@@ -27,6 +27,7 @@ function main(): void {
     radioStations: data.radioStations.length,
     televisionChannels: data.televisionChannels.length,
     terrestrialFrequencies: data.terrestrialFrequencies.length,
+    terrestrialTvChannels: data.terrestrialTvChannels.length,
     satellites: data.satellites.length,
     transponders: data.transponders.length,
     satelliteServices: data.satelliteServices.length,

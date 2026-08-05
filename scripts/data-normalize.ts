@@ -30,6 +30,7 @@ const FILES: { fileName: string; key: keyof LoadedData }[] = [
   { fileName: 'radio-stations.json', key: 'radioStations' },
   { fileName: 'television-channels.json', key: 'televisionChannels' },
   { fileName: 'terrestrial-frequencies.json', key: 'terrestrialFrequencies' },
+  { fileName: 'terrestrial-tv-channels.json', key: 'terrestrialTvChannels' },
   { fileName: 'satellites.json', key: 'satellites' },
   { fileName: 'transponders.json', key: 'transponders' },
   { fileName: 'satellite-services.json', key: 'satelliteServices' },

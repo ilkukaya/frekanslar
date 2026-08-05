@@ -2,10 +2,12 @@
 
 Türkiye Radyo ve Televizyon Frekans Rehberi, Yayın Veritabanı ve Frekans Arama Motoru.
 
-> **Proje aşaması:** Bu depo erken geliştirme aşamasındadır. Mimariyi göstermek için sınırlı fakat gerçekçi
-> örnek veriler içerir. Şehir/il verileri gerçek kamuya açık coğrafi bilgilere dayanır; frekans, transponder ve
-> diğer teknik yayın parametrelerinin büyük bölümü `pending-review` (incelenmeyi bekliyor) olarak işaretlenmiş
-> **örnek verilerdir** ve yayın öncesinde resmî kaynaklarla doğrulanmalıdır. Ayrıntı için
+> **Proje aşaması:** Bu depo erken geliştirme aşamasındadır. Karasal radyo ve televizyon frekans/lisans
+> verileri (81 il, 937 radyo markası, 143 TV kanalı, ~6.000 frekans ve ~1.900 karasal TV kanal ataması)
+> RTÜK'ün resmî il bazında yayın lisans listelerinden içe aktarılmıştır ve `verified` olarak işaretlidir
+> (bkz. [`DATA_SOURCES.md`](./DATA_SOURCES.md)). Uydu, transponder,
+> platform verileri ile resmî web sitesi/logo/sosyal medya gibi zenginleştirme alanları henüz mimariyi
+> göstermek amacıyla oluşturulmuş **örnek verilerdir** ve `pending-review` olarak işaretlidir. Ayrıntı için
 > [`DATA_SOURCES.md`](./DATA_SOURCES.md) ve [`VERIFICATION_POLICY.md`](./VERIFICATION_POLICY.md) dosyalarına
 > bakın.
 
@@ -93,6 +95,7 @@ src/data/
   radio-stations.json            radyo markaları
   television-channels.json       televizyon markaları
   terrestrial-frequencies.json   şehir/ilçe bazlı FM frekans kayıtları
+  terrestrial-tv-channels.json   şehir/ilçe bazlı karasal TV bant/kanal (multiplex) atamaları
   satellites.json                uydular
   transponders.json              transponderler (frekans/polarizasyon/sembol oranı/FEC/modülasyon)
   satellite-services.json        bir transponder üzerindeki radyo/TV servisleri
@@ -111,6 +114,13 @@ paylaşılan parametrelerdir; aynı transponderdeki tüm servisler bunları payl
 `transponderId` üzerinden join ederek gösterir. Bu, spesifikasyonun alan listesindeki bilgilerin hiçbirini
 kaybetmeden (`/tv/[slug]/` sayfası hâlâ frekans/polarizasyon/sembol oranı/FEC gösterir), veriyi
 tekrarsız tutan bilinçli bir normalizasyon kararıdır.
+
+### Tasarım Kararı: Karasal TV Neden `terrestrial-frequencies.json` İçinde Değil?
+
+Türkiye'de dijital karasal TV (DVB-T2), FM radyonun aksine bir MHz frekansıyla değil, bant grubu (RTÜK
+verisinde gözlemlenen: VHF3, UHF4, UHF5) + o bant içindeki mantıksal bir multiplex kanal numarasıyla
+lisanslanır. Bu değeri "frekans" gibi göstermek RTÜK'ün kendi verisini yanlış temsil eder; bu yüzden ayrı
+bir `terrestrial-tv-channels.json` ve şeması (`terrestrialTvChannelSchema`) tutulur.
 
 ## Veri Ekleme Yöntemi
 
@@ -226,11 +236,18 @@ npm run data:build-search  # public/search-index.json üretir (build'in bir par�
 npm run data:check-links   # officialWebsite/officialLiveUrl/kaynak URL'lerinin erişilebilirliğini kontrol eder
 npm run data:report        # kayıt sayıları, doğrulama dağılımı, kapsam boşlukları, eski kayıtlar (reports/data-report.json)
 npm run data:diff          # -- --old <dizin> veya --ref <git-ref> ile eski/yeni veri karşılaştırması
+npm run data:import-rtuk   # -- <raw_extracted.json> ile RTÜK lisans verisini yeniden içe aktarır
 ```
 
 `data:diff`, varsayılan olarak mevcut git geçmişiyle (`HEAD`) karşılaştırır; bu depo gibi henüz commit'i
-olmayan bir depoda çalıştırıldığında bunu açıkça bildirir ve tüm kayıtları "yeni" olarak raporlar. Gelecekte
-CSV/scraper çıktılarından veri almak isterseniz, ham veriyi `src/data/*.json` şemasına yakın bir şekle
+olmayan bir depoda çalıştırıldığında bunu açıkça bildirir ve tüm kayıtları "yeni" olarak raporlar.
+
+`data:import-rtuk`, RTÜK'ün karasal radyo/TV verisini yeniden (örn. güncel bir lisans listesi indirildiğinde)
+içe aktarmak için kullanılır. İki adımdan oluşur: `scripts/import/extract-rtuk-pdfs.py` (RTÜK'ün il bazında
+PDF'lerini + `_indirme_ozeti.csv`'sini düz bir JSON'a çevirir, `pip install pymupdf` gerektirir), ardından
+`npm run data:import-rtuk -- <o JSON'un yolu>` (şemaya eşler, doğrular, `src/data/*.json` dosyalarını
+yazar). Her iki script de kaynağında ayrıntılı tasarım notları içerir. Diğer kaynaklardan (satellite/uydu,
+platform vb.) CSV/scraper çıktısı almak isterseniz, ham veriyi `src/data/*.json` şemasına yakın bir şekle
 getirip `npm run data:normalize` ile kanonikleştirmeniz önerilir.
 
 ## Deployment
@@ -275,9 +292,19 @@ Ayrıntılar için [`LINKING_POLICY.md`](./LINKING_POLICY.md) ve [`CONTENT_REMOV
 
 ## Bilinen Eksikler (İlk Sürüm)
 
-- Karasal radyo dışındaki bölgesel/yerel örnek veri henüz eklenmedi (şema ve filtreler destekler).
-- `officialLiveUrl` alanları, doğrulanmamış bir bağlantı yanlışlıkla "resmî" gösterilmesin diye kasıtlı olarak
-  boş bırakılmıştır; bu nedenle "Resmî Yayından Dinle/İzle" butonları örnek verilerde görünmez (bu, butonun
-  eksik bağlantıda gizlenme davranışının doğru çalıştığını gösterir).
-- Yayın kuruluşu (`broadcasters.json`) kaydı yalnızca TRT için mevcuttur; özel yayıncıların üst kuruluş
-  bilgisi doğrulanmadan eklenmemiştir.
+- **Uydu/transponder/platform verileri** RTÜK'ün kapsamı dışındadır ve hâlâ mimariyi göstermek amacıyla
+  oluşturulmuş örnek veridir (`pending-review`, kaynak `editorial-placeholder`).
+- `officialWebsite`, `officialLiveUrl`, `officialSocialLinks` ve logo alanları RTÜK lisans listelerinde yer
+  almadığı için içe aktarılan ~1.080 radyo/TV markasının tamamında boş bırakılmıştır; bu nedenle "Resmî
+  Yayından Dinle/İzle" butonları bu kayıtlarda görünmez (butonun eksik bağlantıda gizlenme davranışının
+  doğru çalıştığını gösterir, bir hata değildir). Bu alanların doldurulması ayrı, açıkça kaynaklandırılmış
+  bir sonraki veri toplama aşamasıdır.
+- `categories` (tür/format) ve `languages` alanları RTÜK verisinde yoktur; marka adından çıkarılan sınırlı
+  bir anahtar kelime tahminine (`scripts/import/build-rtuk-data.ts`'teki `inferCategories`) ve `["tr"]`
+  varsayılanına dayanır -- gerçek tür/dil bilgisiyle doğrulanmayı bekler.
+- İlçe (`districts.json`) ve verici (`terrestrial-transmitters.json`) kayıtları yalnızca RTÜK'ün lisans
+  listelerinde bir vericinin bulunduğu ilçe olarak geçen ~700 (il, ilçe) çiftini kapsar; rakım ve tesis adı
+  gibi ayrıntılar (RTÜK verisinde yok) `null` bırakılmıştır.
+- `frequency-updates.json` bu içe aktarımla birlikte sıfırlandı: tek bir RTÜK anlık görüntüsünden gerçek bir
+  "neyin değiştiği" bilgisi çıkarılamaz. Değişiklik geçmişi, veri zaman içinde yeniden içe aktarıldıkça
+  (`npm run data:diff`) gerçek kayıtlarla dolmaya başlayacaktır.

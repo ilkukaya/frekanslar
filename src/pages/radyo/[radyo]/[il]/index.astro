@@ -3,19 +3,22 @@ import { getCollection } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
-import DataCard from '../../../../components/DataCard.astro';
+import VerificationBadge from '../../../../components/VerificationBadge.astro';
+import SourceList from '../../../../components/SourceList.astro';
 import LogoPlaceholder from '../../../../components/LogoPlaceholder.astro';
 import BrandCard from '../../../../components/BrandCard.astro';
 import { COVERAGE_TYPE_LABELS } from '../../../../lib/labels';
-import { formatFrequencyDisplay, formatFrequencyValue } from '../../../../lib/format';
-import { sourcesByIds, stationsActiveInCity } from '../../../../lib/relations';
+import { formatDateTr, formatFrequencyDisplay } from '../../../../lib/format';
+import { mostRecentlyVerified, sourcesByIds, stationsActiveInCity } from '../../../../lib/relations';
 import { canonicalUrl, paths } from '../../../../lib/urls';
 import { breadcrumbListSchema, webPageSchema } from '../../../../lib/seo/jsonld';
+import type { TerrestrialFrequency } from '../../../../data/schemas';
 
 export const getStaticPaths = (async () => {
-  const [stationEntries, cityEntries, transmitterEntries, frequencyEntries, sourceEntries] = await Promise.all([
+  const [stationEntries, cityEntries, districtEntries, transmitterEntries, frequencyEntries, sourceEntries] = await Promise.all([
     getCollection('radio-stations'),
     getCollection('cities'),
+    getCollection('districts'),
     getCollection('transmitters'),
     getCollection('terrestrial-frequencies'),
     getCollection('sources'),
@@ -23,20 +26,44 @@ export const getStaticPaths = (async () => {
 
   const stations = stationEntries.map((e) => e.data);
   const cities = cityEntries.map((e) => e.data);
+  const districts = districtEntries.map((e) => e.data);
   const transmitters = transmitterEntries.map((e) => e.data);
   const frequencies = frequencyEntries.map((e) => e.data);
   const sources = sourceEntries.map((e) => e.data);
 
   // Only real (station, city) combinations with an active frequency get a
-  // page -- this is what keeps this route a genuinely distinct-intent
-  // page instead of a combinatorial thin-content generator.
+  // page -- this is what keeps this route a genuinely distinct-intent page
+  // instead of a combinatorial thin-content generator. A station can have
+  // more than one transmitter assignment within the same city (different
+  // districts, occasionally different frequency values -- large provinces
+  // can have a couple dozen), so this groups by (station, city) rather than
+  // generating one page per raw frequency row.
   const activeFrequencies = frequencies.filter((f) => f.status === 'active');
+  const groups = new Map<string, TerrestrialFrequency[]>();
+  for (const freq of activeFrequencies) {
+    const key = `${freq.stationId}::${freq.cityId}`;
+    const existing = groups.get(key);
+    if (existing) existing.push(freq);
+    else groups.set(key, [freq]);
+  }
 
-  return activeFrequencies.map((freq) => {
-    const station = stations.find((s) => s.id === freq.stationId);
-    const city = cities.find((c) => c.id === freq.cityId);
-    if (!station || !city) throw new Error(`Dangling reference on frequency ${freq.id}`);
-    const transmitter = freq.transmitterId ? transmitters.find((t) => t.id === freq.transmitterId) : undefined;
+  return [...groups.values()].map((freqs) => {
+    const first = freqs[0];
+    if (!first) throw new Error('Unexpected empty frequency group');
+    const station = stations.find((s) => s.id === first.stationId);
+    const city = cities.find((c) => c.id === first.cityId);
+    if (!station || !city) throw new Error(`Dangling reference on frequency ${first.id}`);
+
+    const rows = [...freqs]
+      .sort((a, b) => a.frequency - b.frequency)
+      .map((freq) => ({
+        freq,
+        district: freq.districtId ? (districts.find((d) => d.id === freq.districtId) ?? null) : null,
+        transmitter: freq.transmitterId ? (transmitters.find((t) => t.id === freq.transmitterId) ?? null) : null,
+      }));
+    const distinctValues = [...new Set(freqs.map((f) => Math.round(f.frequency * 10) / 10))].sort((a, b) => a - b);
+    const allSourceIds = [...new Set(freqs.flatMap((f) => f.sourceIds))];
+    const mostRecent = mostRecentlyVerified(freqs, 1)[0] ?? first;
     const otherStationsInCity = stationsActiveInCity(stations, frequencies, city.id).filter((s) => s.id !== station.id);
 
     return {
@@ -44,20 +71,29 @@ export const getStaticPaths = (async () => {
       props: {
         station,
         city,
-        freq,
-        transmitter: transmitter ?? null,
-        sources: sourcesByIds(sources, freq.sourceIds),
+        rows,
+        distinctValues,
+        sources: sourcesByIds(sources, allSourceIds),
+        latestVerifiedAt: mostRecent.lastVerifiedAt,
+        latestVerificationStatus: mostRecent.verificationStatus,
         otherStationsInCity,
       },
     };
   });
 }) satisfies GetStaticPaths;
 
-const { station, city, freq, transmitter, sources, otherStationsInCity } = Astro.props;
+const { station, city, rows, distinctValues, sources, latestVerifiedAt, latestVerificationStatus, otherStationsInCity } = Astro.props;
 
+const soleValue = distinctValues.length === 1 ? distinctValues[0] : undefined;
 const pagePath = paths.radioStationCity(station.slug, city.id);
-const pageTitle = `${station.name} ${city.name} Frekansı: ${formatFrequencyDisplay(freq.frequency, freq.unit)}`;
-const pageDescription = `${station.name}, ${city.name} ilinde ${formatFrequencyDisplay(freq.frequency, freq.unit)} frekansında yayın yapıyor. Verici, kapsam ve doğrulama bilgileri.`;
+const pageTitle =
+  soleValue !== undefined
+    ? `${station.name} ${city.name} Frekansı: ${formatFrequencyDisplay(soleValue, 'MHz')}`
+    : `${station.name} ${city.name} Frekansları`;
+const pageDescription =
+  soleValue !== undefined
+    ? `${station.name}, ${city.name} ilinde ${formatFrequencyDisplay(soleValue, 'MHz')} frekansında yayın yapıyor. Verici, kapsam ve doğrulama bilgileri.`
+    : `${station.name}, ${city.name} ilinde ${rows.length} farklı verici noktasından, ilçeye göre değişen frekanslarda yayın yapıyor. Verici, kapsam ve doğrulama bilgileri.`;
 
 const breadcrumbItems = [
   { name: 'Ana Sayfa', href: paths.home() },
@@ -71,13 +107,13 @@ const jsonLd = [
     name: pageTitle,
     description: pageDescription,
     url: canonicalUrl(pagePath),
-    dateModified: freq.lastVerifiedAt,
+    dateModified: latestVerifiedAt,
   }),
   breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
 ];
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={freq.lastVerifiedAt} jsonLd={jsonLd}>
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
 
@@ -89,39 +125,64 @@ const jsonLd = [
     <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
       <p class="text-sm font-semibold text-primary-700">{station.name}, {city.name}'de kaç frekansında yayın yapıyor?</p>
       <p class="mt-1 text-ink">
-        {station.name}, {city.name} ilinde {formatFrequencyDisplay(freq.frequency, freq.unit)} frekansında yayın
-        yapıyor.
+        {
+          soleValue !== undefined ? (
+            <>
+              {station.name}, {city.name} ilinde {formatFrequencyDisplay(soleValue, 'MHz')} frekansında yayın yapıyor
+              {rows.length > 1 && ` (${rows.length} farklı verici noktasından)`}.
+            </>
+          ) : (
+            <>
+              {station.name}, {city.name} ilinde tek bir sabit frekansı yok; {rows.length} verici noktasında ilçeye göre
+              değişen frekanslarda yayın yapıyor. Aşağıdaki tablodan bulunduğunuz ilçeyi bulun.
+            </>
+          )
+        }
       </p>
     </div>
 
-    <div class="mt-6 max-w-sm">
-      <DataCard
-        label="Frekans"
-        value={formatFrequencyValue(freq.frequency)}
-        unit={freq.unit}
-        context={transmitter ? `${transmitter.name} üzerinden` : city.name}
-        lastVerifiedAt={freq.lastVerifiedAt}
-        verificationStatus={freq.verificationStatus}
-        sources={sources}
-      />
-    </div>
+    <section class="mt-6">
+      <div class="overflow-x-auto rounded-lg border border-border" tabindex="0">
+        <table class="responsive-table w-full border-collapse text-sm">
+          <caption class="sr-only">{station.name} — {city.name} frekans ve verici listesi</caption>
+          <thead class="bg-surface-subtle text-left">
+            <tr>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Frekans</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İlçe / Verici</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kapsam</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Son kontrol</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              rows.map(({ freq, district, transmitter }) => (
+                <tr>
+                  <td data-label="Frekans" class="border-t border-border px-3 py-2.5 font-medium text-ink">
+                    {formatFrequencyDisplay(freq.frequency, freq.unit)}
+                  </td>
+                  <td data-label="İlçe / Verici" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                    {district?.name ?? transmitter?.name ?? '—'}
+                  </td>
+                  <td data-label="Kapsam" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                    {COVERAGE_TYPE_LABELS[freq.coverageType]}
+                  </td>
+                  <td data-label="Son kontrol" class="border-t border-border px-3 py-2.5 text-ink-faint">
+                    <time datetime={freq.lastVerifiedAt}>{formatDateTr(freq.lastVerifiedAt)}</time>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Kapsam</p>
-        <p class="mt-1 font-medium text-ink">{COVERAGE_TYPE_LABELS[freq.coverageType]}</p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Verici</p>
-        <p class="mt-1 font-medium text-ink">{transmitter ? transmitter.name : 'Belirtilmemiş'}</p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Durum</p>
-        <p class="mt-1 font-medium text-ink">Aktif</p>
+    <div class="mt-6 rounded-lg border border-border bg-surface p-4">
+      <VerificationBadge status={latestVerificationStatus} lastVerifiedAt={latestVerifiedAt} />
+      <div class="mt-2">
+        <SourceList sources={sources} />
       </div>
     </div>
-
-    {freq.notes && <p class="mt-4 text-sm text-ink-muted">{freq.notes}</p>}
 
     <p class="mt-6 text-sm text-ink-muted">
       {station.name} hakkında daha fazla bilgi (yayın kapsamı, resmî bağlantılar, tüm şehirlerdeki frekansları) için{' '}

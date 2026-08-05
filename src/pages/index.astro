@@ -161,21 +161,28 @@ const jsonLd = [organizationSchema(), websiteSchema()];
       <h2 class="text-xl font-bold text-ink">Son Frekans Değişiklikleri</h2>
       <a href={paths.updateList()} class="text-sm font-medium text-primary-600 hover:underline">Tüm güncellemeler</a>
     </div>
-    <ul class="mt-4 divide-y divide-border rounded-lg border border-border bg-surface">
-      {
-        recentChanges.map((update) => (
-          <li>
-            <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-3 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p class="font-medium text-ink">{update.title}</p>
-                <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
-              </div>
-              <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      recentChanges.length === 0 ? (
+        <p class="mt-4 rounded-lg border border-border bg-surface p-4 text-sm text-ink-muted">
+          Henüz kayıtlı bir değişiklik geçmişi yok. Bu bölüm, veriler zaman içinde güncellendikçe (yeni yayın, kapanan
+          yayın, değişen frekans gibi) dolmaya başlayacaktır.
+        </p>
+      ) : (
+        <ul class="mt-4 divide-y divide-border rounded-lg border border-border bg-surface">
+          {recentChanges.map((update) => (
+            <li>
+              <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-3 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="font-medium text-ink">{update.title}</p>
+                  <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
+                </div>
+                <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </section>
 
   <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">

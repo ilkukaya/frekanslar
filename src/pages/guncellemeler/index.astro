@@ -36,20 +36,28 @@ const jsonLd = [
     <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Güncellemeler</h1>
     <p class="mt-2 max-w-2xl text-ink-muted">{pageDescription}</p>
 
-    <ul class="mt-8 divide-y divide-border rounded-lg border border-border bg-surface">
-      {
-        updates.map((update) => (
-          <li>
-            <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-4 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p class="font-medium text-ink">{update.title}</p>
-                <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
-              </div>
-              <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      updates.length === 0 ? (
+        <p class="mt-8 rounded-lg border border-border bg-surface p-5 text-ink-muted">
+          Henüz kayıtlı bir değişiklik geçmişi yok. Bu sayfa, veri kaynakları zaman içinde yeniden içe aktarıldıkça
+          (yeni yayın, kapanan yayın, değişen frekans, değişen uydu/transponder gibi olaylarla) dolmaya başlayacaktır
+          -- bkz. <a href={paths.dataSources()} class="text-primary-600 underline hover:no-underline">Veri Kaynakları</a>.
+        </p>
+      ) : (
+        <ul class="mt-8 divide-y divide-border rounded-lg border border-border bg-surface">
+          {updates.map((update) => (
+            <li>
+              <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-4 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="font-medium text-ink">{update.title}</p>
+                  <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
+                </div>
+                <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 </BaseLayout>

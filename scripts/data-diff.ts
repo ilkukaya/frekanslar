@@ -28,6 +28,7 @@ import type {
   SatelliteService,
   TelevisionChannel,
   TerrestrialFrequency,
+  TerrestrialTvChannel,
   Transponder,
 } from '../src/data/schemas';
 
@@ -39,6 +40,7 @@ const DATA_FILE_NAMES = [
   'radio-stations.json',
   'television-channels.json',
   'terrestrial-frequencies.json',
+  'terrestrial-tv-channels.json',
   'satellites.json',
   'transponders.json',
   'satellite-services.json',
@@ -133,6 +135,25 @@ function diffFrequencies(oldF: readonly TerrestrialFrequency[], newF: readonly T
   return changes;
 }
 
+function diffTvChannelAssignments(
+  oldT: readonly TerrestrialTvChannel[],
+  newT: readonly TerrestrialTvChannel[],
+): string[] {
+  const changes: string[] = [];
+  // Same rationale as diffFrequencies: correlate by (channelId, cityId,
+  // districtId) rather than id, since this project's ids embed the band +
+  // channel number themselves.
+  const key = (t: TerrestrialTvChannel) => `${t.channelId}::${t.cityId}::${t.districtId ?? ''}`;
+  const oldByKey = new Map(oldT.map((t) => [key(t), t]));
+  for (const entry of newT) {
+    const previous = oldByKey.get(key(entry));
+    if (previous && (previous.band !== entry.band || previous.channelNumber !== entry.channelNumber)) {
+      changes.push(`${entry.channelId} / ${entry.cityId}: ${previous.band} ${previous.channelNumber} -> ${entry.band} ${entry.channelNumber}`);
+    }
+  }
+  return changes;
+}
+
 function diffSatelliteServices(
   oldS: readonly SatelliteService[],
   newS: readonly SatelliteService[],
@@ -181,6 +202,7 @@ function findMissingSources(data: LoadedData): string[] {
   checkAll('radio-stations.json', data.radioStations);
   checkAll('television-channels.json', data.televisionChannels);
   checkAll('terrestrial-frequencies.json', data.terrestrialFrequencies);
+  checkAll('terrestrial-tv-channels.json', data.terrestrialTvChannels);
   checkAll('satellite-services.json', data.satelliteServices);
   checkAll('transponders.json', data.transponders);
   return missing;
@@ -198,6 +220,7 @@ function findStaleRecords(data: LoadedData): string[] {
   check('radio-stations.json', data.radioStations);
   check('television-channels.json', data.televisionChannels);
   check('terrestrial-frequencies.json', data.terrestrialFrequencies);
+  check('terrestrial-tv-channels.json', data.terrestrialTvChannels);
   return stale;
 }
 
@@ -251,6 +274,7 @@ function main(): void {
         radioStations: [],
         televisionChannels: [],
         terrestrialFrequencies: [],
+        terrestrialTvChannels: [],
         satellites: [],
         transponders: [],
         satelliteServices: [],
@@ -286,6 +310,7 @@ function main(): void {
   reportSection('Yeni yayın', [...radioDiff.added, ...tvDiff.added]);
   reportSection('Kapanan yayın', [...radioDiff.removed, ...tvDiff.removed]);
   reportSection('Değişen frekans', diffFrequencies(oldData.terrestrialFrequencies, newData.terrestrialFrequencies));
+  reportSection('Değişen karasal TV kanal ataması', diffTvChannelAssignments(oldData.terrestrialTvChannels, newData.terrestrialTvChannels));
 
   const { satelliteChanges, transponderChanges } = diffSatelliteServices(oldData.satelliteServices, newData.satelliteServices);
   reportSection('Değişen uydu', satelliteChanges);

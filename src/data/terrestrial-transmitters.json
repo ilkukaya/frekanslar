@@ -1,28 +1,1540 @@
 [
   {
-    "id": "adana-merkez-verici",
-    "name": "Adana Merkez Vericisi",
-    "slug": "adana-merkez-verici",
+    "id": "adana-aladag-verici",
+    "name": "Adana Aladağ Vericisi",
+    "slug": "adana-aladag-verici",
     "cityId": "adana",
-    "districtId": null,
+    "districtId": "adana-aladag",
     "elevationMeters": null,
     "notes": null
   },
   {
-    "id": "ankara-elmadag",
-    "name": "Ankara Elmadağ Vericisi",
-    "slug": "ankara-elmadag",
-    "cityId": "ankara",
-    "districtId": null,
+    "id": "adana-ceyhan-verici",
+    "name": "Adana Ceyhan Vericisi",
+    "slug": "adana-ceyhan-verici",
+    "cityId": "adana",
+    "districtId": "adana-ceyhan",
     "elevationMeters": null,
-    "notes": "Ankara merkez yayınları için kullanılan verici tepe noktalarından biri."
+    "notes": null
+  },
+  {
+    "id": "adana-cukurova-verici",
+    "name": "Adana Çukurova Vericisi",
+    "slug": "adana-cukurova-verici",
+    "cityId": "adana",
+    "districtId": "adana-cukurova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-feke-verici",
+    "name": "Adana Feke Vericisi",
+    "slug": "adana-feke-verici",
+    "cityId": "adana",
+    "districtId": "adana-feke",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-imamoglu-verici",
+    "name": "Adana İmamoğlu Vericisi",
+    "slug": "adana-imamoglu-verici",
+    "cityId": "adana",
+    "districtId": "adana-imamoglu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-kozan-verici",
+    "name": "Adana Kozan Vericisi",
+    "slug": "adana-kozan-verici",
+    "cityId": "adana",
+    "districtId": "adana-kozan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-merkez-verici",
+    "name": "Adana Merkez Vericisi",
+    "slug": "adana-merkez-verici",
+    "cityId": "adana",
+    "districtId": "adana-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-pozanti-verici",
+    "name": "Adana Pozantı Vericisi",
+    "slug": "adana-pozanti-verici",
+    "cityId": "adana",
+    "districtId": "adana-pozanti",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-saimbeyli-verici",
+    "name": "Adana Saimbeyli Vericisi",
+    "slug": "adana-saimbeyli-verici",
+    "cityId": "adana",
+    "districtId": "adana-saimbeyli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-seyhan-verici",
+    "name": "Adana Seyhan Vericisi",
+    "slug": "adana-seyhan-verici",
+    "cityId": "adana",
+    "districtId": "adana-seyhan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-tufanbeyli-verici",
+    "name": "Adana Tufanbeyli Vericisi",
+    "slug": "adana-tufanbeyli-verici",
+    "cityId": "adana",
+    "districtId": "adana-tufanbeyli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adana-yuregir-verici",
+    "name": "Adana Yüreğir Vericisi",
+    "slug": "adana-yuregir-verici",
+    "cityId": "adana",
+    "districtId": "adana-yuregir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adiyaman-besni-verici",
+    "name": "Adıyaman Besni Vericisi",
+    "slug": "adiyaman-besni-verici",
+    "cityId": "adiyaman",
+    "districtId": "adiyaman-besni",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adiyaman-celikhan-verici",
+    "name": "Adıyaman Çelikhan Vericisi",
+    "slug": "adiyaman-celikhan-verici",
+    "cityId": "adiyaman",
+    "districtId": "adiyaman-celikhan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adiyaman-golbasi-verici",
+    "name": "Adıyaman Gölbaşı Vericisi",
+    "slug": "adiyaman-golbasi-verici",
+    "cityId": "adiyaman",
+    "districtId": "adiyaman-golbasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adiyaman-kahta-verici",
+    "name": "Adıyaman Kahta Vericisi",
+    "slug": "adiyaman-kahta-verici",
+    "cityId": "adiyaman",
+    "districtId": "adiyaman-kahta",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "adiyaman-merkez-verici",
+    "name": "Adıyaman Merkez Vericisi",
+    "slug": "adiyaman-merkez-verici",
+    "cityId": "adiyaman",
+    "districtId": "adiyaman-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-basmakci-verici",
+    "name": "Afyonkarahisar Başmakçı Vericisi",
+    "slug": "afyonkarahisar-basmakci-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-basmakci",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-bolvadin-verici",
+    "name": "Afyonkarahisar Bolvadin Vericisi",
+    "slug": "afyonkarahisar-bolvadin-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-bolvadin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-cay-verici",
+    "name": "Afyonkarahisar Çay Vericisi",
+    "slug": "afyonkarahisar-cay-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-cay",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-dinar-verici",
+    "name": "Afyonkarahisar Dinar Vericisi",
+    "slug": "afyonkarahisar-dinar-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-dinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-emirdag-verici",
+    "name": "Afyonkarahisar Emirdağ Vericisi",
+    "slug": "afyonkarahisar-emirdag-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-emirdag",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-evciler-verici",
+    "name": "Afyonkarahisar Evciler Vericisi",
+    "slug": "afyonkarahisar-evciler-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-evciler",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-hocalar-verici",
+    "name": "Afyonkarahisar Hocalar Vericisi",
+    "slug": "afyonkarahisar-hocalar-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-hocalar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-ihsaniye-verici",
+    "name": "Afyonkarahisar İhsaniye Vericisi",
+    "slug": "afyonkarahisar-ihsaniye-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-ihsaniye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-iscehisar-verici",
+    "name": "Afyonkarahisar İscehisar Vericisi",
+    "slug": "afyonkarahisar-iscehisar-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-iscehisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-merkez-verici",
+    "name": "Afyonkarahisar Merkez Vericisi",
+    "slug": "afyonkarahisar-merkez-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-sandikli-verici",
+    "name": "Afyonkarahisar Sandıklı Vericisi",
+    "slug": "afyonkarahisar-sandikli-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-sandikli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-sinanpasa-verici",
+    "name": "Afyonkarahisar Sinanpaşa Vericisi",
+    "slug": "afyonkarahisar-sinanpasa-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-sinanpasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-suhut-verici",
+    "name": "Afyonkarahisar Şuhut Vericisi",
+    "slug": "afyonkarahisar-suhut-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-suhut",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "afyonkarahisar-sultandagi-verici",
+    "name": "Afyonkarahisar Sultandağı Vericisi",
+    "slug": "afyonkarahisar-sultandagi-verici",
+    "cityId": "afyonkarahisar",
+    "districtId": "afyonkarahisar-sultandagi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-diyadin-verici",
+    "name": "Ağrı Diyadin Vericisi",
+    "slug": "agri-diyadin-verici",
+    "cityId": "agri",
+    "districtId": "agri-diyadin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-dogubayazit-verici",
+    "name": "Ağrı Doğubayazıt Vericisi",
+    "slug": "agri-dogubayazit-verici",
+    "cityId": "agri",
+    "districtId": "agri-dogubayazit",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-eleskirt-verici",
+    "name": "Ağrı Eleşkirt Vericisi",
+    "slug": "agri-eleskirt-verici",
+    "cityId": "agri",
+    "districtId": "agri-eleskirt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-merkez-verici",
+    "name": "Ağrı Merkez Vericisi",
+    "slug": "agri-merkez-verici",
+    "cityId": "agri",
+    "districtId": "agri-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-patnos-verici",
+    "name": "Ağrı Patnos Vericisi",
+    "slug": "agri-patnos-verici",
+    "cityId": "agri",
+    "districtId": "agri-patnos",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "agri-tutak-verici",
+    "name": "Ağrı Tutak Vericisi",
+    "slug": "agri-tutak-verici",
+    "cityId": "agri",
+    "districtId": "agri-tutak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aksaray-gulagac-verici",
+    "name": "Aksaray Gülağaç Vericisi",
+    "slug": "aksaray-gulagac-verici",
+    "cityId": "aksaray",
+    "districtId": "aksaray-gulagac",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aksaray-guzelyurt-verici",
+    "name": "Aksaray Güzelyurt Vericisi",
+    "slug": "aksaray-guzelyurt-verici",
+    "cityId": "aksaray",
+    "districtId": "aksaray-guzelyurt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aksaray-merkez-verici",
+    "name": "Aksaray Merkez Vericisi",
+    "slug": "aksaray-merkez-verici",
+    "cityId": "aksaray",
+    "districtId": "aksaray-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aksaray-ortakoy-verici",
+    "name": "Aksaray Ortaköy Vericisi",
+    "slug": "aksaray-ortakoy-verici",
+    "cityId": "aksaray",
+    "districtId": "aksaray-ortakoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "amasya-hamamozu-verici",
+    "name": "Amasya Hamamözü Vericisi",
+    "slug": "amasya-hamamozu-verici",
+    "cityId": "amasya",
+    "districtId": "amasya-hamamozu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "amasya-merkez-verici",
+    "name": "Amasya Merkez Vericisi",
+    "slug": "amasya-merkez-verici",
+    "cityId": "amasya",
+    "districtId": "amasya-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "amasya-merzifon-verici",
+    "name": "Amasya Merzifon Vericisi",
+    "slug": "amasya-merzifon-verici",
+    "cityId": "amasya",
+    "districtId": "amasya-merzifon",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "amasya-suluova-verici",
+    "name": "Amasya Suluova Vericisi",
+    "slug": "amasya-suluova-verici",
+    "cityId": "amasya",
+    "districtId": "amasya-suluova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "amasya-tasova-verici",
+    "name": "Amasya Taşova Vericisi",
+    "slug": "amasya-tasova-verici",
+    "cityId": "amasya",
+    "districtId": "amasya-tasova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-altindag-verici",
+    "name": "Ankara Altındağ Vericisi",
+    "slug": "ankara-altindag-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-altindag",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-ayas-verici",
+    "name": "Ankara Ayaş Vericisi",
+    "slug": "ankara-ayas-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-ayas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-bala-verici",
+    "name": "Ankara Bala Vericisi",
+    "slug": "ankara-bala-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-bala",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-beypazari-verici",
+    "name": "Ankara Beypazarı Vericisi",
+    "slug": "ankara-beypazari-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-beypazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-camlidere-verici",
+    "name": "Ankara Çamlıdere Vericisi",
+    "slug": "ankara-camlidere-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-camlidere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-cankaya-verici",
+    "name": "Ankara Çankaya Vericisi",
+    "slug": "ankara-cankaya-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-cankaya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-cubuk-verici",
+    "name": "Ankara Çubuk Vericisi",
+    "slug": "ankara-cubuk-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-cubuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-gudul-verici",
+    "name": "Ankara Güdül Vericisi",
+    "slug": "ankara-gudul-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-gudul",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-kalecik-verici",
+    "name": "Ankara Kalecik Vericisi",
+    "slug": "ankara-kalecik-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-kalecik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-kazan-verici",
+    "name": "Ankara Kazan Vericisi",
+    "slug": "ankara-kazan-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-kazan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-kizilcahamam-verici",
+    "name": "Ankara Kızılcahamam Vericisi",
+    "slug": "ankara-kizilcahamam-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-kizilcahamam",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-mamak-verici",
+    "name": "Ankara Mamak Vericisi",
+    "slug": "ankara-mamak-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-mamak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-merkez-verici",
+    "name": "Ankara Merkez Vericisi",
+    "slug": "ankara-merkez-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-nallihan-verici",
+    "name": "Ankara Nallıhan Vericisi",
+    "slug": "ankara-nallihan-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-nallihan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-polatli-verici",
+    "name": "Ankara Polatlı Vericisi",
+    "slug": "ankara-polatli-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-polatli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-sereflikochisar-verici",
+    "name": "Ankara Şereflikoçhisar Vericisi",
+    "slug": "ankara-sereflikochisar-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-sereflikochisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-yenimahalle-verici",
+    "name": "Ankara Yenimahalle Vericisi",
+    "slug": "ankara-yenimahalle-verici",
+    "cityId": "ankara",
+    "districtId": "ankara-yenimahalle",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-akseki-verici",
+    "name": "Antalya Akseki Vericisi",
+    "slug": "antalya-akseki-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-akseki",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-alanya-verici",
+    "name": "Antalya Alanya Vericisi",
+    "slug": "antalya-alanya-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-alanya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-demre-verici",
+    "name": "Antalya Demre Vericisi",
+    "slug": "antalya-demre-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-demre",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-dosemealti-verici",
+    "name": "Antalya Döşemealtı Vericisi",
+    "slug": "antalya-dosemealti-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-dosemealti",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-elmali-verici",
+    "name": "Antalya Elmalı Vericisi",
+    "slug": "antalya-elmali-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-elmali",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-finike-verici",
+    "name": "Antalya Finike Vericisi",
+    "slug": "antalya-finike-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-finike",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-gazipasa-verici",
+    "name": "Antalya Gazipaşa Vericisi",
+    "slug": "antalya-gazipasa-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-gazipasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-gundogmus-verici",
+    "name": "Antalya Gündoğmuş Vericisi",
+    "slug": "antalya-gundogmus-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-gundogmus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-ibradi-verici",
+    "name": "Antalya İbradi Vericisi",
+    "slug": "antalya-ibradi-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-ibradi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-kas-verici",
+    "name": "Antalya Kaş Vericisi",
+    "slug": "antalya-kas-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-kas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-kemer-verici",
+    "name": "Antalya Kemer Vericisi",
+    "slug": "antalya-kemer-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-kemer",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-kepez-verici",
+    "name": "Antalya Kepez Vericisi",
+    "slug": "antalya-kepez-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-kepez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-konyaalti-verici",
+    "name": "Antalya Konyaaltı Vericisi",
+    "slug": "antalya-konyaalti-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-konyaalti",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-korkuteli-verici",
+    "name": "Antalya Korkuteli Vericisi",
+    "slug": "antalya-korkuteli-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-korkuteli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-kumluca-verici",
+    "name": "Antalya Kumluca Vericisi",
+    "slug": "antalya-kumluca-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-kumluca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-manavgat-verici",
+    "name": "Antalya Manavgat Vericisi",
+    "slug": "antalya-manavgat-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-manavgat",
+    "elevationMeters": null,
+    "notes": null
   },
   {
     "id": "antalya-merkez-verici",
     "name": "Antalya Merkez Vericisi",
     "slug": "antalya-merkez-verici",
     "cityId": "antalya",
-    "districtId": null,
+    "districtId": "antalya-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-muratpasa-verici",
+    "name": "Antalya Muratpaşa Vericisi",
+    "slug": "antalya-muratpasa-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-muratpasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "antalya-serik-verici",
+    "name": "Antalya Serik Vericisi",
+    "slug": "antalya-serik-verici",
+    "cityId": "antalya",
+    "districtId": "antalya-serik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ardahan-cildir-verici",
+    "name": "Ardahan Çıldır Vericisi",
+    "slug": "ardahan-cildir-verici",
+    "cityId": "ardahan",
+    "districtId": "ardahan-cildir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ardahan-damal-verici",
+    "name": "Ardahan Damal Vericisi",
+    "slug": "ardahan-damal-verici",
+    "cityId": "ardahan",
+    "districtId": "ardahan-damal",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ardahan-gole-verici",
+    "name": "Ardahan Göle Vericisi",
+    "slug": "ardahan-gole-verici",
+    "cityId": "ardahan",
+    "districtId": "ardahan-gole",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ardahan-merkez-verici",
+    "name": "Ardahan Merkez Vericisi",
+    "slug": "ardahan-merkez-verici",
+    "cityId": "ardahan",
+    "districtId": "ardahan-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ardahan-posof-verici",
+    "name": "Ardahan Posof Vericisi",
+    "slug": "ardahan-posof-verici",
+    "cityId": "ardahan",
+    "districtId": "ardahan-posof",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-ardanuc-verici",
+    "name": "Artvin Ardanuç Vericisi",
+    "slug": "artvin-ardanuc-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-ardanuc",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-arhavi-verici",
+    "name": "Artvin Arhavi Vericisi",
+    "slug": "artvin-arhavi-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-arhavi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-borcka-verici",
+    "name": "Artvin Borçka Vericisi",
+    "slug": "artvin-borcka-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-borcka",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-hopa-verici",
+    "name": "Artvin Hopa Vericisi",
+    "slug": "artvin-hopa-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-hopa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-merkez-verici",
+    "name": "Artvin Merkez Vericisi",
+    "slug": "artvin-merkez-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-murgul-verici",
+    "name": "Artvin Murgul Vericisi",
+    "slug": "artvin-murgul-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-murgul",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-savsat-verici",
+    "name": "Artvin Şavşat Vericisi",
+    "slug": "artvin-savsat-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-savsat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "artvin-yusufeli-verici",
+    "name": "Artvin Yusufeli Vericisi",
+    "slug": "artvin-yusufeli-verici",
+    "cityId": "artvin",
+    "districtId": "artvin-yusufeli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-bozdogan-verici",
+    "name": "Aydın Bozdoğan Vericisi",
+    "slug": "aydin-bozdogan-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-bozdogan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-cine-verici",
+    "name": "Aydın Çine Vericisi",
+    "slug": "aydin-cine-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-cine",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-didim-verici",
+    "name": "Aydın Didim Vericisi",
+    "slug": "aydin-didim-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-didim",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-karacasu-verici",
+    "name": "Aydın Karacasu Vericisi",
+    "slug": "aydin-karacasu-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-karacasu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-kusadasi-verici",
+    "name": "Aydın Kuşadası Vericisi",
+    "slug": "aydin-kusadasi-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-kusadasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-merkez-verici",
+    "name": "Aydın Merkez Vericisi",
+    "slug": "aydin-merkez-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-nazilli-verici",
+    "name": "Aydın Nazilli Vericisi",
+    "slug": "aydin-nazilli-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-nazilli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "aydin-soke-verici",
+    "name": "Aydın Söke Vericisi",
+    "slug": "aydin-soke-verici",
+    "cityId": "aydin",
+    "districtId": "aydin-soke",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-ayvalik-verici",
+    "name": "Balıkesir Ayvalık Vericisi",
+    "slug": "balikesir-ayvalik-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-ayvalik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-balya-verici",
+    "name": "Balıkesir Balya Vericisi",
+    "slug": "balikesir-balya-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-balya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-bandirma-verici",
+    "name": "Balıkesir Bandırma Vericisi",
+    "slug": "balikesir-bandirma-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-bandirma",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-burhaniye-verici",
+    "name": "Balıkesir Burhaniye Vericisi",
+    "slug": "balikesir-burhaniye-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-burhaniye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-dursunbey-verici",
+    "name": "Balıkesir Dursunbey Vericisi",
+    "slug": "balikesir-dursunbey-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-dursunbey",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-edremit-verici",
+    "name": "Balıkesir Edremit Vericisi",
+    "slug": "balikesir-edremit-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-edremit",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-erdek-verici",
+    "name": "Balıkesir Erdek Vericisi",
+    "slug": "balikesir-erdek-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-erdek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-gonen-verici",
+    "name": "Balıkesir Gönen Vericisi",
+    "slug": "balikesir-gonen-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-gonen",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-havran-verici",
+    "name": "Balıkesir Havran Vericisi",
+    "slug": "balikesir-havran-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-havran",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-ivrindi-verici",
+    "name": "Balıkesir İvrindi Vericisi",
+    "slug": "balikesir-ivrindi-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-ivrindi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-kepsut-verici",
+    "name": "Balıkesir Kepsut Vericisi",
+    "slug": "balikesir-kepsut-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-kepsut",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-marmara-verici",
+    "name": "Balıkesir Marmara Vericisi",
+    "slug": "balikesir-marmara-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-marmara",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-merkez-verici",
+    "name": "Balıkesir Merkez Vericisi",
+    "slug": "balikesir-merkez-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-sindirgi-verici",
+    "name": "Balıkesir Sındırgı Vericisi",
+    "slug": "balikesir-sindirgi-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-sindirgi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "balikesir-susurluk-verici",
+    "name": "Balıkesir Susurluk Vericisi",
+    "slug": "balikesir-susurluk-verici",
+    "cityId": "balikesir",
+    "districtId": "balikesir-susurluk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bartin-amasra-verici",
+    "name": "Bartın Amasra Vericisi",
+    "slug": "bartin-amasra-verici",
+    "cityId": "bartin",
+    "districtId": "bartin-amasra",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bartin-kurucasile-verici",
+    "name": "Bartın Kurucaşile Vericisi",
+    "slug": "bartin-kurucasile-verici",
+    "cityId": "bartin",
+    "districtId": "bartin-kurucasile",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bartin-merkez-verici",
+    "name": "Bartın Merkez Vericisi",
+    "slug": "bartin-merkez-verici",
+    "cityId": "bartin",
+    "districtId": "bartin-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bartin-ulus-verici",
+    "name": "Bartın Ulus Vericisi",
+    "slug": "bartin-ulus-verici",
+    "cityId": "bartin",
+    "districtId": "bartin-ulus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "batman-besiri-verici",
+    "name": "Batman Beşiri Vericisi",
+    "slug": "batman-besiri-verici",
+    "cityId": "batman",
+    "districtId": "batman-besiri",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "batman-hasankeyf-verici",
+    "name": "Batman Hasankeyf Vericisi",
+    "slug": "batman-hasankeyf-verici",
+    "cityId": "batman",
+    "districtId": "batman-hasankeyf",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "batman-kozluk-verici",
+    "name": "Batman Kozluk Vericisi",
+    "slug": "batman-kozluk-verici",
+    "cityId": "batman",
+    "districtId": "batman-kozluk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "batman-merkez-verici",
+    "name": "Batman Merkez Vericisi",
+    "slug": "batman-merkez-verici",
+    "cityId": "batman",
+    "districtId": "batman-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "batman-sason-verici",
+    "name": "Batman Sason Vericisi",
+    "slug": "batman-sason-verici",
+    "cityId": "batman",
+    "districtId": "batman-sason",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bayburt-demirozu-verici",
+    "name": "Bayburt Demirözü Vericisi",
+    "slug": "bayburt-demirozu-verici",
+    "cityId": "bayburt",
+    "districtId": "bayburt-demirozu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bayburt-merkez-verici",
+    "name": "Bayburt Merkez Vericisi",
+    "slug": "bayburt-merkez-verici",
+    "cityId": "bayburt",
+    "districtId": "bayburt-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-bozuyuk-verici",
+    "name": "Bilecik Bozüyük Vericisi",
+    "slug": "bilecik-bozuyuk-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-bozuyuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-golpazari-verici",
+    "name": "Bilecik Gölpazarı Vericisi",
+    "slug": "bilecik-golpazari-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-golpazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-inhisar-verici",
+    "name": "Bilecik İnhisar Vericisi",
+    "slug": "bilecik-inhisar-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-inhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-merkez-verici",
+    "name": "Bilecik Merkez Vericisi",
+    "slug": "bilecik-merkez-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-osmaneli-verici",
+    "name": "Bilecik Osmaneli Vericisi",
+    "slug": "bilecik-osmaneli-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-osmaneli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-pazaryeri-verici",
+    "name": "Bilecik Pazaryeri Vericisi",
+    "slug": "bilecik-pazaryeri-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-pazaryeri",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-sogut-verici",
+    "name": "Bilecik Söğüt Vericisi",
+    "slug": "bilecik-sogut-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-sogut",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bilecik-yenipazar-verici",
+    "name": "Bilecik Yenipazar Vericisi",
+    "slug": "bilecik-yenipazar-verici",
+    "cityId": "bilecik",
+    "districtId": "bilecik-yenipazar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-genc-verici",
+    "name": "Bingöl Genç Vericisi",
+    "slug": "bingol-genc-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-genc",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-karliova-verici",
+    "name": "Bingöl Karlıova Vericisi",
+    "slug": "bingol-karliova-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-karliova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-kigi-verici",
+    "name": "Bingöl Kiğı Vericisi",
+    "slug": "bingol-kigi-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-kigi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-merkez-verici",
+    "name": "Bingöl Merkez Vericisi",
+    "slug": "bingol-merkez-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-solhan-verici",
+    "name": "Bingöl Solhan Vericisi",
+    "slug": "bingol-solhan-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-solhan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-yayladere-verici",
+    "name": "Bingöl Yayladere Vericisi",
+    "slug": "bingol-yayladere-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-yayladere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bingol-yedisu-verici",
+    "name": "Bingöl Yedisu Vericisi",
+    "slug": "bingol-yedisu-verici",
+    "cityId": "bingol",
+    "districtId": "bingol-yedisu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-adilcevaz-verici",
+    "name": "Bitlis Adilcevaz Vericisi",
+    "slug": "bitlis-adilcevaz-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-adilcevaz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-ahlat-verici",
+    "name": "Bitlis Ahlat Vericisi",
+    "slug": "bitlis-ahlat-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-ahlat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-guroymak-verici",
+    "name": "Bitlis Güroymak Vericisi",
+    "slug": "bitlis-guroymak-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-guroymak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-hizan-verici",
+    "name": "Bitlis Hizan Vericisi",
+    "slug": "bitlis-hizan-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-hizan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-merkez-verici",
+    "name": "Bitlis Merkez Vericisi",
+    "slug": "bitlis-merkez-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-mutki-verici",
+    "name": "Bitlis Mutki Vericisi",
+    "slug": "bitlis-mutki-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-mutki",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bitlis-tatvan-verici",
+    "name": "Bitlis Tatvan Vericisi",
+    "slug": "bitlis-tatvan-verici",
+    "cityId": "bitlis",
+    "districtId": "bitlis-tatvan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-gerede-verici",
+    "name": "Bolu Gerede Vericisi",
+    "slug": "bolu-gerede-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-gerede",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-goynuk-verici",
+    "name": "Bolu Göynük Vericisi",
+    "slug": "bolu-goynuk-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-goynuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-kibriscik-verici",
+    "name": "Bolu Kıbrıscık Vericisi",
+    "slug": "bolu-kibriscik-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-kibriscik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-mengen-verici",
+    "name": "Bolu Mengen Vericisi",
+    "slug": "bolu-mengen-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-mengen",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-merkez-verici",
+    "name": "Bolu Merkez Vericisi",
+    "slug": "bolu-merkez-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-mudurnu-verici",
+    "name": "Bolu Mudurnu Vericisi",
+    "slug": "bolu-mudurnu-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-mudurnu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bolu-seben-verici",
+    "name": "Bolu Seben Vericisi",
+    "slug": "bolu-seben-verici",
+    "cityId": "bolu",
+    "districtId": "bolu-seben",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-aglasun-verici",
+    "name": "Burdur Ağlasun Vericisi",
+    "slug": "burdur-aglasun-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-aglasun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-altinyayla-verici",
+    "name": "Burdur Altınyayla Vericisi",
+    "slug": "burdur-altinyayla-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-altinyayla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-bucak-verici",
+    "name": "Burdur Bucak Vericisi",
+    "slug": "burdur-bucak-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-bucak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-celtikci-verici",
+    "name": "Burdur Çeltikçi Vericisi",
+    "slug": "burdur-celtikci-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-celtikci",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-golhisar-verici",
+    "name": "Burdur Gölhisar Vericisi",
+    "slug": "burdur-golhisar-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-golhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-kemer-verici",
+    "name": "Burdur Kemer Vericisi",
+    "slug": "burdur-kemer-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-kemer",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-merkez-verici",
+    "name": "Burdur Merkez Vericisi",
+    "slug": "burdur-merkez-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-tefenni-verici",
+    "name": "Burdur Tefenni Vericisi",
+    "slug": "burdur-tefenni-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-tefenni",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "burdur-yesilova-verici",
+    "name": "Burdur Yeşilova Vericisi",
+    "slug": "burdur-yesilova-verici",
+    "cityId": "burdur",
+    "districtId": "burdur-yesilova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-harmancik-verici",
+    "name": "Bursa Harmancık Vericisi",
+    "slug": "bursa-harmancik-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-harmancik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-inegol-verici",
+    "name": "Bursa İnegöl Vericisi",
+    "slug": "bursa-inegol-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-inegol",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-iznik-verici",
+    "name": "Bursa İznik Vericisi",
+    "slug": "bursa-iznik-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-iznik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-karacabey-verici",
+    "name": "Bursa Karacabey Vericisi",
+    "slug": "bursa-karacabey-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-karacabey",
     "elevationMeters": null,
     "notes": null
   },
@@ -31,34 +1543,4363 @@
     "name": "Bursa Merkez Vericisi",
     "slug": "bursa-merkez-verici",
     "cityId": "bursa",
-    "districtId": null,
+    "districtId": "bursa-merkez",
     "elevationMeters": null,
     "notes": null
   },
   {
-    "id": "istanbul-camlica",
-    "name": "İstanbul Çamlıca Vericisi",
-    "slug": "istanbul-camlica",
-    "cityId": "istanbul",
-    "districtId": "istanbul-uskudar",
-    "elevationMeters": 268,
-    "notes": "İstanbul'un Anadolu Yakası'ndaki başlıca radyo ve televizyon verici noktası."
+    "id": "bursa-mudanya-verici",
+    "name": "Bursa Mudanya Vericisi",
+    "slug": "bursa-mudanya-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-mudanya",
+    "elevationMeters": null,
+    "notes": null
   },
   {
-    "id": "izmir-kadifekale",
-    "name": "İzmir Kadifekale Vericisi",
-    "slug": "izmir-kadifekale",
+    "id": "bursa-mustafakemalpasa-verici",
+    "name": "Bursa Mustafakemalpaşa Vericisi",
+    "slug": "bursa-mustafakemalpasa-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-mustafakemalpasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-nilufer-verici",
+    "name": "Bursa Nilüfer Vericisi",
+    "slug": "bursa-nilufer-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-nilufer",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-orhaneli-verici",
+    "name": "Bursa Orhaneli Vericisi",
+    "slug": "bursa-orhaneli-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-orhaneli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-orhangazi-verici",
+    "name": "Bursa Orhangazi Vericisi",
+    "slug": "bursa-orhangazi-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-orhangazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-osmangazi-verici",
+    "name": "Bursa Osmangazi Vericisi",
+    "slug": "bursa-osmangazi-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-osmangazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-yenisehir-verici",
+    "name": "Bursa Yenişehir Vericisi",
+    "slug": "bursa-yenisehir-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-yenisehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-yildirim-verici",
+    "name": "Bursa Yıldırım Vericisi",
+    "slug": "bursa-yildirim-verici",
+    "cityId": "bursa",
+    "districtId": "bursa-yildirim",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-ayvacik-verici",
+    "name": "Çanakkale Ayvacık Vericisi",
+    "slug": "canakkale-ayvacik-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-ayvacik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-bayramic-verici",
+    "name": "Çanakkale Bayramiç Vericisi",
+    "slug": "canakkale-bayramic-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-bayramic",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-biga-verici",
+    "name": "Çanakkale Biga Vericisi",
+    "slug": "canakkale-biga-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-biga",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-bozcaada-verici",
+    "name": "Çanakkale Bozcaada Vericisi",
+    "slug": "canakkale-bozcaada-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-bozcaada",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-can-verici",
+    "name": "Çanakkale Çan Vericisi",
+    "slug": "canakkale-can-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-can",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-eceabat-verici",
+    "name": "Çanakkale Eceabat Vericisi",
+    "slug": "canakkale-eceabat-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-eceabat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-ezine-verici",
+    "name": "Çanakkale Ezine Vericisi",
+    "slug": "canakkale-ezine-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-ezine",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-gelibolu-verici",
+    "name": "Çanakkale Gelibolu Vericisi",
+    "slug": "canakkale-gelibolu-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-gelibolu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-gokceada-verici",
+    "name": "Çanakkale Gökçeada Vericisi",
+    "slug": "canakkale-gokceada-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-gokceada",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-merkez-verici",
+    "name": "Çanakkale Merkez Vericisi",
+    "slug": "canakkale-merkez-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "canakkale-yenice-verici",
+    "name": "Çanakkale Yenice Vericisi",
+    "slug": "canakkale-yenice-verici",
+    "cityId": "canakkale",
+    "districtId": "canakkale-yenice",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-atkaracalar-verici",
+    "name": "Çankırı Atkaracalar Vericisi",
+    "slug": "cankiri-atkaracalar-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-atkaracalar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-bayramoren-verici",
+    "name": "Çankırı Bayramören Vericisi",
+    "slug": "cankiri-bayramoren-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-bayramoren",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-cerkes-verici",
+    "name": "Çankırı Çerkeş Vericisi",
+    "slug": "cankiri-cerkes-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-cerkes",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-ilgaz-verici",
+    "name": "Çankırı Ilgaz Vericisi",
+    "slug": "cankiri-ilgaz-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-ilgaz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-kizilirmak-verici",
+    "name": "Çankırı Kızılırmak Vericisi",
+    "slug": "cankiri-kizilirmak-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-kizilirmak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-kursunlu-verici",
+    "name": "Çankırı Kurşunlu Vericisi",
+    "slug": "cankiri-kursunlu-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-kursunlu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "cankiri-merkez-verici",
+    "name": "Çankırı Merkez Vericisi",
+    "slug": "cankiri-merkez-verici",
+    "cityId": "cankiri",
+    "districtId": "cankiri-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-alaca-verici",
+    "name": "Çorum Alaca Vericisi",
+    "slug": "corum-alaca-verici",
+    "cityId": "corum",
+    "districtId": "corum-alaca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-bayat-verici",
+    "name": "Çorum Bayat Vericisi",
+    "slug": "corum-bayat-verici",
+    "cityId": "corum",
+    "districtId": "corum-bayat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-bogazkale-verici",
+    "name": "Çorum Boğazkale Vericisi",
+    "slug": "corum-bogazkale-verici",
+    "cityId": "corum",
+    "districtId": "corum-bogazkale",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-dodurga-verici",
+    "name": "Çorum Dodurga Vericisi",
+    "slug": "corum-dodurga-verici",
+    "cityId": "corum",
+    "districtId": "corum-dodurga",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-iskilip-verici",
+    "name": "Çorum İskilip Vericisi",
+    "slug": "corum-iskilip-verici",
+    "cityId": "corum",
+    "districtId": "corum-iskilip",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-kargi-verici",
+    "name": "Çorum Kargı Vericisi",
+    "slug": "corum-kargi-verici",
+    "cityId": "corum",
+    "districtId": "corum-kargi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-merkez-verici",
+    "name": "Çorum Merkez Vericisi",
+    "slug": "corum-merkez-verici",
+    "cityId": "corum",
+    "districtId": "corum-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-oguzlar-verici",
+    "name": "Çorum Oğuzlar Vericisi",
+    "slug": "corum-oguzlar-verici",
+    "cityId": "corum",
+    "districtId": "corum-oguzlar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-osmancik-verici",
+    "name": "Çorum Osmancık Vericisi",
+    "slug": "corum-osmancik-verici",
+    "cityId": "corum",
+    "districtId": "corum-osmancik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "corum-sungurlu-verici",
+    "name": "Çorum Sungurlu Vericisi",
+    "slug": "corum-sungurlu-verici",
+    "cityId": "corum",
+    "districtId": "corum-sungurlu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-acipayam-verici",
+    "name": "Denizli Acıpayam Vericisi",
+    "slug": "denizli-acipayam-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-acipayam",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-akkoy-verici",
+    "name": "Denizli Akköy Vericisi",
+    "slug": "denizli-akkoy-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-akkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-babadag-verici",
+    "name": "Denizli Babadağ Vericisi",
+    "slug": "denizli-babadag-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-babadag",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-cal-verici",
+    "name": "Denizli Çal Vericisi",
+    "slug": "denizli-cal-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-cal",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-cameli-verici",
+    "name": "Denizli Çameli Vericisi",
+    "slug": "denizli-cameli-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-cameli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-civril-verici",
+    "name": "Denizli Çivril Vericisi",
+    "slug": "denizli-civril-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-civril",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-kale-verici",
+    "name": "Denizli Kale Vericisi",
+    "slug": "denizli-kale-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-kale",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-merkez-verici",
+    "name": "Denizli Merkez Vericisi",
+    "slug": "denizli-merkez-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-saraykoy-verici",
+    "name": "Denizli Sarayköy Vericisi",
+    "slug": "denizli-saraykoy-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-saraykoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-serinhisar-verici",
+    "name": "Denizli Serinhisar Vericisi",
+    "slug": "denizli-serinhisar-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-serinhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "denizli-tavas-verici",
+    "name": "Denizli Tavas Vericisi",
+    "slug": "denizli-tavas-verici",
+    "cityId": "denizli",
+    "districtId": "denizli-tavas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-baglar-verici",
+    "name": "Diyarbakır Bağlar Vericisi",
+    "slug": "diyarbakir-baglar-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-baglar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-bismil-verici",
+    "name": "Diyarbakır Bismil Vericisi",
+    "slug": "diyarbakir-bismil-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-bismil",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-cermik-verici",
+    "name": "Diyarbakır Çermik Vericisi",
+    "slug": "diyarbakir-cermik-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-cermik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-cungus-verici",
+    "name": "Diyarbakır Çüngüş Vericisi",
+    "slug": "diyarbakir-cungus-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-cungus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-dicle-verici",
+    "name": "Diyarbakır Dicle Vericisi",
+    "slug": "diyarbakir-dicle-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-dicle",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-ergani-verici",
+    "name": "Diyarbakır Ergani Vericisi",
+    "slug": "diyarbakir-ergani-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-ergani",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-kayapinar-verici",
+    "name": "Diyarbakır Kayapınar Vericisi",
+    "slug": "diyarbakir-kayapinar-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-kayapinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-kulp-verici",
+    "name": "Diyarbakır Kulp Vericisi",
+    "slug": "diyarbakir-kulp-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-kulp",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-lice-verici",
+    "name": "Diyarbakır Lice Vericisi",
+    "slug": "diyarbakir-lice-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-lice",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-merkez-verici",
+    "name": "Diyarbakır Merkez Vericisi",
+    "slug": "diyarbakir-merkez-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-silvan-verici",
+    "name": "Diyarbakır Silvan Vericisi",
+    "slug": "diyarbakir-silvan-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-silvan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-sur-verici",
+    "name": "Diyarbakır Sur Vericisi",
+    "slug": "diyarbakir-sur-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-sur",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "diyarbakir-yenisehir-verici",
+    "name": "Diyarbakır Yenişehir Vericisi",
+    "slug": "diyarbakir-yenisehir-verici",
+    "cityId": "diyarbakir",
+    "districtId": "diyarbakir-yenisehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "duzce-akcakoca-verici",
+    "name": "Düzce Akçakoca Vericisi",
+    "slug": "duzce-akcakoca-verici",
+    "cityId": "duzce",
+    "districtId": "duzce-akcakoca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "duzce-merkez-verici",
+    "name": "Düzce Merkez Vericisi",
+    "slug": "duzce-merkez-verici",
+    "cityId": "duzce",
+    "districtId": "duzce-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "duzce-yigilca-verici",
+    "name": "Düzce Yığılca Vericisi",
+    "slug": "duzce-yigilca-verici",
+    "cityId": "duzce",
+    "districtId": "duzce-yigilca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-enez-verici",
+    "name": "Edirne Enez Vericisi",
+    "slug": "edirne-enez-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-enez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-ipsala-verici",
+    "name": "Edirne İpsala Vericisi",
+    "slug": "edirne-ipsala-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-ipsala",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-kesan-verici",
+    "name": "Edirne Keşan Vericisi",
+    "slug": "edirne-kesan-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-kesan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-lalapasa-verici",
+    "name": "Edirne Lalapaşa Vericisi",
+    "slug": "edirne-lalapasa-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-lalapasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-merkez-verici",
+    "name": "Edirne Merkez Vericisi",
+    "slug": "edirne-merkez-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "edirne-uzunkopru-verici",
+    "name": "Edirne Uzunköprü Vericisi",
+    "slug": "edirne-uzunkopru-verici",
+    "cityId": "edirne",
+    "districtId": "edirne-uzunkopru",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-agin-verici",
+    "name": "Elazığ Ağın Vericisi",
+    "slug": "elazig-agin-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-agin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-alacakaya-verici",
+    "name": "Elazığ Alacakaya Vericisi",
+    "slug": "elazig-alacakaya-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-alacakaya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-aricak-verici",
+    "name": "Elazığ Arıcak Vericisi",
+    "slug": "elazig-aricak-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-aricak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-baskil-verici",
+    "name": "Elazığ Baskil Vericisi",
+    "slug": "elazig-baskil-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-baskil",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-karakocan-verici",
+    "name": "Elazığ Karakoçan Vericisi",
+    "slug": "elazig-karakocan-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-karakocan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-keban-verici",
+    "name": "Elazığ Keban Vericisi",
+    "slug": "elazig-keban-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-keban",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-kovancilar-verici",
+    "name": "Elazığ Kovancılar Vericisi",
+    "slug": "elazig-kovancilar-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-kovancilar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-maden-verici",
+    "name": "Elazığ Maden Vericisi",
+    "slug": "elazig-maden-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-maden",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-merkez-verici",
+    "name": "Elazığ Merkez Vericisi",
+    "slug": "elazig-merkez-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "elazig-palu-verici",
+    "name": "Elazığ Palu Vericisi",
+    "slug": "elazig-palu-verici",
+    "cityId": "elazig",
+    "districtId": "elazig-palu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-cayirli-verici",
+    "name": "Erzincan Çayırlı Vericisi",
+    "slug": "erzincan-cayirli-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-cayirli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-ilic-verici",
+    "name": "Erzincan İliç Vericisi",
+    "slug": "erzincan-ilic-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-ilic",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-kemah-verici",
+    "name": "Erzincan Kemah Vericisi",
+    "slug": "erzincan-kemah-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-kemah",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-kemaliye-verici",
+    "name": "Erzincan Kemaliye Vericisi",
+    "slug": "erzincan-kemaliye-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-kemaliye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-merkez-verici",
+    "name": "Erzincan Merkez Vericisi",
+    "slug": "erzincan-merkez-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-otlukbeli-verici",
+    "name": "Erzincan Otlukbeli Vericisi",
+    "slug": "erzincan-otlukbeli-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-otlukbeli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-refahiye-verici",
+    "name": "Erzincan Refahiye Vericisi",
+    "slug": "erzincan-refahiye-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-refahiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzincan-tercan-verici",
+    "name": "Erzincan Tercan Vericisi",
+    "slug": "erzincan-tercan-verici",
+    "cityId": "erzincan",
+    "districtId": "erzincan-tercan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-askale-verici",
+    "name": "Erzurum Aşkale Vericisi",
+    "slug": "erzurum-askale-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-askale",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-aziziye-verici",
+    "name": "Erzurum Aziziye Vericisi",
+    "slug": "erzurum-aziziye-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-aziziye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-cat-verici",
+    "name": "Erzurum Çat Vericisi",
+    "slug": "erzurum-cat-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-cat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-hinis-verici",
+    "name": "Erzurum Hınıs Vericisi",
+    "slug": "erzurum-hinis-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-hinis",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-horasan-verici",
+    "name": "Erzurum Horasan Vericisi",
+    "slug": "erzurum-horasan-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-horasan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-ispir-verici",
+    "name": "Erzurum İspir Vericisi",
+    "slug": "erzurum-ispir-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-ispir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-karacoban-verici",
+    "name": "Erzurum Karaçoban Vericisi",
+    "slug": "erzurum-karacoban-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-karacoban",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-merkez-verici",
+    "name": "Erzurum Merkez Vericisi",
+    "slug": "erzurum-merkez-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-narman-verici",
+    "name": "Erzurum Narman Vericisi",
+    "slug": "erzurum-narman-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-narman",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-oltu-verici",
+    "name": "Erzurum Oltu Vericisi",
+    "slug": "erzurum-oltu-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-oltu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-olur-verici",
+    "name": "Erzurum Olur Vericisi",
+    "slug": "erzurum-olur-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-olur",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-palandoken-verici",
+    "name": "Erzurum Palandöken Vericisi",
+    "slug": "erzurum-palandoken-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-palandoken",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-pasinler-verici",
+    "name": "Erzurum Pasinler Vericisi",
+    "slug": "erzurum-pasinler-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-pasinler",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-pazaryolu-verici",
+    "name": "Erzurum Pazaryolu Vericisi",
+    "slug": "erzurum-pazaryolu-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-pazaryolu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-senkaya-verici",
+    "name": "Erzurum Şenkaya Vericisi",
+    "slug": "erzurum-senkaya-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-senkaya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-tortum-verici",
+    "name": "Erzurum Tortum Vericisi",
+    "slug": "erzurum-tortum-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-tortum",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-uzundere-verici",
+    "name": "Erzurum Uzundere Vericisi",
+    "slug": "erzurum-uzundere-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-uzundere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "erzurum-yakutiye-verici",
+    "name": "Erzurum Yakutiye Vericisi",
+    "slug": "erzurum-yakutiye-verici",
+    "cityId": "erzurum",
+    "districtId": "erzurum-yakutiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "eskisehir-merkez-verici",
+    "name": "Eskişehir Merkez Vericisi",
+    "slug": "eskisehir-merkez-verici",
+    "cityId": "eskisehir",
+    "districtId": "eskisehir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "eskisehir-mihalgazi-verici",
+    "name": "Eskişehir Mihalgazi Vericisi",
+    "slug": "eskisehir-mihalgazi-verici",
+    "cityId": "eskisehir",
+    "districtId": "eskisehir-mihalgazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "eskisehir-odunpazari-verici",
+    "name": "Eskişehir Odunpazarı Vericisi",
+    "slug": "eskisehir-odunpazari-verici",
+    "cityId": "eskisehir",
+    "districtId": "eskisehir-odunpazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "eskisehir-sivrihisar-verici",
+    "name": "Eskişehir Sivrihisar Vericisi",
+    "slug": "eskisehir-sivrihisar-verici",
+    "cityId": "eskisehir",
+    "districtId": "eskisehir-sivrihisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "eskisehir-tepebasi-verici",
+    "name": "Eskişehir Tepebaşı Vericisi",
+    "slug": "eskisehir-tepebasi-verici",
+    "cityId": "eskisehir",
+    "districtId": "eskisehir-tepebasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-islahiye-verici",
+    "name": "Gaziantep İslahiye Vericisi",
+    "slug": "gaziantep-islahiye-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-islahiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-merkez-verici",
+    "name": "Gaziantep Merkez Vericisi",
+    "slug": "gaziantep-merkez-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-nizip-verici",
+    "name": "Gaziantep Nizip Vericisi",
+    "slug": "gaziantep-nizip-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-nizip",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-nurdagi-verici",
+    "name": "Gaziantep Nurdağı Vericisi",
+    "slug": "gaziantep-nurdagi-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-nurdagi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-sahinbey-verici",
+    "name": "Gaziantep Şahinbey Vericisi",
+    "slug": "gaziantep-sahinbey-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-sahinbey",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-sehitkamil-verici",
+    "name": "Gaziantep Şehitkamil Vericisi",
+    "slug": "gaziantep-sehitkamil-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-sehitkamil",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gaziantep-yavuzeli-verici",
+    "name": "Gaziantep Yavuzeli Vericisi",
+    "slug": "gaziantep-yavuzeli-verici",
+    "cityId": "gaziantep",
+    "districtId": "gaziantep-yavuzeli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-alucra-verici",
+    "name": "Giresun Alucra Vericisi",
+    "slug": "giresun-alucra-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-alucra",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-bulancak-verici",
+    "name": "Giresun Bulancak Vericisi",
+    "slug": "giresun-bulancak-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-bulancak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-canakci-verici",
+    "name": "Giresun Çanakçı Vericisi",
+    "slug": "giresun-canakci-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-canakci",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-dereli-verici",
+    "name": "Giresun Dereli Vericisi",
+    "slug": "giresun-dereli-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-dereli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-dogankent-verici",
+    "name": "Giresun Doğankent Vericisi",
+    "slug": "giresun-dogankent-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-dogankent",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-espiye-verici",
+    "name": "Giresun Espiye Vericisi",
+    "slug": "giresun-espiye-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-espiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-eynesil-verici",
+    "name": "Giresun Eynesil Vericisi",
+    "slug": "giresun-eynesil-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-eynesil",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-gorele-verici",
+    "name": "Giresun Görele Vericisi",
+    "slug": "giresun-gorele-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-gorele",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-guce-verici",
+    "name": "Giresun Güce Vericisi",
+    "slug": "giresun-guce-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-guce",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-kesap-verici",
+    "name": "Giresun Keşap Vericisi",
+    "slug": "giresun-kesap-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-kesap",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-merkez-verici",
+    "name": "Giresun Merkez Vericisi",
+    "slug": "giresun-merkez-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-sebinkarahisar-verici",
+    "name": "Giresun Şebinkarahisar Vericisi",
+    "slug": "giresun-sebinkarahisar-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-sebinkarahisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-tirebolu-verici",
+    "name": "Giresun Tirebolu Vericisi",
+    "slug": "giresun-tirebolu-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-tirebolu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "giresun-yaglidere-verici",
+    "name": "Giresun Yağlıdere Vericisi",
+    "slug": "giresun-yaglidere-verici",
+    "cityId": "giresun",
+    "districtId": "giresun-yaglidere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-kelkit-verici",
+    "name": "Gümüşhane Kelkit Vericisi",
+    "slug": "gumushane-kelkit-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-kelkit",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-kose-verici",
+    "name": "Gümüşhane Köse Vericisi",
+    "slug": "gumushane-kose-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-kose",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-kurtun-verici",
+    "name": "Gümüşhane Kürtün Vericisi",
+    "slug": "gumushane-kurtun-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-kurtun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-merkez-verici",
+    "name": "Gümüşhane Merkez Vericisi",
+    "slug": "gumushane-merkez-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-siran-verici",
+    "name": "Gümüşhane Şiran Vericisi",
+    "slug": "gumushane-siran-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-siran",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "gumushane-torul-verici",
+    "name": "Gümüşhane Torul Vericisi",
+    "slug": "gumushane-torul-verici",
+    "cityId": "gumushane",
+    "districtId": "gumushane-torul",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hakkari-cukurca-verici",
+    "name": "Hakkari Çukurca Vericisi",
+    "slug": "hakkari-cukurca-verici",
+    "cityId": "hakkari",
+    "districtId": "hakkari-cukurca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hakkari-merkez-verici",
+    "name": "Hakkari Merkez Vericisi",
+    "slug": "hakkari-merkez-verici",
+    "cityId": "hakkari",
+    "districtId": "hakkari-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hakkari-semdinli-verici",
+    "name": "Hakkari Şemdinli Vericisi",
+    "slug": "hakkari-semdinli-verici",
+    "cityId": "hakkari",
+    "districtId": "hakkari-semdinli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hakkari-yuksekova-verici",
+    "name": "Hakkari Yüksekova Vericisi",
+    "slug": "hakkari-yuksekova-verici",
+    "cityId": "hakkari",
+    "districtId": "hakkari-yuksekova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-altinozu-verici",
+    "name": "Hatay Altınözü Vericisi",
+    "slug": "hatay-altinozu-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-altinozu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-antakya-verici",
+    "name": "Hatay Antakya Vericisi",
+    "slug": "hatay-antakya-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-antakya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-dortyol-verici",
+    "name": "Hatay Dörtyol Vericisi",
+    "slug": "hatay-dortyol-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-dortyol",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-hassa-verici",
+    "name": "Hatay Hassa Vericisi",
+    "slug": "hatay-hassa-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-hassa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-iskenderun-verici",
+    "name": "Hatay İskenderun Vericisi",
+    "slug": "hatay-iskenderun-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-iskenderun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-kirikhan-verici",
+    "name": "Hatay Kırıkhan Vericisi",
+    "slug": "hatay-kirikhan-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-kirikhan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-reyhanli-verici",
+    "name": "Hatay Reyhanlı Vericisi",
+    "slug": "hatay-reyhanli-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-reyhanli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-samandag-verici",
+    "name": "Hatay Samandağ Vericisi",
+    "slug": "hatay-samandag-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-samandag",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "hatay-yayladagi-verici",
+    "name": "Hatay Yayladağı Vericisi",
+    "slug": "hatay-yayladagi-verici",
+    "cityId": "hatay",
+    "districtId": "hatay-yayladagi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "igdir-aralik-verici",
+    "name": "Iğdır Aralık Vericisi",
+    "slug": "igdir-aralik-verici",
+    "cityId": "igdir",
+    "districtId": "igdir-aralik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "igdir-merkez-verici",
+    "name": "Iğdır Merkez Vericisi",
+    "slug": "igdir-merkez-verici",
+    "cityId": "igdir",
+    "districtId": "igdir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "igdir-tuzluca-verici",
+    "name": "Iğdır Tuzluca Vericisi",
+    "slug": "igdir-tuzluca-verici",
+    "cityId": "igdir",
+    "districtId": "igdir-tuzluca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-aksu-verici",
+    "name": "Isparta Aksu Vericisi",
+    "slug": "isparta-aksu-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-aksu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-egirdir-verici",
+    "name": "Isparta Eğirdir Vericisi",
+    "slug": "isparta-egirdir-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-egirdir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-keciborlu-verici",
+    "name": "Isparta Keçiborlu Vericisi",
+    "slug": "isparta-keciborlu-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-keciborlu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-merkez-verici",
+    "name": "Isparta Merkez Vericisi",
+    "slug": "isparta-merkez-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-sarkikaraagac-verici",
+    "name": "Isparta Şarkikaraağaç Vericisi",
+    "slug": "isparta-sarkikaraagac-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-sarkikaraagac",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-senirkent-verici",
+    "name": "Isparta Senirkent Vericisi",
+    "slug": "isparta-senirkent-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-senirkent",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-sutculer-verici",
+    "name": "Isparta Sütçüler Vericisi",
+    "slug": "isparta-sutculer-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-sutculer",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "isparta-yalvac-verici",
+    "name": "Isparta Yalvaç Vericisi",
+    "slug": "isparta-yalvac-verici",
+    "cityId": "isparta",
+    "districtId": "isparta-yalvac",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-adalar-verici",
+    "name": "İstanbul Adalar Vericisi",
+    "slug": "istanbul-adalar-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-adalar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-avcilar-verici",
+    "name": "İstanbul Avcılar Vericisi",
+    "slug": "istanbul-avcilar-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-avcilar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-bagcilar-verici",
+    "name": "İstanbul Bağcılar Vericisi",
+    "slug": "istanbul-bagcilar-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-bagcilar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-bayrampasa-verici",
+    "name": "İstanbul Bayrampaşa Vericisi",
+    "slug": "istanbul-bayrampasa-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-bayrampasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-beykoz-verici",
+    "name": "İstanbul Beykoz Vericisi",
+    "slug": "istanbul-beykoz-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-beykoz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-buyukcekmece-verici",
+    "name": "İstanbul Büyükçekmece Vericisi",
+    "slug": "istanbul-buyukcekmece-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-buyukcekmece",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-catalca-verici",
+    "name": "İstanbul Çatalca Vericisi",
+    "slug": "istanbul-catalca-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-catalca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-eyup-verici",
+    "name": "İstanbul Eyüp Vericisi",
+    "slug": "istanbul-eyup-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-eyup",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-gaziosmanpasa-verici",
+    "name": "İstanbul Gaziosmanpaşa Vericisi",
+    "slug": "istanbul-gaziosmanpasa-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-gaziosmanpasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-kagithane-verici",
+    "name": "İstanbul Kağıthane Vericisi",
+    "slug": "istanbul-kagithane-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-kagithane",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-sariyer-verici",
+    "name": "İstanbul Sarıyer Vericisi",
+    "slug": "istanbul-sariyer-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-sariyer",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-sile-verici",
+    "name": "İstanbul Şile Vericisi",
+    "slug": "istanbul-sile-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-sile",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-silivri-verici",
+    "name": "İstanbul Silivri Vericisi",
+    "slug": "istanbul-silivri-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-silivri",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-sisli-verici",
+    "name": "İstanbul Şişli Vericisi",
+    "slug": "istanbul-sisli-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-sisli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-uskudar-verici",
+    "name": "İstanbul Üsküdar Vericisi",
+    "slug": "istanbul-uskudar-verici",
+    "cityId": "istanbul",
+    "districtId": "istanbul-uskudar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-aliaga-verici",
+    "name": "İzmir Aliağa Vericisi",
+    "slug": "izmir-aliaga-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-aliaga",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-balcova-verici",
+    "name": "İzmir Balçova Vericisi",
+    "slug": "izmir-balcova-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-balcova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-bayrakli-verici",
+    "name": "İzmir Bayraklı Vericisi",
+    "slug": "izmir-bayrakli-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-bayrakli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-bergama-verici",
+    "name": "İzmir Bergama Vericisi",
+    "slug": "izmir-bergama-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-bergama",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-bornova-verici",
+    "name": "İzmir Bornova Vericisi",
+    "slug": "izmir-bornova-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-bornova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-buca-verici",
+    "name": "İzmir Buca Vericisi",
+    "slug": "izmir-buca-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-buca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-cesme-verici",
+    "name": "İzmir Çeşme Vericisi",
+    "slug": "izmir-cesme-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-cesme",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-dikili-verici",
+    "name": "İzmir Dikili Vericisi",
+    "slug": "izmir-dikili-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-dikili",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-foca-verici",
+    "name": "İzmir Foça Vericisi",
+    "slug": "izmir-foca-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-foca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-karaburun-verici",
+    "name": "İzmir Karaburun Vericisi",
+    "slug": "izmir-karaburun-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-karaburun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-karsiyaka-verici",
+    "name": "İzmir Karşıyaka Vericisi",
+    "slug": "izmir-karsiyaka-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-karsiyaka",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-kemalpasa-verici",
+    "name": "İzmir Kemalpaşa Vericisi",
+    "slug": "izmir-kemalpasa-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-kemalpasa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-kiraz-verici",
+    "name": "İzmir Kiraz Vericisi",
+    "slug": "izmir-kiraz-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-kiraz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-konak-verici",
+    "name": "İzmir Konak Vericisi",
+    "slug": "izmir-konak-verici",
     "cityId": "izmir",
     "districtId": "izmir-konak",
     "elevationMeters": null,
-    "notes": "İzmir merkez yayınları için kullanılan verici tepe noktalarından biri."
+    "notes": null
+  },
+  {
+    "id": "izmir-menderes-verici",
+    "name": "İzmir Menderes Vericisi",
+    "slug": "izmir-menderes-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-menderes",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-menemen-verici",
+    "name": "İzmir Menemen Vericisi",
+    "slug": "izmir-menemen-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-menemen",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-merkez-verici",
+    "name": "İzmir Merkez Vericisi",
+    "slug": "izmir-merkez-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-odemis-verici",
+    "name": "İzmir Ödemiş Vericisi",
+    "slug": "izmir-odemis-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-odemis",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-seferihisar-verici",
+    "name": "İzmir Seferihisar Vericisi",
+    "slug": "izmir-seferihisar-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-seferihisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-selcuk-verici",
+    "name": "İzmir Selçuk Vericisi",
+    "slug": "izmir-selcuk-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-selcuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "izmir-tire-verici",
+    "name": "İzmir Tire Vericisi",
+    "slug": "izmir-tire-verici",
+    "cityId": "izmir",
+    "districtId": "izmir-tire",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-afsin-verici",
+    "name": "Kahramanmaraş Afşin Vericisi",
+    "slug": "kahramanmaras-afsin-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-afsin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-andirin-verici",
+    "name": "Kahramanmaraş Andırın Vericisi",
+    "slug": "kahramanmaras-andirin-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-andirin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-caglayancerit-verici",
+    "name": "Kahramanmaraş Çağlayancerit Vericisi",
+    "slug": "kahramanmaras-caglayancerit-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-caglayancerit",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-ekinozu-verici",
+    "name": "Kahramanmaraş Ekinözü Vericisi",
+    "slug": "kahramanmaras-ekinozu-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-ekinozu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-elbistan-verici",
+    "name": "Kahramanmaraş Elbistan Vericisi",
+    "slug": "kahramanmaras-elbistan-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-elbistan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-goksun-verici",
+    "name": "Kahramanmaraş Göksun Vericisi",
+    "slug": "kahramanmaras-goksun-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-goksun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-merkez-verici",
+    "name": "Kahramanmaraş Merkez Vericisi",
+    "slug": "kahramanmaras-merkez-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-nurhak-verici",
+    "name": "Kahramanmaraş Nurhak Vericisi",
+    "slug": "kahramanmaras-nurhak-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-nurhak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-pazarcik-verici",
+    "name": "Kahramanmaraş Pazarcık Vericisi",
+    "slug": "kahramanmaras-pazarcik-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-pazarcik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kahramanmaras-turkoglu-verici",
+    "name": "Kahramanmaraş Türkoğlu Vericisi",
+    "slug": "kahramanmaras-turkoglu-verici",
+    "cityId": "kahramanmaras",
+    "districtId": "kahramanmaras-turkoglu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-eflani-verici",
+    "name": "Karabük Eflani Vericisi",
+    "slug": "karabuk-eflani-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-eflani",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-eskipazar-verici",
+    "name": "Karabük Eskipazar Vericisi",
+    "slug": "karabuk-eskipazar-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-eskipazar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-merkez-verici",
+    "name": "Karabük Merkez Vericisi",
+    "slug": "karabuk-merkez-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-ovacik-verici",
+    "name": "Karabük Ovacık Vericisi",
+    "slug": "karabuk-ovacik-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-ovacik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-safranbolu-verici",
+    "name": "Karabük Safranbolu Vericisi",
+    "slug": "karabuk-safranbolu-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-safranbolu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karabuk-yenice-verici",
+    "name": "Karabük Yenice Vericisi",
+    "slug": "karabuk-yenice-verici",
+    "cityId": "karabuk",
+    "districtId": "karabuk-yenice",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karaman-basyayla-verici",
+    "name": "Karaman Başyayla Vericisi",
+    "slug": "karaman-basyayla-verici",
+    "cityId": "karaman",
+    "districtId": "karaman-basyayla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karaman-ermenek-verici",
+    "name": "Karaman Ermenek Vericisi",
+    "slug": "karaman-ermenek-verici",
+    "cityId": "karaman",
+    "districtId": "karaman-ermenek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karaman-merkez-verici",
+    "name": "Karaman Merkez Vericisi",
+    "slug": "karaman-merkez-verici",
+    "cityId": "karaman",
+    "districtId": "karaman-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "karaman-sariveliler-verici",
+    "name": "Karaman Sarıveliler Vericisi",
+    "slug": "karaman-sariveliler-verici",
+    "cityId": "karaman",
+    "districtId": "karaman-sariveliler",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kars-akyaka-verici",
+    "name": "Kars Akyaka Vericisi",
+    "slug": "kars-akyaka-verici",
+    "cityId": "kars",
+    "districtId": "kars-akyaka",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kars-digor-verici",
+    "name": "Kars Digor Vericisi",
+    "slug": "kars-digor-verici",
+    "cityId": "kars",
+    "districtId": "kars-digor",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kars-kagizman-verici",
+    "name": "Kars Kağızman Vericisi",
+    "slug": "kars-kagizman-verici",
+    "cityId": "kars",
+    "districtId": "kars-kagizman",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kars-merkez-verici",
+    "name": "Kars Merkez Vericisi",
+    "slug": "kars-merkez-verici",
+    "cityId": "kars",
+    "districtId": "kars-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kars-sarikamis-verici",
+    "name": "Kars Sarıkamış Vericisi",
+    "slug": "kars-sarikamis-verici",
+    "cityId": "kars",
+    "districtId": "kars-sarikamis",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-abana-verici",
+    "name": "Kastamonu Abana Vericisi",
+    "slug": "kastamonu-abana-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-abana",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-arac-verici",
+    "name": "Kastamonu Araç Vericisi",
+    "slug": "kastamonu-arac-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-arac",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-azdavay-verici",
+    "name": "Kastamonu Azdavay Vericisi",
+    "slug": "kastamonu-azdavay-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-azdavay",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-bozkurt-verici",
+    "name": "Kastamonu Bozkurt Vericisi",
+    "slug": "kastamonu-bozkurt-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-bozkurt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-catalzeytin-verici",
+    "name": "Kastamonu Çatalzeytin Vericisi",
+    "slug": "kastamonu-catalzeytin-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-catalzeytin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-cide-verici",
+    "name": "Kastamonu Cide Vericisi",
+    "slug": "kastamonu-cide-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-cide",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-daday-verici",
+    "name": "Kastamonu Daday Vericisi",
+    "slug": "kastamonu-daday-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-daday",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-doganyurt-verici",
+    "name": "Kastamonu Doğanyurt Vericisi",
+    "slug": "kastamonu-doganyurt-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-doganyurt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-hanonu-verici",
+    "name": "Kastamonu Hanönü Vericisi",
+    "slug": "kastamonu-hanonu-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-hanonu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-ihsangazi-verici",
+    "name": "Kastamonu İhsangazi Vericisi",
+    "slug": "kastamonu-ihsangazi-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-ihsangazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-inebolu-verici",
+    "name": "Kastamonu İnebolu Vericisi",
+    "slug": "kastamonu-inebolu-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-inebolu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-kure-verici",
+    "name": "Kastamonu Küre Vericisi",
+    "slug": "kastamonu-kure-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-kure",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-merkez-verici",
+    "name": "Kastamonu Merkez Vericisi",
+    "slug": "kastamonu-merkez-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-pinarbasi-verici",
+    "name": "Kastamonu Pınarbaşı Vericisi",
+    "slug": "kastamonu-pinarbasi-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-pinarbasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-senpazar-verici",
+    "name": "Kastamonu Şenpazar Vericisi",
+    "slug": "kastamonu-senpazar-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-senpazar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-taskopru-verici",
+    "name": "Kastamonu Taşköprü Vericisi",
+    "slug": "kastamonu-taskopru-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-taskopru",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kastamonu-tosya-verici",
+    "name": "Kastamonu Tosya Vericisi",
+    "slug": "kastamonu-tosya-verici",
+    "cityId": "kastamonu",
+    "districtId": "kastamonu-tosya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-akkisla-verici",
+    "name": "Kayseri Akkışla Vericisi",
+    "slug": "kayseri-akkisla-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-akkisla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-bunyan-verici",
+    "name": "Kayseri Bünyan Vericisi",
+    "slug": "kayseri-bunyan-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-bunyan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-develi-verici",
+    "name": "Kayseri Develi Vericisi",
+    "slug": "kayseri-develi-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-develi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-felahiye-verici",
+    "name": "Kayseri Felahiye Vericisi",
+    "slug": "kayseri-felahiye-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-felahiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-kocasinan-verici",
+    "name": "Kayseri Kocasinan Vericisi",
+    "slug": "kayseri-kocasinan-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-kocasinan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-melikgazi-verici",
+    "name": "Kayseri Melikgazi Vericisi",
+    "slug": "kayseri-melikgazi-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-melikgazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-merkez-verici",
+    "name": "Kayseri Merkez Vericisi",
+    "slug": "kayseri-merkez-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-ozvatan-verici",
+    "name": "Kayseri Özvatan Vericisi",
+    "slug": "kayseri-ozvatan-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-ozvatan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-pinarbasi-verici",
+    "name": "Kayseri Pınarbaşı Vericisi",
+    "slug": "kayseri-pinarbasi-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-pinarbasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-sariz-verici",
+    "name": "Kayseri Sarız Vericisi",
+    "slug": "kayseri-sariz-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-sariz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-tomarza-verici",
+    "name": "Kayseri Tomarza Vericisi",
+    "slug": "kayseri-tomarza-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-tomarza",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-yahyali-verici",
+    "name": "Kayseri Yahyalı Vericisi",
+    "slug": "kayseri-yahyali-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-yahyali",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kayseri-yesilhisar-verici",
+    "name": "Kayseri Yeşilhisar Vericisi",
+    "slug": "kayseri-yesilhisar-verici",
+    "cityId": "kayseri",
+    "districtId": "kayseri-yesilhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kilis-merkez-verici",
+    "name": "Kilis Merkez Vericisi",
+    "slug": "kilis-merkez-verici",
+    "cityId": "kilis",
+    "districtId": "kilis-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-baliseyh-verici",
+    "name": "Kırıkkale Balışeyh Vericisi",
+    "slug": "kirikkale-baliseyh-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-baliseyh",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-delice-verici",
+    "name": "Kırıkkale Delice Vericisi",
+    "slug": "kirikkale-delice-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-delice",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-karakecili-verici",
+    "name": "Kırıkkale Karakeçili Vericisi",
+    "slug": "kirikkale-karakecili-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-karakecili",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-keskin-verici",
+    "name": "Kırıkkale Keskin Vericisi",
+    "slug": "kirikkale-keskin-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-keskin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-merkez-verici",
+    "name": "Kırıkkale Merkez Vericisi",
+    "slug": "kirikkale-merkez-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirikkale-sulakyurt-verici",
+    "name": "Kırıkkale Sulakyurt Vericisi",
+    "slug": "kirikkale-sulakyurt-verici",
+    "cityId": "kirikkale",
+    "districtId": "kirikkale-sulakyurt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirklareli-babaeski-verici",
+    "name": "Kırklareli Babaeski Vericisi",
+    "slug": "kirklareli-babaeski-verici",
+    "cityId": "kirklareli",
+    "districtId": "kirklareli-babaeski",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirklareli-demirkoy-verici",
+    "name": "Kırklareli Demirköy Vericisi",
+    "slug": "kirklareli-demirkoy-verici",
+    "cityId": "kirklareli",
+    "districtId": "kirklareli-demirkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirklareli-luleburgaz-verici",
+    "name": "Kırklareli Lüleburgaz Vericisi",
+    "slug": "kirklareli-luleburgaz-verici",
+    "cityId": "kirklareli",
+    "districtId": "kirklareli-luleburgaz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirklareli-merkez-verici",
+    "name": "Kırklareli Merkez Vericisi",
+    "slug": "kirklareli-merkez-verici",
+    "cityId": "kirklareli",
+    "districtId": "kirklareli-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirklareli-vize-verici",
+    "name": "Kırklareli Vize Vericisi",
+    "slug": "kirklareli-vize-verici",
+    "cityId": "kirklareli",
+    "districtId": "kirklareli-vize",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirsehir-akpinar-verici",
+    "name": "Kırşehir Akpınar Vericisi",
+    "slug": "kirsehir-akpinar-verici",
+    "cityId": "kirsehir",
+    "districtId": "kirsehir-akpinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirsehir-kaman-verici",
+    "name": "Kırşehir Kaman Vericisi",
+    "slug": "kirsehir-kaman-verici",
+    "cityId": "kirsehir",
+    "districtId": "kirsehir-kaman",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kirsehir-merkez-verici",
+    "name": "Kırşehir Merkez Vericisi",
+    "slug": "kirsehir-merkez-verici",
+    "cityId": "kirsehir",
+    "districtId": "kirsehir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-basiskele-verici",
+    "name": "Kocaeli Başiskele Vericisi",
+    "slug": "kocaeli-basiskele-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-basiskele",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-derince-verici",
+    "name": "Kocaeli Derince Vericisi",
+    "slug": "kocaeli-derince-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-derince",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-gebze-verici",
+    "name": "Kocaeli Gebze Vericisi",
+    "slug": "kocaeli-gebze-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-gebze",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-golcuk-verici",
+    "name": "Kocaeli Gölcük Vericisi",
+    "slug": "kocaeli-golcuk-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-golcuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-izmit-verici",
+    "name": "Kocaeli İzmit Vericisi",
+    "slug": "kocaeli-izmit-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-izmit",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-kandira-verici",
+    "name": "Kocaeli Kandıra Vericisi",
+    "slug": "kocaeli-kandira-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-kandira",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-karamursel-verici",
+    "name": "Kocaeli Karamürsel Vericisi",
+    "slug": "kocaeli-karamursel-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-karamursel",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-kartepe-verici",
+    "name": "Kocaeli Kartepe Vericisi",
+    "slug": "kocaeli-kartepe-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-kartepe",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kocaeli-merkez-verici",
+    "name": "Kocaeli Merkez Vericisi",
+    "slug": "kocaeli-merkez-verici",
+    "cityId": "kocaeli",
+    "districtId": "kocaeli-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-aksehir-verici",
+    "name": "Konya Akşehir Vericisi",
+    "slug": "konya-aksehir-verici",
+    "cityId": "konya",
+    "districtId": "konya-aksehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-beysehir-verici",
+    "name": "Konya Beyşehir Vericisi",
+    "slug": "konya-beysehir-verici",
+    "cityId": "konya",
+    "districtId": "konya-beysehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-bozkir-verici",
+    "name": "Konya Bozkır Vericisi",
+    "slug": "konya-bozkir-verici",
+    "cityId": "konya",
+    "districtId": "konya-bozkir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-cihanbeyli-verici",
+    "name": "Konya Cihanbeyli Vericisi",
+    "slug": "konya-cihanbeyli-verici",
+    "cityId": "konya",
+    "districtId": "konya-cihanbeyli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-cumra-verici",
+    "name": "Konya Çumra Vericisi",
+    "slug": "konya-cumra-verici",
+    "cityId": "konya",
+    "districtId": "konya-cumra",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-derbent-verici",
+    "name": "Konya Derbent Vericisi",
+    "slug": "konya-derbent-verici",
+    "cityId": "konya",
+    "districtId": "konya-derbent",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-derebucak-verici",
+    "name": "Konya Derebucak Vericisi",
+    "slug": "konya-derebucak-verici",
+    "cityId": "konya",
+    "districtId": "konya-derebucak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-doganhisar-verici",
+    "name": "Konya Doğanhisar Vericisi",
+    "slug": "konya-doganhisar-verici",
+    "cityId": "konya",
+    "districtId": "konya-doganhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-eregli-verici",
+    "name": "Konya Ereğli Vericisi",
+    "slug": "konya-eregli-verici",
+    "cityId": "konya",
+    "districtId": "konya-eregli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-hadim-verici",
+    "name": "Konya Hadım Vericisi",
+    "slug": "konya-hadim-verici",
+    "cityId": "konya",
+    "districtId": "konya-hadim",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-halkapinar-verici",
+    "name": "Konya Halkapınar Vericisi",
+    "slug": "konya-halkapinar-verici",
+    "cityId": "konya",
+    "districtId": "konya-halkapinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-huyuk-verici",
+    "name": "Konya Hüyük Vericisi",
+    "slug": "konya-huyuk-verici",
+    "cityId": "konya",
+    "districtId": "konya-huyuk",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-ilgin-verici",
+    "name": "Konya Ilgın Vericisi",
+    "slug": "konya-ilgin-verici",
+    "cityId": "konya",
+    "districtId": "konya-ilgin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-kadinhani-verici",
+    "name": "Konya Kadınhanı Vericisi",
+    "slug": "konya-kadinhani-verici",
+    "cityId": "konya",
+    "districtId": "konya-kadinhani",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-karapinar-verici",
+    "name": "Konya Karapınar Vericisi",
+    "slug": "konya-karapinar-verici",
+    "cityId": "konya",
+    "districtId": "konya-karapinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-karatay-verici",
+    "name": "Konya Karatay Vericisi",
+    "slug": "konya-karatay-verici",
+    "cityId": "konya",
+    "districtId": "konya-karatay",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-kulu-verici",
+    "name": "Konya Kulu Vericisi",
+    "slug": "konya-kulu-verici",
+    "cityId": "konya",
+    "districtId": "konya-kulu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-meram-verici",
+    "name": "Konya Meram Vericisi",
+    "slug": "konya-meram-verici",
+    "cityId": "konya",
+    "districtId": "konya-meram",
+    "elevationMeters": null,
+    "notes": null
   },
   {
     "id": "konya-merkez-verici",
     "name": "Konya Merkez Vericisi",
     "slug": "konya-merkez-verici",
     "cityId": "konya",
-    "districtId": null,
+    "districtId": "konya-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-sarayonu-verici",
+    "name": "Konya Sarayönü Vericisi",
+    "slug": "konya-sarayonu-verici",
+    "cityId": "konya",
+    "districtId": "konya-sarayonu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-selcuklu-verici",
+    "name": "Konya Selçuklu Vericisi",
+    "slug": "konya-selcuklu-verici",
+    "cityId": "konya",
+    "districtId": "konya-selcuklu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-seydisehir-verici",
+    "name": "Konya Seydişehir Vericisi",
+    "slug": "konya-seydisehir-verici",
+    "cityId": "konya",
+    "districtId": "konya-seydisehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-tuzlukcu-verici",
+    "name": "Konya Tuzlukçu Vericisi",
+    "slug": "konya-tuzlukcu-verici",
+    "cityId": "konya",
+    "districtId": "konya-tuzlukcu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "konya-yunak-verici",
+    "name": "Konya Yunak Vericisi",
+    "slug": "konya-yunak-verici",
+    "cityId": "konya",
+    "districtId": "konya-yunak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-cavdarhisar-verici",
+    "name": "Kütahya Çavdarhisar Vericisi",
+    "slug": "kutahya-cavdarhisar-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-cavdarhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-emet-verici",
+    "name": "Kütahya Emet Vericisi",
+    "slug": "kutahya-emet-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-emet",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-gediz-verici",
+    "name": "Kütahya Gediz Vericisi",
+    "slug": "kutahya-gediz-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-gediz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-hisarcik-verici",
+    "name": "Kütahya Hisarcık Vericisi",
+    "slug": "kutahya-hisarcik-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-hisarcik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-merkez-verici",
+    "name": "Kütahya Merkez Vericisi",
+    "slug": "kutahya-merkez-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-pazarlar-verici",
+    "name": "Kütahya Pazarlar Vericisi",
+    "slug": "kutahya-pazarlar-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-pazarlar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-saphane-verici",
+    "name": "Kütahya Şaphane Vericisi",
+    "slug": "kutahya-saphane-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-saphane",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-simav-verici",
+    "name": "Kütahya Simav Vericisi",
+    "slug": "kutahya-simav-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-simav",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "kutahya-tavsanli-verici",
+    "name": "Kütahya Tavşanlı Vericisi",
+    "slug": "kutahya-tavsanli-verici",
+    "cityId": "kutahya",
+    "districtId": "kutahya-tavsanli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-arapkir-verici",
+    "name": "Malatya Arapkir Vericisi",
+    "slug": "malatya-arapkir-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-arapkir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-darende-verici",
+    "name": "Malatya Darende Vericisi",
+    "slug": "malatya-darende-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-darende",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-dogansehir-verici",
+    "name": "Malatya Doğanşehir Vericisi",
+    "slug": "malatya-dogansehir-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-dogansehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-doganyol-verici",
+    "name": "Malatya Doğanyol Vericisi",
+    "slug": "malatya-doganyol-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-doganyol",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-hekimhan-verici",
+    "name": "Malatya Hekimhan Vericisi",
+    "slug": "malatya-hekimhan-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-hekimhan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-kuluncak-verici",
+    "name": "Malatya Kuluncak Vericisi",
+    "slug": "malatya-kuluncak-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-kuluncak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-merkez-verici",
+    "name": "Malatya Merkez Vericisi",
+    "slug": "malatya-merkez-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-poturge-verici",
+    "name": "Malatya Pötürge Vericisi",
+    "slug": "malatya-poturge-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-poturge",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "malatya-yesilyurt-verici",
+    "name": "Malatya Yeşilyurt Vericisi",
+    "slug": "malatya-yesilyurt-verici",
+    "cityId": "malatya",
+    "districtId": "malatya-yesilyurt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-akhisar-verici",
+    "name": "Manisa Akhisar Vericisi",
+    "slug": "manisa-akhisar-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-akhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-alasehir-verici",
+    "name": "Manisa Alaşehir Vericisi",
+    "slug": "manisa-alasehir-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-alasehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-demirci-verici",
+    "name": "Manisa Demirci Vericisi",
+    "slug": "manisa-demirci-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-demirci",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-gordes-verici",
+    "name": "Manisa Gördes Vericisi",
+    "slug": "manisa-gordes-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-gordes",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-kirkagac-verici",
+    "name": "Manisa Kırkağaç Vericisi",
+    "slug": "manisa-kirkagac-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-kirkagac",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-koprubasi-verici",
+    "name": "Manisa Köprübaşı Vericisi",
+    "slug": "manisa-koprubasi-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-koprubasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-kula-verici",
+    "name": "Manisa Kula Vericisi",
+    "slug": "manisa-kula-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-kula",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-salihli-verici",
+    "name": "Manisa Salihli Vericisi",
+    "slug": "manisa-salihli-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-salihli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-sehzadeler-verici",
+    "name": "Manisa Şehzadeler Vericisi",
+    "slug": "manisa-sehzadeler-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-sehzadeler",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-selendi-verici",
+    "name": "Manisa Selendi Vericisi",
+    "slug": "manisa-selendi-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-selendi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-soma-verici",
+    "name": "Manisa Soma Vericisi",
+    "slug": "manisa-soma-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-soma",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "manisa-turgutlu-verici",
+    "name": "Manisa Turgutlu Vericisi",
+    "slug": "manisa-turgutlu-verici",
+    "cityId": "manisa",
+    "districtId": "manisa-turgutlu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-derik-verici",
+    "name": "Mardin Derik Vericisi",
+    "slug": "mardin-derik-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-derik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-kiziltepe-verici",
+    "name": "Mardin Kızıltepe Vericisi",
+    "slug": "mardin-kiziltepe-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-kiziltepe",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-merkez-verici",
+    "name": "Mardin Merkez Vericisi",
+    "slug": "mardin-merkez-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-midyat-verici",
+    "name": "Mardin Midyat Vericisi",
+    "slug": "mardin-midyat-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-midyat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-nusaybin-verici",
+    "name": "Mardin Nusaybin Vericisi",
+    "slug": "mardin-nusaybin-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-nusaybin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mardin-savur-verici",
+    "name": "Mardin Savur Vericisi",
+    "slug": "mardin-savur-verici",
+    "cityId": "mardin",
+    "districtId": "mardin-savur",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-akdeniz-verici",
+    "name": "Mersin Akdeniz Vericisi",
+    "slug": "mersin-akdeniz-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-akdeniz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-anamur-verici",
+    "name": "Mersin Anamur Vericisi",
+    "slug": "mersin-anamur-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-anamur",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-aydincik-verici",
+    "name": "Mersin Aydıncık Vericisi",
+    "slug": "mersin-aydincik-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-aydincik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-bozyazi-verici",
+    "name": "Mersin Bozyazı Vericisi",
+    "slug": "mersin-bozyazi-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-bozyazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-erdemli-verici",
+    "name": "Mersin Erdemli Vericisi",
+    "slug": "mersin-erdemli-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-erdemli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-gulnar-verici",
+    "name": "Mersin Gülnar Vericisi",
+    "slug": "mersin-gulnar-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-gulnar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-merkez-verici",
+    "name": "Mersin Merkez Vericisi",
+    "slug": "mersin-merkez-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-mezitli-verici",
+    "name": "Mersin Mezitli Vericisi",
+    "slug": "mersin-mezitli-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-mezitli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-mut-verici",
+    "name": "Mersin Mut Vericisi",
+    "slug": "mersin-mut-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-mut",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-silifke-verici",
+    "name": "Mersin Silifke Vericisi",
+    "slug": "mersin-silifke-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-silifke",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-tarsus-verici",
+    "name": "Mersin Tarsus Vericisi",
+    "slug": "mersin-tarsus-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-tarsus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-toroslar-verici",
+    "name": "Mersin Toroslar Vericisi",
+    "slug": "mersin-toroslar-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-toroslar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mersin-yenisehir-verici",
+    "name": "Mersin Yenişehir Vericisi",
+    "slug": "mersin-yenisehir-verici",
+    "cityId": "mersin",
+    "districtId": "mersin-yenisehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-bodrum-verici",
+    "name": "Muğla Bodrum Vericisi",
+    "slug": "mugla-bodrum-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-bodrum",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-dalaman-verici",
+    "name": "Muğla Dalaman Vericisi",
+    "slug": "mugla-dalaman-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-dalaman",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-datca-verici",
+    "name": "Muğla Datça Vericisi",
+    "slug": "mugla-datca-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-datca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-fethiye-verici",
+    "name": "Muğla Fethiye Vericisi",
+    "slug": "mugla-fethiye-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-fethiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-koycegiz-verici",
+    "name": "Muğla Köyceğiz Vericisi",
+    "slug": "mugla-koycegiz-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-koycegiz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-marmaris-verici",
+    "name": "Muğla Marmaris Vericisi",
+    "slug": "mugla-marmaris-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-marmaris",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-merkez-verici",
+    "name": "Muğla Merkez Vericisi",
+    "slug": "mugla-merkez-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-milas-verici",
+    "name": "Muğla Milas Vericisi",
+    "slug": "mugla-milas-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-milas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-ortaca-verici",
+    "name": "Muğla Ortaca Vericisi",
+    "slug": "mugla-ortaca-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-ortaca",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mugla-yatagan-verici",
+    "name": "Muğla Yatağan Vericisi",
+    "slug": "mugla-yatagan-verici",
+    "cityId": "mugla",
+    "districtId": "mugla-yatagan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mus-bulanik-verici",
+    "name": "Muş Bulanık Vericisi",
+    "slug": "mus-bulanik-verici",
+    "cityId": "mus",
+    "districtId": "mus-bulanik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mus-malazgirt-verici",
+    "name": "Muş Malazgirt Vericisi",
+    "slug": "mus-malazgirt-verici",
+    "cityId": "mus",
+    "districtId": "mus-malazgirt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mus-merkez-verici",
+    "name": "Muş Merkez Vericisi",
+    "slug": "mus-merkez-verici",
+    "cityId": "mus",
+    "districtId": "mus-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "mus-varto-verici",
+    "name": "Muş Varto Vericisi",
+    "slug": "mus-varto-verici",
+    "cityId": "mus",
+    "districtId": "mus-varto",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nevsehir-avanos-verici",
+    "name": "Nevşehir Avanos Vericisi",
+    "slug": "nevsehir-avanos-verici",
+    "cityId": "nevsehir",
+    "districtId": "nevsehir-avanos",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nevsehir-gulsehir-verici",
+    "name": "Nevşehir Gülşehir Vericisi",
+    "slug": "nevsehir-gulsehir-verici",
+    "cityId": "nevsehir",
+    "districtId": "nevsehir-gulsehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nevsehir-kozakli-verici",
+    "name": "Nevşehir Kozaklı Vericisi",
+    "slug": "nevsehir-kozakli-verici",
+    "cityId": "nevsehir",
+    "districtId": "nevsehir-kozakli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nevsehir-merkez-verici",
+    "name": "Nevşehir Merkez Vericisi",
+    "slug": "nevsehir-merkez-verici",
+    "cityId": "nevsehir",
+    "districtId": "nevsehir-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nevsehir-urgup-verici",
+    "name": "Nevşehir Ürgüp Vericisi",
+    "slug": "nevsehir-urgup-verici",
+    "cityId": "nevsehir",
+    "districtId": "nevsehir-urgup",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nigde-bor-verici",
+    "name": "Niğde Bor Vericisi",
+    "slug": "nigde-bor-verici",
+    "cityId": "nigde",
+    "districtId": "nigde-bor",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nigde-camardi-verici",
+    "name": "Niğde Çamardı Vericisi",
+    "slug": "nigde-camardi-verici",
+    "cityId": "nigde",
+    "districtId": "nigde-camardi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nigde-ciftlik-verici",
+    "name": "Niğde Çiftlik Vericisi",
+    "slug": "nigde-ciftlik-verici",
+    "cityId": "nigde",
+    "districtId": "nigde-ciftlik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nigde-merkez-verici",
+    "name": "Niğde Merkez Vericisi",
+    "slug": "nigde-merkez-verici",
+    "cityId": "nigde",
+    "districtId": "nigde-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "nigde-ulukisla-verici",
+    "name": "Niğde Ulukışla Vericisi",
+    "slug": "nigde-ulukisla-verici",
+    "cityId": "nigde",
+    "districtId": "nigde-ulukisla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-akkus-verici",
+    "name": "Ordu Akkuş Vericisi",
+    "slug": "ordu-akkus-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-akkus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-aybasti-verici",
+    "name": "Ordu Aybastı Vericisi",
+    "slug": "ordu-aybasti-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-aybasti",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-catalpinar-verici",
+    "name": "Ordu Çatalpınar Vericisi",
+    "slug": "ordu-catalpinar-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-catalpinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-fatsa-verici",
+    "name": "Ordu Fatsa Vericisi",
+    "slug": "ordu-fatsa-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-fatsa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-golkoy-verici",
+    "name": "Ordu Gölköy Vericisi",
+    "slug": "ordu-golkoy-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-golkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-ikizce-verici",
+    "name": "Ordu İkizce Vericisi",
+    "slug": "ordu-ikizce-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-ikizce",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-kabatas-verici",
+    "name": "Ordu Kabataş Vericisi",
+    "slug": "ordu-kabatas-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-kabatas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-kumru-verici",
+    "name": "Ordu Kumru Vericisi",
+    "slug": "ordu-kumru-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-kumru",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-merkez-verici",
+    "name": "Ordu Merkez Vericisi",
+    "slug": "ordu-merkez-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-mesudiye-verici",
+    "name": "Ordu Mesudiye Vericisi",
+    "slug": "ordu-mesudiye-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-mesudiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ordu-unye-verici",
+    "name": "Ordu Ünye Vericisi",
+    "slug": "ordu-unye-verici",
+    "cityId": "ordu",
+    "districtId": "ordu-unye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "osmaniye-bahce-verici",
+    "name": "Osmaniye Bahçe Vericisi",
+    "slug": "osmaniye-bahce-verici",
+    "cityId": "osmaniye",
+    "districtId": "osmaniye-bahce",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "osmaniye-duzici-verici",
+    "name": "Osmaniye Düziçi Vericisi",
+    "slug": "osmaniye-duzici-verici",
+    "cityId": "osmaniye",
+    "districtId": "osmaniye-duzici",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "osmaniye-hasanbeyli-verici",
+    "name": "Osmaniye Hasanbeyli Vericisi",
+    "slug": "osmaniye-hasanbeyli-verici",
+    "cityId": "osmaniye",
+    "districtId": "osmaniye-hasanbeyli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "osmaniye-kadirli-verici",
+    "name": "Osmaniye Kadirli Vericisi",
+    "slug": "osmaniye-kadirli-verici",
+    "cityId": "osmaniye",
+    "districtId": "osmaniye-kadirli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "osmaniye-merkez-verici",
+    "name": "Osmaniye Merkez Vericisi",
+    "slug": "osmaniye-merkez-verici",
+    "cityId": "osmaniye",
+    "districtId": "osmaniye-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-ardesen-verici",
+    "name": "Rize Ardeşen Vericisi",
+    "slug": "rize-ardesen-verici",
+    "cityId": "rize",
+    "districtId": "rize-ardesen",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-camlihemsin-verici",
+    "name": "Rize Çamlıhemşin Vericisi",
+    "slug": "rize-camlihemsin-verici",
+    "cityId": "rize",
+    "districtId": "rize-camlihemsin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-derepazari-verici",
+    "name": "Rize Derepazarı Vericisi",
+    "slug": "rize-derepazari-verici",
+    "cityId": "rize",
+    "districtId": "rize-derepazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-guneysu-verici",
+    "name": "Rize Güneysu Vericisi",
+    "slug": "rize-guneysu-verici",
+    "cityId": "rize",
+    "districtId": "rize-guneysu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-hemsin-verici",
+    "name": "Rize Hemşin Vericisi",
+    "slug": "rize-hemsin-verici",
+    "cityId": "rize",
+    "districtId": "rize-hemsin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-ikizdere-verici",
+    "name": "Rize İkizdere Vericisi",
+    "slug": "rize-ikizdere-verici",
+    "cityId": "rize",
+    "districtId": "rize-ikizdere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-kalkandere-verici",
+    "name": "Rize Kalkandere Vericisi",
+    "slug": "rize-kalkandere-verici",
+    "cityId": "rize",
+    "districtId": "rize-kalkandere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-merkez-verici",
+    "name": "Rize Merkez Vericisi",
+    "slug": "rize-merkez-verici",
+    "cityId": "rize",
+    "districtId": "rize-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "rize-pazar-verici",
+    "name": "Rize Pazar Vericisi",
+    "slug": "rize-pazar-verici",
+    "cityId": "rize",
+    "districtId": "rize-pazar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-adapazari-verici",
+    "name": "Sakarya Adapazarı Vericisi",
+    "slug": "sakarya-adapazari-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-adapazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-akyazi-verici",
+    "name": "Sakarya Akyazı Vericisi",
+    "slug": "sakarya-akyazi-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-akyazi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-geyve-verici",
+    "name": "Sakarya Geyve Vericisi",
+    "slug": "sakarya-geyve-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-geyve",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-hendek-verici",
+    "name": "Sakarya Hendek Vericisi",
+    "slug": "sakarya-hendek-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-hendek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-karasu-verici",
+    "name": "Sakarya Karasu Vericisi",
+    "slug": "sakarya-karasu-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-karasu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-kocaali-verici",
+    "name": "Sakarya Kocaali Vericisi",
+    "slug": "sakarya-kocaali-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-kocaali",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-pamukova-verici",
+    "name": "Sakarya Pamukova Vericisi",
+    "slug": "sakarya-pamukova-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-pamukova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sakarya-tarakli-verici",
+    "name": "Sakarya Taraklı Vericisi",
+    "slug": "sakarya-tarakli-verici",
+    "cityId": "sakarya",
+    "districtId": "sakarya-tarakli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-alacam-verici",
+    "name": "Samsun Alaçam Vericisi",
+    "slug": "samsun-alacam-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-alacam",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-atakum-verici",
+    "name": "Samsun Atakum Vericisi",
+    "slug": "samsun-atakum-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-atakum",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-ayvacik-verici",
+    "name": "Samsun Ayvacık Vericisi",
+    "slug": "samsun-ayvacik-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-ayvacik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-bafra-verici",
+    "name": "Samsun Bafra Vericisi",
+    "slug": "samsun-bafra-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-bafra",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-canik-verici",
+    "name": "Samsun Canik Vericisi",
+    "slug": "samsun-canik-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-canik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-carsamba-verici",
+    "name": "Samsun Çarşamba Vericisi",
+    "slug": "samsun-carsamba-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-carsamba",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-havza-verici",
+    "name": "Samsun Havza Vericisi",
+    "slug": "samsun-havza-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-havza",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-ilkadim-verici",
+    "name": "Samsun İlkadım Vericisi",
+    "slug": "samsun-ilkadim-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-ilkadim",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-ladik-verici",
+    "name": "Samsun Ladik Vericisi",
+    "slug": "samsun-ladik-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-ladik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-merkez-verici",
+    "name": "Samsun Merkez Vericisi",
+    "slug": "samsun-merkez-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-terme-verici",
+    "name": "Samsun Terme Vericisi",
+    "slug": "samsun-terme-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-terme",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "samsun-vezirkopru-verici",
+    "name": "Samsun Vezirköprü Vericisi",
+    "slug": "samsun-vezirkopru-verici",
+    "cityId": "samsun",
+    "districtId": "samsun-vezirkopru",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-akcakale-verici",
+    "name": "Şanlıurfa Akçakale Vericisi",
+    "slug": "sanliurfa-akcakale-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-akcakale",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-birecik-verici",
+    "name": "Şanlıurfa Birecik Vericisi",
+    "slug": "sanliurfa-birecik-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-birecik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-bozova-verici",
+    "name": "Şanlıurfa Bozova Vericisi",
+    "slug": "sanliurfa-bozova-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-bozova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-ceylanpinar-verici",
+    "name": "Şanlıurfa Ceylanpınar Vericisi",
+    "slug": "sanliurfa-ceylanpinar-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-ceylanpinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-halfeti-verici",
+    "name": "Şanlıurfa Halfeti Vericisi",
+    "slug": "sanliurfa-halfeti-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-halfeti",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-merkez-verici",
+    "name": "Şanlıurfa Merkez Vericisi",
+    "slug": "sanliurfa-merkez-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-siverek-verici",
+    "name": "Şanlıurfa Siverek Vericisi",
+    "slug": "sanliurfa-siverek-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-siverek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-suruc-verici",
+    "name": "Şanlıurfa Suruç Vericisi",
+    "slug": "sanliurfa-suruc-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-suruc",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sanliurfa-viransehir-verici",
+    "name": "Şanlıurfa Viranşehir Vericisi",
+    "slug": "sanliurfa-viransehir-verici",
+    "cityId": "sanliurfa",
+    "districtId": "sanliurfa-viransehir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "siirt-aydinlar-verici",
+    "name": "Siirt Aydınlar Vericisi",
+    "slug": "siirt-aydinlar-verici",
+    "cityId": "siirt",
+    "districtId": "siirt-aydinlar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "siirt-baykan-verici",
+    "name": "Siirt Baykan Vericisi",
+    "slug": "siirt-baykan-verici",
+    "cityId": "siirt",
+    "districtId": "siirt-baykan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "siirt-eruh-verici",
+    "name": "Siirt Eruh Vericisi",
+    "slug": "siirt-eruh-verici",
+    "cityId": "siirt",
+    "districtId": "siirt-eruh",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "siirt-merkez-verici",
+    "name": "Siirt Merkez Vericisi",
+    "slug": "siirt-merkez-verici",
+    "cityId": "siirt",
+    "districtId": "siirt-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "siirt-pervari-verici",
+    "name": "Siirt Pervari Vericisi",
+    "slug": "siirt-pervari-verici",
+    "cityId": "siirt",
+    "districtId": "siirt-pervari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-ayancik-verici",
+    "name": "Sinop Ayancık Vericisi",
+    "slug": "sinop-ayancik-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-ayancik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-boyabat-verici",
+    "name": "Sinop Boyabat Vericisi",
+    "slug": "sinop-boyabat-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-boyabat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-dikmen-verici",
+    "name": "Sinop Dikmen Vericisi",
+    "slug": "sinop-dikmen-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-dikmen",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-duragan-verici",
+    "name": "Sinop Durağan Vericisi",
+    "slug": "sinop-duragan-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-duragan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-erfelek-verici",
+    "name": "Sinop Erfelek Vericisi",
+    "slug": "sinop-erfelek-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-erfelek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-merkez-verici",
+    "name": "Sinop Merkez Vericisi",
+    "slug": "sinop-merkez-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sinop-turkeli-verici",
+    "name": "Sinop Türkeli Vericisi",
+    "slug": "sinop-turkeli-verici",
+    "cityId": "sinop",
+    "districtId": "sinop-turkeli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-beytussebap-verici",
+    "name": "Şırnak Beytüşşebap Vericisi",
+    "slug": "sirnak-beytussebap-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-beytussebap",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-cizre-verici",
+    "name": "Şırnak Cizre Vericisi",
+    "slug": "sirnak-cizre-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-cizre",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-idil-verici",
+    "name": "Şırnak İdil Vericisi",
+    "slug": "sirnak-idil-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-idil",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-merkez-verici",
+    "name": "Şırnak Merkez Vericisi",
+    "slug": "sirnak-merkez-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-silopi-verici",
+    "name": "Şırnak Silopi Vericisi",
+    "slug": "sirnak-silopi-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-silopi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sirnak-uludere-verici",
+    "name": "Şırnak Uludere Vericisi",
+    "slug": "sirnak-uludere-verici",
+    "cityId": "sirnak",
+    "districtId": "sirnak-uludere",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-altinyayla-verici",
+    "name": "Sivas Altınyayla Vericisi",
+    "slug": "sivas-altinyayla-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-altinyayla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-divrigi-verici",
+    "name": "Sivas Divriği Vericisi",
+    "slug": "sivas-divrigi-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-divrigi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-dogansar-verici",
+    "name": "Sivas Doğanşar Vericisi",
+    "slug": "sivas-dogansar-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-dogansar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-gemerek-verici",
+    "name": "Sivas Gemerek Vericisi",
+    "slug": "sivas-gemerek-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-gemerek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-gurun-verici",
+    "name": "Sivas Gürün Vericisi",
+    "slug": "sivas-gurun-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-gurun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-imranli-verici",
+    "name": "Sivas İmranlı Vericisi",
+    "slug": "sivas-imranli-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-imranli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-kangal-verici",
+    "name": "Sivas Kangal Vericisi",
+    "slug": "sivas-kangal-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-kangal",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-koyulhisar-verici",
+    "name": "Sivas Koyulhisar Vericisi",
+    "slug": "sivas-koyulhisar-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-koyulhisar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-merkez-verici",
+    "name": "Sivas Merkez Vericisi",
+    "slug": "sivas-merkez-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-sarkisla-verici",
+    "name": "Sivas Şarkışla Vericisi",
+    "slug": "sivas-sarkisla-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-sarkisla",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-susehri-verici",
+    "name": "Sivas Suşehri Vericisi",
+    "slug": "sivas-susehri-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-susehri",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-yildizeli-verici",
+    "name": "Sivas Yıldızeli Vericisi",
+    "slug": "sivas-yildizeli-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-yildizeli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "sivas-zara-verici",
+    "name": "Sivas Zara Vericisi",
+    "slug": "sivas-zara-verici",
+    "cityId": "sivas",
+    "districtId": "sivas-zara",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-cerkezkoy-verici",
+    "name": "Tekirdağ Çerkezköy Vericisi",
+    "slug": "tekirdag-cerkezkoy-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-cerkezkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-corlu-verici",
+    "name": "Tekirdağ Çorlu Vericisi",
+    "slug": "tekirdag-corlu-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-corlu",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-malkara-verici",
+    "name": "Tekirdağ Malkara Vericisi",
+    "slug": "tekirdag-malkara-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-malkara",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-marmaraereglisi-verici",
+    "name": "Tekirdağ Marmaraereğlisi Vericisi",
+    "slug": "tekirdag-marmaraereglisi-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-marmaraereglisi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-merkez-verici",
+    "name": "Tekirdağ Merkez Vericisi",
+    "slug": "tekirdag-merkez-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tekirdag-sarkoy-verici",
+    "name": "Tekirdağ Şarköy Vericisi",
+    "slug": "tekirdag-sarkoy-verici",
+    "cityId": "tekirdag",
+    "districtId": "tekirdag-sarkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-almus-verici",
+    "name": "Tokat Almus Vericisi",
+    "slug": "tokat-almus-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-almus",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-artova-verici",
+    "name": "Tokat Artova Vericisi",
+    "slug": "tokat-artova-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-artova",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-basciftlik-verici",
+    "name": "Tokat Başçiftlik Vericisi",
+    "slug": "tokat-basciftlik-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-basciftlik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-erbaa-verici",
+    "name": "Tokat Erbaa Vericisi",
+    "slug": "tokat-erbaa-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-erbaa",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-merkez-verici",
+    "name": "Tokat Merkez Vericisi",
+    "slug": "tokat-merkez-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-niksar-verici",
+    "name": "Tokat Niksar Vericisi",
+    "slug": "tokat-niksar-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-niksar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-pazar-verici",
+    "name": "Tokat Pazar Vericisi",
+    "slug": "tokat-pazar-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-pazar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-resadiye-verici",
+    "name": "Tokat Reşadiye Vericisi",
+    "slug": "tokat-resadiye-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-resadiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-turhal-verici",
+    "name": "Tokat Turhal Vericisi",
+    "slug": "tokat-turhal-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-turhal",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tokat-zile-verici",
+    "name": "Tokat Zile Vericisi",
+    "slug": "tokat-zile-verici",
+    "cityId": "tokat",
+    "districtId": "tokat-zile",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-akcaabat-verici",
+    "name": "Trabzon Akçaabat Vericisi",
+    "slug": "trabzon-akcaabat-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-akcaabat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-arakli-verici",
+    "name": "Trabzon Araklı Vericisi",
+    "slug": "trabzon-arakli-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-arakli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-arsin-verici",
+    "name": "Trabzon Arsin Vericisi",
+    "slug": "trabzon-arsin-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-arsin",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-carsibasi-verici",
+    "name": "Trabzon Çarşıbaşı Vericisi",
+    "slug": "trabzon-carsibasi-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-carsibasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-caykara-verici",
+    "name": "Trabzon Çaykara Vericisi",
+    "slug": "trabzon-caykara-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-caykara",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-dernekpazari-verici",
+    "name": "Trabzon Dernekpazarı Vericisi",
+    "slug": "trabzon-dernekpazari-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-dernekpazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-duzkoy-verici",
+    "name": "Trabzon Düzköy Vericisi",
+    "slug": "trabzon-duzkoy-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-duzkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-hayrat-verici",
+    "name": "Trabzon Hayrat Vericisi",
+    "slug": "trabzon-hayrat-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-hayrat",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-koprubasi-verici",
+    "name": "Trabzon Köprübaşı Vericisi",
+    "slug": "trabzon-koprubasi-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-koprubasi",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-macka-verici",
+    "name": "Trabzon Maçka Vericisi",
+    "slug": "trabzon-macka-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-macka",
     "elevationMeters": null,
     "notes": null
   },
@@ -67,7 +5908,376 @@
     "name": "Trabzon Merkez Vericisi",
     "slug": "trabzon-merkez-verici",
     "cityId": "trabzon",
-    "districtId": null,
+    "districtId": "trabzon-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-salpazari-verici",
+    "name": "Trabzon Şalpazarı Vericisi",
+    "slug": "trabzon-salpazari-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-salpazari",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-surmene-verici",
+    "name": "Trabzon Sürmene Vericisi",
+    "slug": "trabzon-surmene-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-surmene",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-tonya-verici",
+    "name": "Trabzon Tonya Vericisi",
+    "slug": "trabzon-tonya-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-tonya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-vakfikebir-verici",
+    "name": "Trabzon Vakfıkebir Vericisi",
+    "slug": "trabzon-vakfikebir-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-vakfikebir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-yomra-verici",
+    "name": "Trabzon Yomra Vericisi",
+    "slug": "trabzon-yomra-verici",
+    "cityId": "trabzon",
+    "districtId": "trabzon-yomra",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tunceli-mazgirt-verici",
+    "name": "Tunceli Mazgirt Vericisi",
+    "slug": "tunceli-mazgirt-verici",
+    "cityId": "tunceli",
+    "districtId": "tunceli-mazgirt",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tunceli-merkez-verici",
+    "name": "Tunceli Merkez Vericisi",
+    "slug": "tunceli-merkez-verici",
+    "cityId": "tunceli",
+    "districtId": "tunceli-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tunceli-ovacik-verici",
+    "name": "Tunceli Ovacık Vericisi",
+    "slug": "tunceli-ovacik-verici",
+    "cityId": "tunceli",
+    "districtId": "tunceli-ovacik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "tunceli-pulumur-verici",
+    "name": "Tunceli Pülümür Vericisi",
+    "slug": "tunceli-pulumur-verici",
+    "cityId": "tunceli",
+    "districtId": "tunceli-pulumur",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "usak-banaz-verici",
+    "name": "Uşak Banaz Vericisi",
+    "slug": "usak-banaz-verici",
+    "cityId": "usak",
+    "districtId": "usak-banaz",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "usak-merkez-verici",
+    "name": "Uşak Merkez Vericisi",
+    "slug": "usak-merkez-verici",
+    "cityId": "usak",
+    "districtId": "usak-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-bahcesaray-verici",
+    "name": "Van Bahçesaray Vericisi",
+    "slug": "van-bahcesaray-verici",
+    "cityId": "van",
+    "districtId": "van-bahcesaray",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-baskale-verici",
+    "name": "Van Başkale Vericisi",
+    "slug": "van-baskale-verici",
+    "cityId": "van",
+    "districtId": "van-baskale",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-caldiran-verici",
+    "name": "Van Çaldıran Vericisi",
+    "slug": "van-caldiran-verici",
+    "cityId": "van",
+    "districtId": "van-caldiran",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-catak-verici",
+    "name": "Van Çatak Vericisi",
+    "slug": "van-catak-verici",
+    "cityId": "van",
+    "districtId": "van-catak",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-ercis-verici",
+    "name": "Van Erciş Vericisi",
+    "slug": "van-ercis-verici",
+    "cityId": "van",
+    "districtId": "van-ercis",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-gevas-verici",
+    "name": "Van Gevaş Vericisi",
+    "slug": "van-gevas-verici",
+    "cityId": "van",
+    "districtId": "van-gevas",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-gurpinar-verici",
+    "name": "Van Gürpınar Vericisi",
+    "slug": "van-gurpinar-verici",
+    "cityId": "van",
+    "districtId": "van-gurpinar",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-merkez-verici",
+    "name": "Van Merkez Vericisi",
+    "slug": "van-merkez-verici",
+    "cityId": "van",
+    "districtId": "van-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-muradiye-verici",
+    "name": "Van Muradiye Vericisi",
+    "slug": "van-muradiye-verici",
+    "cityId": "van",
+    "districtId": "van-muradiye",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "van-ozalp-verici",
+    "name": "Van Özalp Vericisi",
+    "slug": "van-ozalp-verici",
+    "cityId": "van",
+    "districtId": "van-ozalp",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yalova-merkez-verici",
+    "name": "Yalova Merkez Vericisi",
+    "slug": "yalova-merkez-verici",
+    "cityId": "yalova",
+    "districtId": "yalova-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-akdagmadeni-verici",
+    "name": "Yozgat Akdağmadeni Vericisi",
+    "slug": "yozgat-akdagmadeni-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-akdagmadeni",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-aydincik-verici",
+    "name": "Yozgat Aydıncık Vericisi",
+    "slug": "yozgat-aydincik-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-aydincik",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-bogazliyan-verici",
+    "name": "Yozgat Boğazlıyan Vericisi",
+    "slug": "yozgat-bogazliyan-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-bogazliyan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-candir-verici",
+    "name": "Yozgat Çandır Vericisi",
+    "slug": "yozgat-candir-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-candir",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-cayiralan-verici",
+    "name": "Yozgat Çayıralan Vericisi",
+    "slug": "yozgat-cayiralan-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-cayiralan",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-cekerek-verici",
+    "name": "Yozgat Çekerek Vericisi",
+    "slug": "yozgat-cekerek-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-cekerek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-kadisehri-verici",
+    "name": "Yozgat Kadışehri Vericisi",
+    "slug": "yozgat-kadisehri-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-kadisehri",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-merkez-verici",
+    "name": "Yozgat Merkez Vericisi",
+    "slug": "yozgat-merkez-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-merkez",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-saraykent-verici",
+    "name": "Yozgat Saraykent Vericisi",
+    "slug": "yozgat-saraykent-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-saraykent",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-sarikaya-verici",
+    "name": "Yozgat Sarıkaya Vericisi",
+    "slug": "yozgat-sarikaya-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-sarikaya",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-sefaatli-verici",
+    "name": "Yozgat Şefaatli Vericisi",
+    "slug": "yozgat-sefaatli-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-sefaatli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-sorgun-verici",
+    "name": "Yozgat Sorgun Vericisi",
+    "slug": "yozgat-sorgun-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-sorgun",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-yenifakili-verici",
+    "name": "Yozgat Yenifakılı Vericisi",
+    "slug": "yozgat-yenifakili-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-yenifakili",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "yozgat-yerkoy-verici",
+    "name": "Yozgat Yerköy Vericisi",
+    "slug": "yozgat-yerkoy-verici",
+    "cityId": "yozgat",
+    "districtId": "yozgat-yerkoy",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "zonguldak-alapli-verici",
+    "name": "Zonguldak Alaplı Vericisi",
+    "slug": "zonguldak-alapli-verici",
+    "cityId": "zonguldak",
+    "districtId": "zonguldak-alapli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "zonguldak-caycuma-verici",
+    "name": "Zonguldak Çaycuma Vericisi",
+    "slug": "zonguldak-caycuma-verici",
+    "cityId": "zonguldak",
+    "districtId": "zonguldak-caycuma",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "zonguldak-devrek-verici",
+    "name": "Zonguldak Devrek Vericisi",
+    "slug": "zonguldak-devrek-verici",
+    "cityId": "zonguldak",
+    "districtId": "zonguldak-devrek",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "zonguldak-krd-eregli-verici",
+    "name": "Zonguldak Krd. Ereğli Vericisi",
+    "slug": "zonguldak-krd-eregli-verici",
+    "cityId": "zonguldak",
+    "districtId": "zonguldak-krd-eregli",
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "zonguldak-merkez-verici",
+    "name": "Zonguldak Merkez Vericisi",
+    "slug": "zonguldak-merkez-verici",
+    "cityId": "zonguldak",
+    "districtId": "zonguldak-merkez",
     "elevationMeters": null,
     "notes": null
   }

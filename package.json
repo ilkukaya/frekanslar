@@ -24,7 +24,8 @@
     "data:build-search": "tsx scripts/data-build-search.ts",
     "data:check-links": "tsx scripts/data-check-links.ts",
     "data:report": "tsx scripts/data-report.ts",
-    "data:diff": "tsx scripts/data-diff.ts"
+    "data:diff": "tsx scripts/data-diff.ts",
+    "data:import-rtuk": "tsx scripts/import/build-rtuk-data.ts"
   },
   "dependencies": {
     "@lucide/astro": "^1.28.0",

@@ -1,5 +1,160 @@
 [
   {
+    "id": "0-sifir-tv",
+    "name": "0 SIFIR TV",
+    "slug": "0-sifir-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "0 SIFIR TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BURAK REKLAM YAYINCILIK VE PAZARLAMA ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "burak-reklam-yayincilik-ve-pazarlama-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "24",
+    "name": "24",
+    "slug": "24",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "24, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. DİNAMİK RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 2 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "dinamik-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "26",
+    "name": "26",
+    "slug": "26",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "26, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL YİRMİALTI TELEVİZYON REKLAMCILIK TANITIM HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "eskisehir",
+    "owner": "kanal-yirmialti-televizyon-reklamcilik-tanitim-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "55tv",
+    "name": "55TV",
+    "slug": "55tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "55TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BAŞAK KÜLTÜR SANAT YAYIN VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "samsun",
+    "owner": "basak-kultur-sanat-yayin-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "a-haber",
+    "name": "A HABER",
+    "slug": "a-haber",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "A HABER, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TURKUVAZ MEDYA YAYIN HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 58 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "haber"
+    ],
+    "headquarters": "istanbul",
+    "owner": "turkuvaz-medya-yayin-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
     "id": "a-spor",
     "name": "A Spor",
     "slug": "a-spor",
@@ -33,68 +188,2947 @@
     "seoDescription": null
   },
   {
+    "id": "ada-tv",
+    "name": "ADA TV",
+    "slug": "ada-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ADA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. 2001 RADYO TELEVİZYON REKLAMCILIK İLETİŞİM HİZMETLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "aydin",
+    "owner": "2001-radyo-televizyon-reklamcilik-iletisim-hizmetleri-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ahi-tv",
+    "name": "AHİ TV",
+    "slug": "ahi-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "AHİ TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. AHİ İLETİŞİM VE YAYINCILIK HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kirsehir",
+    "owner": "ahi-iletisim-ve-yayincilik-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "alanya-tv",
+    "name": "ALANYA TV",
+    "slug": "alanya-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ALANYA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ALANYA RADYO TV REKLAMCILIK FİLİMCİLİK HİZMETLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "antalya",
+    "owner": "alanya-radyo-tv-reklamcilik-filimcilik-hizmetleri-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "alican",
+    "name": "ALİCAN",
+    "slug": "alican",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ALİCAN, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL ALİCAN RADYO VE TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "antalya",
+    "owner": "kanal-alican-radyo-ve-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "amed-tv",
+    "name": "AMED TV",
+    "slug": "amed-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "AMED TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. AKTÜEL RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "diyarbakir",
+    "owner": "aktuel-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "antep-mega-tv",
+    "name": "ANTEP MEGA TV",
+    "slug": "antep-mega-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ANTEP MEGA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ANTEP MEDYA YAYINCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "gaziantep",
+    "owner": "antep-medya-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "art",
+    "name": "ART",
+    "slug": "art",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ART, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. AMASYA RADYO TELEVİZYONCULUK VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "amasya",
+    "owner": "amasya-radyo-televizyonculuk-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "art-tv",
+    "name": "ART TV",
+    "slug": "art-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ART TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ANA RADYO TELEVİZYON REKLAM VE YAYINCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "denizli",
+    "owner": "ana-radyo-televizyon-reklam-ve-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "art-world",
+    "name": "art world",
+    "slug": "art-world",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "art world, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. AKDENİZ RADYO TELEVİZYON VE TANITIM HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "antalya",
+    "owner": "akdeniz-radyo-televizyon-ve-tanitim-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "as",
+    "name": "AS",
+    "slug": "as",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "AS, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CLB MEDYA RADYO TELEVİZYON YAYINCILIK VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bursa",
+    "owner": "clb-medya-radyo-televizyon-yayincilik-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "asftv",
+    "name": "ASFTV",
+    "slug": "asftv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ASFTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL T TELEVİZYONCULUK YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "kanal-t-televizyonculuk-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
     "id": "atv",
     "name": "ATV",
     "slug": "atv",
     "alternativeNames": [],
     "logo": null,
-    "description": "ATV, dizi, eğlence ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
+    "description": "ATV, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TURKUVAZ AKTİF TELEVİZYON PRODÜKSİYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 58 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
     "coverageType": "national",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema",
-      "haber"
+      "genel"
     ],
     "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.atv.com.tr",
+    "owner": "turkuvaz-aktif-televizyon-produksiyon-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
     "featured": true,
     "seoTitle": null,
     "seoDescription": null
   },
   {
-    "id": "kanal-d",
-    "name": "Kanal D",
-    "slug": "kanal-d",
+    "id": "ay-tv",
+    "name": "AY TV",
+    "slug": "ay-tv",
     "alternativeNames": [],
     "logo": null,
-    "description": "Kanal D, dizi, yarışma ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
-    "coverageType": "national",
+    "description": "AY TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ARTİS MEDYA YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema",
-      "haber"
+      "genel"
     ],
-    "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.kanald.com.tr",
+    "headquarters": "aydin",
+    "owner": "artis-medya-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "baskent-tv",
+    "name": "BAŞKENT TV",
+    "slug": "baskent-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BAŞKENT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. İNOVATİF MEDYA YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "inovatif-medya-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "best-tv",
+    "name": "BEST TV",
+    "slug": "best-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BEST TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ELBİSTAN ŞARDAĞ TV.HABERLEŞME A.Ş. tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kahramanmaras",
+    "owner": "elbistan-sardag-tv-haberlesme-a-s",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "bir-tv",
+    "name": "bir tv",
+    "slug": "bir-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "bir tv, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BİR TV RADYO TELEVİZYON YAPIM YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "izmir",
+    "owner": "bir-tv-radyo-televizyon-yapim-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "brtv",
+    "name": "BRTV",
+    "slug": "brtv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BRTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BİZİM RADYO TELEVİZYON YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "karabuk",
+    "owner": "bizim-radyo-televizyon-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "btv",
+    "name": "BTV",
+    "slug": "btv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BOZTEPE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ordu",
+    "owner": "boztepe-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "btv-bartin-televizyonu",
+    "name": "BTV Bartın Televizyonu",
+    "slug": "btv-bartin-televizyonu",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BTV Bartın Televizyonu, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BTV BARTIN RADYO VE TELEVİZYON İŞLETMESİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bartin",
+    "owner": "btv-bartin-radyo-ve-televizyon-isletmesi-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "bursa-tv",
+    "name": "BURSA TV",
+    "slug": "bursa-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "BURSA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. R.M.B. RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bursa",
+    "owner": "r-m-b-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "can-tv",
+    "name": "CAN TV",
+    "slug": "can-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "CAN TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CAN YAYINCILIK VE REKLAMCILIK ANONİM ŞİRKETİ. tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "diyarbakir",
+    "owner": "can-yayincilik-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "can-tv-24",
+    "name": "CAN TV 24",
+    "slug": "can-tv-24",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "CAN TV 24, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CANER RADYO TELEVİZYON VE İLETİŞİM HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "erzincan",
+    "owner": "caner-radyo-televizyon-ve-iletisim-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "cnn-turk",
+    "name": "CNN TÜRK",
+    "slug": "cnn-turk",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "CNN TÜRK, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MES TELEVİZYON VE RADYO YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 52 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "mes-televizyon-ve-radyo-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
     "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "crt",
+    "name": "CRT",
+    "slug": "crt",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "CRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. YENİ ÇUKUROVA MEDYA RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "adana",
+    "owner": "yeni-cukurova-medya-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "crt-2",
+    "name": "CRT",
+    "slug": "crt-2",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "CRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. FATSA CANİK RADYO TELEVİZYON YAYINCILIK REKLAMCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ordu",
+    "owner": "fatsa-canik-radyo-televizyon-yayincilik-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "crt-3",
+    "name": "ÇRT",
+    "slug": "crt-3",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ÇRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ÇARŞAMBA RADYO - TELEVİZYON SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "samsun",
+    "owner": "carsamba-radyo-televizyon-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "cukurova-tv",
+    "name": "ÇUKUROVA TV",
+    "slug": "cukurova-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ÇUKUROVA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ÇUKUROVA RADYO TELEVİZYON YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "adana",
+    "owner": "cukurova-radyo-televizyon-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "demokrat-tv",
+    "name": "DEMOKRAT TV",
+    "slug": "demokrat-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "DEMOKRAT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KELEŞLER RADYO TELEVİZYON VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "zonguldak",
+    "owner": "kelesler-radyo-televizyon-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "dogu-tv",
+    "name": "DOĞU TV",
+    "slug": "dogu-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "DOĞU TV, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ALYANAK YAYINCILIK TİCARET SANAYİ VE PAZARLAMA A.Ş. tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "erzurum",
+    "owner": "alyanak-yayincilik-ticaret-sanayi-ve-pazarlama-a-s",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "duzce-tv",
+    "name": "DÜZCE TV",
+    "slug": "duzce-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "DÜZCE TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. DÜZCE RADYO VE TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "duzce",
+    "owner": "duzce-radyo-ve-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "e-erciyes-tv",
+    "name": "E ERCİYES TV",
+    "slug": "e-erciyes-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "E ERCİYES TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. UZ BASIN YAYIN PROGRAMCILIK TİCARET VE SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kayseri",
+    "owner": "uz-basin-yayin-programcilik-ticaret-ve-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "edessa-tv",
+    "name": "EDESSA TV",
+    "slug": "edessa-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "EDESSA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. DOĞAN YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "sanliurfa",
+    "owner": "dogan-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "egem-tv",
+    "name": "EGEM TV",
+    "slug": "egem-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "EGEM TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. EGEM TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ. tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "usak",
+    "owner": "egem-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "elif-tv",
+    "name": "ELİF TV",
+    "slug": "elif-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ELİF TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ELİF TELEVİZYON VE RADYO TİCARET SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kayseri",
+    "owner": "elif-televizyon-ve-radyo-ticaret-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "elmas67",
+    "name": "ELMAS67",
+    "slug": "elmas67",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ELMAS67, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ELMAS RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "zonguldak",
+    "owner": "elmas-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "er",
+    "name": "ER",
+    "slug": "er",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ER, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ER RADYO TELEVİZYON AJANS ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "malatya",
+    "owner": "er-radyo-televizyon-ajans-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ert",
+    "name": "ERT",
+    "slug": "ert",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ERT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERZİNCAN RADYO VE TELEVİZYON KURULUŞU ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "erzincan",
+    "owner": "erzincan-radyo-ve-televizyon-kurulusu-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ert-2",
+    "name": "ERT",
+    "slug": "ert-2",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ERT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERT ERBAA RADYO VE TELEVİZYON YAYIMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tokat",
+    "owner": "ert-erbaa-radyo-ve-televizyon-yayimcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ert-sah-tv",
+    "name": "ert şah tv",
+    "slug": "ert-sah-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ert şah tv, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERT1 RADYO TELEVİZYON REKLAM VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "erzincan",
+    "owner": "ert1-radyo-televizyon-reklam-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ert-tv",
+    "name": "ERT TV",
+    "slug": "ert-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ERT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BİR-YAY BİRLİK RADYO TV YAYINCILIK SANAYİ TİCARET VE PAZARLAMA ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "bir-yay-birlik-radyo-tv-yayincilik-sanayi-ticaret-ve-pazarlama-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ertv",
+    "name": "ERTV",
+    "slug": "ertv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ERTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ELBİSTAN RADYO TELEVİZYON YAYINCILIK REKLAMCILIK VE İLETİŞİM HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kahramanmaras",
+    "owner": "elbistan-radyo-televizyon-yayincilik-reklamcilik-ve-iletisim-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "eru",
+    "name": "ERÜ",
+    "slug": "eru",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ERÜ, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERCİYES ÜNİVERSİTESİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kayseri",
+    "owner": "erciyes-universitesi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "eskisehir-super-tv-es-tv",
+    "name": "ESKİŞEHİR SÜPER TV (ES TV)",
+    "slug": "eskisehir-super-tv-es-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ESKİŞEHİR SÜPER TV (ES TV), yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MERHABA RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "eskisehir",
+    "owner": "merhaba-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "etv",
+    "name": "etv",
+    "slug": "etv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "etv, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. EDİRNE RADYO VE TELEVİZYONU BASIN YAYINCILIK HİZMETLERİ TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "edirne",
+    "owner": "edirne-radyo-ve-televizyonu-basin-yayincilik-hizmetleri-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "etv-manisa",
+    "name": "Etv Manisa",
+    "slug": "etv-manisa",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Etv Manisa, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERDİNÇ YAYINCILIK TANITIM REKLAM VE ORGANİZASYON HİZMETLERİ TİCARET VE SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "manisa",
+    "owner": "erdinc-yayincilik-tanitim-reklam-ve-organizasyon-hizmetleri-ticaret-ve-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "frt-tv-fethiye-radyo-televizyonu",
+    "name": "FRT TV FETHİYE RADYO TELEVİZYONU",
+    "slug": "frt-tv-fethiye-radyo-televizyonu",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "FRT TV FETHİYE RADYO TELEVİZYONU, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CANNUR YAYIN VE REKLAMCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mugla",
+    "owner": "cannur-yayin-ve-reklamcilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "gelisim-tv",
+    "name": "GELİŞİM TV",
+    "slug": "gelisim-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "GELİŞİM TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. GELİŞİM RADYO TELEVİZYON YAYINCILIK VE GAZETECİLİK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "rize",
+    "owner": "gelisim-radyo-televizyon-yayincilik-ve-gazetecilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "gozdetv",
+    "name": "gözdetv",
+    "slug": "gozdetv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "gözdetv, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. GÖZDE TELEVİZYON İLETİŞİM VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "samsun",
+    "owner": "gozde-televizyon-iletisim-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "guney-tv",
+    "name": "Güney TV",
+    "slug": "guney-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Güney TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. GÜNEY RADYO TELEVİZYON YAYINCILIK VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mersin",
+    "owner": "guney-radyo-televizyon-yayincilik-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "haber-turk",
+    "name": "HABER TÜRK",
+    "slug": "haber-turk",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "HABER TÜRK, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CİNER MEDYA TV HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 71 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "haber"
+    ],
+    "headquarters": "istanbul",
+    "owner": "ciner-medya-tv-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "hisar-tv",
+    "name": "HİSAR TV",
+    "slug": "hisar-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "HİSAR TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. HİSAR RADYO VE TELEVİZYON YAYINCILIĞI SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "gaziantep",
+    "owner": "hisar-radyo-ve-televizyon-yayinciligi-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "icel",
+    "name": "İÇEL",
+    "slug": "icel",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "İÇEL, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. İGRT - İSTİKLAL RADYO TELEVİZYON VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mersin",
+    "owner": "igrt-istiklal-radyo-televizyon-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "igdir-tv",
+    "name": "IĞDIR TV",
+    "slug": "igdir-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "IĞDIR TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. IĞDIR TELEVİZYON RADYO TELEFON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "igdir",
+    "owner": "igdir-televizyon-radyo-telefon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "k-15",
+    "name": "K 15",
+    "slug": "k-15",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "K 15, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BUCAK RADYO VE TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "burdur",
+    "owner": "bucak-radyo-ve-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-04",
+    "name": "KANAL 04",
+    "slug": "kanal-04",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 04, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. EMTAŞ BASIN YAYIN FİLM VE REKLAMCILIK PRODÜKSİYON HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "emtas-basin-yayin-film-ve-reklamcilik-produksiyon-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-19",
+    "name": "KANAL 19",
+    "slug": "kanal-19",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 19, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. HİLAL BİR TV İLETİŞİM YAYINCILIĞI VE REKLAMCILIK A.Ş. tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "corum",
+    "owner": "hilal-bir-tv-iletisim-yayinciligi-ve-reklamcilik-a-s",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-23",
+    "name": "KANAL 23",
+    "slug": "kanal-23",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 23, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. DORUK RADYO VE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "elazig",
+    "owner": "doruk-radyo-ve-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-25",
+    "name": "KANAL 25",
+    "slug": "kanal-25",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 25, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ERZURUM YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "erzurum",
+    "owner": "erzurum-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-32",
+    "name": "KANAL 32",
+    "slug": "kanal-32",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 32, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL 32 RADYO, TELEVİZYON, YAYINCILIK, REKLAMCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "isparta",
+    "owner": "kanal-32-radyo-televizyon-yayincilik-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-38",
+    "name": "KANAL 38",
+    "slug": "kanal-38",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 38, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ÇAĞAN 38 RADYO TELEVİZYON YAYINCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kayseri",
+    "owner": "cagan-38-radyo-televizyon-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-5",
+    "name": "KANAL 5",
+    "slug": "kanal-5",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 5, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL 5 TELEVİZYON- RADYO VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "gaziantep",
+    "owner": "kanal-5-televizyon-radyo-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-52",
+    "name": "Kanal 52",
+    "slug": "kanal-52",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Kanal 52, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. M.G.A MÜZİK YAPIM REKLAM VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ordu",
+    "owner": "m-g-a-muzik-yapim-reklam-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-54",
+    "name": "KANAL 54",
+    "slug": "kanal-54",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 54, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL 54 RADYO TELEVİZYON REKLAM YAYINCILIK ORGANİZASYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "sakarya",
+    "owner": "kanal-54-radyo-televizyon-reklam-yayincilik-organizasyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-68",
+    "name": "KANAL 68",
+    "slug": "kanal-68",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 68, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. YİĞİT TELEVİZYON VE RADYO YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kocaeli",
+    "owner": "yigit-televizyon-ve-radyo-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-7",
+    "name": "KANAL 7",
+    "slug": "kanal-7",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 7, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. HAYAT GÖRSEL YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "hayat-gorsel-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-72",
+    "name": "KANAL 72",
+    "slug": "kanal-72",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 72, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BATMAN ÇAĞRI TV İŞLETMESİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "batman",
+    "owner": "batman-cagri-tv-isletmesi-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-80",
+    "name": "KANAL 80",
+    "slug": "kanal-80",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL 80, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL 80 MEDYA HİZMET SAĞLAYICI VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "osmaniye",
+    "owner": "kanal-80-medya-hizmet-saglayici-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-a",
+    "name": "KANAL A",
+    "slug": "kanal-a",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL A, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KTV YAYINCILIK VE REKLAM SANAYİ TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 2 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "ktv-yayincilik-ve-reklam-sanayi-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-d",
+    "name": "KANAL D",
+    "slug": "kanal-d",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL D, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. DEMİRÖREN TV RADYO YAYINCILIK YAPIMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 20 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "demiroren-tv-radyo-yayincilik-yapimcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-e",
+    "name": "KANAL E",
+    "slug": "kanal-e",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL E, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TURAN RADYO TELEVİZYON YAPIM VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "elazig",
+    "owner": "turan-radyo-televizyon-yapim-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-g28",
+    "name": "KANAL G28",
+    "slug": "kanal-g28",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL G28, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. OLUŞUM YAYINCILIK VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "giresun",
+    "owner": "olusum-yayincilik-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-k",
+    "name": "KANAL K",
+    "slug": "kanal-k",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL K, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. LALE TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "nevsehir",
+    "owner": "lale-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-malatya",
+    "name": "KANAL MALATYA",
+    "slug": "kanal-malatya",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KANAL MALATYA, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SENA RADYO-TELEVİZYON-AJANS ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "sena-radyo-televizyon-ajans-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-p",
+    "name": "Kanal P",
+    "slug": "kanal-p",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Kanal P, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. POLO TELEVİZYON RADYO YAYIN YAPIM VE TANITIM ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "polo-televizyon-radyo-yayin-yapim-ve-tanitim-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-v",
+    "name": "Kanal V",
+    "slug": "kanal-v",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Kanal V, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. VİP YAYINCILIK VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "antalya",
+    "owner": "vip-yayincilik-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kapadokya-tv",
+    "name": "KAPADOKYA TV",
+    "slug": "kapadokya-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KAPADOKYA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KAPADOKYA RADYO VE TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "nevsehir",
+    "owner": "kapadokya-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kaytv",
+    "name": "KAYTV",
+    "slug": "kaytv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KAYTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KAYSERİ ORTAANADOLU RADYO VE TELEVİZYONCULUK VE YAYINCILIK TİCARET SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kayseri",
+    "owner": "kayseri-ortaanadolu-radyo-ve-televizyonculuk-ve-yayincilik-ticaret-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kent-tv",
+    "name": "KENT TV",
+    "slug": "kent-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KENT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KAYIN YAYINCILIK RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mugla",
+    "owner": "kayin-yayincilik-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kent64",
+    "name": "Kent64",
+    "slug": "kent64",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Kent64, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ÖZ EGE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "usak",
+    "owner": "oz-ege-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kocaeli-tv",
+    "name": "KOCAELİ TV",
+    "slug": "kocaeli-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KOCAELİ TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KOCAELİ İLETİŞİM RADYO TELEVİZYON YAYIN VE YAPIM ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kocaeli",
+    "owner": "kocaeli-iletisim-radyo-televizyon-yayin-ve-yapim-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kon-tv",
+    "name": "KON TV",
+    "slug": "kon-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KON TV, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KONTV TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "kontv-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kordon-tv",
+    "name": "KORDON TV",
+    "slug": "kordon-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KORDON TV, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KORDON RADYO VE TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "izmir",
+    "owner": "kordon-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "koroglu",
+    "name": "KÖROĞLU",
+    "slug": "koroglu",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KÖROĞLU, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MEZİYET RADYO VE TELEVİZYON YAYIN HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bolu",
+    "owner": "meziyet-radyo-ve-televizyon-yayin-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ktv",
+    "name": "KTV",
+    "slug": "ktv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KTV-AS İLETİŞİM YAYINCILIK REKLAMCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kirsehir",
+    "owner": "ktv-as-iletisim-yayincilik-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ktv-2",
+    "name": "KTV",
+    "slug": "ktv-2",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KONYAT İLETİŞİM VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "konyat-iletisim-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kuzey-tv",
+    "name": "KUZEY TV",
+    "slug": "kuzey-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "KUZEY TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KUZEY MEDYA RADYO TELEVİZYON İLETİŞİM SİSTEMLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "trabzon",
+    "owner": "kuzey-medya-radyo-televizyon-iletisim-sistemleri-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "line-tv",
+    "name": "LİNE TV",
+    "slug": "line-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "LİNE TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. B.E.R.K. RADYO TV YAYINCILIK VE REKLAM TİCARET SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bursa",
+    "owner": "b-e-r-k-radyo-tv-yayincilik-ve-reklam-ticaret-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "mar-tv",
+    "name": "MAR TV",
+    "slug": "mar-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MAR TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MARTAŞ MARMARA RADYO TELEVİZYON YAYINCILIK REKLAMCILIK TİCARET VE SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "balikesir",
+    "owner": "martas-marmara-radyo-televizyon-yayincilik-reklamcilik-ticaret-ve-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "maraton",
+    "name": "MARATON",
+    "slug": "maraton",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MARATON, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MARATON RADYO VE TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "aydin",
+    "owner": "maraton-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "marmaris-tv",
+    "name": "MARMARİS TV",
+    "slug": "marmaris-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MARMARİS TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BÜYÜK MARMARİS RADYO TELEVİZYON VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mugla",
+    "owner": "buyuk-marmaris-radyo-televizyon-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "mega-tv",
+    "name": "MEGA TV",
+    "slug": "mega-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MEGA TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ULUÇINAR RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "hatay",
+    "owner": "ulucinar-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "mercan-tv",
+    "name": "MERCAN TV",
+    "slug": "mercan-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MERCAN TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ADA İLETİŞİM SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "adiyaman",
+    "owner": "ada-iletisim-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "mersin-tv",
+    "name": "MERSİN TV",
+    "slug": "mersin-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "MERSİN TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MERSİN TELEVİZYON İŞLETMESİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mersin",
+    "owner": "mersin-televizyon-isletmesi-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "metro-tv",
+    "name": "METRO TV",
+    "slug": "metro-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "METRO TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. EREĞLİ METRO TELEVİZYON VE RADYO YAYINCILIK YAPIMCILIK SANAYİ VE TİCARET A.Ş tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "eregli-metro-televizyon-ve-radyo-yayincilik-yapimcilik-sanayi-ve-ticaret-a-s",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "n-tv",
+    "name": "N TV",
+    "slug": "n-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "N TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. NTV NİĞDE TELEVİZYON RADYO YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "nigde",
+    "owner": "ntv-nigde-televizyon-radyo-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
     "seoTitle": null,
     "seoDescription": null
   },
@@ -102,97 +3136,711 @@
     "id": "now",
     "name": "NOW",
     "slug": "now",
-    "alternativeNames": [
-      "Now TV"
-    ],
+    "alternativeNames": [],
     "logo": null,
-    "description": "NOW, dizi, eğlence ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
+    "description": "NOW, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. HUZUR RADYO TV ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 75 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
     "coverageType": "national",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema",
-      "haber"
+      "genel"
     ],
     "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.nowtv.com.tr",
+    "owner": "huzur-radyo-tv-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "nrt",
+    "name": "NRT",
+    "slug": "nrt",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "NRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. BELDE RADYO-TV YAYINCILIK VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "gaziantep",
+    "owner": "belde-radyo-tv-yayincilik-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ntv",
+    "name": "NTV",
+    "slug": "ntv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "NTV, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. NTV RADYO VE TELEVİZYON YAYINCILIĞI ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 43 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "ntv-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "olay-tv",
+    "name": "OLAY TV",
+    "slug": "olay-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "OLAY TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRAKYA İLETİM RADYO VE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tekirdag",
+    "owner": "trakya-iletim-radyo-ve-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "oncu-tv",
+    "name": "ÖNCÜ TV",
+    "slug": "oncu-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ÖNCÜ TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ÖNCÜ YAYINCILIK VE REKLAMCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "duzce",
+    "owner": "oncu-yayincilik-ve-reklamcilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ort",
+    "name": "ORT",
+    "slug": "ort",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ORT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ORDU TELEVİZYON - RADYO İŞLETMECİLİĞİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ordu",
+    "owner": "ordu-televizyon-radyo-isletmeciligi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ort-osmaniyem-radyo-televizyonu",
+    "name": "ORT Osmaniyem Radyo Televizyonu",
+    "slug": "ort-osmaniyem-radyo-televizyonu",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ORT Osmaniyem Radyo Televizyonu, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. OSMANİYEM RADYO TELEVİZYON YAYIN İLETİŞİM REKLAM SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "van",
+    "owner": "osmaniyem-radyo-televizyon-yayin-iletisim-reklam-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "otag-tv",
+    "name": "OTAĞ TV",
+    "slug": "otag-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "OTAĞ TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. OTAĞ TV YAYINCILIK TİCARET A.Ş tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "adana",
+    "owner": "otag-tv-yayincilik-ticaret-a-s",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "rize-tv",
+    "name": "RİZE TV",
+    "slug": "rize-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "RİZE TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. RİZE TV RADYO VİTAMİN ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "rize",
+    "owner": "rize-tv-radyo-vitamin-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "safasrt",
+    "name": "SAFASRT",
+    "slug": "safasrt",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "SAFASRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SAFA RADYO VE TELEVİZYON İLETİŞİM YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tokat",
+    "owner": "safa-radyo-ve-televizyon-iletisim-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "sah-tv",
+    "name": "ŞAH TV",
+    "slug": "sah-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ŞAH TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ŞRT ŞAH RADYO TELEVİZYON REKLAMCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mugla",
+    "owner": "srt-sah-radyo-televizyon-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "serhat-tv",
+    "name": "SERHAT TV",
+    "slug": "serhat-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "SERHAT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KARS İLETİŞİM VE REKLAMCILIK ORGANİZASYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kars",
+    "owner": "kars-iletisim-ve-reklamcilik-organizasyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
     "featured": false,
     "seoTitle": null,
     "seoDescription": null
   },
   {
     "id": "show-tv",
-    "name": "Show TV",
+    "name": "SHOW TV",
     "slug": "show-tv",
     "alternativeNames": [],
     "logo": null,
-    "description": "Show TV, dizi ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
+    "description": "SHOW TV, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SHOW TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 78 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
     "coverageType": "national",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema"
+      "genel"
     ],
     "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.showtv.com.tr",
+    "owner": "show-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
     "featured": true,
     "seoTitle": null,
     "seoDescription": null
   },
   {
-    "id": "star-tv",
-    "name": "Star TV",
-    "slug": "star-tv",
+    "id": "showroom",
+    "name": "SHOWROOM",
+    "slug": "showroom",
     "alternativeNames": [],
     "logo": null,
-    "description": "Star TV, dizi ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
-    "coverageType": "national",
+    "description": "SHOWROOM, bölgesel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SAKARYA KENT RADYO TELEVİZYON SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 2 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "regional",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema"
+      "genel"
     ],
     "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.startv.com.tr",
+    "owner": "sakarya-kent-radyo-televizyon-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "soke-kanal-09",
+    "name": "SÖKE KANAL 09",
+    "slug": "soke-kanal-09",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "SÖKE KANAL 09, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SÖKE RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "aydin",
+    "owner": "soke-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "star-tv",
+    "name": "STAR TV",
+    "slug": "star-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "STAR TV, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. STARTV MEDYA HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 43 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "startv-medya-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "strt",
+    "name": "STRT",
+    "slug": "strt",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "STRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. ŞEREFLİKOÇHİSAR TUZGÖLÜ RADYO TELEVİZYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "sereflikochisar-tuzgolu-radyo-televizyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "sun-rtv",
+    "name": "SUN RTV",
+    "slug": "sun-rtv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "SUN RTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SUN RADYO TELEVİZYON YAYINCILIK VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "mersin",
+    "owner": "sun-radyo-televizyon-yayincilik-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "sun-tv",
+    "name": "SUN TV",
+    "slug": "sun-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "SUN TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. SELÇUK RADYO TELEVİZYON VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "selcuk-radyo-televizyon-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "th-turk-haber",
+    "name": "TH TÜRK HABER",
+    "slug": "th-turk-haber",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TH TÜRK HABER, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KANAL 43 PROGRAMCILIK VE YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "haber"
+    ],
+    "headquarters": "kutahya",
+    "owner": "kanal-43-programcilik-ve-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tokat-tv",
+    "name": "TOKAT TV",
+    "slug": "tokat-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TOKAT TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TOKAT RADYO TELEVİZYON İLETİŞİM YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tokat",
+    "owner": "tokat-radyo-televizyon-iletisim-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trabzon-kanal-bordo-mavi",
+    "name": "TRABZON KANAL BORDO MAVİ",
+    "slug": "trabzon-kanal-bordo-mavi",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRABZON KANAL BORDO MAVİ, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MAVİ TELEVİZYON VE RADYO İLETİŞİM ORGANİZASYON ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "trabzon",
+    "owner": "mavi-televizyon-ve-radyo-iletisim-organizasyon-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trakya-turk",
+    "name": "TRAKYA TÜRK",
+    "slug": "trakya-turk",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRAKYA TÜRK, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. CEMRE 7 RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tekirdag",
+    "owner": "cemre-7-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
     "featured": false,
     "seoTitle": null,
     "seoDescription": null
@@ -201,34 +3849,340 @@
     "id": "trt-1",
     "name": "TRT 1",
     "slug": "trt-1",
-    "alternativeNames": [
-      "TRT1"
-    ],
+    "alternativeNames": [],
     "logo": null,
-    "description": "TRT 1, TRT (Türkiye Radyo Televizyon Kurumu) bünyesinde yayın yapan, haber, dizi ve genel içerik sunan ulusal kamu televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
+    "description": "TRT 1, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRT tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 79 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
     "coverageType": "national",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "haber",
-      "dizi-sinema"
+      "genel"
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": "https://www.trt.net.tr",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
     "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-3-spor-tbmm-tv",
+    "name": "TRT 3 SPOR / TBMM TV",
+    "slug": "trt-3-spor-tbmm-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT 3 SPOR / TBMM TV, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRT tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 79 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "spor"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-cocuk",
+    "name": "TRT ÇOCUK",
+    "slug": "trt-cocuk",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT ÇOCUK, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRT tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 78 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "cocuk"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-haber",
+    "name": "TRT HABER",
+    "slug": "trt-haber",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT HABER, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRT tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 79 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "haber"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-kurdi",
+    "name": "TRT KURDİ",
+    "slug": "trt-kurdi",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT KURDİ, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRT tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 17 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ttv",
+    "name": "TTV",
+    "slug": "ttv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TTV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TRABZON TELEVİZYON RADYO GAZETE İLETİŞİM ORGANİZASYON YAYINCILIK MATBAACILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "trabzon",
+    "owner": "trabzon-televizyon-radyo-gazete-iletisim-organizasyon-yayincilik-matbaacilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "turhal-super-tv",
+    "name": "TURHAL SÜPER TV",
+    "slug": "turhal-super-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TURHAL SÜPER TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TURHAL SÜPERAY RADYO TELEVİZYON YAYINCILIK TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tokat",
+    "owner": "turhal-superay-radyo-televizyon-yayincilik-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tv-41",
+    "name": "TV 41",
+    "slug": "tv-41",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TV 41, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. 41 İLETİŞİM RADYO TELEVİZYON YAYIN YAPIM ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "kocaeli",
+    "owner": "41-iletisim-radyo-televizyon-yayin-yapim-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tv2",
+    "name": "tv2",
+    "slug": "tv2",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "tv2, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. MİNA TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 3 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "mina-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tv3",
+    "name": "TV3",
+    "slug": "tv3",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TV3, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KARAHİSAR TV RADYO REKLAMCILIK PRODÜKSİYON YAYINCILIK TİCARET VE SANAYİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "afyonkarahisar",
+    "owner": "karahisar-tv-radyo-reklamcilik-produksiyon-yayincilik-ticaret-ve-sanayi-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tv42",
+    "name": "tv42",
+    "slug": "tv42",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "tv42, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KONEVİ RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "konya",
+    "owner": "konevi-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
     "seoTitle": null,
     "seoDescription": null
   },
@@ -238,28 +4192,244 @@
     "slug": "tv8",
     "alternativeNames": [],
     "logo": null,
-    "description": "TV8, yarışma ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
-    "broadcastType": "satellite-tv",
+    "description": "TV8, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TV8 TV YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 68 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
     "coverageType": "national",
     "languages": [
       "tr"
     ],
     "categories": [
-      "genel",
-      "dizi-sinema"
+      "genel"
     ],
     "headquarters": "istanbul",
-    "owner": null,
-    "officialWebsite": "https://www.tv8.com.tr",
+    "owner": "tv8-tv-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "editorial-placeholder"
+      "rtuk"
     ],
-    "verificationStatus": "pending-review",
+    "verificationStatus": "verified",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tvnet",
+    "name": "tvnet",
+    "slug": "tvnet",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "tvnet, ulusal ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. NET YAYINCILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre 35 ilde yayın ataması bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "net-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tyt-turk",
+    "name": "TYT TÜRK",
+    "slug": "tyt-turk",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TYT TÜRK, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TEXS MEDYA YAYINCILIK HABERLEŞME TEKNOLOJİLERİ VE İLETİŞİM HİZMETLERİ ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "istanbul",
+    "owner": "texs-medya-yayincilik-haberlesme-teknolojileri-ve-iletisim-hizmetleri-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "ugur-tv",
+    "name": "UĞUR TV",
+    "slug": "ugur-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "UĞUR TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. UĞUR MEDYA RADYO VE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "usak",
+    "owner": "ugur-medya-radyo-ve-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "venus-tv",
+    "name": "VENÜS TV",
+    "slug": "venus-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "VENÜS TV, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. VENÜS RENK İLETİŞİM HİZMETLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "bilecik",
+    "owner": "venus-renk-iletisim-hizmetleri-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "world-turk-dunyanizin-televizyonu",
+    "name": "WORLD TURK Dünyanızın Televizyonu",
+    "slug": "world-turk-dunyanizin-televizyonu",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "WORLD TURK Dünyanızın Televizyonu, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. RTV 58 RADYO TELEVİZYON İLETİŞİM SİSTEMLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "sivas",
+    "owner": "rtv-58-radyo-televizyon-iletisim-sistemleri-sanayi-ve-ticaret-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "yeni-karesi",
+    "name": "YENİ KARESİ",
+    "slug": "yeni-karesi",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "YENİ KARESİ, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. KARESİ RADYO VE TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "balikesir",
+    "owner": "karesi-radyo-ve-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "zrt",
+    "name": "ZRT",
+    "slug": "zrt",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ZRT, yerel ölçekte karasal televizyon yayını yapan bir televizyon markasıdır. TEKİRDAĞ RADYO TELEVİZYON YAYINCILIK ANONİM ŞİRKETİ tarafından işletilmektedir. RTÜK lisans kayıtlarına göre yayını tek bir ilde bulunmaktadır.",
+    "broadcastType": "terrestrial-tv",
+    "coverageType": "local",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel"
+    ],
+    "headquarters": "tekirdag",
+    "owner": "tekirdag-radyo-televizyon-yayincilik-anonim-sirketi",
+    "officialWebsite": null,
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk"
+    ],
+    "verificationStatus": "verified",
     "featured": false,
     "seoTitle": null,
     "seoDescription": null

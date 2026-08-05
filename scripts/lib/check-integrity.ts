@@ -76,6 +76,14 @@ export function checkReferentialIntegrity(data: LoadedData): LoadIssue[] {
     checkSourceIds(issues, 'terrestrial-frequencies.json', freq.id, freq.sourceIds, sourceIds);
   }
 
+  for (const tvChannel of data.terrestrialTvChannels) {
+    checkRef(issues, 'terrestrial-tv-channels.json', tvChannel.id, 'channelId', tvChannel.channelId, televisionChannelIds);
+    checkRef(issues, 'terrestrial-tv-channels.json', tvChannel.id, 'cityId', tvChannel.cityId, cityIds);
+    checkRef(issues, 'terrestrial-tv-channels.json', tvChannel.id, 'districtId', tvChannel.districtId, districtIds);
+    checkRef(issues, 'terrestrial-tv-channels.json', tvChannel.id, 'transmitterId', tvChannel.transmitterId, transmitterIds);
+    checkSourceIds(issues, 'terrestrial-tv-channels.json', tvChannel.id, tvChannel.sourceIds, sourceIds);
+  }
+
   for (const satellite of data.satellites) {
     checkSourceIds(issues, 'satellites.json', satellite.id, satellite.sourceIds, sourceIds);
   }

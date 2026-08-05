@@ -250,6 +250,40 @@ export type TerrestrialFrequency = z.infer<typeof terrestrialFrequencySchema>;
 export const terrestrialFrequenciesFileSchema = z.array(terrestrialFrequencySchema);
 
 /* ------------------------------------------------------------------ */
+/*  Terrestrial (digital over-the-air) TV channel assignments          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Deliberately NOT merged into `terrestrialFrequencySchema`. Turkish digital
+ * terrestrial TV (DVB-T2 / "karasal TV") is licensed by band group + a
+ * logical multiplex channel number (e.g. "UHF4" kanal 23), not by an RF
+ * frequency in MHz the way FM radio and analog broadcasts are -- treating
+ * `kanal` as if it were a frequency value would misrepresent RTÜK's own
+ * license data. `band` is free text rather than a strict enum because the
+ * regulator's own band-group labels (observed: VHF3, UHF4, UHF5) are not a
+ * fixed public enumeration and a future re-import could add another.
+ */
+export const terrestrialTvChannelSchema = z.object({
+  id: slugSchema,
+  channelId: z.string().min(1),
+  band: z.string().min(1),
+  channelNumber: z.number().int().positive(),
+  cityId: z.string().min(1),
+  districtId: z.string().min(1).nullable(),
+  transmitterId: z.string().min(1).nullable(),
+  coverageType: coverageTypeEnum,
+  status: statusEnum,
+  validFrom: isoDateSchema.nullable(),
+  validTo: isoDateSchema.nullable(),
+  lastVerifiedAt: isoDateSchema,
+  sourceIds: sourceIdsSchema,
+  verificationStatus: verificationStatusEnum,
+  notes: z.string().nullable(),
+});
+export type TerrestrialTvChannel = z.infer<typeof terrestrialTvChannelSchema>;
+export const terrestrialTvChannelsFileSchema = z.array(terrestrialTvChannelSchema);
+
+/* ------------------------------------------------------------------ */
 /*  Satellites, transponders, satellite services                       */
 /* ------------------------------------------------------------------ */
 

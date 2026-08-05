@@ -20,6 +20,7 @@ import {
   sourcesFileSchema,
   televisionChannelsFileSchema,
   terrestrialFrequenciesFileSchema,
+  terrestrialTvChannelsFileSchema,
   transmittersFileSchema,
   transpondersFileSchema,
 } from '../../src/data/schemas';
@@ -36,6 +37,7 @@ import type {
   Source,
   TelevisionChannel,
   TerrestrialFrequency,
+  TerrestrialTvChannel,
   Transmitter,
   Transponder,
 } from '../../src/data/schemas';
@@ -56,6 +58,7 @@ export interface LoadedData {
   radioStations: RadioStation[];
   televisionChannels: TelevisionChannel[];
   terrestrialFrequencies: TerrestrialFrequency[];
+  terrestrialTvChannels: TerrestrialTvChannel[];
   satellites: Satellite[];
   transponders: Transponder[];
   satelliteServices: SatelliteService[];
@@ -96,6 +99,7 @@ export function loadAllData(dataDir: string = DATA_DIR): { data: LoadedData; iss
     radioStations: loadFile(dataDir, 'radio-stations.json', radioStationsFileSchema, issues),
     televisionChannels: loadFile(dataDir, 'television-channels.json', televisionChannelsFileSchema, issues),
     terrestrialFrequencies: loadFile(dataDir, 'terrestrial-frequencies.json', terrestrialFrequenciesFileSchema, issues),
+    terrestrialTvChannels: loadFile(dataDir, 'terrestrial-tv-channels.json', terrestrialTvChannelsFileSchema, issues),
     satellites: loadFile(dataDir, 'satellites.json', satellitesFileSchema, issues),
     transponders: loadFile(dataDir, 'transponders.json', transpondersFileSchema, issues),
     satelliteServices: loadFile(dataDir, 'satellite-services.json', satelliteServicesFileSchema, issues),

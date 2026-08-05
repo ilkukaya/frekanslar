@@ -14,6 +14,7 @@ import {
   sourceSchema,
   televisionChannelSchema,
   terrestrialFrequencySchema,
+  terrestrialTvChannelSchema,
   transmitterSchema,
   transponderSchema,
 } from './data/schemas';
@@ -51,6 +52,11 @@ const televisionChannels = defineCollection({
 const terrestrialFrequencies = defineCollection({
   loader: file('src/data/terrestrial-frequencies.json'),
   schema: terrestrialFrequencySchema,
+});
+
+const terrestrialTvChannels = defineCollection({
+  loader: file('src/data/terrestrial-tv-channels.json'),
+  schema: terrestrialTvChannelSchema,
 });
 
 const satellites = defineCollection({
@@ -101,6 +107,7 @@ export const collections = {
   'radio-stations': radioStations,
   'television-channels': televisionChannels,
   'terrestrial-frequencies': terrestrialFrequencies,
+  'terrestrial-tv-channels': terrestrialTvChannels,
   satellites,
   transponders,
   'satellite-services': satelliteServices,

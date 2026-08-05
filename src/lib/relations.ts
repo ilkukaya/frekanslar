@@ -15,6 +15,7 @@ import type {
   Source,
   TelevisionChannel,
   TerrestrialFrequency,
+  TerrestrialTvChannel,
   Transmitter,
   Transponder,
 } from '../data/schemas';
@@ -125,6 +126,47 @@ export function groupFrequenciesByValue(
     }
   }
   return groups;
+}
+
+/* --------------------- Terrestrial (digital over-the-air) TV --------------------- */
+
+export function tvChannelsByChannel(
+  tvChannels: readonly TerrestrialTvChannel[],
+  channelId: string,
+): TerrestrialTvChannel[] {
+  return tvChannels.filter((entry) => entry.channelId === channelId);
+}
+
+export function tvChannelsByCity(
+  tvChannels: readonly TerrestrialTvChannel[],
+  cityId: string,
+): TerrestrialTvChannel[] {
+  return tvChannels.filter((entry) => entry.cityId === cityId);
+}
+
+export function tvChannelsByDistrict(
+  tvChannels: readonly TerrestrialTvChannel[],
+  districtId: string,
+): TerrestrialTvChannel[] {
+  return tvChannels.filter((entry) => entry.districtId === districtId);
+}
+
+export function activeTvChannels(
+  tvChannels: readonly TerrestrialTvChannel[],
+): TerrestrialTvChannel[] {
+  return tvChannels.filter((entry) => entry.status === 'active');
+}
+
+/** TV channels with at least one (active) terrestrial assignment in the given city, deduplicated. */
+export function tvChannelsActiveInCity(
+  channels: readonly TelevisionChannel[],
+  tvChannels: readonly TerrestrialTvChannel[],
+  cityId: string,
+): TelevisionChannel[] {
+  const channelIds = new Set(
+    activeTvChannels(tvChannelsByCity(tvChannels, cityId)).map((entry) => entry.channelId),
+  );
+  return channels.filter((channel) => channelIds.has(channel.id));
 }
 
 /* ------------------------------ Satellite ----------------------------- */

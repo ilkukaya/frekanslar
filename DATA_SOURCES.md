@@ -28,13 +28,32 @@ görünümü için `/veri-kaynaklari/` sayfasına bakın (`src/pages/veri-kaynak
 }
 ```
 
+### RTÜK İçe Aktarımı (karasal radyo/TV)
+
+`cities.json`, `districts.json`, `terrestrial-transmitters.json`, `broadcasters.json`, `radio-stations.json`,
+`television-channels.json`, `terrestrial-frequencies.json` ve `terrestrial-tv-channels.json` dosyalarının
+tamamı, RTÜK'ün resmî "il bazında yayın lisans listesi" PDF'lerinden (81 il × radyo/TV, RTÜK'ün kendi
+`_indirme_ozeti.csv` dosyasıyla birlikte) içe aktarılmıştır. Bu kayıtlar `sourceIds: ["rtuk"]` ve
+`verificationStatus: "verified"` taşır. İçe aktarım araçları: `scripts/import/extract-rtuk-pdfs.py`
+(PDF tablo çıkarımı, PyMuPDF gerektirir) ve `scripts/import/build-rtuk-data.ts`
+(`npm run data:import-rtuk -- <raw_extracted.json>`, şema doğrulama ve normalizasyon). Her iki script de
+kaynak koduna gömülü ayrıntılı tasarım notları içerir (marka/kuruluş adlarının neden büyük/küçük harf
+normalize edilmediği, R1/R2/R3 ve T1/T2/T3 lisans kodlarının `coverageType`'a nasıl eşlendiği, "Ünvanı" ile
+"Radyo Çağrı"/"Tv Logo" alanlarının bir istasyonu neden birlikte tanımladığı gibi).
+
+RTÜK'ün lisans listeleri şunları **kapsamaz** ve bu nedenle içe aktarılan kayıtlarda `null`/boş bırakılır:
+resmî web sitesi, resmî canlı yayın bağlantısı, sosyal medya hesapları, logo, tür/dil bilgisi (kategori alanı
+yalnızca marka adından çıkarılan sınırlı bir anahtar kelime tahminidir). Bu alanların gerçek verilerle
+doldurulması, ayrı ve açıkça kaynaklandırılmış bir sonraki veri toplama aşamasıdır.
+
 ### `editorial-placeholder` Türü
 
-Bu proje deposundaki teknik yayın verilerinin büyük bölümü, mimariyi göstermek amacıyla oluşturulmuş
-örnek/gösterim verisidir. Bu kayıtlar **gerçek bir otoriteye (RTÜK, Türksat, yayın kuruluşu) atfedilmez** —
-onlar bu verileri sağlamadı. Bunun yerine `editorial-placeholder` türündeki dahili kaynağa atıfta bulunulur;
-bu, hem şeffaflık hem de RTÜK/Türksat gibi gerçek kurumların adının, onlar tarafından doğrulanmamış sayılara
-yanlışlıkla bağlanmasını önlemek için bilinçli bir tasarım kararıdır.
+Uydu (`satellites.json`, `transponders.json`, `satellite-services.json`) ve platform
+(`platforms.json`, `platform-channels.json`) verileri RTÜK'ün kapsamı dışındadır ve hâlâ mimariyi
+göstermek amacıyla oluşturulmuş örnek/gösterim verisidir. Bu kayıtlar **gerçek bir otoriteye (Türksat,
+yayın kuruluşu) atfedilmez** — onlar bu verileri sağlamadı. Bunun yerine `editorial-placeholder` türündeki
+dahili kaynağa atıfta bulunulur; bu, hem şeffaflık hem de Türksat gibi gerçek kurumların adının, onlar
+tarafından doğrulanmamış sayılara yanlışlıkla bağlanmasını önlemek için bilinçli bir tasarım kararıdır.
 
 ## Yeni Kaynak Ekleme
 

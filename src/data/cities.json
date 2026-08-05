@@ -7,6 +7,41 @@
     "region": "akdeniz"
   },
   {
+    "id": "adiyaman",
+    "name": "Adıyaman",
+    "slug": "adiyaman",
+    "plateCode": 2,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "afyonkarahisar",
+    "name": "Afyonkarahisar",
+    "slug": "afyonkarahisar",
+    "plateCode": 3,
+    "region": "ege"
+  },
+  {
+    "id": "agri",
+    "name": "Ağrı",
+    "slug": "agri",
+    "plateCode": 4,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "aksaray",
+    "name": "Aksaray",
+    "slug": "aksaray",
+    "plateCode": 68,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "amasya",
+    "name": "Amasya",
+    "slug": "amasya",
+    "plateCode": 5,
+    "region": "karadeniz"
+  },
+  {
     "id": "ankara",
     "name": "Ankara",
     "slug": "ankara",
@@ -21,11 +56,221 @@
     "region": "akdeniz"
   },
   {
+    "id": "ardahan",
+    "name": "Ardahan",
+    "slug": "ardahan",
+    "plateCode": 75,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "artvin",
+    "name": "Artvin",
+    "slug": "artvin",
+    "plateCode": 8,
+    "region": "karadeniz"
+  },
+  {
+    "id": "aydin",
+    "name": "Aydın",
+    "slug": "aydin",
+    "plateCode": 9,
+    "region": "ege"
+  },
+  {
+    "id": "balikesir",
+    "name": "Balıkesir",
+    "slug": "balikesir",
+    "plateCode": 10,
+    "region": "marmara"
+  },
+  {
+    "id": "bartin",
+    "name": "Bartın",
+    "slug": "bartin",
+    "plateCode": 74,
+    "region": "karadeniz"
+  },
+  {
+    "id": "batman",
+    "name": "Batman",
+    "slug": "batman",
+    "plateCode": 72,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "bayburt",
+    "name": "Bayburt",
+    "slug": "bayburt",
+    "plateCode": 69,
+    "region": "karadeniz"
+  },
+  {
+    "id": "bilecik",
+    "name": "Bilecik",
+    "slug": "bilecik",
+    "plateCode": 11,
+    "region": "marmara"
+  },
+  {
+    "id": "bingol",
+    "name": "Bingöl",
+    "slug": "bingol",
+    "plateCode": 12,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "bitlis",
+    "name": "Bitlis",
+    "slug": "bitlis",
+    "plateCode": 13,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "bolu",
+    "name": "Bolu",
+    "slug": "bolu",
+    "plateCode": 14,
+    "region": "karadeniz"
+  },
+  {
+    "id": "burdur",
+    "name": "Burdur",
+    "slug": "burdur",
+    "plateCode": 15,
+    "region": "akdeniz"
+  },
+  {
     "id": "bursa",
     "name": "Bursa",
     "slug": "bursa",
     "plateCode": 16,
     "region": "marmara"
+  },
+  {
+    "id": "canakkale",
+    "name": "Çanakkale",
+    "slug": "canakkale",
+    "plateCode": 17,
+    "region": "marmara"
+  },
+  {
+    "id": "cankiri",
+    "name": "Çankırı",
+    "slug": "cankiri",
+    "plateCode": 18,
+    "region": "karadeniz"
+  },
+  {
+    "id": "corum",
+    "name": "Çorum",
+    "slug": "corum",
+    "plateCode": 19,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "denizli",
+    "name": "Denizli",
+    "slug": "denizli",
+    "plateCode": 20,
+    "region": "ege"
+  },
+  {
+    "id": "diyarbakir",
+    "name": "Diyarbakır",
+    "slug": "diyarbakir",
+    "plateCode": 21,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "duzce",
+    "name": "Düzce",
+    "slug": "duzce",
+    "plateCode": 81,
+    "region": "karadeniz"
+  },
+  {
+    "id": "edirne",
+    "name": "Edirne",
+    "slug": "edirne",
+    "plateCode": 22,
+    "region": "marmara"
+  },
+  {
+    "id": "elazig",
+    "name": "Elazığ",
+    "slug": "elazig",
+    "plateCode": 23,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "erzincan",
+    "name": "Erzincan",
+    "slug": "erzincan",
+    "plateCode": 24,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "erzurum",
+    "name": "Erzurum",
+    "slug": "erzurum",
+    "plateCode": 25,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "eskisehir",
+    "name": "Eskişehir",
+    "slug": "eskisehir",
+    "plateCode": 26,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "gaziantep",
+    "name": "Gaziantep",
+    "slug": "gaziantep",
+    "plateCode": 27,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "giresun",
+    "name": "Giresun",
+    "slug": "giresun",
+    "plateCode": 28,
+    "region": "karadeniz"
+  },
+  {
+    "id": "gumushane",
+    "name": "Gümüşhane",
+    "slug": "gumushane",
+    "plateCode": 29,
+    "region": "karadeniz"
+  },
+  {
+    "id": "hakkari",
+    "name": "Hakkari",
+    "slug": "hakkari",
+    "plateCode": 30,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "hatay",
+    "name": "Hatay",
+    "slug": "hatay",
+    "plateCode": 31,
+    "region": "akdeniz"
+  },
+  {
+    "id": "igdir",
+    "name": "Iğdır",
+    "slug": "igdir",
+    "plateCode": 76,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "isparta",
+    "name": "Isparta",
+    "slug": "isparta",
+    "plateCode": 32,
+    "region": "akdeniz"
   },
   {
     "id": "istanbul",
@@ -42,6 +287,83 @@
     "region": "ege"
   },
   {
+    "id": "kahramanmaras",
+    "name": "Kahramanmaraş",
+    "slug": "kahramanmaras",
+    "plateCode": 46,
+    "region": "akdeniz"
+  },
+  {
+    "id": "karabuk",
+    "name": "Karabük",
+    "slug": "karabuk",
+    "plateCode": 78,
+    "region": "karadeniz"
+  },
+  {
+    "id": "karaman",
+    "name": "Karaman",
+    "slug": "karaman",
+    "plateCode": 70,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "kars",
+    "name": "Kars",
+    "slug": "kars",
+    "plateCode": 36,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "kastamonu",
+    "name": "Kastamonu",
+    "slug": "kastamonu",
+    "plateCode": 37,
+    "region": "karadeniz"
+  },
+  {
+    "id": "kayseri",
+    "name": "Kayseri",
+    "slug": "kayseri",
+    "plateCode": 38,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "kilis",
+    "name": "Kilis",
+    "slug": "kilis",
+    "plateCode": 79,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "kirikkale",
+    "name": "Kırıkkale",
+    "slug": "kirikkale",
+    "plateCode": 71,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "kirklareli",
+    "name": "Kırklareli",
+    "slug": "kirklareli",
+    "plateCode": 39,
+    "region": "marmara"
+  },
+  {
+    "id": "kirsehir",
+    "name": "Kırşehir",
+    "slug": "kirsehir",
+    "plateCode": 40,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "kocaeli",
+    "name": "Kocaeli",
+    "slug": "kocaeli",
+    "plateCode": 41,
+    "region": "marmara"
+  },
+  {
     "id": "konya",
     "name": "Konya",
     "slug": "konya",
@@ -49,10 +371,199 @@
     "region": "ic-anadolu"
   },
   {
+    "id": "kutahya",
+    "name": "Kütahya",
+    "slug": "kutahya",
+    "plateCode": 43,
+    "region": "ege"
+  },
+  {
+    "id": "malatya",
+    "name": "Malatya",
+    "slug": "malatya",
+    "plateCode": 44,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "manisa",
+    "name": "Manisa",
+    "slug": "manisa",
+    "plateCode": 45,
+    "region": "ege"
+  },
+  {
+    "id": "mardin",
+    "name": "Mardin",
+    "slug": "mardin",
+    "plateCode": 47,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "mersin",
+    "name": "Mersin",
+    "slug": "mersin",
+    "plateCode": 33,
+    "region": "akdeniz"
+  },
+  {
+    "id": "mugla",
+    "name": "Muğla",
+    "slug": "mugla",
+    "plateCode": 48,
+    "region": "ege"
+  },
+  {
+    "id": "mus",
+    "name": "Muş",
+    "slug": "mus",
+    "plateCode": 49,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "nevsehir",
+    "name": "Nevşehir",
+    "slug": "nevsehir",
+    "plateCode": 50,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "nigde",
+    "name": "Niğde",
+    "slug": "nigde",
+    "plateCode": 51,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "ordu",
+    "name": "Ordu",
+    "slug": "ordu",
+    "plateCode": 52,
+    "region": "karadeniz"
+  },
+  {
+    "id": "osmaniye",
+    "name": "Osmaniye",
+    "slug": "osmaniye",
+    "plateCode": 80,
+    "region": "akdeniz"
+  },
+  {
+    "id": "rize",
+    "name": "Rize",
+    "slug": "rize",
+    "plateCode": 53,
+    "region": "karadeniz"
+  },
+  {
+    "id": "sakarya",
+    "name": "Sakarya",
+    "slug": "sakarya",
+    "plateCode": 54,
+    "region": "marmara"
+  },
+  {
+    "id": "samsun",
+    "name": "Samsun",
+    "slug": "samsun",
+    "plateCode": 55,
+    "region": "karadeniz"
+  },
+  {
+    "id": "sanliurfa",
+    "name": "Şanlıurfa",
+    "slug": "sanliurfa",
+    "plateCode": 63,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "siirt",
+    "name": "Siirt",
+    "slug": "siirt",
+    "plateCode": 56,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "sinop",
+    "name": "Sinop",
+    "slug": "sinop",
+    "plateCode": 57,
+    "region": "karadeniz"
+  },
+  {
+    "id": "sirnak",
+    "name": "Şırnak",
+    "slug": "sirnak",
+    "plateCode": 73,
+    "region": "guneydogu-anadolu"
+  },
+  {
+    "id": "sivas",
+    "name": "Sivas",
+    "slug": "sivas",
+    "plateCode": 58,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "tekirdag",
+    "name": "Tekirdağ",
+    "slug": "tekirdag",
+    "plateCode": 59,
+    "region": "marmara"
+  },
+  {
+    "id": "tokat",
+    "name": "Tokat",
+    "slug": "tokat",
+    "plateCode": 60,
+    "region": "karadeniz"
+  },
+  {
     "id": "trabzon",
     "name": "Trabzon",
     "slug": "trabzon",
     "plateCode": 61,
+    "region": "karadeniz"
+  },
+  {
+    "id": "tunceli",
+    "name": "Tunceli",
+    "slug": "tunceli",
+    "plateCode": 62,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "usak",
+    "name": "Uşak",
+    "slug": "usak",
+    "plateCode": 64,
+    "region": "ege"
+  },
+  {
+    "id": "van",
+    "name": "Van",
+    "slug": "van",
+    "plateCode": 65,
+    "region": "dogu-anadolu"
+  },
+  {
+    "id": "yalova",
+    "name": "Yalova",
+    "slug": "yalova",
+    "plateCode": 77,
+    "region": "marmara"
+  },
+  {
+    "id": "yozgat",
+    "name": "Yozgat",
+    "slug": "yozgat",
+    "plateCode": 66,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "zonguldak",
+    "name": "Zonguldak",
+    "slug": "zonguldak",
+    "plateCode": 67,
     "region": "karadeniz"
   }
 ]
