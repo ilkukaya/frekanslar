@@ -1,0 +1,71 @@
+---
+import { paths } from '../lib/urls';
+import { siteConfig } from '../config/site';
+
+const currentYear = new Date().getFullYear();
+
+const columns = [
+  {
+    title: 'Keşfet',
+    links: [
+      { name: 'Radyo Frekansları', href: paths.radioList() },
+      { name: 'Televizyon Kanalları', href: paths.tvList() },
+      { name: 'TV Frekansları', href: paths.tvFrequencies() },
+      { name: 'Uydu Frekansları', href: paths.satelliteList() },
+      { name: 'Rehber', href: paths.guideList() },
+      { name: 'Güncellemeler', href: paths.updateList() },
+    ],
+  },
+  {
+    title: 'Kurumsal',
+    links: [
+      { name: 'Hakkımızda', href: paths.about() },
+      { name: 'Veri Kaynakları', href: paths.dataSources() },
+      { name: 'İletişim', href: paths.contact() },
+    ],
+  },
+  {
+    title: 'Yasal ve Bildirimler',
+    links: [
+      { name: 'Hatalı Bilgi Bildir', href: paths.correction() },
+      { name: 'Gizlilik Politikası', href: paths.privacy() },
+      { name: 'Kullanım Koşulları', href: paths.terms() },
+    ],
+  },
+];
+---
+
+<footer class="border-t border-border bg-surface">
+  <div class="mx-auto max-w-(--container-content) px-4 py-12 sm:px-6">
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+      <div class="col-span-2">
+        <p class="text-base font-bold text-ink">{siteConfig.siteName}</p>
+        <p class="mt-2 max-w-sm text-sm text-ink-muted">{siteConfig.defaultDescription}</p>
+      </div>
+      {
+        columns.map((column) => (
+          <div>
+            <h2 class="text-sm font-semibold text-ink">{column.title}</h2>
+            <ul class="mt-3 space-y-2">
+              {column.links.map((link) => (
+                <li>
+                  <a href={link.href} class="text-sm text-ink-muted hover:text-primary-600 hover:underline">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {currentYear} {siteConfig.siteName}. Tüm hakları saklıdır.</p>
+      <p>
+        Kanal ve radyo logoları ilgili yayın kuruluşlarına aittir ve yalnızca tanımlayıcı/editoryal amaçla
+        kullanılır.
+      </p>
+    </div>
+  </div>
+</footer>

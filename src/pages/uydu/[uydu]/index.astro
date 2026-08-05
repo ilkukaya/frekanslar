@@ -1,0 +1,236 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import VerificationBadge from '../../../components/VerificationBadge.astro';
+import SourceList from '../../../components/SourceList.astro';
+import RelatedLinks from '../../../components/RelatedLinks.astro';
+import { BROADCAST_KIND_LABELS, ENCRYPTION_LABELS, RESOLUTION_LABELS } from '../../../lib/labels';
+import { formatDateTr, formatTransponderSignature } from '../../../lib/format';
+import { byId, servicesBySatellite, sourcesByIds, transpondersBySatellite } from '../../../lib/relations';
+import { canonicalUrl, paths } from '../../../lib/urls';
+import { breadcrumbListSchema, datasetSchema, webPageSchema } from '../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [satelliteEntries, transponderEntries, serviceEntries, radioEntries, tvEntries, sourceEntries] =
+    await Promise.all([
+      getCollection('satellites'),
+      getCollection('transponders'),
+      getCollection('satellite-services'),
+      getCollection('radio-stations'),
+      getCollection('television-channels'),
+      getCollection('sources'),
+    ]);
+
+  const satellites = satelliteEntries.map((e) => e.data);
+  const transponders = transponderEntries.map((e) => e.data);
+  const services = serviceEntries.map((e) => e.data);
+  const radioStations = radioEntries.map((e) => e.data);
+  const televisionChannels = tvEntries.map((e) => e.data);
+  const sources = sourceEntries.map((e) => e.data);
+
+  return satellites.map((satellite) => ({
+    params: { uydu: satellite.slug },
+    props: {
+      satellite,
+      satellites,
+      transponders: transpondersBySatellite(transponders, satellite.id),
+      services: servicesBySatellite(services, satellite.id),
+      radioStations,
+      televisionChannels,
+      sources,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { satellite, satellites, transponders, services, radioStations, televisionChannels, sources } = Astro.props;
+
+const tvServices = services.filter((s) => s.broadcastKind === 'tv');
+const radioServices = services.filter((s) => s.broadcastKind === 'radio');
+const freeToAirCount = services.filter((s) => s.encryption === 'free-to-air').length;
+const encryptedCount = services.filter((s) => s.encryption === 'encrypted').length;
+const satelliteSources = sourcesByIds(sources, satellite.sourceIds);
+const latestVerifiedAt = [satellite.lastVerifiedAt, ...services.map((s) => s.lastVerifiedAt)].sort().at(-1) ?? satellite.lastVerifiedAt;
+
+const pagePath = paths.satellite(satellite.slug);
+const pageTitle = `${satellite.name} Güncel TV ve Radyo Frekansları`;
+const pageDescription = `${satellite.name} (${satellite.orbitalPosition}) üzerindeki transponderler, taşıdığı televizyon ve radyo kanalları, şifreli/şifresiz yayın bilgileri.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Uydu Frekansları', href: paths.satelliteList() },
+  { name: satellite.name, href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath), dateModified: latestVerifiedAt }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  datasetSchema({
+    name: `${satellite.name} Transponder ve Kanal Veri Seti`,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    dateModified: latestVerifiedAt,
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{satellite.name}</h1>
+    <div class="mt-2">
+      <VerificationBadge status={satellite.verificationStatus} lastVerifiedAt={satellite.lastVerifiedAt} />
+    </div>
+
+    <p class="mt-6 max-w-3xl text-ink-muted">{satellite.description}</p>
+
+    <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Yörünge Konumu</p>
+        <p class="mt-1 font-medium text-ink">{satellite.orbitalPosition}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">İşletmeci</p>
+        <p class="mt-1 font-medium text-ink">{satellite.operator}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Transponder Sayısı</p>
+        <p class="mt-1 font-medium text-ink">{transponders.length}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Şifresiz / Şifreli</p>
+        <p class="mt-1 font-medium text-ink">{freeToAirCount} / {encryptedCount}</p>
+      </div>
+    </div>
+
+    {
+      satellite.coverageAreas.length > 0 && (
+        <div class="mt-6">
+          <h2 class="text-sm font-semibold text-ink">Kapsama Alanı</h2>
+          <p class="mt-1 text-sm text-ink-muted">{satellite.coverageAreas.join(', ')}</p>
+        </div>
+      )
+    }
+
+    <section class="mt-10" data-resolution-filter-root>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="text-xl font-bold text-ink">Aktif Transponderler ve Kanallar</h2>
+        <div class="flex items-center gap-2">
+          <label for="res-filter" class="text-xs font-medium text-ink-muted">Görüntü kalitesine göre filtrele</label>
+          <select id="res-filter" class="h-9 rounded-md border border-border-strong bg-surface px-2 text-sm" data-resolution-filter>
+            <option value="">Tümü</option>
+            <option value="SD">SD</option>
+            <option value="HD">HD</option>
+            <option value="UHD">UHD</option>
+          </select>
+        </div>
+      </div>
+
+      {
+        transponders.length === 0 ? (
+          <p class="mt-3 text-sm text-ink-muted">Bu uydu için henüz doğrulanmış bir transponder kaydı bulunmuyor.</p>
+        ) : (
+          <div class="mt-4 space-y-4">
+            {transponders.map((transponder) => {
+              const transponderServices = services.filter((s) => s.transponderId === transponder.id);
+              return (
+                <div class="rounded-lg border border-border bg-surface p-5">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <a href={paths.transponder(transponder.slug)} class="font-semibold text-ink hover:text-primary-600 hover:underline">
+                      {formatTransponderSignature(transponder.frequencyMhz, transponder.polarization, transponder.symbolRate)}
+                    </a>
+                    <VerificationBadge status={transponder.verificationStatus} compact />
+                  </div>
+                  <p class="mt-1 text-xs text-ink-faint">{transponder.fec} FEC · {transponder.modulation}</p>
+                  <div class="mt-3 overflow-x-auto rounded-md border border-border" tabindex="0">
+                    <table class="responsive-table w-full border-collapse text-sm">
+                      <caption class="sr-only">{transponder.slug} transponderindeki servisler</caption>
+                      <thead class="bg-surface-subtle text-left">
+                        <tr>
+                          <th scope="col" class="px-3 py-2 font-semibold text-ink">Kanal</th>
+                          <th scope="col" class="px-3 py-2 font-semibold text-ink">Tür</th>
+                          <th scope="col" class="px-3 py-2 font-semibold text-ink">Görüntü</th>
+                          <th scope="col" class="px-3 py-2 font-semibold text-ink">Şifreleme</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {transponderServices.map((service) => {
+                          const brand =
+                            service.broadcastKind === 'tv'
+                              ? byId(televisionChannels, service.stationId)
+                              : byId(radioStations, service.stationId);
+                          const href = brand
+                            ? service.broadcastKind === 'tv'
+                              ? paths.televisionChannel(brand.slug)
+                              : paths.radioStation(brand.slug)
+                            : null;
+                          return (
+                            <tr data-resolution={service.resolution ?? ''}>
+                              <td data-label="Kanal" class="border-t border-border px-3 py-2 font-medium text-ink">
+                                {brand && href ? (
+                                  <a href={href} class="text-primary-600 hover:underline">{brand.name}</a>
+                                ) : (
+                                  service.stationId
+                                )}
+                              </td>
+                              <td data-label="Tür" class="border-t border-border px-3 py-2 text-ink-muted">
+                                {BROADCAST_KIND_LABELS[service.broadcastKind]}
+                              </td>
+                              <td data-label="Görüntü" class="border-t border-border px-3 py-2 text-ink-muted">
+                                {service.resolution ? RESOLUTION_LABELS[service.resolution] : '—'}
+                              </td>
+                              <td data-label="Şifreleme" class="border-t border-border px-3 py-2 text-ink-muted">
+                                {ENCRYPTION_LABELS[service.encryption]}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )
+      }
+    </section>
+
+    <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Televizyon Kanalı Sayısı</p>
+        <p class="mt-1 text-xl font-bold text-ink">{tvServices.length}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Radyo Kanalı Sayısı</p>
+        <p class="mt-1 text-xl font-bold text-ink">{radioServices.length}</p>
+      </div>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink">Veri Kaynakları ve Doğrulama</h2>
+      <div class="mt-3 rounded-lg border border-border bg-surface p-4">
+        <VerificationBadge status={satellite.verificationStatus} lastVerifiedAt={satellite.lastVerifiedAt} />
+        <div class="mt-2">
+          <SourceList sources={satelliteSources} />
+        </div>
+      </div>
+    </section>
+
+    <RelatedLinks
+      title="Diğer Uydular"
+      items={satellites.filter((s) => s.id !== satellite.id).map((s) => ({ name: s.name, href: paths.satellite(s.slug) }))}
+    />
+
+    <p class="mt-8 text-sm text-ink-muted">
+      Son güncelleme: <time datetime={latestVerifiedAt}>{formatDateTr(latestVerifiedAt)}</time>. Hatalı bir bilgi mi
+      gördünüz?{' '}
+      <a href={`${paths.correction()}?ilgili=${encodeURIComponent(satellite.name)}`} class="text-primary-600 underline hover:no-underline">
+        Düzeltme bildirin
+      </a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<script src="../../../scripts/resolution-filter-controller.ts"></script>

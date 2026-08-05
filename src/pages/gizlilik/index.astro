@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../config/site';
+import { formatDateTr } from '../../lib/format';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+
+const lastUpdated = '2026-08-05';
+const pagePath = paths.privacy();
+const pageTitle = 'Gizlilik Politikası | Frekanslar';
+const pageDescription = `${siteConfig.siteName} gizlilik politikası: hangi verilerin toplandığı, analitik yaklaşımımız ve düzeltme formu üzerinden paylaşılan bilgiler.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Gizlilik Politikası', href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath), dateModified: lastUpdated }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={lastUpdated} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Gizlilik Politikası</h1>
+    <p class="mt-2 text-sm text-ink-faint">Son güncelleme: {formatDateTr(lastUpdated)}</p>
+
+    <div class="prose-content mt-6 space-y-4 text-ink-muted">
+      <h2 class="text-lg font-bold text-ink">Analitik Yaklaşımımız</h2>
+      <p>
+        {siteConfig.siteName}, varsayılan olarak hiçbir üçüncü taraf analitik betiği yüklemez ve hiçbir çerez
+        kullanmaz. Site içi etkileşimler (arama, sonuç tıklaması, resmî bağlantı tıklaması, düzeltme gönderimi
+        gibi) yalnızca bir analitik sağlayıcı açıkça yapılandırılmışsa ve o sağlayıcının betiği site işletmeni
+        tarafından ayrıca eklenmişse ölçülür. Bu ölçüm, kullanıcıyı tanımlayıcı kişisel veri toplamaz.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Düzeltme Bildirim Formu</h2>
+      <p>
+        Düzeltme bildirim formunda paylaştığınız bilgiler (ilgili yayın, önerilen düzeltme, isteğe bağlı ad ve
+        e-posta) yalnızca bildiriminizi değerlendirmek ve gerekirse sizinle iletişime geçmek amacıyla kullanılır.
+        Ad ve e-posta alanları isteğe bağlıdır.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Sunucu Günlükleri</h2>
+      <p>
+        Statik olarak barındırılan bu site, barındırma sağlayıcısının standart sunucu günlüklerini (IP adresi,
+        tarayıcı bilgisi, istek zamanı gibi) tutabilir. Bu günlükler güvenlik ve performans amacıyla kullanılır.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Üçüncü Taraf Bağlantılar</h2>
+      <p>
+        Radyo ve televizyon kuruluşlarının resmî web sitelerine ve canlı yayın sayfalarına verdiğimiz bağlantılar
+        sizi bu sitenin dışına yönlendirir. Bu harici sitelerin kendi gizlilik politikaları geçerlidir.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">İletişim</h2>
+      <p>
+        Gizlilikle ilgili sorularınız için{' '}
+        <a href={`mailto:${siteConfig.contactEmail}`} class="text-primary-600 underline hover:no-underline">{siteConfig.contactEmail}</a>{' '}
+        adresinden bize ulaşabilirsiniz.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

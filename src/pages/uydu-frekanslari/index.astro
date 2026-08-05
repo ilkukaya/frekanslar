@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SatelliteCard from '../../components/SatelliteCard.astro';
+import { servicesBySatellite, sortByName, transpondersBySatellite } from '../../lib/relations';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const [satelliteEntries, transponderEntries, serviceEntries] = await Promise.all([
+  getCollection('satellites'),
+  getCollection('transponders'),
+  getCollection('satellite-services'),
+]);
+
+const satellites = sortByName(satelliteEntries.map((e) => e.data));
+const transponders = transponderEntries.map((e) => e.data);
+const services = serviceEntries.map((e) => e.data);
+
+const pagePath = paths.satelliteList();
+const pageTitle = 'Türkiye Uydu Frekansları: Türksat Uyduları ve Kanal Ayarları';
+const pageDescription = `Türkiye'de radyo ve televizyon yayınlarının dağıtıldığı ${satellites.length} uydunun yörünge konumu, transponderleri ve taşıdığı kanallar.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Uydu Frekansları', href: pagePath },
+];
+
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: satellites.map((satellite) => ({ name: satellite.name, url: canonicalUrl(paths.satellite(satellite.slug)) })),
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Türkiye Uydu Frekansları</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">
+      Türkiye'de yayın yapan ulusal televizyon ve radyo kanallarının büyük bölümü Türksat uydu ailesi üzerinden
+      şifresiz olarak dağıtılır. Aşağıdan bir uyduyu seçerek transponderlerini ve taşıdığı kanalları
+      inceleyebilirsiniz.
+    </p>
+    <p class="mt-2 text-sm">
+      Kanala göre arama yapmak isterseniz{' '}
+      <a href={paths.tvFrequencies()} class="text-primary-600 underline hover:no-underline">TV frekansları tablosuna</a> bakın.
+    </p>
+
+    <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        satellites.map((satellite) => {
+          const transponderCount = transpondersBySatellite(transponders, satellite.id).length;
+          const serviceCount = servicesBySatellite(services, satellite.id).length;
+          return (
+            <SatelliteCard
+              satellite={satellite}
+              meta={`${satellite.orbitalPosition} · ${transponderCount} transponder · ${serviceCount} kanal`}
+            />
+          );
+        })
+      }
+    </div>
+  </div>
+</BaseLayout>

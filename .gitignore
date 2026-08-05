@@ -1,0 +1,28 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# generated
+src/generated/
+public/search-index.json
+reports/
+
+# logs
+npm-debug.log*
+*.log
+
+# environment
+.env
+.env.production
+.env.local
+
+# editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# testing
+coverage/

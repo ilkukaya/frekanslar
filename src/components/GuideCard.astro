@@ -1,0 +1,26 @@
+---
+import { BookOpen } from '@lucide/astro';
+import { paths } from '../lib/urls';
+import { formatDateTr } from '../lib/format';
+
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  updatedDate: string;
+}
+
+const { slug, title, description, updatedDate } = Astro.props;
+---
+
+<a
+  href={paths.guide(slug)}
+  class="flex flex-col gap-2 rounded-lg border border-border bg-surface p-4 shadow-card transition-colors hover:border-primary-600"
+>
+  <span class="flex h-9 w-9 items-center justify-center rounded-md bg-primary-50 text-primary-700">
+    <BookOpen class="h-4.5 w-4.5" aria-hidden="true" />
+  </span>
+  <p class="font-semibold text-ink">{title}</p>
+  <p class="line-clamp-2 text-sm text-ink-muted">{description}</p>
+  <p class="text-xs text-ink-faint">Güncellendi: {formatDateTr(updatedDate)}</p>
+</a>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../config/site';
+import { formatDateTr } from '../../lib/format';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+
+const lastUpdated = '2026-08-05';
+const pagePath = paths.terms();
+const pageTitle = 'Kullanım Koşulları | Frekanslar';
+const pageDescription = `${siteConfig.siteName} kullanım koşulları: veri doğruluğu, telif ve resmî yayın bağlantıları politikası.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Kullanım Koşulları', href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath), dateModified: lastUpdated }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={lastUpdated} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Kullanım Koşulları</h1>
+    <p class="mt-2 text-sm text-ink-faint">Son güncelleme: {formatDateTr(lastUpdated)}</p>
+
+    <div class="prose-content mt-6 space-y-4 text-ink-muted">
+      <h2 class="text-lg font-bold text-ink">Veri Doğruluğu</h2>
+      <p>
+        {siteConfig.siteName} üzerindeki bilgiler mümkün olan en güncel ve doğru şekilde sunulmaya çalışılır;
+        ancak frekans, transponder ve teknik yayın parametreleri zaman içinde değişebilir. Her kaydın yanında
+        gösterilen doğrulama durumu ve son kontrol tarihi, bilginin güncelliği hakkında fikir verir. Kritik
+        kullanım (örneğin bir yayının profesyonel olarak dağıtımı) öncesinde bilginin ilgili resmî kaynaktan
+        teyit edilmesi önerilir.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Telif ve Resmî Yayın Bağlantıları Politikası</h2>
+      <ul class="list-disc space-y-1 pl-5">
+        <li>Hiçbir canlı yayını izinsiz olarak yeniden yayınlamayız veya proxy üzerinden geçirmeyiz.</li>
+        <li>Korsan veya yetkisiz üçüncü taraf yayın bağlantısı eklemeyiz.</li>
+        <li>HLS veya video akış adreslerini izinsiz olarak kopyalamayız.</li>
+        <li>
+          "Resmî Yayından Dinle/İzle" butonları yalnızca ilgili yayın kuruluşunun resmî web sitesine veya
+          doğrulanmış resmî canlı yayın sayfasına yönlendirir; bu bağlantılar yeni sekmede açılır ve kullanıcıyı
+          sitede yayın başlıyormuş gibi yanıltmaz.
+        </li>
+        <li>Yayın kuruluşunun açık izni olmadan hiçbir yayını iframe ile gömmeyiz.</li>
+      </ul>
+
+      <h2 class="text-lg font-bold text-ink">Logo ve Marka Kullanımı</h2>
+      <p>
+        Kanal ve radyo logoları, kullanıldığı sayfalarda yalnızca tanımlayıcı ve editoryal amaçla gösterilir;
+        yeniden tasarlanmaz veya yanıltıcı biçimde değiştirilmez. Logo kaynağı belirtilmemiş kayıtlarda, kırık
+        görsel yerine baş harflerden oluşan güvenli bir yer tutucu gösterilir. Logo veya marka kullanımıyla
+        ilgili bir itirazınız varsa
+        {' '}<a href={paths.correction()} class="text-primary-600 underline hover:no-underline">Düzeltme Bildir</a>{' '}
+        sayfası üzerinden bize ulaşabilirsiniz.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Düzeltme ve Kaldırma Başvurusu</h2>
+      <p>
+        Hatalı, güncelliğini yitirmiş veya itiraz ettiğiniz bir bilgi için
+        {' '}<a href={paths.correction()} class="text-primary-600 underline hover:no-underline">Düzeltme Bildir</a>{' '}
+        formunu kullanabilirsiniz. İçerik kaldırma taleplerini de aynı form üzerinden, talebinizin gerekçesini
+        açıklayarak iletebilirsiniz.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Sorumluluk Sınırı</h2>
+      <p>
+        {siteConfig.siteName}, sitede yer alan bilgilerin kullanımından doğabilecek doğrudan veya dolaylı
+        zararlardan sorumlu tutulamaz. Site "olduğu gibi" sunulmaktadır.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+/**
+ * Central SEO component. Every indexable page renders this once in its
+ * <head> with a unique title/description/canonical -- nothing here is
+ * auto-generated from a template that could produce duplicate or
+ * keyword-stuffed titles; each page composes its own.
+ */
+import { siteConfig } from '../config/site';
+import { canonicalUrl } from '../lib/urls';
+import JsonLd from './JsonLd.astro';
+import type { JsonLdObject } from '../lib/seo/jsonld';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Site-relative path, e.g. "/radyo/metro-fm/". Used to build the canonical URL and og:url. */
+  path: string;
+  robots?: 'index,follow' | 'noindex,follow' | 'noindex,nofollow';
+  ogType?: 'website' | 'article';
+  /** ISO date the underlying content was last verified/updated. */
+  lastUpdated?: string;
+  jsonLd?: JsonLdObject | JsonLdObject[];
+}
+
+const {
+  title,
+  description,
+  path,
+  robots = 'index,follow',
+  ogType = 'website',
+  lastUpdated,
+  jsonLd,
+} = Astro.props;
+
+const url = canonicalUrl(path);
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+<meta name="robots" content={robots} />
+
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:site_name" content={siteConfig.siteName} />
+<meta property="og:locale" content={siteConfig.locale.replace('-', '_')} />
+{lastUpdated && <meta property="article:modified_time" content={lastUpdated} />}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+
+{jsonLd && <JsonLd schema={jsonLd} />}

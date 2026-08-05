@@ -1,0 +1,18 @@
+[
+  {
+    "id": "trt",
+    "name": "TRT (Türkiye Radyo Televizyon Kurumu)",
+    "slug": "trt",
+    "description": "TRT, Türkiye'nin kamu radyo ve televizyon kurumudur. Ulusal ölçekte birden fazla radyo ve televizyon kanalı işletir. Bu profil, TRT'ye bağlı marka sayfalarını (TRT 1, TRT FM, TRT Türkü, Radyo 1) tek bir kurumsal kimlik altında ilişkilendirmek için tutulur.",
+    "headquarters": "ankara",
+    "officialWebsite": "https://www.trt.net.tr",
+    "foundedYear": 1964,
+    "claimStatus": "unclaimed",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "rtuk",
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  }
+]

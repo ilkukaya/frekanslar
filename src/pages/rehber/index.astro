@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const guideEntries = await getCollection('guides');
+const guides = [...guideEntries].sort((a, b) => b.data.updatedDate.localeCompare(a.data.updatedDate));
+
+const pagePath = paths.guideList();
+const pageTitle = 'Rehberler: Frekans ve Yayın Kılavuzları';
+const pageDescription = 'Uydu kanalı ekleme, FM frekansı bulma ve yayın türleri hakkında adım adım rehberler.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Rehber', href: pagePath },
+];
+
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: guides.map((guide) => ({ name: guide.data.title, url: canonicalUrl(paths.guide(guide.id)) })),
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Rehberler</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">{pageDescription}</p>
+
+    <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        guides.map((guide) => (
+          <GuideCard slug={guide.id} title={guide.data.title} description={guide.data.description} updatedDate={guide.data.updatedDate} />
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

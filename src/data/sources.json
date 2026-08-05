@@ -1,0 +1,47 @@
+[
+  {
+    "id": "broadcaster-official-site",
+    "name": "Yayın Kuruluşunun Resmî Web Sitesi",
+    "slug": "broadcaster-official-site",
+    "type": "broadcaster-official",
+    "url": null,
+    "description": "İlgili radyo veya televizyon kuruluşunun kendi resmî kurumsal web sitesinde yayınladığı bilgiler. Kayda özgü resmî site adresi, kaydın officialWebsite alanında yer alır.",
+    "reliability": "high"
+  },
+  {
+    "id": "editorial-placeholder",
+    "name": "Frekanslar Editöryal Notu (Örnek Veri)",
+    "slug": "editorial-placeholder",
+    "type": "editorial-placeholder",
+    "url": null,
+    "description": "Bu kayıt, mimariyi göstermek amacıyla Frekanslar editör ekibi tarafından oluşturulmuş örnek/gösterim verisidir. RTÜK, Türksat veya ilgili yayıncı tarafından doğrulanmamıştır ve yayın öncesinde gerçek kaynaklarla teyit edilmelidir.",
+    "reliability": "low"
+  },
+  {
+    "id": "rtuk",
+    "name": "RTÜK (Radyo ve Televizyon Üst Kurulu)",
+    "slug": "rtuk",
+    "type": "regulator",
+    "url": "https://www.rtuk.gov.tr",
+    "description": "Türkiye'de radyo ve televizyon yayıncılığını düzenleyen resmî üst kurul. Yayın lisansları ve yayıncı kayıtlarına ilişkin en yüksek öncelikli resmî kaynak.",
+    "reliability": "high"
+  },
+  {
+    "id": "turksat",
+    "name": "Türksat A.Ş.",
+    "slug": "turksat",
+    "type": "satellite-operator",
+    "url": "https://www.turksat.com.tr",
+    "description": "Türkiye'nin uydu işletmecisi. Türksat uydu ailesi ve transponder tahsislerine ilişkin resmî işletmeci kaynağı.",
+    "reliability": "high"
+  },
+  {
+    "id": "user-report",
+    "name": "Kullanıcı Bildirimi",
+    "slug": "user-report",
+    "type": "user-submission",
+    "url": null,
+    "description": "Düzeltme bildirim formu üzerinden kullanıcılar tarafından iletilen, editöryal ekip tarafından henüz doğrulanmamış bilgi.",
+    "reliability": "low"
+  }
+]

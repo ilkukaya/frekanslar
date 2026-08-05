@@ -1,0 +1,91 @@
+---
+/**
+ * Renders a verification-status pill with an honest, specific label --
+ * never just a green checkmark. Colors stay within the blue/red/orange
+ * accent palette; "verified" uses blue (primary), degraded states use
+ * orange, and stale/inactive states use red.
+ */
+import { Clock, CircleCheckBig, Info, TriangleAlert } from '@lucide/astro';
+import { formatDateTr } from '../lib/format';
+import type { VerificationStatus } from '../data/schemas';
+
+interface Props {
+  status: VerificationStatus;
+  lastVerifiedAt?: string;
+  /** Compact = icon + label only, no trailing "Son kontrol" date. */
+  compact?: boolean;
+}
+
+const { status, lastVerifiedAt, compact = false } = Astro.props;
+
+const STATUS_META: Record<
+  VerificationStatus,
+  {
+    label: string;
+    /** Shorter wording for dense contexts (cards, list rows) -- same meaning, less repetition. */
+    shortLabel: string;
+    tone: 'primary' | 'warning' | 'danger';
+    icon: 'check' | 'clock' | 'info' | 'warning';
+  }
+> = {
+  verified: { label: 'Resmî kaynaktan doğrulandı', shortLabel: 'Doğrulandı', tone: 'primary', icon: 'check' },
+  'partially-verified': {
+    label: 'Kısmen doğrulandı',
+    shortLabel: 'Kısmen doğrulandı',
+    tone: 'warning',
+    icon: 'info',
+  },
+  'community-reported': {
+    label: 'Kullanıcı bildirimiyle eklendi, henüz doğrulanmadı',
+    shortLabel: 'Kullanıcı bildirimi',
+    tone: 'warning',
+    icon: 'info',
+  },
+  outdated: {
+    label: 'Bu bilgi güncelliğini yitirmiş olabilir',
+    shortLabel: 'Güncel olmayabilir',
+    tone: 'danger',
+    icon: 'warning',
+  },
+  inactive: { label: 'Bu yayın artık aktif değil', shortLabel: 'Aktif değil', tone: 'danger', icon: 'warning' },
+  'pending-review': {
+    label: 'Örnek veri — yayın öncesinde doğrulanmalıdır',
+    shortLabel: 'Örnek veri',
+    tone: 'warning',
+    icon: 'clock',
+  },
+};
+
+const meta = STATUS_META[status];
+const displayLabel = compact ? meta.shortLabel : meta.label;
+
+const TONE_CLASSES: Record<(typeof meta)['tone'], string> = {
+  primary: 'bg-primary-50 text-primary-700',
+  warning: 'bg-warning-50 text-warning-700',
+  danger: 'bg-danger-50 text-danger-700',
+};
+---
+
+<span class="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span
+    class:list={[
+      'inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium',
+      TONE_CLASSES[meta.tone],
+    ]}
+    title={compact ? meta.label : undefined}
+  >
+    {meta.icon === 'check' && <CircleCheckBig class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+    {meta.icon === 'warning' && <TriangleAlert class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+    {meta.icon === 'clock' && <Clock class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+    {meta.icon === 'info' && <Info class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+    {displayLabel}
+  </span>
+  {
+    !compact && lastVerifiedAt && (
+      <span class="text-xs text-ink-faint">
+        Son kontrol:{' '}
+        <time datetime={lastVerifiedAt}>{formatDateTr(lastVerifiedAt)}</time>
+      </span>
+    )
+  }
+</span>

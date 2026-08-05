@@ -1,0 +1,44 @@
+---
+/**
+ * Renders real, page-specific FAQs as native <details>/<summary>
+ * disclosures (no JS, full keyboard/screen-reader support built in).
+ * Callers should only pass FAQPage JSON-LD to <SEO> when `faqs` is
+ * non-empty -- this component doesn't inject structured data itself so
+ * that invariant stays visible at the call site.
+ */
+import type { FaqItem } from '../lib/faq-generator';
+
+export type { FaqItem };
+
+interface Props {
+  faqs: FaqItem[];
+  title?: string;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { faqs, title = 'Sık Sorulan Sorular', headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+---
+
+{
+  faqs.length > 0 && (
+    <section aria-labelledby="faq-heading" class="mt-10">
+      <Heading id="faq-heading" class="text-xl font-bold text-ink">
+        {title}
+      </Heading>
+      <div class="mt-4 divide-y divide-border rounded-lg border border-border bg-surface">
+        {faqs.map((faq, index) => (
+          <details class="group p-4 open:pb-4" open={index === 0}>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-medium text-ink [&::-webkit-details-marker]:hidden">
+              {faq.question}
+              <span class="shrink-0 text-ink-faint transition-transform group-open:rotate-45" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <p class="mt-2 text-sm leading-relaxed text-ink-muted">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}

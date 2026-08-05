@@ -1,0 +1,151 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import FAQSection from '../../../components/FAQSection.astro';
+import RelatedLinks from '../../../components/RelatedLinks.astro';
+import { formatDateTr } from '../../../lib/format';
+import { canonicalUrl, paths } from '../../../lib/urls';
+import { breadcrumbListSchema, faqPageSchema, webPageSchema } from '../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [guideEntries, radioEntries, tvEntries, satelliteEntries] = await Promise.all([
+    getCollection('guides'),
+    getCollection('radio-stations'),
+    getCollection('television-channels'),
+    getCollection('satellites'),
+  ]);
+
+  const radioStations = radioEntries.map((e) => e.data);
+  const televisionChannels = tvEntries.map((e) => e.data);
+  const satellites = satelliteEntries.map((e) => e.data);
+
+  return guideEntries.map((guide) => ({
+    params: { rehber: guide.id },
+    props: { guide, guides: guideEntries, radioStations, televisionChannels, satellites },
+  }));
+}) satisfies GetStaticPaths;
+
+const { guide, guides, radioStations, televisionChannels, satellites } = Astro.props;
+const { Content } = await render(guide);
+
+const pagePath = paths.guide(guide.id);
+const pageTitle = guide.data.seoTitle ?? guide.data.title;
+const pageDescription = guide.data.seoDescription ?? guide.data.description;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Rehber', href: paths.guideList() },
+  { name: guide.data.title, href: pagePath },
+];
+
+const relatedGuides = guides.filter((g) => guide.data.relatedGuideIds.includes(g.id));
+const relatedStations = radioStations.filter((s) => guide.data.relatedStationIds.includes(s.id));
+const relatedChannels = televisionChannels.filter((c) => guide.data.relatedChannelIds.includes(c.id));
+const relatedSatellites = satellites.filter((sat) => guide.data.relatedSatelliteIds.includes(sat.id));
+
+const relatedItems = [
+  ...relatedGuides.map((g) => ({ name: g.data.title, href: paths.guide(g.id), meta: 'Rehber' })),
+  ...relatedStations.map((s) => ({ name: s.name, href: paths.radioStation(s.slug), meta: 'Radyo' })),
+  ...relatedChannels.map((c) => ({ name: c.name, href: paths.televisionChannel(c.slug), meta: 'TV Kanalı' })),
+  ...relatedSatellites.map((sat) => ({ name: sat.name, href: paths.satellite(sat.slug), meta: 'Uydu' })),
+];
+
+const jsonLd = [
+  webPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    dateModified: guide.data.updatedDate,
+  }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  ...(guide.data.faq.length > 0 ? [faqPageSchema(guide.data.faq)] : []),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} ogType="article" lastUpdated={guide.data.updatedDate} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{guide.data.title}</h1>
+    <p class="mt-2 text-sm text-ink-faint">
+      Yayınlanma: <time datetime={guide.data.publishedDate}>{formatDateTr(guide.data.publishedDate)}</time>
+      {' · '}
+      Güncellendi: <time datetime={guide.data.updatedDate}>{formatDateTr(guide.data.updatedDate)}</time>
+    </p>
+
+    <div class="prose-content mt-8">
+      <Content />
+    </div>
+
+    <FAQSection faqs={guide.data.faq} />
+
+    <RelatedLinks title="İlgili İçerikler" items={relatedItems} />
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-content :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  .prose-content :global(p) {
+    margin-top: 0.75rem;
+    line-height: 1.7;
+    color: var(--color-ink-muted);
+  }
+
+  .prose-content :global(ul),
+  .prose-content :global(ol) {
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    color: var(--color-ink-muted);
+  }
+
+  .prose-content :global(li) {
+    margin-top: 0.35rem;
+    line-height: 1.6;
+  }
+
+  .prose-content :global(ol) {
+    list-style: decimal;
+  }
+
+  .prose-content :global(ul) {
+    list-style: disc;
+  }
+
+  .prose-content :global(strong) {
+    color: var(--color-ink);
+  }
+
+  .prose-content :global(blockquote) {
+    margin-top: 1rem;
+    border-left: 3px solid var(--color-primary-600);
+    padding-left: 1rem;
+    color: var(--color-ink-muted);
+    font-style: italic;
+  }
+
+  .prose-content :global(table) {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .prose-content :global(th),
+  .prose-content :global(td) {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+
+  .prose-content :global(th) {
+    background-color: var(--color-surface-subtle);
+  }
+</style>

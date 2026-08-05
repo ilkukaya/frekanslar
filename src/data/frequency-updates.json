@@ -1,0 +1,154 @@
+[
+  {
+    "id": "a-spor-transponder-changed",
+    "slug": "a-spor-transponder-changed",
+    "date": "2026-01-05",
+    "changeType": "transponder-changed",
+    "entityType": "satellite-service",
+    "entityId": "a-spor-turksat-3a-service",
+    "relatedStationId": null,
+    "relatedChannelId": "a-spor",
+    "cityId": null,
+    "title": "A Spor transponder bilgisi güncellendi",
+    "description": "A Spor'un Türksat 3A üzerindeki transponder ataması güncellenmiştir.",
+    "oldValue": "11096 H 30000",
+    "newValue": "11169 V 30000",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "joyturk-izmir-frequency-changed",
+    "slug": "joyturk-izmir-frequency-changed",
+    "date": "2026-06-15",
+    "changeType": "frequency-changed",
+    "entityType": "terrestrial-frequency",
+    "entityId": "joyturk-izmir-94-8",
+    "relatedStationId": "joyturk",
+    "relatedChannelId": null,
+    "cityId": "izmir",
+    "title": "JoyTürk İzmir frekansı güncellendi",
+    "description": "JoyTürk'ün İzmir ilindeki FM frekansı, yerel frekans planlaması nedeniyle 94.8 MHz olarak güncellenmiştir.",
+    "oldValue": "88.4 MHz",
+    "newValue": "94.8 MHz",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "now-satellite-service-added",
+    "slug": "now-satellite-service-added",
+    "date": "2026-02-10",
+    "changeType": "new-broadcast",
+    "entityType": "satellite-service",
+    "entityId": "now-turksat-3a-service",
+    "relatedStationId": null,
+    "relatedChannelId": "now",
+    "cityId": null,
+    "title": "NOW uydu yayını Türksat 3A üzerinde listelendi",
+    "description": "NOW televizyon kanalının Türksat 3A üzerindeki uydu yayın bilgileri Frekanslar veritabanına eklenmiştir.",
+    "oldValue": null,
+    "newValue": "Türksat 3A · 11169 V 30000",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "power-fm-stale-verification",
+    "slug": "power-fm-stale-verification",
+    "date": "2026-08-01",
+    "changeType": "stale-verification",
+    "entityType": "radio-station",
+    "entityId": "power-fm",
+    "relatedStationId": "power-fm",
+    "relatedChannelId": null,
+    "cityId": null,
+    "title": "Power FM kaydı yeniden incelemeyi bekliyor",
+    "description": "Power FM profilindeki bilgiler örnek veri aşamasındadır ve resmî kaynaklarla yeniden incelenmeyi beklemektedir.",
+    "oldValue": null,
+    "newValue": null,
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "super-fm-bursa-frequency-changed",
+    "slug": "super-fm-bursa-frequency-changed",
+    "date": "2026-05-02",
+    "changeType": "frequency-changed",
+    "entityType": "terrestrial-frequency",
+    "entityId": "super-fm-bursa-94-8",
+    "relatedStationId": "super-fm",
+    "relatedChannelId": null,
+    "cityId": "bursa",
+    "title": "Süper FM Bursa frekansı güncellendi",
+    "description": "Süper FM'in Bursa ilindeki FM frekansı, yerel frekans planlaması nedeniyle 94.8 MHz olarak güncellenmiştir.",
+    "oldValue": "91.6 MHz",
+    "newValue": "94.8 MHz",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "trt-fm-ankara-frequency-changed",
+    "slug": "trt-fm-ankara-frequency-changed",
+    "date": "2026-03-20",
+    "changeType": "frequency-changed",
+    "entityType": "terrestrial-frequency",
+    "entityId": "trt-fm-ankara-97-2",
+    "relatedStationId": "trt-fm",
+    "relatedChannelId": null,
+    "cityId": "ankara",
+    "title": "TRT FM Ankara frekansı güncellendi",
+    "description": "TRT FM'in Ankara ilindeki FM frekansı, yerel frekans planlaması nedeniyle 97.2 MHz olarak güncellenmiştir.",
+    "oldValue": "95.0 MHz",
+    "newValue": "97.2 MHz",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "trt-turku-broken-link",
+    "slug": "trt-turku-broken-link",
+    "date": "2026-04-18",
+    "changeType": "broken-official-link",
+    "entityType": "radio-station",
+    "entityId": "trt-turku",
+    "relatedStationId": "trt-turku",
+    "relatedChannelId": null,
+    "cityId": null,
+    "title": "TRT Türkü resmî bağlantısı kontrol edildi",
+    "description": "TRT Türkü'nün profilinde yer alan resmî web sitesi bağlantısı rutin bağlantı kontrolünden geçirilmiş ve erişilebilir olduğu teyit edilmiştir.",
+    "oldValue": null,
+    "newValue": null,
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "virgin-radio-turkiye-missing-source",
+    "slug": "virgin-radio-turkiye-missing-source",
+    "date": "2026-07-10",
+    "changeType": "missing-source",
+    "entityType": "radio-station",
+    "entityId": "virgin-radio-turkiye",
+    "relatedStationId": "virgin-radio-turkiye",
+    "relatedChannelId": null,
+    "cityId": null,
+    "title": "Virgin Radio Türkiye kaydı ek kaynak bekliyor",
+    "description": "Virgin Radio Türkiye profili şu anda yalnızca editöryal örnek kaynağa dayanmaktadır; resmî bir kaynakla doğrulama bekliyor.",
+    "oldValue": null,
+    "newValue": null,
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  }
+]

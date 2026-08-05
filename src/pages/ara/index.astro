@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { Search } from '@lucide/astro';
+import { paths } from '../../lib/urls';
+
+const initialQuery = Astro.url.searchParams.get('q') ?? '';
+
+const pagePath = paths.search();
+const pageTitle = 'Arama Sonuçları | Frekanslar';
+const pageDescription = 'Frekanslar sitesinde radyo, televizyon, şehir, frekans, uydu ve transponder araması.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Arama', href: pagePath },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} robots="noindex,follow">
+  <div class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6" data-search-page-root>
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Arama Sonuçları</h1>
+
+    <form action={pagePath} method="get" class="mt-6">
+      <label for="search-page-input" class="sr-only">Kanal, radyo, şehir veya frekans ara</label>
+      <div class="relative">
+        <Search class="pointer-events-none absolute left-3.5 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-ink-faint" aria-hidden="true" />
+        <input
+          type="search"
+          id="search-page-input"
+          name="q"
+          value={initialQuery}
+          placeholder="Kanal, radyo, şehir veya frekans ara…"
+          class="h-12 w-full rounded-full border border-border-strong bg-surface pl-10 pr-4 text-base text-ink outline-none focus-visible:border-primary-600"
+          data-search-page-input
+        />
+      </div>
+    </form>
+
+    <noscript>
+      <p class="mt-4 rounded-md border border-warning-100 bg-warning-50 p-3 text-sm text-warning-700">
+        Arama sonuçları JavaScript gerektirir. Kanal, radyo veya şehir sayfalarına doğrudan site içi gezinme
+        menüsünden de ulaşabilirsiniz.
+      </p>
+    </noscript>
+
+    <p class="mt-4 text-sm text-ink-muted" data-search-page-summary role="status" aria-live="polite"></p>
+    <p class="mt-2 hidden text-sm text-danger-600" data-search-page-error hidden>
+      Arama dizini yüklenemedi. Lütfen sayfayı yenileyin.
+    </p>
+
+    <ul class="mt-2 divide-y divide-border rounded-lg border border-border bg-surface" data-search-page-results></ul>
+    <p class="mt-6 hidden text-sm text-ink-muted" data-search-page-empty hidden>
+      Sonuç bulunamadı. Farklı bir arama terimi deneyin veya
+      <a href={paths.radioList()} class="text-primary-600 underline hover:no-underline">radyo frekanslarına</a> ya da
+      <a href={paths.tvList()} class="text-primary-600 underline hover:no-underline">televizyon kanallarına</a> göz atın.
+    </p>
+  </div>
+</BaseLayout>
+
+<script src="../../scripts/search-page-controller.ts"></script>

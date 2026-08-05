@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import BrandCard from '../../../components/BrandCard.astro';
+import { buildCategoryPages } from '../../../lib/category-pages';
+import { canonicalUrl, paths } from '../../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../../lib/seo/jsonld';
+import type { RadioStation, TelevisionChannel } from '../../../data/schemas';
+
+export const getStaticPaths = (async () => {
+  const [radioEntries, tvEntries] = await Promise.all([
+    getCollection('radio-stations'),
+    getCollection('television-channels'),
+  ]);
+
+  const radioStations = radioEntries.map((e) => e.data);
+  const televisionChannels = tvEntries.map((e) => e.data);
+  const categoryPages = buildCategoryPages(radioStations, televisionChannels);
+
+  return categoryPages.map((page) => ({
+    params: { tur: page.slug },
+    props: { page },
+  }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const pagePath = paths.broadcastType(page.slug);
+const pageTitle = `${page.title}: Güncel Liste`;
+const pageDescription =
+  page.kind === 'radio'
+    ? `${page.title.toLowerCase()} kategorisindeki ${page.items.length} radyo istasyonunun güncel profili.`
+    : `${page.title.toLowerCase()} kategorisindeki ${page.items.length} televizyon kanalının güncel profili.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: page.kind === 'radio' ? 'Radyo Frekansları' : 'Televizyon Kanalları', href: page.kind === 'radio' ? paths.radioList() : paths.tvList() },
+  { name: page.title, href: pagePath },
+];
+
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: page.items.map((item) => ({
+      name: item.name,
+      url: canonicalUrl(page.kind === 'radio' ? paths.radioStation(item.slug) : paths.televisionChannel(item.slug)),
+    })),
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{page.title}</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">{pageDescription}</p>
+
+    <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        page.items.map((item) => (
+          <BrandCard brand={item as RadioStation | TelevisionChannel} kind={page.kind} />
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

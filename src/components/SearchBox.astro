@@ -1,0 +1,58 @@
+---
+/**
+ * Site-wide search box (WAI-ARIA combobox). Works as a real GET form to
+ * `/ara/` even before `search-box-controller.ts` has loaded; once it has,
+ * results appear inline as an accessible listbox without navigating away.
+ */
+import { Search } from '@lucide/astro';
+import { paths } from '../lib/urls';
+
+interface Props {
+  /** Slightly different placeholder/sizing on the homepage hero vs the header. */
+  size?: 'default' | 'large';
+  initialValue?: string;
+}
+
+const { size = 'default', initialValue = '' } = Astro.props;
+const inputId = size === 'large' ? 'site-search-hero' : 'site-search-header';
+const heightClass = size === 'large' ? 'h-14 text-base' : 'h-11 text-sm';
+---
+
+<div class="relative w-full" data-search-root>
+  <form action={paths.search()} method="get" data-search-form role="search">
+    <label for={inputId} class="sr-only">Kanal, radyo, şehir veya frekans ara</label>
+    <div class="relative">
+      <Search
+        class="pointer-events-none absolute left-3.5 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-ink-faint"
+        aria-hidden="true"
+      />
+      <input
+        type="search"
+        id={inputId}
+        name="q"
+        value={initialValue}
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Kanal, radyo, şehir veya frekans ara…"
+        class={`w-full rounded-full border border-border-strong bg-surface pl-10 pr-4 ${heightClass} text-ink shadow-card outline-none focus-visible:border-primary-600`}
+        role="combobox"
+        aria-expanded="false"
+        aria-controls={`${inputId}-results`}
+        aria-autocomplete="list"
+        data-search-input
+      />
+    </div>
+    <ul
+      id={`${inputId}-results`}
+      role="listbox"
+      aria-label="Arama sonuçları"
+      hidden
+      class="absolute z-30 mt-2 max-h-96 w-full overflow-y-auto rounded-lg border border-border bg-surface shadow-popover"
+      data-search-results
+    >
+    </ul>
+    <p class="sr-only" role="status" aria-live="polite" data-search-status></p>
+  </form>
+</div>
+
+<script src="../scripts/search-box-controller.ts"></script>

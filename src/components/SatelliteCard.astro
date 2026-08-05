@@ -1,0 +1,29 @@
+---
+import { Satellite as SatelliteIcon } from '@lucide/astro';
+import VerificationBadge from './VerificationBadge.astro';
+import { paths } from '../lib/urls';
+import type { Satellite } from '../data/schemas';
+
+interface Props {
+  satellite: Satellite;
+  meta?: string;
+}
+
+const { satellite, meta } = Astro.props;
+---
+
+<a
+  href={paths.satellite(satellite.slug)}
+  class="flex items-center gap-3 rounded-lg border border-border bg-surface p-4 shadow-card transition-colors hover:border-primary-600"
+>
+  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-muted text-ink-muted">
+    <SatelliteIcon class="h-5 w-5" aria-hidden="true" />
+  </span>
+  <div class="min-w-0 flex-1">
+    <p class="truncate font-semibold text-ink">{satellite.name}</p>
+    <p class="truncate text-sm text-ink-muted">{meta ?? satellite.orbitalPosition}</p>
+    <div class="mt-1.5">
+      <VerificationBadge status={satellite.verificationStatus} compact />
+    </div>
+  </div>
+</a>

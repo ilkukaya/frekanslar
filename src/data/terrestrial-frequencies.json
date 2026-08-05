@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "joyturk-adana-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-ankara-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-antalya-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-bursa-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-istanbul-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-izmir-94-8",
+    "stationId": "joyturk",
+    "frequency": 94.8,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": "İzmir bölgesinde yerel frekans planlaması nedeniyle marka genelindeki frekanstan farklıdır."
+  },
+  {
+    "id": "joyturk-konya-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "joyturk-trabzon-88-4",
+    "stationId": "joyturk",
+    "frequency": 88.4,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-adana-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-ankara-97-6",
+    "stationId": "metro-fm",
+    "frequency": 97.6,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": "Ankara bölgesinde yerel frekans planlaması nedeniyle marka genelindeki frekanstan farklıdır."
+  },
+  {
+    "id": "metro-fm-antalya-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-bursa-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-istanbul-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-izmir-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-konya-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "metro-fm-trabzon-97-2",
+    "stationId": "metro-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-adana-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-ankara-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-antalya-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-bursa-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-istanbul-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-izmir-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-konya-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "power-fm-trabzon-100-4",
+    "stationId": "power-fm",
+    "frequency": 100.4,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-adana-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-ankara-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-antalya-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-bursa-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-istanbul-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-izmir-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-konya-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "radyo-1-trabzon-90-4",
+    "stationId": "radyo-1",
+    "frequency": 90.4,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-adana-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-ankara-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-antalya-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-bursa-94-8",
+    "stationId": "super-fm",
+    "frequency": 94.8,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": "Bursa bölgesinde yerel frekans planlaması nedeniyle marka genelindeki frekanstan farklıdır."
+  },
+  {
+    "id": "super-fm-istanbul-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-izmir-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-konya-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "super-fm-trabzon-91-6",
+    "stationId": "super-fm",
+    "frequency": 91.6,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-adana-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-ankara-97-2",
+    "stationId": "trt-fm",
+    "frequency": 97.2,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": "Ankara bölgesinde yerel frekans planlaması nedeniyle marka genelindeki frekanstan farklıdır."
+  },
+  {
+    "id": "trt-fm-antalya-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-bursa-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-istanbul-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-izmir-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-konya-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-fm-trabzon-95-0",
+    "stationId": "trt-fm",
+    "frequency": 95,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-adana-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-ankara-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-antalya-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-bursa-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-istanbul-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-izmir-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-konya-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "trt-turku-trabzon-92-6",
+    "stationId": "trt-turku",
+    "frequency": 92.6,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-adana-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "adana",
+    "districtId": null,
+    "transmitterId": "adana-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-ankara-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "ankara",
+    "districtId": null,
+    "transmitterId": "ankara-elmadag",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-antalya-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "antalya",
+    "districtId": null,
+    "transmitterId": "antalya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-bursa-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "bursa",
+    "districtId": null,
+    "transmitterId": "bursa-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-istanbul-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "istanbul",
+    "districtId": null,
+    "transmitterId": "istanbul-camlica",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-izmir-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "izmir",
+    "districtId": null,
+    "transmitterId": "izmir-kadifekale",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-konya-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "konya",
+    "districtId": null,
+    "transmitterId": "konya-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  },
+  {
+    "id": "virgin-radio-turkiye-trabzon-104-2",
+    "stationId": "virgin-radio-turkiye",
+    "frequency": 104.2,
+    "unit": "MHz",
+    "cityId": "trabzon",
+    "districtId": null,
+    "transmitterId": "trabzon-merkez-verici",
+    "coverageType": "national",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "notes": null
+  }
+]

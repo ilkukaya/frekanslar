@@ -1,0 +1,267 @@
+[
+  {
+    "id": "a-spor",
+    "name": "A Spor",
+    "slug": "a-spor",
+    "alternativeNames": [
+      "ASpor"
+    ],
+    "logo": null,
+    "description": "A Spor, spor müsabakaları ve spor haberleri yayınlayan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir spor televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "spor"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.aspor.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "atv",
+    "name": "ATV",
+    "slug": "atv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "ATV, dizi, eğlence ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema",
+      "haber"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.atv.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "kanal-d",
+    "name": "Kanal D",
+    "slug": "kanal-d",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Kanal D, dizi, yarışma ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema",
+      "haber"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.kanald.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "now",
+    "name": "NOW",
+    "slug": "now",
+    "alternativeNames": [
+      "Now TV"
+    ],
+    "logo": null,
+    "description": "NOW, dizi, eğlence ve haber içerikleri sunan, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema",
+      "haber"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.nowtv.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "show-tv",
+    "name": "Show TV",
+    "slug": "show-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Show TV, dizi ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.showtv.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "star-tv",
+    "name": "Star TV",
+    "slug": "star-tv",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Star TV, dizi ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.startv.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-1",
+    "name": "TRT 1",
+    "slug": "trt-1",
+    "alternativeNames": [
+      "TRT1"
+    ],
+    "logo": null,
+    "description": "TRT 1, TRT (Türkiye Radyo Televizyon Kurumu) bünyesinde yayın yapan, haber, dizi ve genel içerik sunan ulusal kamu televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "haber",
+      "dizi-sinema"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": "https://www.trt.net.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "tv8",
+    "name": "TV8",
+    "slug": "tv8",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TV8, yarışma ve eğlence programları ağırlıklı, Türkiye genelinde ulusal ölçekte yayın yapan özel bir televizyon kanalıdır.",
+    "broadcastType": "satellite-tv",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "dizi-sinema"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.tv8.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  }
+]

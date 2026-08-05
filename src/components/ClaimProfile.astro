@@ -1,0 +1,54 @@
+---
+/**
+ * "Bu yayın kuruluşunu temsil ediyor musunuz?" block: a route for the
+ * broadcaster itself to request a profile-info verification, plus a
+ * ready-made notification message an editor can send them. No backlink
+ * or payment is ever required to claim/verify a profile.
+ */
+import { canonicalUrl, paths } from '../lib/urls';
+
+interface Props {
+  entityName: string;
+  path: string;
+}
+
+const { entityName, path } = Astro.props;
+const profileUrl = canonicalUrl(path);
+const claimHref = `${paths.correction()}?ilgili=${encodeURIComponent(entityName)}&baglam=profil-dogrulama`;
+const notificationMessage = `Frekans bilgileriniz Frekanslar'da güncellendi. Profilinizi kontrol edebilir ve hatalı bilgileri bildirebilirsiniz: ${profileUrl}`;
+---
+
+<section class="mt-6 rounded-lg border border-border bg-surface p-5">
+  <h2 class="text-base font-bold text-ink">Bu yayın kuruluşunu temsil ediyor musunuz?</h2>
+  <p class="mt-1.5 text-sm text-ink-muted">
+    {entityName} adına profil bilgilerini doğrulamak veya güncellemek isterseniz düzeltme formu üzerinden bize
+    ulaşabilirsiniz. Profil doğrulaması için herhangi bir bağlantı (backlink) şartı aranmaz.
+  </p>
+  <div class="mt-3 flex flex-wrap items-center gap-3">
+    <a
+      href={claimHref}
+      class="inline-flex items-center rounded-md border border-border-strong px-4 py-2 text-sm font-medium text-ink hover:bg-surface-subtle"
+    >
+      Profili doğrulama talebi gönder
+    </a>
+  </div>
+
+  <details class="mt-4 text-sm">
+    <summary class="cursor-pointer font-medium text-ink-muted hover:text-ink">
+      Editör notu: Yayın kuruluşuna gönderilecek bildirim metni
+    </summary>
+    <div class="mt-2 flex items-start gap-2">
+      <pre id="claim-notification-text" class="flex-1 overflow-x-auto rounded-md border border-border bg-surface-subtle p-3 text-xs text-ink-muted" tabindex="0">{notificationMessage}</pre>
+      <button
+        type="button"
+        class="h-fit shrink-0 rounded-md border border-border-strong px-3 py-2 text-xs font-medium text-ink hover:bg-surface-subtle"
+        data-copy-button
+        data-copy-target="#claim-notification-text"
+      >
+        Metni kopyala
+      </button>
+    </div>
+  </details>
+</section>
+
+<script src="../scripts/copy-button-controller.ts"></script>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBox from '../components/SearchBox.astro';
+import { paths } from '../lib/urls';
+
+const pagePath = '/404/';
+const pageTitle = 'Sayfa Bulunamadı | Frekanslar';
+const pageDescription = 'Aradığınız sayfa bulunamadı.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} robots="noindex,follow">
+  <div class="mx-auto max-w-(--container-narrow) px-4 py-20 text-center sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-primary-600">404</p>
+    <h1 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Sayfa Bulunamadı</h1>
+    <p class="mt-3 text-ink-muted">
+      Aradığınız sayfa taşınmış, kaldırılmış veya hiç var olmamış olabilir. Aşağıdan arama yapabilir ya da ana
+      sayfaya dönebilirsiniz.
+    </p>
+
+    <div class="mx-auto mt-8 max-w-md">
+      <SearchBox size="large" />
+    </div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm">
+      <a href={paths.home()} class="rounded-md bg-primary-600 px-4 py-2 font-semibold text-white hover:bg-primary-700">Ana Sayfaya Dön</a>
+      <a href={paths.radioList()} class="rounded-md border border-border-strong px-4 py-2 text-ink hover:bg-surface-subtle">Radyo Frekansları</a>
+      <a href={paths.tvList()} class="rounded-md border border-border-strong px-4 py-2 text-ink hover:bg-surface-subtle">Televizyon Kanalları</a>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,116 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import SourceList from '../../../components/SourceList.astro';
+import VerificationBadge from '../../../components/VerificationBadge.astro';
+import { CHANGE_TYPE_LABELS } from '../../../lib/labels';
+import { formatDateTr } from '../../../lib/format';
+import { byId, sourcesByIds } from '../../../lib/relations';
+import { canonicalUrl, paths } from '../../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [updateEntries, stationEntries, channelEntries, cityEntries, sourceEntries] = await Promise.all([
+    getCollection('frequency-updates'),
+    getCollection('radio-stations'),
+    getCollection('television-channels'),
+    getCollection('cities'),
+    getCollection('sources'),
+  ]);
+
+  const updates = updateEntries.map((e) => e.data);
+  const stations = stationEntries.map((e) => e.data);
+  const channels = channelEntries.map((e) => e.data);
+  const cities = cityEntries.map((e) => e.data);
+  const sources = sourceEntries.map((e) => e.data);
+
+  return updates.map((update) => ({
+    params: { guncelleme: update.slug },
+    props: {
+      update,
+      relatedStation: update.relatedStationId ? (byId(stations, update.relatedStationId) ?? null) : null,
+      relatedChannel: update.relatedChannelId ? (byId(channels, update.relatedChannelId) ?? null) : null,
+      relatedCity: update.cityId ? (byId(cities, update.cityId) ?? null) : null,
+      sources: sourcesByIds(sources, update.sourceIds),
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { update, relatedStation, relatedChannel, relatedCity, sources } = Astro.props;
+
+const pagePath = paths.update(update.slug);
+const pageTitle = update.title;
+const pageDescription = update.description;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Güncellemeler', href: paths.updateList() },
+  { name: update.title, href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath), dateModified: update.date }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} ogType="article" lastUpdated={update.date} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <p class="mt-4 inline-flex items-center rounded-full bg-primary-50 px-2.5 py-1 text-xs font-medium text-primary-700">
+      {CHANGE_TYPE_LABELS[update.changeType]}
+    </p>
+    <h1 class="mt-3 text-2xl font-bold text-ink sm:text-3xl">{update.title}</h1>
+    <p class="mt-2 text-sm text-ink-faint">
+      <time datetime={update.date}>{formatDateTr(update.date)}</time>
+    </p>
+
+    <p class="mt-6 text-ink-muted">{update.description}</p>
+
+    {
+      (update.oldValue || update.newValue) && (
+        <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {update.oldValue && (
+            <div class="rounded-lg border border-border bg-surface p-4">
+              <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Önceki Değer</p>
+              <p class="mt-1 font-medium text-ink">{update.oldValue}</p>
+            </div>
+          )}
+          {update.newValue && (
+            <div class="rounded-lg border border-primary-100 bg-primary-50 p-4">
+              <p class="text-xs font-medium uppercase tracking-wide text-primary-700">Yeni Değer</p>
+              <p class="mt-1 font-medium text-ink">{update.newValue}</p>
+            </div>
+          )}
+        </div>
+      )
+    }
+
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      {relatedStation && (
+        <a href={paths.radioStation(relatedStation.slug)} class="rounded-md border border-border-strong px-3 py-1.5 text-ink hover:bg-surface-subtle">
+          Radyo: {relatedStation.name}
+        </a>
+      )}
+      {relatedChannel && (
+        <a href={paths.televisionChannel(relatedChannel.slug)} class="rounded-md border border-border-strong px-3 py-1.5 text-ink hover:bg-surface-subtle">
+          Kanal: {relatedChannel.name}
+        </a>
+      )}
+      {relatedCity && (
+        <a href={paths.city(relatedCity.slug)} class="rounded-md border border-border-strong px-3 py-1.5 text-ink hover:bg-surface-subtle">
+          Şehir: {relatedCity.name}
+        </a>
+      )}
+    </div>
+
+    <div class="mt-8 rounded-lg border border-border bg-surface p-4">
+      <VerificationBadge status={update.verificationStatus} lastVerifiedAt={update.date} />
+      <div class="mt-2">
+        <SourceList sources={sources} />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,46 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Trailing-slash policy: Astro's static output is directory-style
+# (/foo/index.html for the /foo/ route -- see `trailingSlash: 'always'`
+# in astro.config.mjs), and Netlify's static asset server already
+# 301-redirects a bare "/foo" request to "/foo/" by default for exactly
+# this output shape, so no custom redirect rule is needed (or safe to
+# add -- a naive `/*` -> `/:splat/` rule would loop on paths that
+# already end in a slash).
+
+# --- Security headers -------------------------------------------------
+# Applied site-wide. CSP is same-origin only: this site never loads a
+# third-party script, style, font or frame, and the "official
+# listen/watch" links are plain <a target="_blank"> navigations, never
+# iframes -- so there is nothing to allow-list beyond 'self'.
+# 'unsafe-inline' stays in script-src/style-src because Astro's static
+# build inlines some small per-page bundles and Astro's own scoped
+# <style> blocks directly into the HTML rather than always extracting
+# them to external files; a static site has no per-request nonce to
+# tighten this further without a server.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+
+# --- Caching ------------------------------------------------------------
+# Hashed build assets (content-addressed filenames) are immutable --
+# cache them for a year. Only a trailing "/prefix/*" splat is used here;
+# Netlify's header-matching glob support for a wildcard in the middle of
+# a path segment (e.g. "/*.html") isn't reliable, so HTML pages, the
+# search index and the sitemaps are deliberately left to Netlify's own
+# (already conservative, non-immutable) default caching for anything
+# outside of /_astro/*.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

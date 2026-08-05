@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import DataCard from '../../../../components/DataCard.astro';
+import LogoPlaceholder from '../../../../components/LogoPlaceholder.astro';
+import BrandCard from '../../../../components/BrandCard.astro';
+import { COVERAGE_TYPE_LABELS } from '../../../../lib/labels';
+import { formatFrequencyDisplay, formatFrequencyValue } from '../../../../lib/format';
+import { sourcesByIds, stationsActiveInCity } from '../../../../lib/relations';
+import { canonicalUrl, paths } from '../../../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [stationEntries, cityEntries, transmitterEntries, frequencyEntries, sourceEntries] = await Promise.all([
+    getCollection('radio-stations'),
+    getCollection('cities'),
+    getCollection('transmitters'),
+    getCollection('terrestrial-frequencies'),
+    getCollection('sources'),
+  ]);
+
+  const stations = stationEntries.map((e) => e.data);
+  const cities = cityEntries.map((e) => e.data);
+  const transmitters = transmitterEntries.map((e) => e.data);
+  const frequencies = frequencyEntries.map((e) => e.data);
+  const sources = sourceEntries.map((e) => e.data);
+
+  // Only real (station, city) combinations with an active frequency get a
+  // page -- this is what keeps this route a genuinely distinct-intent
+  // page instead of a combinatorial thin-content generator.
+  const activeFrequencies = frequencies.filter((f) => f.status === 'active');
+
+  return activeFrequencies.map((freq) => {
+    const station = stations.find((s) => s.id === freq.stationId);
+    const city = cities.find((c) => c.id === freq.cityId);
+    if (!station || !city) throw new Error(`Dangling reference on frequency ${freq.id}`);
+    const transmitter = freq.transmitterId ? transmitters.find((t) => t.id === freq.transmitterId) : undefined;
+    const otherStationsInCity = stationsActiveInCity(stations, frequencies, city.id).filter((s) => s.id !== station.id);
+
+    return {
+      params: { radyo: station.slug, il: city.slug },
+      props: {
+        station,
+        city,
+        freq,
+        transmitter: transmitter ?? null,
+        sources: sourcesByIds(sources, freq.sourceIds),
+        otherStationsInCity,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { station, city, freq, transmitter, sources, otherStationsInCity } = Astro.props;
+
+const pagePath = paths.radioStationCity(station.slug, city.id);
+const pageTitle = `${station.name} ${city.name} Frekansı: ${formatFrequencyDisplay(freq.frequency, freq.unit)}`;
+const pageDescription = `${station.name}, ${city.name} ilinde ${formatFrequencyDisplay(freq.frequency, freq.unit)} frekansında yayın yapıyor. Verici, kapsam ve doğrulama bilgileri.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Radyo Frekansları', href: paths.radioList() },
+  { name: station.name, href: paths.radioStation(station.slug) },
+  { name: city.name, href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    dateModified: freq.lastVerifiedAt,
+  }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={freq.lastVerifiedAt} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <LogoPlaceholder name={station.name} logo={station.logo} size="md" />
+      <h1 class="text-2xl font-bold text-ink sm:text-3xl">{station.name} — {city.name} Frekansı</h1>
+    </div>
+
+    <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
+      <p class="text-sm font-semibold text-primary-700">{station.name}, {city.name}'de kaç frekansında yayın yapıyor?</p>
+      <p class="mt-1 text-ink">
+        {station.name}, {city.name} ilinde {formatFrequencyDisplay(freq.frequency, freq.unit)} frekansında yayın
+        yapıyor.
+      </p>
+    </div>
+
+    <div class="mt-6 max-w-sm">
+      <DataCard
+        label="Frekans"
+        value={formatFrequencyValue(freq.frequency)}
+        unit={freq.unit}
+        context={transmitter ? `${transmitter.name} üzerinden` : city.name}
+        lastVerifiedAt={freq.lastVerifiedAt}
+        verificationStatus={freq.verificationStatus}
+        sources={sources}
+      />
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Kapsam</p>
+        <p class="mt-1 font-medium text-ink">{COVERAGE_TYPE_LABELS[freq.coverageType]}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Verici</p>
+        <p class="mt-1 font-medium text-ink">{transmitter ? transmitter.name : 'Belirtilmemiş'}</p>
+      </div>
+      <div class="rounded-lg border border-border bg-surface p-4">
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Durum</p>
+        <p class="mt-1 font-medium text-ink">Aktif</p>
+      </div>
+    </div>
+
+    {freq.notes && <p class="mt-4 text-sm text-ink-muted">{freq.notes}</p>}
+
+    <p class="mt-6 text-sm text-ink-muted">
+      {station.name} hakkında daha fazla bilgi (yayın kapsamı, resmî bağlantılar, tüm şehirlerdeki frekansları) için{' '}
+      <a href={paths.radioStation(station.slug)} class="text-primary-600 underline hover:no-underline">radyo profiline</a>{' '}
+      bakabilirsiniz.
+    </p>
+
+    {
+      otherStationsInCity.length > 0 && (
+        <section class="mt-10">
+          <h2 class="text-xl font-bold text-ink">{city.name}'deki Diğer Radyolar</h2>
+          <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {otherStationsInCity.slice(0, 4).map((other) => (
+              <BrandCard brand={other} kind="radio" />
+            ))}
+          </div>
+          <p class="mt-3 text-sm">
+            <a href={paths.city(city.slug)} class="text-primary-600 hover:underline">
+              {city.name}'deki tüm radyo frekanslarını gör
+            </a>
+          </p>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

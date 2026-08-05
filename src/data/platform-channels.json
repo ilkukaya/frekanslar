@@ -1,0 +1,170 @@
+[
+  {
+    "id": "d-smart-atv",
+    "platformId": "d-smart",
+    "channelId": "atv",
+    "broadcastKind": "tv",
+    "channelNumber": 3,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "d-smart-kanal-d",
+    "platformId": "d-smart",
+    "channelId": "kanal-d",
+    "broadcastKind": "tv",
+    "channelNumber": 4,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "d-smart-show-tv",
+    "platformId": "d-smart",
+    "channelId": "show-tv",
+    "broadcastKind": "tv",
+    "channelNumber": 5,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "d-smart-trt-1",
+    "platformId": "d-smart",
+    "channelId": "trt-1",
+    "broadcastKind": "tv",
+    "channelNumber": 1,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tivibu-atv",
+    "platformId": "tivibu",
+    "channelId": "atv",
+    "broadcastKind": "tv",
+    "channelNumber": 2,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tivibu-kanal-d",
+    "platformId": "tivibu",
+    "channelId": "kanal-d",
+    "broadcastKind": "tv",
+    "channelNumber": 3,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tivibu-show-tv",
+    "platformId": "tivibu",
+    "channelId": "show-tv",
+    "broadcastKind": "tv",
+    "channelNumber": 4,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tivibu-star-tv",
+    "platformId": "tivibu",
+    "channelId": "star-tv",
+    "broadcastKind": "tv",
+    "channelNumber": 5,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tivibu-trt-1",
+    "platformId": "tivibu",
+    "channelId": "trt-1",
+    "broadcastKind": "tv",
+    "channelNumber": 1,
+    "packageName": "Temel Paket",
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-kablo-tv-atv",
+    "platformId": "turksat-kablo-tv",
+    "channelId": "atv",
+    "broadcastKind": "tv",
+    "channelNumber": 2,
+    "packageName": null,
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-kablo-tv-kanal-d",
+    "platformId": "turksat-kablo-tv",
+    "channelId": "kanal-d",
+    "broadcastKind": "tv",
+    "channelNumber": 3,
+    "packageName": null,
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-kablo-tv-trt-1",
+    "platformId": "turksat-kablo-tv",
+    "channelId": "trt-1",
+    "broadcastKind": "tv",
+    "channelNumber": 1,
+    "packageName": null,
+    "status": "active",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  }
+]

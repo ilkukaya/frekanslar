@@ -1,0 +1,252 @@
+[
+  {
+    "id": "a-spor-turksat-3a-service",
+    "stationId": "a-spor",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-3a",
+    "transponderId": "turksat-3a-11169-v-30000",
+    "videoPid": 519,
+    "audioPids": [
+      659
+    ],
+    "pcrPid": 519,
+    "serviceIdNumber": 402,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "atv-turksat-4a-service",
+    "stationId": "atv",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-4a",
+    "transponderId": "turksat-4a-11958-h-27500",
+    "videoPid": 513,
+    "audioPids": [
+      651
+    ],
+    "pcrPid": 513,
+    "serviceIdNumber": 102,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "kanal-d-turksat-4a-service",
+    "stationId": "kanal-d",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-4a",
+    "transponderId": "turksat-4a-12015-v-27500",
+    "videoPid": 514,
+    "audioPids": [
+      653
+    ],
+    "pcrPid": 514,
+    "serviceIdNumber": 201,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "now-turksat-3a-service",
+    "stationId": "now",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-3a",
+    "transponderId": "turksat-3a-11169-v-30000",
+    "videoPid": 518,
+    "audioPids": [
+      658
+    ],
+    "pcrPid": 518,
+    "serviceIdNumber": 401,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "show-tv-turksat-4a-service",
+    "stationId": "show-tv",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-4a",
+    "transponderId": "turksat-4a-12015-v-27500",
+    "videoPid": 515,
+    "audioPids": [
+      654
+    ],
+    "pcrPid": 515,
+    "serviceIdNumber": 202,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "star-tv-turksat-3a-service",
+    "stationId": "star-tv",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-3a",
+    "transponderId": "turksat-3a-11096-h-30000",
+    "videoPid": 516,
+    "audioPids": [
+      655
+    ],
+    "pcrPid": 516,
+    "serviceIdNumber": 301,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "trt-1-turksat-4a-service",
+    "stationId": "trt-1",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-4a",
+    "transponderId": "turksat-4a-11958-h-27500",
+    "videoPid": 512,
+    "audioPids": [
+      650
+    ],
+    "pcrPid": 512,
+    "serviceIdNumber": 101,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "trt-fm-turksat-4a-service",
+    "stationId": "trt-fm",
+    "broadcastKind": "radio",
+    "satelliteId": "turksat-4a",
+    "transponderId": "turksat-4a-11958-h-27500",
+    "videoPid": null,
+    "audioPids": [
+      652
+    ],
+    "pcrPid": 652,
+    "serviceIdNumber": 103,
+    "networkId": 70,
+    "resolution": null,
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "trt-turku-turksat-3a-service",
+    "stationId": "trt-turku",
+    "broadcastKind": "radio",
+    "satelliteId": "turksat-3a",
+    "transponderId": "turksat-3a-11096-h-30000",
+    "videoPid": null,
+    "audioPids": [
+      657
+    ],
+    "pcrPid": 657,
+    "serviceIdNumber": 303,
+    "networkId": 70,
+    "resolution": null,
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "tv8-turksat-3a-service",
+    "stationId": "tv8",
+    "broadcastKind": "tv",
+    "satelliteId": "turksat-3a",
+    "transponderId": "turksat-3a-11096-h-30000",
+    "videoPid": 517,
+    "audioPids": [
+      656
+    ],
+    "pcrPid": 517,
+    "serviceIdNumber": 302,
+    "networkId": 70,
+    "resolution": "HD",
+    "encryption": "free-to-air",
+    "coverage": "Türkiye ve Avrupa",
+    "status": "active",
+    "validFrom": null,
+    "validTo": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review"
+  }
+]

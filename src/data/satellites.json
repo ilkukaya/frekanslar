@@ -1,0 +1,112 @@
+[
+  {
+    "id": "turksat-3a",
+    "name": "Türksat 3A",
+    "slug": "turksat-3a",
+    "orbitalPosition": "42°E",
+    "operator": "Türksat A.Ş.",
+    "coverageAreas": [
+      "Türkiye",
+      "Avrupa",
+      "Orta Doğu",
+      "Orta Asya"
+    ],
+    "status": "active",
+    "launchDate": null,
+    "description": "Türksat 3A, Türksat A.Ş. tarafından işletilen ve 42°E yörünge konumunda hizmet veren bir haberleşme uydusudur. Türkiye'de birçok ulusal radyo ve televizyon kanalının yayınına ev sahipliği yapar.",
+    "officialWebsite": "https://www.turksat.com.tr",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "turksat"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-4a",
+    "name": "Türksat 4A",
+    "slug": "turksat-4a",
+    "orbitalPosition": "42°E",
+    "operator": "Türksat A.Ş.",
+    "coverageAreas": [
+      "Türkiye",
+      "Avrupa",
+      "Orta Doğu",
+      "Orta Asya",
+      "Afrika"
+    ],
+    "status": "active",
+    "launchDate": null,
+    "description": "Türksat 4A, Türksat A.Ş. tarafından işletilen ve 42°E yörünge konumunda hizmet veren bir haberleşme uydusudur. Türkiye'deki ulusal televizyon ve radyo yayıncılığının önemli bir bölümü bu uydu üzerinden dağıtılır.",
+    "officialWebsite": "https://www.turksat.com.tr",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "turksat"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-5a",
+    "name": "Türksat 5A",
+    "slug": "turksat-5a",
+    "orbitalPosition": "42°E",
+    "operator": "Türksat A.Ş.",
+    "coverageAreas": [
+      "Türkiye",
+      "Avrupa",
+      "Orta Doğu"
+    ],
+    "status": "active",
+    "launchDate": null,
+    "description": "Türksat 5A, Türksat A.Ş.'nin uydu filosuna eklenen, 42°E yörünge konumunda hizmet veren yeni nesil bir haberleşme uydusudur.",
+    "officialWebsite": "https://www.turksat.com.tr",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "turksat"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-5b",
+    "name": "Türksat 5B",
+    "slug": "turksat-5b",
+    "orbitalPosition": "42°E",
+    "operator": "Türksat A.Ş.",
+    "coverageAreas": [
+      "Türkiye",
+      "Avrupa",
+      "Orta Doğu",
+      "Orta Asya"
+    ],
+    "status": "active",
+    "launchDate": null,
+    "description": "Türksat 5B, Türksat A.Ş.'nin uydu filosuna eklenen, 42°E yörünge konumunda hizmet veren yeni nesil bir haberleşme uydusudur.",
+    "officialWebsite": "https://www.turksat.com.tr",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "turksat"
+    ],
+    "verificationStatus": "pending-review"
+  },
+  {
+    "id": "turksat-6a",
+    "name": "Türksat 6A",
+    "slug": "turksat-6a",
+    "orbitalPosition": "42°E",
+    "operator": "Türksat A.Ş.",
+    "coverageAreas": [
+      "Türkiye",
+      "Avrupa",
+      "Orta Doğu",
+      "Orta Asya"
+    ],
+    "status": "active",
+    "launchDate": null,
+    "description": "Türksat 6A, Türkiye'nin yurt içinde tasarlanıp üretilen ilk iletişim uydusudur ve 42°E yörünge konumunda hizmet vermektedir.",
+    "officialWebsite": "https://www.turksat.com.tr",
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "turksat"
+    ],
+    "verificationStatus": "pending-review"
+  }
+]

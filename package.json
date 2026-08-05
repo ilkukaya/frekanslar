@@ -1,0 +1,50 @@
+{
+  "name": "frekanslar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Türkiye Radyo ve Televizyon Frekans Rehberi, Yayın Veritabanı ve Frekans Arama Motoru",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "npm run data:validate && npm run data:build-search && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "typecheck": "astro check && tsc --noEmit -p tsconfig.scripts.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "data:validate": "tsx scripts/data-validate.ts",
+    "data:normalize": "tsx scripts/data-normalize.ts",
+    "data:build-search": "tsx scripts/data-build-search.ts",
+    "data:check-links": "tsx scripts/data-check-links.ts",
+    "data:report": "tsx scripts/data-report.ts",
+    "data:diff": "tsx scripts/data-diff.ts"
+  },
+  "dependencies": {
+    "@lucide/astro": "^1.28.0",
+    "astro": "7.1.6",
+    "fuse.js": "7.5.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@eslint/js": "10.0.1",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "22.15.0",
+    "eslint": "10.8.0",
+    "eslint-plugin-astro": "3.1.0",
+    "globals": "17.9.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.7",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.66.0",
+    "vitest": "4.1.10",
+    "yaml": "2.9.0"
+  }
+}

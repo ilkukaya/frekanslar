@@ -1,0 +1,74 @@
+[
+  {
+    "id": "adana-merkez-verici",
+    "name": "Adana Merkez Vericisi",
+    "slug": "adana-merkez-verici",
+    "cityId": "adana",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "ankara-elmadag",
+    "name": "Ankara Elmadağ Vericisi",
+    "slug": "ankara-elmadag",
+    "cityId": "ankara",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": "Ankara merkez yayınları için kullanılan verici tepe noktalarından biri."
+  },
+  {
+    "id": "antalya-merkez-verici",
+    "name": "Antalya Merkez Vericisi",
+    "slug": "antalya-merkez-verici",
+    "cityId": "antalya",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "bursa-merkez-verici",
+    "name": "Bursa Merkez Vericisi",
+    "slug": "bursa-merkez-verici",
+    "cityId": "bursa",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "istanbul-camlica",
+    "name": "İstanbul Çamlıca Vericisi",
+    "slug": "istanbul-camlica",
+    "cityId": "istanbul",
+    "districtId": "istanbul-uskudar",
+    "elevationMeters": 268,
+    "notes": "İstanbul'un Anadolu Yakası'ndaki başlıca radyo ve televizyon verici noktası."
+  },
+  {
+    "id": "izmir-kadifekale",
+    "name": "İzmir Kadifekale Vericisi",
+    "slug": "izmir-kadifekale",
+    "cityId": "izmir",
+    "districtId": "izmir-konak",
+    "elevationMeters": null,
+    "notes": "İzmir merkez yayınları için kullanılan verici tepe noktalarından biri."
+  },
+  {
+    "id": "konya-merkez-verici",
+    "name": "Konya Merkez Vericisi",
+    "slug": "konya-merkez-verici",
+    "cityId": "konya",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": null
+  },
+  {
+    "id": "trabzon-merkez-verici",
+    "name": "Trabzon Merkez Vericisi",
+    "slug": "trabzon-merkez-verici",
+    "cityId": "trabzon",
+    "districtId": null,
+    "elevationMeters": null,
+    "notes": null
+  }
+]

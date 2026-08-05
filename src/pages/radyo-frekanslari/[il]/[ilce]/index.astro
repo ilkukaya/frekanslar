@@ -1,0 +1,173 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import FrequencyTable, { type FrequencyTableRow } from '../../../../components/FrequencyTable.astro';
+import { formatDateTr } from '../../../../lib/format';
+import { frequenciesByCity, mostRecentlyVerified, stationsActiveInCity } from '../../../../lib/relations';
+import { canonicalUrl, paths } from '../../../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [cityEntries, districtEntries, transmitterEntries, stationEntries, frequencyEntries] = await Promise.all([
+    getCollection('cities'),
+    getCollection('districts'),
+    getCollection('transmitters'),
+    getCollection('radio-stations'),
+    getCollection('terrestrial-frequencies'),
+  ]);
+
+  const cities = cityEntries.map((e) => e.data);
+  const districts = districtEntries.map((e) => e.data);
+  const transmitters = transmitterEntries.map((e) => e.data);
+  const stations = stationEntries.map((e) => e.data);
+  const frequencies = frequencyEntries.map((e) => e.data);
+
+  // Only generate a district page when there is real, district-specific
+  // substance to show -- here, a transmitter physically located in that
+  // district. A city-wide table repeated under every district URL with no
+  // extra information would be exactly the thin-page pattern the project
+  // is meant to avoid. Every other district in `districts.json` simply
+  // has no page yet, ready to be added once real per-district signal data
+  // exists.
+  const districtsWithTransmitter = districts
+    .map((district) => ({ district, transmitter: transmitters.find((t) => t.districtId === district.id) }))
+    .filter((entry): entry is { district: (typeof districts)[number]; transmitter: (typeof transmitters)[number] } =>
+      Boolean(entry.transmitter),
+    );
+
+  return districtsWithTransmitter.map(({ district, transmitter }) => {
+    const city = cities.find((c) => c.id === district.cityId);
+    if (!city) throw new Error(`District ${district.id} references unknown city ${district.cityId}`);
+
+    const cityFrequencies = frequenciesByCity(frequencies, city.id).filter((f) => f.status === 'active');
+    const otherTransmitters = transmitters.filter((t) => t.cityId === city.id && t.id !== transmitter.id);
+    const activeStations = stationsActiveInCity(stations, frequencies, city.id);
+
+    return {
+      params: { il: city.slug, ilce: district.slug },
+      props: { district, city, transmitter, cityFrequencies, otherTransmitters, stations, activeStations },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { district, city, transmitter, cityFrequencies, otherTransmitters, stations, activeStations } = Astro.props;
+
+const stationById = new Map(stations.map((s) => [s.id, s]));
+
+const tableRows: FrequencyTableRow[] = cityFrequencies
+  .map((freq): FrequencyTableRow | null => {
+    const station = stationById.get(freq.stationId);
+    if (!station) return null;
+    return {
+      id: freq.id,
+      frequency: freq.frequency,
+      unit: freq.unit,
+      stationName: station.name,
+      stationHref: paths.radioStationCity(station.slug, city.slug),
+      broadcastType: station.broadcastType,
+      coverageType: freq.coverageType,
+      districtOrTransmitter: transmitter.name,
+      status: freq.status,
+      lastVerifiedAt: freq.lastVerifiedAt,
+    };
+  })
+  .filter((row): row is FrequencyTableRow => row !== null)
+  .sort((a, b) => a.frequency - b.frequency);
+
+const latestVerifiedAt = mostRecentlyVerified(cityFrequencies, 1)[0]?.lastVerifiedAt ?? null;
+
+const pagePath = paths.district(city.slug, district.slug);
+const pageTitle = `${district.name} (${city.name}) Radyo Frekansları ve Sinyal Bilgisi`;
+const pageDescription = `${district.name}, ${city.name} ilinde alınabilen FM frekansları, en yakın verici ve sinyal durumu hakkında bilgi.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Radyo Frekansları', href: paths.radioList() },
+  { name: city.name, href: paths.city(city.slug) },
+  { name: district.name, href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    dateModified: latestVerifiedAt ?? undefined,
+  }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt ?? undefined} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{district.name} Radyo Frekansları</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">
+      {district.name}, {city.name} iline bağlı bir ilçedir. Bu sayfa, {city.name} genelindeki FM frekanslarını{' '}
+      {district.name} özelinde verici ve sinyal bilgisiyle birlikte gösterir.
+    </p>
+
+    <section class="mt-8 rounded-lg border border-border bg-surface p-5">
+      <h2 class="text-lg font-bold text-ink">Verici Bölgesi</h2>
+      <p class="mt-2 text-ink">
+        <strong>{transmitter.name}</strong>, {district.name} ilçesinde bulunmaktadır
+        {transmitter.elevationMeters && ` (yaklaşık ${transmitter.elevationMeters} m rakım)`}. {city.name}{' '}
+        genelindeki ulusal radyo yayınlarının önemli bir bölümü bu vericiden dağıtıldığı için {district.name}{' '}
+        ilçesinde sinyal kalitesi genellikle güçlüdür.
+      </p>
+      {transmitter.notes && <p class="mt-2 text-sm text-ink-muted">{transmitter.notes}</p>}
+    </section>
+
+    {
+      otherTransmitters.length > 0 && (
+        <section class="mt-6">
+          <h2 class="text-lg font-bold text-ink">Yakın Vericiler</h2>
+          <ul class="mt-3 space-y-2">
+            {otherTransmitters.map((other) => (
+              <li class="rounded-md border border-border bg-surface px-4 py-3 text-sm text-ink-muted">
+                <span class="font-medium text-ink">{other.name}</span> — {city.name} genelinde hizmet veren diğer bir
+                verici noktasıdır.
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="mt-6 rounded-lg border border-warning-100 bg-warning-50 p-5">
+      <h2 class="text-lg font-bold text-ink">Şehir Merkeziyle Fark ve Sinyal Durumu</h2>
+      <p class="mt-2 text-sm text-ink-muted">
+        {district.name}, ana vericinin bulunduğu bölge olduğu için {city.name} il merkezine kıyasla bina içi alımda
+        dahi genellikle güçlü sinyal alınır. Vericiden uzaklaştıkça (özellikle yüksek binalar veya coğrafi engeller
+        varsa) sinyal gücü değişebilir; bu sayfa yalnızca vericinin konumuna dayalı genel bir değerlendirme sunar,
+        saha ölçümü yerine geçmez.
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-ink">{district.name} İçin Doğrulanmış Frekans Kayıtları</h2>
+      <p class="mt-1 text-sm text-ink-muted">
+        Aşağıdaki tablo {city.name} genelinde geçerli olan frekansları gösterir; {district.name} ilçesi bu
+        frekansların dağıtıldığı {transmitter.name} vericisine ev sahipliği yapar.
+      </p>
+      <div class="mt-4">
+        <FrequencyTable rows={tableRows} caption={`${district.name} ilçesi için radyo frekansları tablosu`} />
+      </div>
+    </section>
+
+    <p class="mt-8 text-sm text-ink-muted">
+      {activeStations.length} radyo istasyonunun tamamını görmek için{' '}
+      <a href={paths.city(city.slug)} class="text-primary-600 underline hover:no-underline">{city.name} radyo frekansları sayfasına</a> bakabilirsiniz.
+    </p>
+
+    {
+      latestVerifiedAt && (
+        <p class="mt-4 text-sm text-ink-faint">
+          Son doğrulama: <time datetime={latestVerifiedAt}>{formatDateTr(latestVerifiedAt)}</time>.
+        </p>
+      )
+    }
+  </div>
+</BaseLayout>

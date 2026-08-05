@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../config/site';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+
+const pagePath = paths.about();
+const pageTitle = 'Hakkımızda | Frekanslar';
+const pageDescription = 'Frekanslar, Türkiye radyo ve televizyon yayınlarını tek bir veritabanında bir araya getiren bir frekans rehberi ve arama motorudur.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Hakkımızda', href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath) }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Hakkımızda</h1>
+
+    <div class="prose-content mt-8 space-y-4 text-ink-muted">
+      <p>
+        {siteConfig.siteName}, Türkiye'de yayın yapan radyo ve televizyon kuruluşlarını; karasal, uydu, kablo ve
+        internet yayın türleriyle birlikte tek bir veritabanında toplamayı amaçlayan bir frekans rehberi ve arama
+        motorudur.
+      </p>
+      <p>
+        Amacımız basit bir frekans listesi sunmak değil; şehre, radyo/kanal adına, frekansa, uyduya veya
+        transpondere göre arama yapılabilen, her kaydın kaynağını ve son doğrulama tarihini açıkça gösteren
+        sürdürülebilir bir veri kaynağı oluşturmaktır.
+      </p>
+      <h2 class="text-lg font-bold text-ink">Proje Aşaması</h2>
+      <p>
+        {siteConfig.siteName} şu anda erken geliştirme aşamasındadır. Sitedeki şehir, il ve genel yayın kuruluşu
+        bilgileri gerçek ve kamuya açık kaynaklara dayanır; ancak frekans, transponder ve teknik yayın
+        parametrelerinin büyük bölümü, mimariyi göstermek amacıyla oluşturulmuş örnek verilerdir ve
+        <code class="mx-1 rounded bg-surface-subtle px-1.5 py-0.5 text-sm">pending-review</code>
+        (incelenmeyi bekliyor) olarak işaretlenmiştir. Bu durum, ilgili her sayfada açıkça belirtilir.
+      </p>
+      <h2 class="text-lg font-bold text-ink">Nasıl Çalışıyoruz</h2>
+      <p>
+        Her veri kaydı; bir kaynağa, bir doğrulama durumuna ve bir son kontrol tarihine sahiptir. Doğrulama
+        durumları hakkında ayrıntılı bilgiyi
+        {' '}<a href={paths.dataSources()} class="text-primary-600 underline hover:no-underline">Veri Kaynakları</a>{' '}
+        sayfasında bulabilirsiniz. Hatalı veya güncelliğini yitirmiş bir bilgi gördüğünüzde
+        {' '}<a href={paths.correction()} class="text-primary-600 underline hover:no-underline">Düzeltme Bildir</a>{' '}
+        sayfasından bize ulaşabilirsiniz.
+      </p>
+      <h2 class="text-lg font-bold text-ink">Yayın Kuruluşlarına Not</h2>
+      <p>
+        Radyo ve televizyon kuruluşlarının resmî web sitelerine ve doğrulanmış canlı yayın sayfalarına yalnızca
+        editoryal ve tanımlayıcı amaçla bağlantı veririz; hiçbir yayını izinsiz olarak yeniden yayınlamaz veya
+        gömmeyiz. Kendi kuruluşunuza ait bilgileri doğrulamak isterseniz ilgili profil sayfasındaki
+        "Bu yayın kuruluşunu temsil ediyor musunuz?" bölümünü kullanabilirsiniz.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

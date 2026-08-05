@@ -1,0 +1,151 @@
+---
+/**
+ * Sortable, filterable frequency table used on city pages (and anywhere
+ * else a list of terrestrial frequencies needs to be browsed). Renders as
+ * a real, fully-populated <table> server-side -- sorting/filtering is a
+ * progressive-enhancement layer on top (`frequency-table-controller.ts`),
+ * the table is complete and readable with zero JS. On narrow screens the
+ * same markup restyles into a card layout via scoped CSS, no duplicate
+ * DOM and no JS required for that either.
+ */
+import { BROADCAST_TYPE_LABELS, COVERAGE_TYPE_LABELS, ENTITY_STATUS_LABELS } from '../lib/labels';
+import { formatDateTr, formatFrequencyValue } from '../lib/format';
+import { foldTurkish } from '../lib/slug';
+import type { BroadcastType, CoverageType, EntityStatus } from '../data/schemas';
+
+export interface FrequencyTableRow {
+  id: string;
+  frequency: number;
+  unit: string;
+  stationName: string;
+  stationHref: string;
+  broadcastType: BroadcastType;
+  coverageType: CoverageType;
+  districtOrTransmitter: string | null;
+  status: EntityStatus;
+  lastVerifiedAt: string;
+}
+
+interface Props {
+  rows: FrequencyTableRow[];
+  caption: string;
+  /** Only worth showing the district filter when the rows actually vary by district. */
+  showDistrictFilter?: boolean;
+}
+
+const { rows, caption, showDistrictFilter = false } = Astro.props;
+
+const broadcastTypeOptions = [...new Set(rows.map((row) => row.broadcastType))];
+const districtOptions = [...new Set(rows.map((row) => row.districtOrTransmitter).filter((v): v is string => Boolean(v)))].sort(
+  (a, b) => a.localeCompare(b, 'tr'),
+);
+---
+
+<div data-frequency-table-root>
+  <div class="mb-4 flex flex-wrap items-end gap-3">
+    <div class="flex flex-col gap-1">
+      <label for="freq-filter-text" class="text-xs font-medium text-ink-muted">Radyo adına göre filtrele</label>
+      <input
+        type="text"
+        id="freq-filter-text"
+        placeholder="Örn: Metro FM"
+        class="h-9 w-48 rounded-md border border-border-strong bg-surface px-3 text-sm outline-none focus-visible:border-primary-600"
+        data-filter-text
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="freq-filter-type" class="text-xs font-medium text-ink-muted">Yayın türüne göre filtrele</label>
+      <select
+        id="freq-filter-type"
+        class="h-9 rounded-md border border-border-strong bg-surface px-2 text-sm outline-none focus-visible:border-primary-600"
+        data-filter-broadcast-type
+      >
+        <option value="">Tümü</option>
+        {broadcastTypeOptions.map((type) => <option value={type}>{BROADCAST_TYPE_LABELS[type]}</option>)}
+      </select>
+    </div>
+    {
+      showDistrictFilter && districtOptions.length > 0 && (
+        <div class="flex flex-col gap-1">
+          <label for="freq-filter-district" class="text-xs font-medium text-ink-muted">İlçeye göre filtrele</label>
+          <select
+            id="freq-filter-district"
+            class="h-9 rounded-md border border-border-strong bg-surface px-2 text-sm outline-none focus-visible:border-primary-600"
+            data-filter-district
+          >
+            <option value="">Tümü</option>
+            {districtOptions.map((district) => <option value={district}>{district}</option>)}
+          </select>
+        </div>
+      )
+    }
+    <p class="text-xs text-ink-faint" data-filter-result-count aria-live="polite"></p>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-border" tabindex="0">
+    <table class="responsive-table w-full border-collapse text-sm" data-sortable-table>
+      <caption class="sr-only">{caption}</caption>
+      <thead class="bg-surface-subtle text-left">
+        <tr>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">
+            <button type="button" class="inline-flex items-center gap-1" data-sort-key="frequency" data-sort-type="number">
+              Frekans
+            </button>
+          </th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">
+            <button type="button" class="inline-flex items-center gap-1" data-sort-key="station" data-sort-type="string">
+              Radyo
+            </button>
+          </th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Yayın türü</th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kapsam</th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İlçe / Verici</th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Durum</th>
+          <th scope="col" class="px-3 py-2.5 font-semibold text-ink">
+            <button type="button" class="inline-flex items-center gap-1" data-sort-key="verified" data-sort-type="string">
+              Son kontrol
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr
+              data-row
+              data-search-text={foldTurkish(row.stationName)}
+              data-broadcast-type={row.broadcastType}
+              data-district={row.districtOrTransmitter ?? ''}
+            >
+              <td data-label="Frekans" data-sort-col="frequency" data-sort-value={row.frequency} class="border-t border-border px-3 py-2.5 font-medium text-ink">
+                {formatFrequencyValue(row.frequency)} {row.unit}
+              </td>
+              <td data-label="Radyo" data-sort-col="station" data-sort-value={row.stationName} class="border-t border-border px-3 py-2.5">
+                <a href={row.stationHref} class="font-medium text-primary-600 hover:underline">
+                  {row.stationName}
+                </a>
+              </td>
+              <td data-label="Yayın türü" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                {BROADCAST_TYPE_LABELS[row.broadcastType]}
+              </td>
+              <td data-label="Kapsam" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                {COVERAGE_TYPE_LABELS[row.coverageType]}
+              </td>
+              <td data-label="İlçe / Verici" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                {row.districtOrTransmitter ?? '—'}
+              </td>
+              <td data-label="Durum" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                {ENTITY_STATUS_LABELS[row.status]}
+              </td>
+              <td data-label="Son kontrol" data-sort-col="verified" data-sort-value={row.lastVerifiedAt} class="border-t border-border px-3 py-2.5 text-ink-faint">
+                <time datetime={row.lastVerifiedAt}>{formatDateTr(row.lastVerifiedAt)}</time>
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="../scripts/frequency-table-controller.ts"></script>

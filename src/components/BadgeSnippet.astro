@@ -1,0 +1,62 @@
+---
+/**
+ * "Frekanslar'da Doğrulandı" backlink-badge embed block, shown on radio
+ * and TV profile pages. Usage is entirely optional for the broadcaster --
+ * profile verification never requires adding the badge.
+ */
+import { buildBadgeSnippet } from '../lib/badge';
+import { canonicalUrl } from '../lib/urls';
+
+interface Props {
+  path: string;
+  verified: boolean;
+}
+
+const { path, verified } = Astro.props;
+const profileUrl = canonicalUrl(path);
+
+const variants = verified
+  ? ([
+      { key: 'verified', title: "Doğrulanmış rozeti", html: buildBadgeSnippet({ variant: 'verified', profileUrl }) },
+      { key: 'neutral', title: 'Nötr rozet', html: buildBadgeSnippet({ variant: 'neutral', profileUrl }) },
+    ] as const)
+  : ([{ key: 'neutral', title: 'Rozet', html: buildBadgeSnippet({ variant: 'neutral', profileUrl }) }] as const);
+---
+
+<section class="mt-8 rounded-lg border border-border bg-surface-subtle p-5">
+  <h2 class="text-base font-bold text-ink">Bu profili sitenize ekleyin</h2>
+  <p class="mt-1.5 text-sm text-ink-muted">
+    Aşağıdaki HTML kodu, kendi web sitenize eklenebilecek küçük, JavaScript gerektirmeyen bir rozettir. Kullanımı
+    isteğe bağlıdır ve profil doğrulaması için rozet ekleme şartı aranmaz.
+  </p>
+
+  <div class="mt-4 space-y-4">
+    {
+      variants.map((variant, index) => (
+        <>
+          <div class="flex flex-wrap items-center gap-3">
+            <span set:html={variant.html} />
+          </div>
+          <div class="flex items-start gap-2">
+            <pre
+              id={`badge-code-${index}`}
+              class="flex-1 overflow-x-auto rounded-md border border-border bg-surface p-3 text-xs text-ink-muted"
+              tabindex="0"
+            ><code>{variant.html}</code></pre>
+            <button
+              type="button"
+              class="h-fit shrink-0 rounded-md border border-border-strong px-3 py-2 text-xs font-medium text-ink hover:bg-surface"
+              data-copy-button
+              data-copy-target={`#badge-code-${index}`}
+              data-analytics-event="badge_code_copied"
+            >
+              Kodu kopyala
+            </button>
+          </div>
+        </>
+      ))
+    }
+  </div>
+</section>
+
+<script src="../scripts/copy-button-controller.ts"></script>

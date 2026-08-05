@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { formatDateTr } from '../../lib/format';
+import { CHANGE_TYPE_LABELS } from '../../lib/labels';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const updateEntries = await getCollection('frequency-updates');
+const updates = updateEntries.map((e) => e.data).sort((a, b) => b.date.localeCompare(a.date));
+
+const pagePath = paths.updateList();
+const pageTitle = 'Frekans ve Yayın Güncellemeleri';
+const pageDescription = 'Radyo ve televizyon yayınlarındaki frekans, uydu ve transponder değişikliklerinin kayıtlı geçmişi.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Güncellemeler', href: pagePath },
+];
+
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: updates.map((update) => ({ name: update.title, url: canonicalUrl(paths.update(update.slug)) })),
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Güncellemeler</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">{pageDescription}</p>
+
+    <ul class="mt-8 divide-y divide-border rounded-lg border border-border bg-surface">
+      {
+        updates.map((update) => (
+          <li>
+            <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-4 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p class="font-medium text-ink">{update.title}</p>
+                <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
+              </div>
+              <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

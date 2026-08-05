@@ -1,0 +1,35 @@
+---
+import type { Source } from '../data/schemas';
+
+interface Props {
+  sources: Source[];
+  label?: string;
+}
+
+const { sources, label = 'Kaynaklar' } = Astro.props;
+---
+
+{
+  sources.length > 0 && (
+    <p class="text-xs text-ink-faint">
+      {label}:{' '}
+      {sources.map((source, index) => (
+        <>
+          {source.url ? (
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-primary-600"
+            >
+              {source.name}
+            </a>
+          ) : (
+            <span>{source.name}</span>
+          )}
+          {index < sources.length - 1 && ', '}
+        </>
+      ))}
+    </p>
+  )
+}

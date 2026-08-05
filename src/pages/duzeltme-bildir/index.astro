@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CorrectionForm from '../../components/CorrectionForm.astro';
+import { sortByName } from '../../lib/relations';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+
+const [radioEntries, tvEntries, cityEntries] = await Promise.all([
+  getCollection('radio-stations'),
+  getCollection('television-channels'),
+  getCollection('cities'),
+]);
+
+const broadcastOptions = sortByName([...radioEntries.map((e) => e.data), ...tvEntries.map((e) => e.data)]).map(
+  (b) => b.name,
+);
+const cityOptions = sortByName(cityEntries.map((e) => e.data)).map((c) => c.name);
+
+const pagePath = paths.correction();
+const pageTitle = 'Hatalı Bilgi Bildir | Frekanslar';
+const pageDescription = 'Bir radyo, televizyon veya frekans kaydındaki hatalı ya da güncelliğini yitirmiş bilgiyi bize bildirin.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Düzeltme Bildir', href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath) }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Hatalı Bilgi Bildir</h1>
+    <p class="mt-2 text-ink-muted">
+      Bir radyo, televizyon, frekans, uydu veya transponder kaydında hatalı ya da güncelliğini yitirmiş bir bilgi
+      gördüyseniz aşağıdaki formu doldurarak bize bildirebilirsiniz. Editöryal ekibimiz her bildirimi inceler.
+    </p>
+
+    <div class="mt-8">
+      <CorrectionForm broadcastOptions={broadcastOptions} cityOptions={cityOptions} />
+    </div>
+  </article>
+</BaseLayout>

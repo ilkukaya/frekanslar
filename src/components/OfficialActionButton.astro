@@ -1,0 +1,97 @@
+---
+/**
+ * The "Resmî Dinle/İzle" and "Resmî Web Sitesine Git" buttons.
+ *
+ * Rules enforced here, not left to callers to remember:
+ * - Only ever renders a link the data actually provides (never a
+ *   third-party/unofficial fallback).
+ * - `target="_blank"` always pairs with `rel="noopener noreferrer"`.
+ * - No `nofollow` -- this is a normal editorial link to an official
+ *   source, not a paid or user-submitted one.
+ * - Always shows a plain-language "bu bağlantı sizi yönlendirir" caption
+ *   next to the button so nobody mistakes it for in-site playback.
+ * - If the URL is missing, no clickable button is rendered at all --
+ *   instead a short, honest note explains why, so the layout doesn't
+ *   just have an unexplained gap.
+ */
+import { ExternalLink } from '@lucide/astro';
+import type { AnalyticsEvent, AnalyticsPayload } from '../lib/analytics';
+
+interface Props {
+  href: string | null;
+  label: string;
+  destinationDescription: string;
+  variant?: 'primary' | 'secondary';
+  analyticsEvent: AnalyticsEvent;
+  analyticsPayload?: AnalyticsPayload;
+}
+
+const {
+  href,
+  label,
+  destinationDescription,
+  variant = 'primary',
+  analyticsEvent,
+  analyticsPayload,
+} = Astro.props;
+
+const VARIANT_CLASSES: Record<'primary' | 'secondary', string> = {
+  primary: 'bg-primary-600 text-white hover:bg-primary-700',
+  secondary: 'border border-border-strong bg-surface text-ink hover:bg-surface-subtle',
+};
+---
+
+{
+  href ? (
+    <div class="flex flex-col gap-1">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={[
+          'inline-flex w-fit items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors',
+          VARIANT_CLASSES[variant],
+        ]}
+        data-official-action
+        data-analytics-event={analyticsEvent}
+        data-analytics-payload={JSON.stringify(analyticsPayload ?? {})}
+      >
+        {label}
+        <ExternalLink class="h-4 w-4" aria-hidden="true" />
+      </a>
+      <p class="text-xs text-ink-faint">{destinationDescription}</p>
+    </div>
+  ) : (
+    <p class="text-xs text-ink-faint">
+      Bu yayın için resmî bağlantı henüz eklenmedi. Bilgisi olan yayın kuruluşları{' '}
+      <a href="/duzeltme-bildir/" class="underline hover:text-primary-600">
+        düzeltme formu
+      </a>{' '}
+      üzerinden iletebilir.
+    </p>
+  )
+}
+
+<script>
+  import { ANALYTICS_EVENTS, type AnalyticsEvent } from '../lib/analytics';
+
+  function isAnalyticsEvent(value: string): value is AnalyticsEvent {
+    return (ANALYTICS_EVENTS as readonly string[]).includes(value);
+  }
+
+  function parsePayload(raw: string | undefined): Record<string, string> {
+    try {
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-official-action]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const eventName = link.dataset.analyticsEvent;
+      if (!eventName || !isAnalyticsEvent(eventName)) return;
+      window.frekanslarTrack?.(eventName, parsePayload(link.dataset.analyticsPayload));
+    });
+  });
+</script>

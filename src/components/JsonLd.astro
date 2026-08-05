@@ -1,0 +1,17 @@
+---
+/**
+ * Injects one or more JSON-LD `<script>` tags. Accepts either a single
+ * schema object or an array, so pages can pass whatever they built
+ * without wrapping/unwrapping arrays themselves.
+ */
+import type { JsonLdObject } from '../lib/seo/jsonld';
+
+interface Props {
+  schema: JsonLdObject | JsonLdObject[];
+}
+
+const { schema } = Astro.props;
+const schemas = Array.isArray(schema) ? schema : [schema];
+---
+
+{schemas.map((entry) => <script type="application/ld+json" is:inline set:html={JSON.stringify(entry)} />)}

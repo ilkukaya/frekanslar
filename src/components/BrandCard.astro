@@ -1,0 +1,38 @@
+---
+/**
+ * Shared card for both radio stations and TV channels (their data shape
+ * is identical -- see `broadcastBrandBase` in `src/data/schemas.ts`).
+ */
+import LogoPlaceholder from './LogoPlaceholder.astro';
+import VerificationBadge from './VerificationBadge.astro';
+import { COVERAGE_TYPE_LABELS } from '../lib/labels';
+import { paths } from '../lib/urls';
+import type { RadioStation, TelevisionChannel } from '../data/schemas';
+
+interface Props {
+  brand: RadioStation | TelevisionChannel;
+  kind: 'radio' | 'tv';
+  /** Extra context line, e.g. a frequency value when listing stations for one city. */
+  meta?: string;
+}
+
+const { brand, kind, meta } = Astro.props;
+const href = kind === 'radio' ? paths.radioStation(brand.slug) : paths.televisionChannel(brand.slug);
+const kindLabel = kind === 'radio' ? 'Radyo' : 'Televizyon';
+---
+
+<a
+  href={href}
+  class="flex items-center gap-3 rounded-lg border border-border bg-surface p-4 shadow-card transition-colors hover:border-primary-600"
+>
+  <LogoPlaceholder name={brand.name} logo={brand.logo} size="md" />
+  <div class="min-w-0 flex-1">
+    <p class="truncate font-semibold text-ink">{brand.name}</p>
+    <p class="truncate text-sm text-ink-muted">
+      {meta ?? `${kindLabel} · ${COVERAGE_TYPE_LABELS[brand.coverageType]}`}
+    </p>
+    <div class="mt-1.5">
+      <VerificationBadge status={brand.verificationStatus} compact />
+    </div>
+  </div>
+</a>

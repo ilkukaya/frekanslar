@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { siteConfig } from '../../config/site';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+
+const pagePath = paths.contact();
+const pageTitle = 'İletişim | Frekanslar';
+const pageDescription = `${siteConfig.siteName} ile iletişime geçme yolları.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'İletişim', href: pagePath },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath) }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">İletişim</h1>
+
+    <div class="prose-content mt-6 space-y-4 text-ink-muted">
+      <p>
+        Frekans, radyo veya televizyon bilgilerine ilişkin bir düzeltme bildirmek isterseniz, kaydın bağlamını
+        (ilgili yayın, şehir, kaynak URL) doğrudan iletebileceğiniz
+        {' '}<a href={paths.correction()} class="text-primary-600 underline hover:no-underline">Düzeltme Bildir</a>{' '}
+        formunu kullanmanızı öneririz; bu, talebinizin doğru kayda ulaşmasını hızlandırır.
+      </p>
+      <p>Diğer sorularınız için bize e-posta ile ulaşabilirsiniz:</p>
+      <p>
+        <a href={`mailto:${siteConfig.contactEmail}`} class="font-medium text-primary-600 hover:underline">
+          {siteConfig.contactEmail}
+        </a>
+      </p>
+      <p>
+        Bir yayın kuruluşunu temsil ediyorsanız ve profilinizi doğrulamak istiyorsanız, ilgili radyo veya
+        televizyon profil sayfasındaki "Bu yayın kuruluşunu temsil ediyor musunuz?" bölümünü kullanabilirsiniz.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

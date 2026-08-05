@@ -1,0 +1,261 @@
+[
+  {
+    "id": "joyturk",
+    "name": "JoyTürk",
+    "slug": "joyturk",
+    "alternativeNames": [
+      "Joy Türk"
+    ],
+    "logo": null,
+    "description": "JoyTürk, Türkçe pop müzik ağırlıklı yayın yapan, Türkiye genelinde birçok şehirde dinlenebilen özel bir ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.joyturk.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "metro-fm",
+    "name": "Metro FM",
+    "slug": "metro-fm",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Metro FM, İstanbul merkezli, ağırlıklı olarak yabancı pop müzik yayını yapan, Türkiye genelinde birçok şehirde dinlenebilen özel bir ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.metrofm.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "power-fm",
+    "name": "Power FM",
+    "slug": "power-fm",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Power FM, İstanbul merkezli, müzik ağırlıklı yayın yapan özel bir ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.powerfm.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "radyo-1",
+    "name": "Radyo 1",
+    "slug": "radyo-1",
+    "alternativeNames": [
+      "TRT Radyo 1"
+    ],
+    "logo": null,
+    "description": "Radyo 1, TRT bünyesinde haber, kültür-sanat ve söyleşi ağırlıklı içerikler sunan ulusal bir radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "haber",
+      "kultur-sanat",
+      "genel"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": "https://www.trt.net.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "super-fm",
+    "name": "Süper FM",
+    "slug": "super-fm",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "Süper FM, İstanbul merkezli, müzik ağırlıklı yayın yapan özel bir ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.superfm.com.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-fm",
+    "name": "TRT FM",
+    "slug": "trt-fm",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT FM, TRT (Türkiye Radyo Televizyon Kurumu) bünyesinde ulusal ölçekte yayın yapan genel müzik ve haber ağırlıklı bir radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "genel",
+      "muzik",
+      "haber"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": "https://www.trt.net.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": true,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "trt-turku",
+    "name": "TRT Türkü",
+    "slug": "trt-turku",
+    "alternativeNames": [],
+    "logo": null,
+    "description": "TRT Türkü, Türk halk müziği ve türkü ağırlıklı yayın yapan, TRT bünyesindeki ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik",
+      "kultur-sanat"
+    ],
+    "headquarters": "ankara",
+    "owner": "trt",
+    "officialWebsite": "https://www.trt.net.tr",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  },
+  {
+    "id": "virgin-radio-turkiye",
+    "name": "Virgin Radio Türkiye",
+    "slug": "virgin-radio-turkiye",
+    "alternativeNames": [
+      "Virgin Radio"
+    ],
+    "logo": null,
+    "description": "Virgin Radio Türkiye, uluslararası Virgin Radio markasının Türkiye lisansıyla yayın yapan, müzik ağırlıklı özel bir ulusal radyo kanalıdır.",
+    "broadcastType": "terrestrial-radio",
+    "coverageType": "national",
+    "languages": [
+      "tr"
+    ],
+    "categories": [
+      "muzik"
+    ],
+    "headquarters": "istanbul",
+    "owner": null,
+    "officialWebsite": "https://www.virginradioturkiye.com",
+    "officialLiveUrl": null,
+    "officialSocialLinks": {},
+    "status": "active",
+    "firstBroadcastDate": null,
+    "lastVerifiedAt": "2026-08-05",
+    "sourceIds": [
+      "editorial-placeholder"
+    ],
+    "verificationStatus": "pending-review",
+    "featured": false,
+    "seoTitle": null,
+    "seoDescription": null
+  }
+]

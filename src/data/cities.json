@@ -1,0 +1,58 @@
+[
+  {
+    "id": "adana",
+    "name": "Adana",
+    "slug": "adana",
+    "plateCode": 1,
+    "region": "akdeniz"
+  },
+  {
+    "id": "ankara",
+    "name": "Ankara",
+    "slug": "ankara",
+    "plateCode": 6,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "antalya",
+    "name": "Antalya",
+    "slug": "antalya",
+    "plateCode": 7,
+    "region": "akdeniz"
+  },
+  {
+    "id": "bursa",
+    "name": "Bursa",
+    "slug": "bursa",
+    "plateCode": 16,
+    "region": "marmara"
+  },
+  {
+    "id": "istanbul",
+    "name": "İstanbul",
+    "slug": "istanbul",
+    "plateCode": 34,
+    "region": "marmara"
+  },
+  {
+    "id": "izmir",
+    "name": "İzmir",
+    "slug": "izmir",
+    "plateCode": 35,
+    "region": "ege"
+  },
+  {
+    "id": "konya",
+    "name": "Konya",
+    "slug": "konya",
+    "plateCode": 42,
+    "region": "ic-anadolu"
+  },
+  {
+    "id": "trabzon",
+    "name": "Trabzon",
+    "slug": "trabzon",
+    "plateCode": 61,
+    "region": "karadeniz"
+  }
+]

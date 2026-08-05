@@ -1,0 +1,131 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import VerificationBadge from '../../components/VerificationBadge.astro';
+import { SOURCE_TYPE_LABELS } from '../../lib/labels';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
+import type { VerificationStatus } from '../../data/schemas';
+
+const sourceEntries = await getCollection('sources');
+const sources = sourceEntries.map((e) => e.data);
+
+const pagePath = paths.dataSources();
+const pageTitle = 'Veri Kaynakları ve Doğrulama Süreci | Frekanslar';
+const pageDescription = 'Frekanslar veritabanındaki kaynak öncelik sırası, doğrulama durumları ve veri metodolojisi.';
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Veri Kaynakları', href: pagePath },
+];
+
+const verificationStatuses: { status: VerificationStatus; explanation: string }[] = [
+  { status: 'verified', explanation: 'Resmî düzenleyici kurum, uydu işletmecisi veya yayın kuruluşunun resmî kaynağıyla doğrulanmıştır.' },
+  { status: 'partially-verified', explanation: 'Bilginin bir kısmı doğrulanmış, bir kısmı henüz teyit edilmemiştir.' },
+  { status: 'community-reported', explanation: 'Kullanıcı bildirimiyle eklenmiş, editöryal ekip tarafından henüz doğrulanmamıştır.' },
+  { status: 'outdated', explanation: 'Daha önce doğrulanmış ancak güncelliğini yitirmiş olabilecek bilgidir.' },
+  { status: 'inactive', explanation: 'İlgili yayın veya kayıt artık aktif değildir.' },
+  { status: 'pending-review', explanation: 'Mimariyi göstermek amacıyla oluşturulmuş örnek veridir; yayın öncesinde gerçek kaynaklarla doğrulanmalıdır.' },
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath) }),
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Veri Kaynakları ve Doğrulama Süreci</h1>
+
+    <div class="prose-content mt-6 space-y-4 text-ink-muted">
+      <p>
+        Her radyo, televizyon, frekans, uydu ve transponder kaydının bir veya daha fazla kaynağı ve bir doğrulama
+        durumu vardır. Bu sayfa, kaynak önceliğimizi, doğrulama durumlarının anlamını ve veri metodolojimizi
+        açıklar.
+      </p>
+
+      <h2 class="text-lg font-bold text-ink">Kaynak Önceliği</h2>
+      <ol class="list-decimal space-y-1 pl-5">
+        <li>Resmî düzenleyici kurum (örn. RTÜK)</li>
+        <li>Resmî uydu işletmecisi (örn. Türksat A.Ş.)</li>
+        <li>Yayın kuruluşunun resmî web sitesi</li>
+        <li>Yayın kuruluşunun doğrulanmış sosyal medya hesabı</li>
+        <li>Güvenilir ikincil kaynaklar</li>
+        <li>Kullanıcı bildirimi (doğrulanana kadar "unverified" olarak işaretlenir)</li>
+      </ol>
+    </div>
+
+    <section class="mt-8">
+      <h2 class="text-lg font-bold text-ink">Doğrulama Durumları</h2>
+      <ul class="mt-4 space-y-3">
+        {
+          verificationStatuses.map((item) => (
+            <li class="rounded-lg border border-border bg-surface p-4">
+              <VerificationBadge status={item.status} />
+              <p class="mt-2 text-sm text-ink-muted">{item.explanation}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold text-ink">Kayıtlı Kaynaklar</h2>
+      <div class="mt-4 overflow-x-auto rounded-lg border border-border" tabindex="0">
+        <table class="responsive-table w-full border-collapse text-sm">
+          <caption class="sr-only">Frekanslar veritabanında kullanılan kaynaklar</caption>
+          <thead class="bg-surface-subtle text-left">
+            <tr>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kaynak</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Tür</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Güvenilirlik</th>
+              <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Açıklama</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              sources.map((source) => (
+                <tr>
+                  <td data-label="Kaynak" class="border-t border-border px-3 py-2.5 font-medium text-ink">
+                    {source.url ? (
+                      <a href={source.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:underline">
+                        {source.name}
+                      </a>
+                    ) : (
+                      source.name
+                    )}
+                  </td>
+                  <td data-label="Tür" class="border-t border-border px-3 py-2.5 text-ink-muted">{SOURCE_TYPE_LABELS[source.type]}</td>
+                  <td data-label="Güvenilirlik" class="border-t border-border px-3 py-2.5 text-ink-muted capitalize">{source.reliability}</td>
+                  <td data-label="Açıklama" class="border-t border-border px-3 py-2.5 text-ink-muted">{source.description}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold text-ink">Veri Metodolojisi</h2>
+      <div class="mt-3 space-y-3 text-sm text-ink-muted">
+        <p>
+          Veriler normalleştirilmiş JSON dosyalarında (şehirler, ilçeler, yayın kuruluşları, radyo istasyonları,
+          televizyon kanalları, karasal frekanslar, uydular, transponderler, uydu servisleri, platformlar,
+          kaynaklar) tutulur ve her kayıt Zod şemalarıyla doğrulanır. Geçersiz veya eksik bir kayıt build
+          sürecinde reddedilir.
+        </p>
+        <p>
+          Değişiklik geçmişi ayrı bir "güncellemeler" veri setinde tutulur; yeni yayın, kapanan yayın, frekans
+          değişikliği, uydu/transponder değişikliği, kırık resmî bağlantı, eksik kaynak ve uzun süredir
+          doğrulanmamış kayıt gibi durumlar
+          {' '}<a href={paths.updateList()} class="text-primary-600 underline hover:no-underline">Güncellemeler</a>{' '}
+          sayfasında görünür hale gelir.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

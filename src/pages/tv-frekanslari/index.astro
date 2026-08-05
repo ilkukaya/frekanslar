@@ -1,0 +1,120 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import VerificationBadge from '../../components/VerificationBadge.astro';
+import { ENCRYPTION_LABELS, RESOLUTION_LABELS } from '../../lib/labels';
+import { formatDateTr, formatTransponderSignature } from '../../lib/format';
+import { byId, sortByName } from '../../lib/relations';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const [channelEntries, serviceEntries, transponderEntries, satelliteEntries] = await Promise.all([
+  getCollection('television-channels'),
+  getCollection('satellite-services'),
+  getCollection('transponders'),
+  getCollection('satellites'),
+]);
+
+const channels = sortByName(channelEntries.map((e) => e.data));
+const services = serviceEntries.map((e) => e.data).filter((s) => s.broadcastKind === 'tv' && s.status === 'active');
+const transponders = transponderEntries.map((e) => e.data);
+const satellites = satelliteEntries.map((e) => e.data);
+
+const rows = channels.map((channel) => {
+  const service = services.find((s) => s.stationId === channel.id);
+  const transponder = service ? byId(transponders, service.transponderId) : undefined;
+  const satellite = transponder ? byId(satellites, transponder.satelliteId) : undefined;
+  return { channel, service, transponder, satellite };
+});
+
+const latestVerifiedAt = services.map((s) => s.lastVerifiedAt).sort().at(-1) ?? null;
+
+const pagePath = paths.tvFrequencies();
+const pageTitle = 'TV Frekansları: Kanallara Göre Güncel Uydu Ayarları Tablosu';
+const pageDescription = `Türkiye'deki televizyon kanallarının uydu, frekans, polarizasyon ve sembol oranı bilgilerini tek tabloda karşılaştırın.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'TV Frekansları', href: pagePath },
+];
+
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: channels.map((channel) => ({ name: channel.name, url: canonicalUrl(paths.televisionChannel(channel.slug)) })),
+    dateModified: latestVerifiedAt ?? undefined,
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt ?? undefined} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">TV Frekansları</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">
+      Bir kanalın uydu, transponder ve teknik yayın bilgilerini hızlıca karşılaştırmak için aşağıdaki tabloyu
+      kullanabilirsiniz. Kanal profiline gitmek için kanal adına tıklayın.
+    </p>
+
+    <div class="mt-6 overflow-x-auto rounded-lg border border-border" tabindex="0">
+      <table class="responsive-table w-full border-collapse text-sm">
+        <caption class="sr-only">Türkiye televizyon kanalları frekans tablosu</caption>
+        <thead class="bg-surface-subtle text-left">
+          <tr>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kanal</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Uydu</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Frekans / Pol / SR</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Görüntü</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Şifreleme</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Durum</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map(({ channel, service, transponder, satellite }) => (
+              <tr>
+                <td data-label="Kanal" class="border-t border-border px-3 py-2.5 font-medium text-ink">
+                  <a href={paths.televisionChannel(channel.slug)} class="text-primary-600 hover:underline">{channel.name}</a>
+                </td>
+                <td data-label="Uydu" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                  {satellite ? <a href={paths.satellite(satellite.slug)} class="hover:text-primary-600 hover:underline">{satellite.name}</a> : '—'}
+                </td>
+                <td data-label="Frekans / Pol / SR" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                  {transponder ? (
+                    <a href={paths.transponder(transponder.slug)} class="hover:text-primary-600 hover:underline">
+                      {formatTransponderSignature(transponder.frequencyMhz, transponder.polarization, transponder.symbolRate)}
+                    </a>
+                  ) : (
+                    '—'
+                  )}
+                </td>
+                <td data-label="Görüntü" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                  {service?.resolution ? RESOLUTION_LABELS[service.resolution] : '—'}
+                </td>
+                <td data-label="Şifreleme" class="border-t border-border px-3 py-2.5 text-ink-muted">
+                  {service ? ENCRYPTION_LABELS[service.encryption] : '—'}
+                </td>
+                <td data-label="Durum" class="border-t border-border px-3 py-2.5">
+                  <VerificationBadge status={service?.verificationStatus ?? channel.verificationStatus} compact />
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    {
+      latestVerifiedAt && (
+        <p class="mt-4 text-xs text-ink-faint">
+          Son güncelleme: <time datetime={latestVerifiedAt}>{formatDateTr(latestVerifiedAt)}</time>. Her satırdaki
+          değerler ilgili kanalın profil sayfasında kaynağıyla birlikte gösterilir.
+        </p>
+      )
+    }
+  </div>
+</BaseLayout>

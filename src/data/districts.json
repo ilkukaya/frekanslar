@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ankara-cankaya",
+    "name": "Çankaya",
+    "slug": "cankaya",
+    "cityId": "ankara"
+  },
+  {
+    "id": "ankara-kecioren",
+    "name": "Keçiören",
+    "slug": "kecioren",
+    "cityId": "ankara"
+  },
+  {
+    "id": "bursa-osmangazi",
+    "name": "Osmangazi",
+    "slug": "osmangazi",
+    "cityId": "bursa"
+  },
+  {
+    "id": "istanbul-bakirkoy",
+    "name": "Bakırköy",
+    "slug": "bakirkoy",
+    "cityId": "istanbul"
+  },
+  {
+    "id": "istanbul-besiktas",
+    "name": "Beşiktaş",
+    "slug": "besiktas",
+    "cityId": "istanbul"
+  },
+  {
+    "id": "istanbul-kadikoy",
+    "name": "Kadıköy",
+    "slug": "kadikoy",
+    "cityId": "istanbul"
+  },
+  {
+    "id": "istanbul-sisli",
+    "name": "Şişli",
+    "slug": "sisli",
+    "cityId": "istanbul"
+  },
+  {
+    "id": "istanbul-uskudar",
+    "name": "Üsküdar",
+    "slug": "uskudar",
+    "cityId": "istanbul"
+  },
+  {
+    "id": "izmir-karsiyaka",
+    "name": "Karşıyaka",
+    "slug": "karsiyaka",
+    "cityId": "izmir"
+  },
+  {
+    "id": "izmir-konak",
+    "name": "Konak",
+    "slug": "konak",
+    "cityId": "izmir"
+  }
+]
