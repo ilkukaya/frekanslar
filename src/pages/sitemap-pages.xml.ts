@@ -18,6 +18,8 @@ export const GET: APIRoute = async () => {
   const staticPaths = [
     paths.home(),
     paths.radioList(),
+    paths.radioDirectory(),
+    paths.broadcasterList(),
     paths.tvList(),
     paths.tvFrequencies(),
     paths.satelliteList(),

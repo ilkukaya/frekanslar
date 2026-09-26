@@ -41,3 +41,21 @@ function dispatch(event: AnalyticsEvent, payload: AnalyticsPayload | undefined):
 }
 
 window.frekanslarTrack = dispatch;
+
+// Official listen/watch/website links anywhere on the page (delegated, so
+// every card/button variant is covered without its own script).
+document.addEventListener('click', (event) => {
+  const target = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-official-action]') : null;
+  if (!target) return;
+  const name = target.dataset.analyticsEvent as AnalyticsEvent | undefined;
+  if (!name) return;
+  let payload: AnalyticsPayload;
+  try {
+    payload = target.dataset.analyticsPayload ? JSON.parse(target.dataset.analyticsPayload) : {};
+  } catch {
+    payload = {};
+  }
+  dispatch(name, payload);
+  const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  gtag?.('event', name, payload);
+});

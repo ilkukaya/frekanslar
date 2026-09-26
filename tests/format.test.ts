@@ -79,3 +79,25 @@ describe('formatTransponderSignature', () => {
     expect(formatTransponderSignature(11958, 'H', 27500)).toBe('11958 H 27500');
   });
 });
+
+import { tvChannelCenterMhz, formatTvChannel } from '../src/lib/format';
+
+describe('tvChannelCenterMhz', () => {
+  it('maps UHF channels on the 8 MHz raster', () => {
+    expect(tvChannelCenterMhz(21)).toBe(474);
+    expect(tvChannelCenterMhz(40)).toBe(626);
+    expect(tvChannelCenterMhz(69)).toBe(858);
+  });
+  it('maps VHF Band III channels on the 7 MHz raster', () => {
+    expect(tvChannelCenterMhz(5)).toBe(177.5);
+    expect(tvChannelCenterMhz(12)).toBe(226.5);
+  });
+  it('returns null outside known ranges', () => {
+    expect(tvChannelCenterMhz(3)).toBeNull();
+    expect(tvChannelCenterMhz(70)).toBeNull();
+  });
+  it('formats a readable label', () => {
+    expect(formatTvChannel(40)).toBe('UHF 40 · 626 MHz');
+    expect(formatTvChannel(5)).toBe('VHF 5 · 177,5 MHz');
+  });
+});

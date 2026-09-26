@@ -1,0 +1,57 @@
+---
+/**
+ * "Dinle ↗" / "İzle ↗" call to action. Never plays anything in-site: it
+ * always opens the broadcaster's own official live page (or, failing that,
+ * its official website) in a new tab. Renders nothing when the brand has
+ * no official link on record.
+ */
+import { ArrowUpRight, Headphones, MonitorPlay } from '@lucide/astro';
+import type { RadioStation, TelevisionChannel } from '../data/schemas';
+
+interface Props {
+  brand: RadioStation | TelevisionChannel;
+  kind: 'radio' | 'tv';
+  size?: 'sm' | 'lg';
+  class?: string;
+}
+
+const { brand, kind, size = 'sm', class: className = '' } = Astro.props;
+const href = brand.officialLiveUrl ?? brand.officialWebsite;
+const label = kind === 'radio' ? 'Dinle' : 'İzle';
+const Icon = kind === 'radio' ? Headphones : MonitorPlay;
+const event = kind === 'radio' ? 'official_listen_clicked' : 'official_watch_clicked';
+function hostOf(url: string | null): string {
+  try {
+    return url ? new URL(url).hostname.replace(/^www\./, '') : '';
+  } catch {
+    return '';
+  }
+}
+const host = hostOf(href);
+---
+
+{
+  href && (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`${brand.name} resmî yayınına git (${host})`}
+      aria-label={`${brand.name} ${label} – resmî siteye gider: ${host}`}
+      data-official-action
+      data-analytics-event={event}
+      data-analytics-payload={JSON.stringify({ stationId: brand.id })}
+      class:list={[
+        'relative z-10 inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full font-semibold transition-colors',
+        size === 'sm'
+          ? 'h-9 bg-ink px-3.5 text-[0.8rem] text-surface hover:bg-primary-600'
+          : 'h-12 bg-primary-600 px-6 text-base text-white hover:bg-primary-700',
+        className,
+      ]}
+    >
+      {size === 'lg' && <Icon class="h-5 w-5" aria-hidden="true" />}
+      {size === 'lg' ? `Canlı ${label}` : label}
+      <ArrowUpRight class={size === 'sm' ? 'h-3.5 w-3.5' : 'h-4.5 w-4.5'} aria-hidden="true" />
+    </a>
+  )
+}

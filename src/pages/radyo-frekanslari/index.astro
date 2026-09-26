@@ -41,7 +41,7 @@ const jsonLd = [
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
-    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">Türkiye Radyo Frekansları</h1>
+    <h1 class="mt-4 text-3xl text-ink sm:text-4xl">Şehre Göre Radyo Frekansları</h1>
     <p class="mt-2 max-w-2xl text-ink-muted">
       {cities.length} şehirdeki güncel FM frekanslarını şehre göre inceleyin veya {stations.length} radyo
       istasyonundan birinin profiline gidin.
@@ -59,9 +59,12 @@ const jsonLd = [
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-ink">Tüm Radyo İstasyonları</h2>
-      <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {stations.map((station) => <BrandCard brand={station} kind="radio" />)}
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-xl font-bold text-ink">Ulusal Radyolar</h2>
+        <a href={paths.radioDirectory()} class="text-sm font-semibold text-ink underline decoration-primary-500 underline-offset-4">Tüm {stations.length} radyo (A–Z)</a>
+      </div>
+      <div class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+        {stations.filter((s) => s.coverageType === 'national').map((station) => <BrandCard brand={station} kind="radio" />)}
       </div>
     </section>
   </div>

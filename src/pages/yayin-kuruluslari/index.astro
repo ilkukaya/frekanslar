@@ -1,0 +1,99 @@
+---
+/**
+ * A–Z index of every RTÜK-licensed broadcaster (licence-holder company)
+ * with a link to its firm profile.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const [broadcasterEntries, radioEntries, tvEntries, cityEntries] = await Promise.all([
+  getCollection('broadcasters'),
+  getCollection('radio-stations'),
+  getCollection('television-channels'),
+  getCollection('cities'),
+]);
+const cityById = new Map(cityEntries.map((e) => [e.data.id, e.data]));
+const brandsByOwner = new Map<string, { name: string; kind: 'radio' | 'tv' }[]>();
+for (const { data } of radioEntries) if (data.owner) brandsByOwner.set(data.owner, [...(brandsByOwner.get(data.owner) ?? []), { name: data.name, kind: 'radio' }]);
+for (const { data } of tvEntries) if (data.owner) brandsByOwner.set(data.owner, [...(brandsByOwner.get(data.owner) ?? []), { name: data.name, kind: 'tv' }]);
+
+const broadcasters = broadcasterEntries
+  .map((e) => e.data)
+  .sort((a, b) => a.name.localeCompare(b.name, 'tr', { numeric: true }));
+
+function letterOf(name: string): string {
+  const ch = name.charAt(0).toLocaleUpperCase('tr');
+  return /[A-ZÇĞİÖŞÜ]/.test(ch) ? ch : '0–9';
+}
+const groups = new Map<string, typeof broadcasters>();
+for (const b of broadcasters) groups.set(letterOf(b.name), [...(groups.get(letterOf(b.name)) ?? []), b]);
+
+const pagePath = paths.broadcasterList();
+const pageTitle = `Radyo ve TV Yayın Kuruluşları: ${broadcasters.length} Firma Profili`;
+const pageDescription = `RTÜK lisanslı ${broadcasters.length} radyo ve televizyon yayın kuruluşunun firma profilleri: sahip oldukları kanallar, merkezleri ve yayın yaptıkları iller.`;
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Yayın Kuruluşları', href: pagePath },
+];
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((i) => ({ name: i.name, url: canonicalUrl(i.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: broadcasters.slice(0, 200).map((b) => ({ name: b.name, url: canonicalUrl(paths.broadcaster(b.slug)) })),
+  }),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6" data-filter-root>
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-3xl text-ink sm:text-4xl">Yayın Kuruluşları</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">
+      Türkiye'de RTÜK'ten karasal yayın lisansı almış {broadcasters.length} şirket. Her firma profilinde sahip
+      olunan radyo ve televizyonlar, merkez ili ve yayın yapılan iller yer alır.
+    </p>
+
+    <div class="sticky top-16 z-30 -mx-4 mt-6 border-b border-border bg-surface-subtle/95 px-4 py-3 backdrop-blur sm:mx-0 sm:rounded-xl sm:border">
+      <label for="org-filter" class="sr-only">Kuruluş veya marka adıyla filtrele</label>
+      <input id="org-filter" type="search" placeholder="Şirket ya da kanal adı yazın…" autocomplete="off" class="h-11 w-full rounded-full border border-border-strong bg-surface px-4 text-ink outline-none focus-visible:border-ink" data-filter-input />
+      <p class="mt-2 text-xs text-ink-faint"><span data-filter-count>{broadcasters.length}</span> kuruluş gösteriliyor</p>
+    </div>
+
+    <nav aria-label="Harf dizini" class="scrollbar-none mt-4 flex gap-1 overflow-x-auto">
+      {[...groups.keys()].map((l) => <a href={`#harf-${l}`} class="shrink-0 rounded-md px-2.5 py-1 text-sm font-semibold text-ink-muted hover:bg-surface-muted hover:text-ink">{l}</a>)}
+    </nav>
+
+    <AdSlot placement="listing" />
+
+    {
+      [...groups.entries()].map(([letter, list]) => (
+        <section id={`harf-${letter}`} class="mt-8" data-filter-section>
+          <h2 class="border-b border-border pb-2 text-xl text-ink">{letter}</h2>
+          <ul class="mt-1 divide-y divide-border">
+            {list.map((b) => {
+              const brands = brandsByOwner.get(b.id) ?? [];
+              const hq = b.headquarters ? cityById.get(b.headquarters)?.name : null;
+              return (
+                <li data-filter-item data-name={`${b.name} ${brands.map((x) => x.name).join(' ')}`} class="py-3">
+                  <a href={paths.broadcaster(b.slug)} class="font-medium text-ink hover:underline">{b.name}</a>
+                  <p class="mt-0.5 text-sm text-ink-faint">
+                    {hq && <span>{hq} · </span>}
+                    {brands.map((x) => x.name).join(', ')}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<script src="../../scripts/list-filter-controller.ts"></script>

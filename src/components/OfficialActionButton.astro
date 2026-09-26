@@ -71,27 +71,3 @@ const VARIANT_CLASSES: Record<'primary' | 'secondary', string> = {
     </p>
   )
 }
-
-<script>
-  import { ANALYTICS_EVENTS, type AnalyticsEvent } from '../lib/analytics';
-
-  function isAnalyticsEvent(value: string): value is AnalyticsEvent {
-    return (ANALYTICS_EVENTS as readonly string[]).includes(value);
-  }
-
-  function parsePayload(raw: string | undefined): Record<string, string> {
-    try {
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  }
-
-  document.querySelectorAll<HTMLAnchorElement>('[data-official-action]').forEach((link) => {
-    link.addEventListener('click', () => {
-      const eventName = link.dataset.analyticsEvent;
-      if (!eventName || !isAnalyticsEvent(eventName)) return;
-      window.frekanslarTrack?.(eventName, parsePayload(link.dataset.analyticsPayload));
-    });
-  });
-</script>

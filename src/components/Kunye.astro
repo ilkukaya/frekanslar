@@ -1,0 +1,178 @@
+---
+/**
+ * "Künye" -- the imprint/fact sheet of a radio or TV brand: who holds the
+ * licence, where it is based, its reach and its official channels. Every
+ * value comes from the data files; empty values are shown as such rather
+ * than guessed.
+ */
+import { formatDateTr } from '../lib/format';
+import { BROADCAST_TYPE_LABELS, COVERAGE_TYPE_LABELS } from '../lib/labels';
+import { paths } from '../lib/urls';
+import type { Broadcaster, RadioStation, Source, TelevisionChannel } from '../data/schemas';
+
+interface Props {
+  brand: RadioStation | TelevisionChannel;
+  kind: 'radio' | 'tv';
+  broadcaster: Broadcaster | null;
+  otherBrandCount: number;
+  hq: { name: string; slug: string } | null;
+  cityCount: number;
+  assignmentLabel: string;
+  assignmentCount: number;
+  sources: Source[];
+}
+
+const { brand, kind, broadcaster, otherBrandCount, hq, cityCount, assignmentLabel, assignmentCount, sources } = Astro.props;
+
+const SOCIAL_LABELS: Record<string, string> = {
+  x: 'X (Twitter)',
+  twitter: 'X (Twitter)',
+  instagram: 'Instagram',
+  youtube: 'YouTube',
+  facebook: 'Facebook',
+  tiktok: 'TikTok',
+};
+
+const socials = Object.entries(brand.officialSocialLinks ?? {}).filter((e): e is [string, string] => Boolean(e[1]));
+
+function host(url: string | null): string | null {
+  if (!url) return null;
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+---
+
+<section id="kunye" class="mt-10">
+  <h2 class="text-2xl text-ink">{brand.name} Künyesi</h2>
+  <p class="mt-1 text-sm text-ink-muted">
+    {kind === 'radio' ? 'Radyonun' : 'Kanalın'} lisans, kuruluş ve iletişim bilgileri.
+  </p>
+  <dl class="mt-4 grid grid-cols-1 overflow-hidden rounded-xl border border-border bg-surface sm:grid-cols-2">
+    <div class="kunye-row">
+      <dt>Marka adı</dt>
+      <dd>{brand.name}{brand.alternativeNames.length > 0 && <span class="text-ink-faint"> ({brand.alternativeNames.join(', ')})</span>}</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Yayın türü</dt>
+      <dd>{BROADCAST_TYPE_LABELS[brand.broadcastType]}</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Lisans sahibi kuruluş</dt>
+      <dd>
+        {
+          broadcaster ? (
+            <a href={paths.broadcaster(broadcaster.slug)} class="font-medium text-ink underline decoration-border-strong underline-offset-4 hover:decoration-primary-500">
+              {broadcaster.name}
+            </a>
+          ) : (
+            'Belirtilmemiş'
+          )
+        }
+        {otherBrandCount > 0 && <span class="block text-xs text-ink-faint">Bu kuruluşun {otherBrandCount} başka markası daha var</span>}
+      </dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Yayın kapsamı</dt>
+      <dd>{COVERAGE_TYPE_LABELS[brand.coverageType]}</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Merkez</dt>
+      <dd>{hq ? <a href={paths.city(hq.slug)} class="underline decoration-border-strong underline-offset-4 hover:decoration-primary-500">{hq.name}</a> : 'Belirtilmemiş'}</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Yayın yapılan il</dt>
+      <dd><span class="num font-semibold">{cityCount}</span> il</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>{assignmentLabel}</dt>
+      <dd><span class="num font-semibold">{assignmentCount}</span></dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Resmî web sitesi</dt>
+      <dd>
+        {
+          brand.officialWebsite ? (
+            <a href={brand.officialWebsite} target="_blank" rel="noopener noreferrer" class="underline decoration-border-strong underline-offset-4 hover:decoration-primary-500">
+              {host(brand.officialWebsite)}
+            </a>
+          ) : (
+            <span class="text-ink-faint">Eklenmedi</span>
+          )
+        }
+      </dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Canlı yayın sayfası</dt>
+      <dd>
+        {
+          brand.officialLiveUrl ? (
+            <a href={brand.officialLiveUrl} target="_blank" rel="noopener noreferrer" class="underline decoration-border-strong underline-offset-4 hover:decoration-primary-500">
+              {host(brand.officialLiveUrl)}
+            </a>
+          ) : (
+            <span class="text-ink-faint">Eklenmedi</span>
+          )
+        }
+      </dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Sosyal medya</dt>
+      <dd>
+        {
+          socials.length > 0 ? (
+            <span class="flex flex-wrap gap-x-3 gap-y-1">
+              {socials.map(([platform, url]) => (
+                <a href={url} target="_blank" rel="noopener noreferrer" class="underline decoration-border-strong underline-offset-4 hover:decoration-primary-500">
+                  {SOCIAL_LABELS[platform] ?? platform}
+                </a>
+              ))}
+            </span>
+          ) : (
+            <span class="text-ink-faint">Eklenmedi</span>
+          )
+        }
+      </dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Kaynak</dt>
+      <dd>{sources.map((s) => s.name).join(', ') || '—'}</dd>
+    </div>
+    <div class="kunye-row">
+      <dt>Son doğrulama</dt>
+      <dd><time datetime={brand.lastVerifiedAt}>{formatDateTr(brand.lastVerifiedAt)}</time></dd>
+    </div>
+  </dl>
+</section>
+
+<style>
+  .kunye-row {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.925rem;
+  }
+  @media (min-width: 40rem) {
+    .kunye-row:nth-child(odd) {
+      border-right: 1px solid var(--color-border);
+    }
+  }
+  @media (max-width: 30rem) {
+    .kunye-row {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+  }
+  dt {
+    color: var(--color-ink-faint);
+  }
+  dd {
+    color: var(--color-ink);
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+</style>

@@ -6,6 +6,7 @@ const SITEMAP_FILES = [
   'sitemap-pages.xml',
   'sitemap-radio.xml',
   'sitemap-tv.xml',
+  'sitemap-broadcasters.xml',
   'sitemap-cities.xml',
   'sitemap-frequencies.xml',
   'sitemap-satellites.xml',

@@ -195,3 +195,32 @@ export function televisionStationSchema(input: TelevisionStationJsonLdInput): Js
     ...(input.areaServed ? { areaServed: input.areaServed } : {}),
   };
 }
+
+export function broadcasterOrganizationSchema(input: {
+  name: string;
+  description: string;
+  url: string;
+  website: string | null;
+  city: string | null;
+  brands: readonly { name: string; url: string; kind: 'radio' | 'tv' }[];
+}): JsonLdObject {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: input.name,
+    legalName: input.name,
+    description: input.description,
+    url: input.url,
+    ...(input.website ? { sameAs: [input.website] } : {}),
+    ...(input.city ? { address: { '@type': 'PostalAddress', addressLocality: input.city, addressCountry: 'TR' } } : {}),
+    ...(input.brands.length > 0
+      ? {
+          brand: input.brands.map((b) => ({
+            '@type': b.kind === 'radio' ? 'RadioStation' : 'TelevisionStation',
+            name: b.name,
+            url: b.url,
+          })),
+        }
+      : {}),
+  };
+}

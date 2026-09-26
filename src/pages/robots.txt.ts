@@ -1,18 +1,41 @@
 import type { APIRoute } from 'astro';
 import { canonicalUrl, paths } from '../lib/urls';
 
+/**
+ * Search engines AND AI answer engines are explicitly welcome: being cited
+ * by ChatGPT/Perplexity/Gemini/Claude answers is part of the traffic
+ * strategy (GEO), so their crawlers get the same access as Googlebot.
+ */
+const AI_CRAWLERS = [
+  'GPTBot',
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'ClaudeBot',
+  'Claude-SearchBot',
+  'Claude-User',
+  'PerplexityBot',
+  'Perplexity-User',
+  'Google-Extended',
+  'Applebot-Extended',
+  'Bingbot',
+  'YandexBot',
+  'DuckAssistBot',
+  'Meta-ExternalAgent',
+  'Amazonbot',
+  'CCBot',
+];
+
 export const GET: APIRoute = () => {
+  const disallow = [`Disallow: ${paths.search()}`, 'Disallow: /*?*', `Disallow: ${paths.correctionThanks()}`];
   const lines = [
     'User-agent: *',
     'Allow: /',
-    // Internal search results are client-rendered per query and carry no
-    // unique indexable content of their own -- keep them out of the crawl
-    // budget entirely, on top of the page's own noindex meta tag.
-    `Disallow: ${paths.search()}`,
-    'Disallow: /*?*',
-    `Disallow: ${paths.correctionThanks()}`,
+    ...disallow,
     '',
+    ...AI_CRAWLERS.flatMap((bot) => [`User-agent: ${bot}`, 'Allow: /', ...disallow, '']),
     `Sitemap: ${canonicalUrl('/sitemap-index.xml')}`,
+    '',
+    `# LLM özeti: ${canonicalUrl('/llms.txt')}`,
   ];
 
   return new Response(lines.join('\n') + '\n', {

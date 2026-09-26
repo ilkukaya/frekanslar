@@ -5,6 +5,9 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import FAQSection from '../../../components/FAQSection.astro';
 import RelatedLinks from '../../../components/RelatedLinks.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import EquipmentPicks from '../../../components/EquipmentPicks.astro';
+import { siteConfig } from '../../../config/site';
 import { formatDateTr } from '../../../lib/format';
 import { canonicalUrl, paths } from '../../../lib/urls';
 import { breadcrumbListSchema, faqPageSchema, webPageSchema } from '../../../lib/seo/jsonld';
@@ -60,14 +63,68 @@ const jsonLd = [
     dateModified: guide.data.updatedDate,
   }),
   breadcrumbListSchema(breadcrumbItems.map((item) => ({ name: item.name, url: canonicalUrl(item.href) }))),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: guide.data.title,
+    description: pageDescription,
+    datePublished: guide.data.publishedDate,
+    dateModified: guide.data.updatedDate,
+    inLanguage: 'tr',
+    mainEntityOfPage: canonicalUrl(pagePath),
+    image: canonicalUrl('/og-default.png'),
+    author: { '@type': 'Organization', name: `${siteConfig.siteName} Editör Ekibi`, url: canonicalUrl(paths.about()) },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.siteName,
+      url: siteConfig.siteUrl,
+      logo: { '@type': 'ImageObject', url: canonicalUrl('/icon-512.png') },
+    },
+  },
   ...(guide.data.faq.length > 0 ? [faqPageSchema(guide.data.faq)] : []),
 ];
+
+const EQUIPMENT: Record<string, { label: string; query: string }[]> = {
+  'canak-anten-ayari-turksat': [
+    { label: 'Çanak anten (80–100 cm)', query: 'çanak anten 90 cm' },
+    { label: 'Universal LNB', query: 'universal lnb' },
+    { label: 'Uydu yön bulucu (sat finder)', query: 'uydu yön bulucu' },
+  ],
+  'lnb-nedir-cesitleri': [
+    { label: 'Single / Twin / Quad LNB', query: 'twin lnb' },
+    { label: 'DiSEqC switch', query: 'diseqc switch' },
+  ],
+  'sinyal-yok-hatasi-cozumu': [
+    { label: 'Uydu alıcısı (HD)', query: 'uydu alıcısı hd' },
+    { label: 'F konnektör ve koaksiyel kablo', query: 'uydu kablosu f konnektör' },
+  ],
+  'otomatik-kanal-aramasi-nasil-yapilir': [{ label: 'Uydu alıcısı', query: 'uydu alıcısı' }],
+  'uydu-kanali-nasil-eklenir': [{ label: 'Uydu alıcısı', query: 'uydu alıcısı' }],
+  'anten-ayari-nasil-yapilir': [
+    { label: 'Dijital karasal çatı anteni', query: 'dvb-t2 çatı anteni' },
+    { label: 'Aktif iç anten', query: 'dvb-t2 iç anten' },
+  ],
+  'dvb-t2-karasal-yayin-nedir': [
+    { label: 'DVB-T2 alıcı (set üstü kutu)', query: 'dvb-t2 alıcı' },
+    { label: 'Karasal iç anten', query: 'dvb-t2 iç anten' },
+  ],
+  'fm-radyo-cekmiyor-cozum': [
+    { label: 'FM radyo (taşınabilir)', query: 'fm radyo taşınabilir' },
+    { label: 'FM anten', query: 'fm radyo anteni' },
+  ],
+  'arabada-radyo-frekansi-ayarlama': [{ label: 'Araç FM transmitter / Bluetooth', query: 'araç fm transmitter bluetooth' }],
+  'internetten-radyo-dinleme': [
+    { label: 'İnternet radyosu', query: 'internet radyosu wifi' },
+    { label: 'Bluetooth hoparlör', query: 'bluetooth hoparlör' },
+  ],
+};
+const equipment = EQUIPMENT[guide.id] ?? [];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath} ogType="article" lastUpdated={guide.data.updatedDate} jsonLd={jsonLd}>
   <article class="mx-auto max-w-(--container-narrow) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
-    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{guide.data.title}</h1>
+    <h1 class="mt-4 text-3xl leading-tight text-ink sm:text-[2.6rem]">{guide.data.title}</h1>
     <p class="mt-2 text-sm text-ink-faint">
       Yayınlanma: <time datetime={guide.data.publishedDate}>{formatDateTr(guide.data.publishedDate)}</time>
       {' · '}
@@ -77,6 +134,10 @@ const jsonLd = [
     <div class="prose-content mt-8">
       <Content />
     </div>
+
+    <EquipmentPicks items={equipment} />
+
+    <AdSlot placement="inContent" />
 
     <FAQSection faqs={guide.data.faq} />
 

@@ -102,3 +102,25 @@ export function formatTransponderSignature(
 ): string {
   return `${Math.round(frequencyMhz)} ${polarization} ${Math.round(symbolRate)}`;
 }
+
+/**
+ * Centre frequency (MHz) of a standard ITU Region 1 / CCIR TV channel, as
+ * used by the RTÜK terrestrial (DVB-T2) licence lists. UHF channels 21-69
+ * use an 8 MHz raster (ch21 = 474 MHz); VHF Band III channels 5-12 use a
+ * 7 MHz raster (ch5 = 177.5 MHz). Returns null for anything outside those
+ * ranges rather than guessing.
+ */
+export function tvChannelCenterMhz(channelNumber: number): number | null {
+  if (channelNumber >= 21 && channelNumber <= 69) return 306 + 8 * channelNumber;
+  if (channelNumber >= 5 && channelNumber <= 12) return 177.5 + 7 * (channelNumber - 5);
+  return null;
+}
+
+/** "UHF 40 · 626 MHz" style label for a terrestrial TV assignment. */
+export function formatTvChannel(channelNumber: number): string {
+  const mhz = tvChannelCenterMhz(channelNumber);
+  const band = channelNumber >= 21 ? 'UHF' : 'VHF';
+  return mhz === null
+    ? `Kanal ${channelNumber}`
+    : `${band} ${channelNumber} · ${mhz.toLocaleString('tr-TR', { maximumFractionDigits: 1 })} MHz`;
+}

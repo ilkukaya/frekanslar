@@ -78,14 +78,15 @@
     ],
     "headquarters": "osmaniye",
     "owner": "damla-yagmur-basin-yayin-iletisim-ve-telekomunikasyon-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.2000.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -140,14 +141,15 @@
     ],
     "headquarters": "kirikkale",
     "owner": "71-radyo-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyo71.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -202,14 +204,15 @@
     ],
     "headquarters": "sakarya",
     "owner": "ada-fm-radyo-televizyon-yayincilik-organizasyon-sanayi-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.adafm.net/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -295,14 +298,15 @@
     ],
     "headquarters": "adana",
     "owner": "adana-fm-reklam-tanitim-ve-iletisim-sistemleri-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.adanafm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -326,14 +330,17 @@
     ],
     "headquarters": "adana",
     "owner": "hayat-medya-yapim-radyo-reklam-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyohayat.com.tr/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "instagram": "https://www.instagram.com/radyohayat/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -357,14 +364,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
+    "officialWebsite": "https://radyo.adiyaman.edu.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -481,14 +489,17 @@
     ],
     "headquarters": "afyonkarahisar",
     "owner": "sultan-radyo-televizyon-yayincilik-ve-reklamcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.afyonradyosultan.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "facebook": "https://www.facebook.com/sultanradyotv/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -636,14 +647,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
+    "officialWebsite": "https://unifm.akdeniz.edu.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -667,14 +679,17 @@
     ],
     "headquarters": "aksaray",
     "owner": "hasret-radyo-ve-reklamcilik-iletisim-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.akgulfm.net/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "facebook": "https://www.facebook.com/akgulfmTR/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -729,14 +744,15 @@
     ],
     "headquarters": "konya",
     "owner": "ak-mega-radyo-televizyon-yayincilik-ve-reklamcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.akmegaradyo.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -760,14 +776,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "ak-ra-televizyon-habercilik-ve-yapim-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://akradyo.net/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -822,14 +839,18 @@
     ],
     "headquarters": "diyarbakir",
     "owner": "diyarbakir-genc-radyo-televizyon-yayincilik-tanitim-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.dogan21fm.com.tr/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "instagram": "https://www.instagram.com/dogan21fm/",
+      "facebook": "https://www.facebook.com/dogan21fm/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -853,14 +874,15 @@
     ],
     "headquarters": "aksaray",
     "owner": "oz-ay-televizyon-radyo-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.aksarayfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -915,14 +937,15 @@
     ],
     "headquarters": "aksaray",
     "owner": "ahmet-pektas-radyo-ve-televizyon-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyo68.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -946,14 +969,15 @@
     ],
     "headquarters": "aksaray",
     "owner": "aksaray-elif-radyo-ve-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.aksarayinsesi.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -977,14 +1001,15 @@
     ],
     "headquarters": "izmir",
     "owner": "aliaga-aktif-fm-radyo-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.aktiffm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -1039,14 +1064,15 @@
     ],
     "headquarters": "antalya",
     "owner": "alanya-fm-radyo-yayincilik-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.alanyafm.com/",
+    "officialLiveUrl": "https://www.alanyafm.com/canli-yayin.html",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -1070,14 +1096,18 @@
     ],
     "headquarters": "mardin",
     "owner": "hubo-yayincilik-reklamcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.aleffm.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/channel/UCFt0UBJTNevfZBaSLRXx2Zw",
+      "facebook": "https://www.facebook.com/radyoalef/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -1101,14 +1131,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "alem-radyo-ve-televizyon-yayincilik-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.alemfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -1194,14 +1225,19 @@
     ],
     "headquarters": "kayseri",
     "owner": "anadolu-ozel-radyo-televizyon-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.anadolufm.net/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "instagram": "https://www.instagram.com/anadolufmkayseri91/",
+      "x": "https://x.com/fmanadolu",
+      "facebook": "https://www.facebook.com/fmanadolu"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -1752,14 +1788,15 @@
     ],
     "headquarters": "ankara",
     "owner": "medyahaber-radyo-ve-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.askfm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -2093,14 +2130,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "hat-medya-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.babaradyo.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -2651,14 +2689,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "best-production-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.bestfm.com.tr/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/channel/UCod-SnaZG87hpU-6AhGVqhg"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -2992,14 +3033,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "c-gorsel-yayinlar-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.bloomberghtradyo.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/@bloomberghtradyo"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -3364,14 +3408,15 @@
     ],
     "headquarters": "bartin",
     "owner": "btv-bartin-radyo-ve-televizyon-isletmesi-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.bartintv.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -4325,14 +4370,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "renk-radyo-ve-televizyon-yayincilik-hizmetleri-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "http://www.cemradyo.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -4449,14 +4495,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "mes-televizyon-ve-radyo-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.cnnturk.com/",
+    "officialLiveUrl": "https://www.cnnturk.com/radyo",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -4635,14 +4682,15 @@
     ],
     "headquarters": "adana",
     "owner": "yeni-cukurova-medya-radyo-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://crttv.com.tr/",
+    "officialLiveUrl": "https://crttv.com.tr/canliyayin.html",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -4728,14 +4776,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
+    "officialWebsite": "https://cukurcafm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -5224,14 +5273,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://diyanetkuranradyo.com/",
+    "officialLiveUrl": "https://diyanetkuranradyo.com/canli-dinle",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -5255,14 +5305,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://diyanetradyo.com/",
+    "officialLiveUrl": "https://diyanetradyo.com/canli-dinle",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -5286,14 +5337,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://risaletradyo.com/",
+    "officialLiveUrl": "https://risaletradyo.com/canli-dinle",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -6061,14 +6113,17 @@
     ],
     "headquarters": "kayseri",
     "owner": "nevsehir-anadolu-radyo-ve-televizyon-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://enderunfm.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/c/EnderunTVRD"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -6495,14 +6550,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "erkam-medya-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.erkamradyo.com/",
+    "officialLiveUrl": "https://www.erkamradyo.com/erkam-radyo-dinle.html",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -8572,14 +8628,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "bogazici-radyo-televizyon-yayinciligi-ve-reklamcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.haberturkradyo.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -8603,14 +8660,15 @@
     ],
     "headquarters": "kocaeli",
     "owner": "hak-mesaj-televizyon-radyo-yapimi-ve-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.mesajfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -9254,14 +9312,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "ciner-medya-tv-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.htspor.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -9595,14 +9654,15 @@
     ],
     "headquarters": "izmir",
     "owner": "imbat-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.imbatfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -9843,14 +9903,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "istanbul-fm-slow-muzik-radyo-televizyon-ve-uydu-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.istanbulfm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -10029,14 +10090,18 @@
     ],
     "headquarters": "istanbul",
     "owner": "emin-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialWebsite": "https://www.joyturk.com.tr/",
+    "officialLiveUrl": "https://karnaval.com/radyolar/joyturk",
+    "officialSocialLinks": {
+      "x": "https://x.com/joyturk",
+      "facebook": "https://www.facebook.com/Joyturk/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -10091,14 +10156,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "medya-izmir-basin-yayin-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://kafaradyo.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/c/KafaRadyo"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -10153,14 +10221,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "istanbul-fm-radyo-televizyon-ve-uydu-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://kalpfm.com/",
+    "officialLiveUrl": "https://kalpfm.com/dinle/",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -11300,14 +11369,15 @@
     ],
     "headquarters": "izmir",
     "owner": "kordon-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://izmirkordonfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -11424,14 +11494,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "kral-muzik-medya-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.kralmuzik.com.tr/",
+    "officialLiveUrl": "https://www.kralmuzik.com.tr/radyo/kral-fm",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -11455,14 +11526,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "startv-medya-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.kralmuzik.com.tr/",
+    "officialLiveUrl": "https://www.kralmuzik.com.tr/radyo/kral-pop",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -11548,14 +11620,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "kupe-radyo-televizyon-yayincilik-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://kupefm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -11672,14 +11745,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "birinci-radyo-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.lalegulfm.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -11765,14 +11839,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "bilisim-radyo-televizyon-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.ligradyo.com.tr/",
+    "officialLiveUrl": "https://www.ligradyo.com.tr/canli-dinle/",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -12044,14 +12119,18 @@
     ],
     "headquarters": "aydin",
     "owner": "maraton-radyo-ve-televizyon-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://habermaraton.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/@maratonaydin",
+      "facebook": "https://www.facebook.com/maratonaydin/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -12106,14 +12185,15 @@
     ],
     "headquarters": "kocaeli",
     "owner": "kocaeli-marmara-radyo-televizyon-yayim-ve-yapimcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.marmarafm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -12912,14 +12992,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "metro-fm-radyo-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.metrofm.com.tr/",
+    "officialLiveUrl": "https://karnaval.com/radyolar/metrofm",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -16136,14 +16217,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "alaturka-radyo-televizyon-yayincilik-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.radyoalaturka.com.tr/",
+    "officialLiveUrl": "https://www.radyoalaturka.com.tr/canli-yayinlar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -16942,14 +17024,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "demiroren-tv-radyo-yayincilik-yapimcilik-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.radyod.com/",
+    "officialLiveUrl": "https://www.radyod.com/",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17283,14 +17366,17 @@
     ],
     "headquarters": "izmir",
     "owner": "egevizyon-gorsel-ve-isitsel-medya-yayinlari-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyoege.com.tr/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/@radyoege92.78"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17345,14 +17431,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "ikibinondokuz-radyoculuk-ve-sanat-organizasyonu-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://radioeksen.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "x": "https://x.com/radioeksen"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17376,14 +17465,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "sahin-radyo-televizyon-yayimcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyoevin.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17500,14 +17590,18 @@
     ],
     "headquarters": "istanbul",
     "owner": "radyo-fenerbahce-medya-ve-iletisim-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialWebsite": "https://live.radyofenerbahce.org/",
+    "officialLiveUrl": "https://live.radyofenerbahce.org/",
+    "officialSocialLinks": {
+      "x": "https://x.com/RadyoFenerbahce",
+      "facebook": "https://www.facebook.com/radyofenerbahce97/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17531,14 +17625,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "atakoy-fm-iletisim-hizmetleri-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyofenomen.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17562,14 +17657,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "esrt-radyo-televizyon-hizmetleri-reklam-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyofenomen.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -17624,14 +17720,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "hd-yayincilik-ve-medya-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyofenomen.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -18306,14 +18403,15 @@
     ],
     "headquarters": "ankara",
     "owner": "canli-radyo-televizyon-reklam-pazarlama-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://harmanradyo.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -18647,14 +18745,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "izmir-basak-efem-radyo-tv-reklamcilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyoizmir.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -18709,14 +18808,15 @@
     ],
     "headquarters": "trabzon",
     "owner": "ozkaradeniz-televizyon-ve-radyo-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyokadirga.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -19329,14 +19429,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "bilim-medya-yayin-ve-reklam-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://radyomars.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -19360,14 +19461,17 @@
     ],
     "headquarters": "yozgat",
     "owner": "yerkoy-radyo-televizyon-yayinciligi-reklam-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://radyomastika.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "instagram": "https://www.instagram.com/mastikafm/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -19453,14 +19557,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "radyomega-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyomega.fm/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -20414,14 +20519,15 @@
     ],
     "headquarters": "bursa",
     "owner": "clb-medya-radyo-televizyon-yayincilik-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyos.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -20538,14 +20644,15 @@
     ],
     "headquarters": "kocaeli",
     "owner": "radyo-tek-yayincilik-reklamcilik-tanitim-hizmetleri-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "http://www.radyosahin.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -20817,14 +20924,17 @@
     ],
     "headquarters": "adana",
     "owner": "ozel-radyo-televizyon-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyoseyhan.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "facebook": "https://www.facebook.com/radyoseyhan/"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -20848,14 +20958,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "mina-radyo-ve-reklam-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyoseymen.com.tr/",
+    "officialLiveUrl": "https://radyoseymen.com.tr/index.php/canli-dinle/",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -21003,14 +21114,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "radyospor-radyo-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://radyospor.com/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -21065,14 +21177,15 @@
     ],
     "headquarters": "edirne",
     "owner": "radyo-su-radyo-televizyon-basin-yayin-reklamcilik-ve-organizasyon-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyosu.com.tr/",
+    "officialLiveUrl": "https://radyosu.com.tr/ana-sayfa/radyo-linklerimiz/",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -21499,14 +21612,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "saran-radyo-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.radyotrafik.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "x": "https://x.com/radyotrafik"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -21530,14 +21646,18 @@
     ],
     "headquarters": "izmir",
     "owner": "saran-izmir-radyo-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://radyotrafik.com/izmir",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "instagram": "https://www.instagram.com/radyotrafikizmir/",
+      "x": "https://x.com/radyotrafik35"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -24103,14 +24223,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "izmir-fm-radyo-televizyon-yayincilik-ve-reklamcilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://rsradyoseymen.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -25219,14 +25340,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "show-radyo-yayinciligi-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.showradyo.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -25498,14 +25620,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "rapsodi-radyo-ve-televizyon-yayincilik-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.slowturk.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -26056,14 +26179,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "super-fm-radyo-anonim-sirketi",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://www.superfm.com.tr/",
+    "officialLiveUrl": "https://karnaval.com/radyolar/superfm",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -26676,14 +26800,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "tgrt-haber-tv-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.tgrtfm.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -26955,14 +27080,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -26986,14 +27112,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -27017,14 +27144,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -27048,14 +27176,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/kanallar/radyo-1",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -27079,14 +27208,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/kanallar/trt-radyo-haber",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -27110,14 +27240,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": true,
@@ -27141,14 +27272,15 @@
     ],
     "headquarters": "ankara",
     "owner": "trt",
-    "officialWebsite": null,
-    "officialLiveUrl": null,
+    "officialWebsite": "https://radyo.trt.net.tr/",
+    "officialLiveUrl": "https://www.trtdinle.com/radyolar",
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -27482,14 +27614,17 @@
     ],
     "headquarters": "istanbul",
     "owner": "turkuvaz-yeni-asir-televizyon-produksiyon-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.turkuvazradyolar.com/",
     "officialLiveUrl": null,
-    "officialSocialLinks": {},
+    "officialSocialLinks": {
+      "youtube": "https://www.youtube.com/c/turkuvazradyolar"
+    },
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -27916,14 +28051,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "turkuvaz-aktif-televizyon-produksiyon-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://www.vavtv.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,
@@ -28753,14 +28889,15 @@
     ],
     "headquarters": "istanbul",
     "owner": "yonelim-yayincilik-sanayi-ve-ticaret-anonim-sirketi",
-    "officialWebsite": null,
+    "officialWebsite": "https://yonradyo.com.tr/",
     "officialLiveUrl": null,
     "officialSocialLinks": {},
     "status": "active",
     "firstBroadcastDate": null,
     "lastVerifiedAt": "2026-08-05",
     "sourceIds": [
-      "rtuk"
+      "rtuk",
+      "broadcaster-official-site"
     ],
     "verificationStatus": "verified",
     "featured": false,

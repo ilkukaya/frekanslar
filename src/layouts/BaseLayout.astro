@@ -1,13 +1,13 @@
 ---
 /**
- * Site-wide HTML shell: skip link, sample-data banner, header, footer,
- * global styles, SEO tags and the analytics bootstrap. Every page in
- * `src/pages/` renders through this layout.
+ * Site-wide HTML shell: theme bootstrap, skip link, header, footer,
+ * mobile tab bar, global styles, SEO tags, analytics and (opt-in) ad
+ * bootstrap. Every page in `src/pages/` renders through this layout.
  */
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import SampleDataBanner from '../components/SampleDataBanner.astro';
+import MobileTabBar from '../components/MobileTabBar.astro';
 import SEO from '../components/SEO.astro';
 import { siteConfig } from '../config/site';
 import { analyticsRuntimeConfig } from '../lib/analytics';
@@ -22,18 +22,39 @@ interface Props {
   ogType?: 'website' | 'article';
   lastUpdated?: string;
   jsonLd?: JsonLdObject | JsonLdObject[];
+  /** Absolute or site-relative OG image; defaults to the site-wide card. */
+  ogImage?: string;
 }
 
-const { title, description, path, robots, ogType, lastUpdated, jsonLd } = Astro.props;
+const { title, description, path, robots, ogType, lastUpdated, jsonLd, ogImage } = Astro.props;
 const analyticsConfig = analyticsRuntimeConfig();
+const { adsense, verification, ga4Id } = siteConfig;
 ---
 
-<html lang={siteConfig.language}>
+<html lang={siteConfig.language} dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script is:inline>
+      // Apply a stored theme choice before first paint (no flash).
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch {
+        /* storage blocked: fall back to the OS preference */
+      }
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="alternate" type="text/plain" title="LLM özeti" href="/llms.txt" />
+    {verification.google && <meta name="google-site-verification" content={verification.google} />}
+    {verification.bing && <meta name="msvalidate.01" content={verification.bing} />}
+    {verification.yandex && <meta name="yandex-verification" content={verification.yandex} />}
     <SEO
       title={title}
       description={description}
@@ -42,20 +63,48 @@ const analyticsConfig = analyticsRuntimeConfig();
       ogType={ogType}
       lastUpdated={lastUpdated}
       jsonLd={jsonLd}
+      ogImage={ogImage}
     />
+    {
+      ga4Id && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`} />
+          <script is:inline define:vars={{ ga4Id }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              // gtag.js requires the real `arguments` object, not an array.
+              // eslint-disable-next-line prefer-rest-params
+              window.dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', ga4Id, { anonymize_ip: true });
+          </script>
+        </>
+      )
+    }
+    {
+      adsense.client && (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsense.client}`}
+          crossorigin="anonymous"
+        />
+      )
+    }
     <script src="../scripts/analytics-client.ts"></script>
   </head>
   <body
-    class="flex min-h-screen flex-col bg-surface-subtle text-ink antialiased"
+    class="pb-safe-tabbar flex min-h-screen flex-col bg-surface-subtle text-ink antialiased"
     data-analytics-provider={analyticsConfig.provider}
     data-analytics-domain={analyticsConfig.domain}
   >
     <a href="#main-content" class="skip-link">İçeriğe geç</a>
-    <SampleDataBanner />
     <Header />
     <main id="main-content" class="flex-1">
       <slot />
     </main>
     <Footer />
+    <MobileTabBar />
   </body>
 </html>

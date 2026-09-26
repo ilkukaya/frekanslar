@@ -7,7 +7,9 @@ import FrequencyTable, { type FrequencyTableRow } from '../../../components/Freq
 import BrandCard from '../../../components/BrandCard.astro';
 import RelatedLinks from '../../../components/RelatedLinks.astro';
 import FAQSection from '../../../components/FAQSection.astro';
-import { formatDateTr } from '../../../lib/format';
+import ListenButton from '../../../components/ListenButton.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import { formatDateTr, formatTvChannel } from '../../../lib/format';
 import { CHANGE_TYPE_LABELS } from '../../../lib/labels';
 import { generateCityFaqs } from '../../../lib/faq-generator';
 import {
@@ -31,6 +33,11 @@ export const getStaticPaths = (async () => {
       getCollection('transmitters'),
       getCollection('frequency-updates'),
     ]);
+  const [tvEntries, tvAssignmentEntries] = await Promise.all([
+    getCollection('television-channels'),
+    getCollection('terrestrial-tv-channels'),
+  ]);
+  const tvById = new Map(tvEntries.map((e) => [e.data.id, e.data]));
 
   const cities = cityEntries.map((e) => e.data);
   const districts = districtEntries.map((e) => e.data);
@@ -48,9 +55,18 @@ export const getStaticPaths = (async () => {
       .filter((u) => u.cityId === city.id)
       .sort((a, b) => b.date.localeCompare(a.date));
 
+    const districtNameById = new Map(cityDistricts.map((d) => [d.id, d.name]));
+    const tvRows = tvAssignmentEntries
+      .map((e) => e.data)
+      .filter((a) => a.cityId === city.id && a.status === 'active')
+      .map((a) => ({ assignment: a, channel: tvById.get(a.channelId) ?? null, district: a.districtId ? (districtNameById.get(a.districtId) ?? null) : null }))
+      .filter((r): r is typeof r & { channel: NonNullable<typeof r.channel> } => r.channel !== null)
+      .sort((a, b) => a.assignment.channelNumber - b.assignment.channelNumber || a.channel.name.localeCompare(b.channel.name, 'tr'));
+
     return {
       params: { il: city.slug },
       props: {
+        tvRows,
         city,
         cities,
         cityFrequencies,
@@ -64,8 +80,9 @@ export const getStaticPaths = (async () => {
   });
 }) satisfies GetStaticPaths;
 
-const { city, cities, cityFrequencies, activeStations, cityDistricts, cityTransmitters, cityUpdates, stations } =
+const { city, cities, cityFrequencies, activeStations, cityDistricts, cityTransmitters, cityUpdates, stations, tvRows } =
   Astro.props;
+const tvChannelCount = new Set(tvRows.map((r) => r.channel.id)).size;
 
 const stationById = new Map(stations.map((s) => [s.id, s]));
 
@@ -96,13 +113,15 @@ const tableRows: FrequencyTableRow[] = cityFrequencies
   .sort((a, b) => a.frequency - b.frequency);
 
 const neighbors = neighborCities(cities, city, 4);
-const popularStations = activeStations.filter((s) => s.featured).slice(0, 4);
+const popularStations = activeStations
+  .filter((s) => s.coverageType === 'national' && (s.officialLiveUrl ?? s.officialWebsite))
+  .slice(0, 6);
 const latestVerifiedAt = mostRecentlyVerified(cityFrequencies, 1)[0]?.lastVerifiedAt ?? null;
 const faqs = generateCityFaqs(city, activeStations.length, cityFrequencies);
 
 const pagePath = paths.city(city.slug);
-const pageTitle = `${city.name} Radyo Frekansları: Güncel FM Listesi`;
-const pageDescription = `${city.name} ilinde FM frekansında yayın yapan ${activeStations.length} radyo istasyonunun güncel frekans, verici ve doğrulama bilgileri.`;
+const pageTitle = `${city.name} Radyo Frekansları ${new Date().getFullYear()}: ${activeStations.length} FM Radyo${tvChannelCount > 0 ? ` ve ${tvChannelCount} Karasal TV` : ''}`;
+const pageDescription = `${city.name} ilinde yayın yapan ${activeStations.length} radyonun FM frekansları${tvChannelCount > 0 ? ` ve ${tvChannelCount} televizyon kanalının karasal (DVB-T2) yayın kanalları` : ''}: ilçe ve verici bazında güncel liste, RTÜK kaynaklı.`;
 
 const breadcrumbItems = [
   { name: 'Ana Sayfa', href: paths.home() },
@@ -136,10 +155,16 @@ const jsonLd = [
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt ?? undefined} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
-    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{city.name} Radyo Frekansları</h1>
+    <h1 class="mt-4 text-3xl text-ink sm:text-4xl">{city.name} Radyo Frekansları{tvRows.length > 0 && ' ve TV Kanalları'}</h1>
+    {tvRows.length > 0 && (
+      <nav class="mt-3 flex flex-wrap gap-2 text-sm" aria-label="Sayfa içi">
+        <a href="#frekans-tablosu" class="rounded-full border border-border-strong px-3 py-1 text-ink hover:border-ink">FM radyolar ({activeStations.length})</a>
+        <a href="#tv" class="rounded-full border border-border-strong px-3 py-1 text-ink hover:border-ink">Karasal TV ({tvChannelCount})</a>
+      </nav>
+    )}
 
-    <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
-      <p class="text-sm font-semibold text-primary-700">{city.name}'de kaç radyo istasyonu yayın yapıyor?</p>
+    <div class="mt-6 rounded-xl border-l-4 border-primary-500 bg-surface p-5">
+      <p class="font-display text-sm font-bold text-ink">{city.name}'de kaç radyo istasyonu yayın yapıyor?</p>
       <p class="mt-1 text-ink">
         {city.name} ilinde Frekanslar'da doğrulanmış kayıtlara göre {activeStations.length} radyo istasyonu FM
         frekansında yayın yapıyor.
@@ -168,18 +193,19 @@ const jsonLd = [
     {
       popularStations.length > 0 && (
         <section class="mt-10">
-          <h2 class="text-xl font-bold text-ink">{city.name}'deki Popüler Radyolar</h2>
-          <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {popularStations.map((station) => (
-              <BrandCard brand={station} kind="radio" meta={`${city.name} üzerinden dinle`} />
-            ))}
+          <h2 class="text-xl font-bold text-ink">{city.name}'de Dinlenebilen Ulusal Radyolar</h2>
+          <div class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {popularStations.map((station) => {
+              const f = cityFrequencies.find((x) => x.stationId === station.id);
+              return <BrandCard brand={station} kind="radio" meta={f ? `${city.name}: ${f.frequency.toFixed(1)} MHz` : undefined} />;
+            })}
           </div>
         </section>
       )
     }
 
-    <section class="mt-10">
-      <h2 class="text-xl font-bold text-ink">Frekans Tablosu</h2>
+    <section id="frekans-tablosu" class="mt-10 scroll-mt-20">
+      <h2 class="text-xl font-bold text-ink">{city.name} FM Radyo Frekans Tablosu</h2>
       {
         tableRows.length === 0 ? (
           <p class="mt-3 text-sm text-ink-muted">Bu şehir için henüz doğrulanmış bir frekans kaydı bulunmuyor.</p>
@@ -190,6 +216,47 @@ const jsonLd = [
         )
       }
     </section>
+
+    <AdSlot placement="inContent" />
+
+    {
+      tvRows.length > 0 && (
+        <section id="tv" class="mt-10 scroll-mt-20">
+          <h2 class="text-xl font-bold text-ink">{city.name} Karasal TV Kanalları (DVB-T2)</h2>
+          <p class="mt-1 max-w-3xl text-sm text-ink-muted">
+            {city.name}'de antenle izlenebilen {tvChannelCount} televizyon kanalı. MHz değeri standart UHF/VHF kanal
+            planına göre hesaplanmış merkez frekanstır.
+          </p>
+          <div class="mt-4 overflow-x-auto rounded-xl border border-border bg-surface" tabindex="0">
+            <table class="responsive-table w-full border-collapse text-sm">
+              <caption class="sr-only">{city.name} karasal TV kanalları</caption>
+              <thead class="bg-surface-subtle text-left">
+                <tr>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kanal · Frekans</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Televizyon</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Bant</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İlçe / Verici</th>
+                  <th scope="col" class="px-3 py-2.5"><span class="sr-only">Canlı izle</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {tvRows.map(({ assignment, channel, district }) => (
+                  <tr>
+                    <td data-label="Kanal · Frekans" class="num border-t border-border px-3 py-2.5 font-semibold text-ink">{formatTvChannel(assignment.channelNumber)}</td>
+                    <td data-label="Televizyon" class="border-t border-border px-3 py-2.5 font-medium">
+                      <a href={paths.televisionChannel(channel.slug)} class="text-ink hover:text-primary-600 hover:underline">{channel.name}</a>
+                    </td>
+                    <td data-label="Bant" class="border-t border-border px-3 py-2.5 text-ink-muted">{assignment.band}</td>
+                    <td data-label="İlçe / Verici" class="border-t border-border px-3 py-2.5 text-ink-muted">{district ?? '—'}</td>
+                    <td class="border-t border-border px-3 py-2 text-right"><ListenButton brand={channel} kind="tv" /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )
+    }
 
     {
       cityTransmitters.length > 0 && (

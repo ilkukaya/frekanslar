@@ -1,0 +1,141 @@
+---
+/**
+ * A–Z directory of every licensed radio brand, filterable by coverage.
+ * Each row links to the profile and has a direct "Dinle" action to the
+ * official stream page when one is on record.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import LogoPlaceholder from '../../components/LogoPlaceholder.astro';
+import ListenButton from '../../components/ListenButton.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { COVERAGE_TYPE_LABELS } from '../../lib/labels';
+import { canonicalUrl, paths } from '../../lib/urls';
+import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+
+const [radioEntries, cityEntries, freqEntries] = await Promise.all([
+  getCollection('radio-stations'),
+  getCollection('cities'),
+  getCollection('terrestrial-frequencies'),
+]);
+const cityById = new Map(cityEntries.map((e) => [e.data.id, e.data]));
+const freqCount = new Map<string, number>();
+for (const { data } of freqEntries) if (data.status === 'active') freqCount.set(data.stationId, (freqCount.get(data.stationId) ?? 0) + 1);
+
+const radios = radioEntries
+  .map((e) => e.data)
+  .sort((a, b) => a.name.localeCompare(b.name, 'tr', { numeric: true }));
+
+function letterOf(name: string): string {
+  const ch = name.charAt(0).toLocaleUpperCase('tr');
+  return /[A-ZÇĞİÖŞÜ]/.test(ch) ? ch : '0–9';
+}
+const groups = new Map<string, typeof radios>();
+for (const r of radios) {
+  const l = letterOf(r.name);
+  groups.set(l, [...(groups.get(l) ?? []), r]);
+}
+const counts = {
+  national: radios.filter((r) => r.coverageType === 'national').length,
+  regional: radios.filter((r) => r.coverageType === 'regional').length,
+  local: radios.filter((r) => r.coverageType === 'local').length,
+};
+
+const pagePath = paths.radioDirectory();
+const pageTitle = `Tüm Radyolar A–Z: ${radios.length} Radyo, Frekanslar ve Canlı Dinle`;
+const pageDescription = `Türkiye'deki ${radios.length} lisanslı radyonun alfabetik listesi: ${counts.national} ulusal, ${counts.regional} bölgesel, ${counts.local} yerel radyo. Frekansları, künyeleri ve resmî canlı dinleme bağlantıları.`;
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Radyolar', href: pagePath },
+];
+const jsonLd = [
+  breadcrumbListSchema(breadcrumbItems.map((i) => ({ name: i.name, url: canonicalUrl(i.href) }))),
+  collectionPageSchema({
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl(pagePath),
+    items: radios.filter((r) => r.coverageType !== 'local').map((r) => ({ name: r.name, url: canonicalUrl(paths.radioStation(r.slug)) })),
+  }),
+];
+const chips = [
+  ['all', `Tümü (${radios.length})`],
+  ['national', `Ulusal (${counts.national})`],
+  ['regional', `Bölgesel (${counts.regional})`],
+  ['local', `Yerel (${counts.local})`],
+] as const;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6" data-filter-root>
+    <Breadcrumb items={breadcrumbItems} />
+    <h1 class="mt-4 text-3xl text-ink sm:text-4xl">Tüm Radyolar</h1>
+    <p class="mt-2 max-w-2xl text-ink-muted">
+      RTÜK lisanslı {radios.length} radyonun tamamı. Bir radyoya tıklayarak şehir şehir frekanslarını ve künyesini
+      görün; <strong class="text-ink">Dinle</strong> butonu sizi radyonun kendi resmî yayın sayfasına götürür.
+    </p>
+
+    <div class="sticky top-16 z-30 -mx-4 mt-6 border-b border-border bg-surface-subtle/95 px-4 py-3 backdrop-blur sm:mx-0 sm:rounded-xl sm:border sm:px-4">
+      <label for="radio-filter" class="sr-only">Radyo adıyla filtrele</label>
+      <input
+        id="radio-filter"
+        type="search"
+        placeholder="Radyo adı yazın… (ör. Kral, Power, TRT)"
+        autocomplete="off"
+        class="h-11 w-full rounded-full border border-border-strong bg-surface px-4 text-ink outline-none focus-visible:border-ink"
+        data-filter-input
+      />
+      <div class="scrollbar-none mt-3 flex gap-2 overflow-x-auto" role="group" aria-label="Kapsama göre filtre">
+        {
+          chips.map(([value, label], i) => (
+            <button
+              type="button"
+              data-filter-chip={value}
+              aria-pressed={i === 0 ? 'true' : 'false'}
+              class="shrink-0 rounded-full border border-border-strong px-3.5 py-1.5 text-sm font-medium text-ink-muted aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-surface"
+            >
+              {label}
+            </button>
+          ))
+        }
+      </div>
+      <p class="mt-2 text-xs text-ink-faint"><span data-filter-count>{radios.length}</span> radyo gösteriliyor</p>
+    </div>
+
+    <nav aria-label="Harf dizini" class="scrollbar-none mt-4 flex gap-1 overflow-x-auto">
+      {[...groups.keys()].map((l) => <a href={`#harf-${l}`} class="shrink-0 rounded-md px-2.5 py-1 text-sm font-semibold text-ink-muted hover:bg-surface-muted hover:text-ink">{l}</a>)}
+    </nav>
+
+    <AdSlot placement="listing" />
+
+    {
+      [...groups.entries()].map(([letter, list]) => (
+        <section id={`harf-${letter}`} class="mt-8" data-filter-section>
+          <h2 class="border-b border-border pb-2 text-xl text-ink">{letter}</h2>
+          <ul class="mt-2 grid grid-cols-1 gap-x-6 md:grid-cols-2">
+            {list.map((r) => {
+              const hq = r.headquarters ? cityById.get(r.headquarters)?.name : null;
+              const n = freqCount.get(r.id) ?? 0;
+              return (
+                <li data-filter-item data-name={r.name} data-group={r.coverageType} class="relative flex items-center gap-3 border-b border-border py-2.5">
+                  <LogoPlaceholder name={r.name} logo={r.logo} website={r.officialWebsite} size="sm" />
+                  <div class="min-w-0 flex-1">
+                    <a href={paths.radioStation(r.slug)} class="block truncate font-medium text-ink after:absolute after:inset-0 hover:underline">
+                      {r.name}
+                    </a>
+                    <p class="truncate text-xs text-ink-faint">
+                      {COVERAGE_TYPE_LABELS[r.coverageType]}{hq ? ` · ${hq}` : ''} · {n} frekans
+                    </p>
+                  </div>
+                  <ListenButton brand={r} kind="radio" />
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<script src="../../scripts/list-filter-controller.ts"></script>

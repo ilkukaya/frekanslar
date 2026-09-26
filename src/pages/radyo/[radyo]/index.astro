@@ -6,8 +6,9 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import DataCard from '../../../components/DataCard.astro';
 import VerificationBadge from '../../../components/VerificationBadge.astro';
 import SourceList from '../../../components/SourceList.astro';
-import LogoPlaceholder from '../../../components/LogoPlaceholder.astro';
-import OfficialActionButton from '../../../components/OfficialActionButton.astro';
+import ProfileHero from '../../../components/ProfileHero.astro';
+import Kunye from '../../../components/Kunye.astro';
+import AdSlot from '../../../components/AdSlot.astro';
 import FAQSection from '../../../components/FAQSection.astro';
 import RelatedLinks from '../../../components/RelatedLinks.astro';
 import BadgeSnippet from '../../../components/BadgeSnippet.astro';
@@ -57,6 +58,12 @@ export const getStaticPaths = (async () => {
     getCollection('satellites'),
     getCollection('transponders'),
   ]);
+  const tvEntries = await getCollection('television-channels');
+  const ownerBrandCounts = new Map<string, number>();
+  for (const brand of [...stationEntries, ...tvEntries]) {
+    const owner = brand.data.owner;
+    if (owner) ownerBrandCounts.set(owner, (ownerBrandCounts.get(owner) ?? 0) + 1);
+  }
 
   const stations = stationEntries.map((e) => e.data);
   const cities = cityEntries.map((e) => e.data);
@@ -90,6 +97,7 @@ export const getStaticPaths = (async () => {
         satellites,
         transponders,
         relatedStations: relatedBrands(stations, station, 4),
+        otherBrandCount: station.owner ? (ownerBrandCounts.get(station.owner) ?? 1) - 1 : 0,
       },
     };
   });
@@ -108,6 +116,7 @@ const {
   satellites,
   transponders,
   relatedStations,
+  otherBrandCount,
 } = Astro.props;
 
 const cityById = new Map(cities.map((c) => [c.id, c]));
@@ -118,8 +127,16 @@ const directAnswer = buildStationDirectAnswer(station, stationFrequencies, citie
 const faqs = generateStationFaqs(station, activeCities, broadcaster, stationServices.length > 0);
 
 const pagePath = paths.radioStation(station.slug);
-const pageTitle = `${station.name} Frekansları: Şehirlere Göre Güncel Liste`;
-const pageDescription = `${station.name} frekans bilgileri: ${activeCities.length} şehirde FM frekansı, yayın kapsamı, resmî bağlantılar ve doğrulama durumu.`;
+const pageTitle =
+  activeCities.length === 1
+    ? `${station.name} Frekansı (${activeCities[0]!.name}) – Canlı Dinle, Künye`
+    : `${station.name} Frekansları: ${activeCities.length} İlde FM Listesi, Canlı Dinle`;
+const pageDescription = `${station.name} ${activeCities.length} ilde ${stationFrequencies.length} FM frekansından yayın yapıyor. Şehir şehir frekans listesi, resmî canlı yayın bağlantısı ve radyo künyesi.`;
+const hqCity = station.headquarters ? (cityById.get(station.headquarters) ?? null) : null;
+const reachSummary =
+  stationFrequencies.length > 0
+    ? `${activeCities.length} ilde ${stationFrequencies.length} FM frekansı${broadcaster ? ` · ${broadcaster.name}` : ''}`
+    : 'Karasal FM frekans kaydı bulunmuyor';
 
 const breadcrumbItems = [
   { name: 'Ana Sayfa', href: paths.home() },
@@ -140,96 +157,43 @@ const jsonLd = [
     description: station.description,
     url: canonicalUrl(pagePath),
     logo: station.logo,
-    sameAs: Object.values(station.officialSocialLinks).filter((v): v is string => Boolean(v)),
+    sameAs: [station.officialWebsite, ...Object.values(station.officialSocialLinks)].filter((v): v is string => Boolean(v)),
     areaServed: 'Türkiye',
   }),
   ...(faqs.length > 0 ? [faqPageSchema(faqs)] : []),
 ];
 
-const socialLinks = Object.entries(station.officialSocialLinks).filter(([, url]) => Boolean(url));
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={station.lastVerifiedAt} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
 
-    <div class="mt-4 flex flex-wrap items-start gap-4">
-      <LogoPlaceholder name={station.name} logo={station.logo} size="lg" />
-      <div class="min-w-0 flex-1">
-        <h1 class="text-2xl font-bold text-ink sm:text-3xl">{station.name}</h1>
-        <p class="mt-1 text-sm text-ink-muted">
-          {BROADCAST_TYPE_LABELS[station.broadcastType]} · {COVERAGE_TYPE_LABELS[station.coverageType]}
-        </p>
-        <div class="mt-2">
-          <VerificationBadge status={station.verificationStatus} lastVerifiedAt={station.lastVerifiedAt} />
-        </div>
-      </div>
+    <ProfileHero brand={station} kind="radio" hqName={hqCity?.name ?? null} reachSummary={reachSummary} />
+
+    <div class="mt-6 rounded-xl border-l-4 border-primary-500 bg-surface p-5">
+      <p class="font-display text-sm font-bold text-ink">{directAnswer.question}</p>
+      <p class="mt-1.5 text-ink">{directAnswer.answer}</p>
     </div>
 
-    <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
-      <p class="text-sm font-semibold text-primary-700">{directAnswer.question}</p>
-      <p class="mt-1 text-ink">{directAnswer.answer}</p>
-    </div>
+    <p class="mt-6 max-w-3xl leading-relaxed text-ink-muted">{station.description}</p>
 
-    <p class="mt-6 max-w-3xl text-ink-muted">{station.description}</p>
+    <AdSlot placement="inContent" />
 
-    <div class="mt-6 flex flex-wrap gap-3">
-      <OfficialActionButton
-        href={station.officialLiveUrl}
-        label="Resmî Yayından Dinle"
-        destinationDescription="Bu bağlantı sizi radyonun resmî canlı yayın sayfasına yönlendirir."
-        analyticsEvent="official_listen_clicked"
-        analyticsPayload={{ stationId: station.id }}
-      />
-      <OfficialActionButton
-        href={station.officialWebsite}
-        label="Resmî Web Sitesine Git"
-        destinationDescription="Bu bağlantı sizi radyonun resmî web sitesine yönlendirir."
-        variant="secondary"
-        analyticsEvent="official_website_clicked"
-        analyticsPayload={{ stationId: station.id }}
-      />
-    </div>
-
-    <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Merkezi</p>
-        <p class="mt-1 font-medium text-ink">
-          {station.headquarters ? (cityById.get(station.headquarters)?.name ?? station.headquarters) : 'Belirtilmemiş'}
-        </p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Yayın Kuruluşu</p>
-        <p class="mt-1 font-medium text-ink">{broadcaster ? broadcaster.name : 'Belirtilmemiş'}</p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Aktif Şehir Sayısı</p>
-        <p class="mt-1 font-medium text-ink">{activeCities.length}</p>
-      </div>
-    </div>
-
-    {
-      socialLinks.length > 0 && (
-        <div class="mt-6">
-          <h2 class="text-sm font-semibold text-ink">Resmî Sosyal Medya Hesapları</h2>
-          <div class="mt-2 flex flex-wrap gap-2">
-            {socialLinks.map(([platform, url]) => (
-              <a
-                href={url as string}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-md border border-border-strong px-3 py-1.5 text-sm capitalize text-ink hover:bg-surface-subtle"
-              >
-                {platform}
-              </a>
-            ))}
-          </div>
-        </div>
-      )
-    }
+    <Kunye
+      brand={station}
+      kind="radio"
+      broadcaster={broadcaster}
+      otherBrandCount={otherBrandCount}
+      hq={hqCity ? { name: hqCity.name, slug: hqCity.slug } : null}
+      cityCount={activeCities.length}
+      assignmentLabel="FM frekans sayısı"
+      assignmentCount={stationFrequencies.length}
+      sources={stationSources}
+    />
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-ink">Şehir Bazlı FM Frekansları</h2>
+      <h2 class="text-2xl text-ink">{station.name} Şehir Şehir FM Frekansları</h2>
       {
         stationFrequencies.length === 0 ? (
           <p class="mt-3 text-sm text-ink-muted">Bu radyo için henüz doğrulanmış bir FM frekans kaydı bulunmuyor.</p>
@@ -256,7 +220,7 @@ const socialLinks = Object.entries(station.officialSocialLinks).filter(([, url])
                         {city ? <a href={paths.city(city.slug)} class="text-primary-600 hover:underline">{city.name}</a> : freq.cityId}
                       </td>
                       <td data-label="Frekans" class="border-t border-border px-3 py-2.5">
-                        <a href={paths.radioStationCity(station.slug, city?.slug ?? freq.cityId)} class="font-medium text-ink hover:text-primary-600 hover:underline">
+                        <a href={paths.radioStationCity(station.slug, city?.slug ?? freq.cityId)} class="num text-base font-bold text-ink hover:text-primary-600 hover:underline">
                           {formatFrequencyDisplay(freq.frequency, freq.unit)}
                         </a>
                       </td>

@@ -2,9 +2,11 @@
 /**
  * Shared card for both radio stations and TV channels (their data shape
  * is identical -- see `broadcastBrandBase` in `src/data/schemas.ts`).
+ * The whole card links to the profile (stretched link); the Dinle/İzle
+ * button sits above it and goes to the official broadcast instead.
  */
 import LogoPlaceholder from './LogoPlaceholder.astro';
-import VerificationBadge from './VerificationBadge.astro';
+import ListenButton from './ListenButton.astro';
 import { COVERAGE_TYPE_LABELS } from '../lib/labels';
 import { paths } from '../lib/urls';
 import type { RadioStation, TelevisionChannel } from '../data/schemas';
@@ -14,25 +16,25 @@ interface Props {
   kind: 'radio' | 'tv';
   /** Extra context line, e.g. a frequency value when listing stations for one city. */
   meta?: string;
+  /** Large numeric highlight (e.g. "97.2") shown on the right instead of meta text. */
+  highlight?: string;
 }
 
-const { brand, kind, meta } = Astro.props;
+const { brand, kind, meta, highlight } = Astro.props;
 const href = kind === 'radio' ? paths.radioStation(brand.slug) : paths.televisionChannel(brand.slug);
-const kindLabel = kind === 'radio' ? 'Radyo' : 'Televizyon';
+const kindLabel = kind === 'radio' ? 'Radyo' : 'TV';
 ---
 
-<a
-  href={href}
-  class="flex items-center gap-3 rounded-lg border border-border bg-surface p-4 shadow-card transition-colors hover:border-primary-600"
->
-  <LogoPlaceholder name={brand.name} logo={brand.logo} size="md" />
+<div class="group relative flex items-center gap-3 rounded-lg border border-border bg-surface p-3 transition-colors hover:border-border-strong hover:bg-surface-subtle">
+  <LogoPlaceholder name={brand.name} logo={brand.logo} website={brand.officialWebsite} size="md" />
   <div class="min-w-0 flex-1">
-    <p class="truncate font-semibold text-ink">{brand.name}</p>
-    <p class="truncate text-sm text-ink-muted">
+    <a href={href} class="block truncate font-semibold text-ink after:absolute after:inset-0 after:content-['']">
+      {brand.name}
+    </a>
+    <p class="truncate text-[0.8rem] text-ink-faint">
       {meta ?? `${kindLabel} · ${COVERAGE_TYPE_LABELS[brand.coverageType]}`}
     </p>
-    <div class="mt-1.5">
-      <VerificationBadge status={brand.verificationStatus} compact />
-    </div>
   </div>
-</a>
+  {highlight && <span class="num shrink-0 text-lg font-bold text-ink">{highlight}</span>}
+  <ListenButton brand={brand} kind={kind} />
+</div>

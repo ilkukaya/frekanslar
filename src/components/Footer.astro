@@ -1,55 +1,77 @@
 ---
 import { paths } from '../lib/urls';
 import { siteConfig } from '../config/site';
+import SiteLogo from './SiteLogo.astro';
 
 const currentYear = new Date().getFullYear();
+
+const popularCities = [
+  ['İstanbul', 'istanbul'],
+  ['Ankara', 'ankara'],
+  ['İzmir', 'izmir'],
+  ['Bursa', 'bursa'],
+  ['Antalya', 'antalya'],
+  ['Adana', 'adana'],
+  ['Konya', 'konya'],
+  ['Gaziantep', 'gaziantep'],
+] as const;
 
 const columns = [
   {
     title: 'Keşfet',
     links: [
-      { name: 'Radyo Frekansları', href: paths.radioList() },
+      { name: 'Tüm Radyolar (A–Z)', href: paths.radioDirectory() },
+      { name: 'Şehre Göre Radyo Frekansları', href: paths.radioList() },
       { name: 'Televizyon Kanalları', href: paths.tvList() },
-      { name: 'TV Frekansları', href: paths.tvFrequencies() },
+      { name: 'Karasal TV Frekansları', href: paths.tvFrequencies() },
       { name: 'Uydu Frekansları', href: paths.satelliteList() },
+      { name: 'Yayın Kuruluşları', href: paths.broadcasterList() },
       { name: 'Rehber', href: paths.guideList() },
-      { name: 'Güncellemeler', href: paths.updateList() },
     ],
+  },
+  {
+    title: 'Popüler Şehirler',
+    links: popularCities.map(([name, slug]) => ({ name: `${name} radyo frekansları`, href: paths.city(slug) })),
   },
   {
     title: 'Kurumsal',
     links: [
       { name: 'Hakkımızda', href: paths.about() },
       { name: 'Veri Kaynakları', href: paths.dataSources() },
-      { name: 'İletişim', href: paths.contact() },
-    ],
-  },
-  {
-    title: 'Yasal ve Bildirimler',
-    links: [
+      { name: 'Güncellemeler', href: paths.updateList() },
       { name: 'Hatalı Bilgi Bildir', href: paths.correction() },
-      { name: 'Gizlilik Politikası', href: paths.privacy() },
+      { name: 'İletişim', href: paths.contact() },
+      { name: 'Gizlilik ve Çerezler', href: paths.privacy() },
       { name: 'Kullanım Koşulları', href: paths.terms() },
     ],
   },
 ];
 ---
 
-<footer class="border-t border-border bg-surface">
+<footer class="mt-16 border-t border-border bg-surface">
   <div class="mx-auto max-w-(--container-content) px-4 py-12 sm:px-6">
-    <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
-      <div class="col-span-2">
-        <p class="text-base font-bold text-ink">{siteConfig.siteName}</p>
-        <p class="mt-2 max-w-sm text-sm text-ink-muted">{siteConfig.defaultDescription}</p>
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div>
+        <SiteLogo />
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-ink-muted">
+          Türkiye'deki tüm lisanslı radyo ve televizyon yayınlarının frekans, kapsama ve künye bilgileri. Karasal
+          yayın verileri RTÜK'ün resmî lisans listelerine dayanır.
+        </p>
+        <p class="mt-4 text-sm text-ink-muted">
+          Yayın kuruluşu musunuz?
+          <a href={paths.correction()} class="font-medium text-ink underline decoration-primary-500 underline-offset-4 hover:text-primary-600">
+            Profilinizi güncelleyin
+          </a>
+        </p>
       </div>
       {
         columns.map((column) => (
           <div>
-            <h2 class="text-sm font-semibold text-ink">{column.title}</h2>
+            <h2 class="font-display text-sm font-bold text-ink">{column.title}</h2>
             <ul class="mt-3 space-y-2">
               {column.links.map((link) => (
                 <li>
-                  <a href={link.href} class="text-sm text-ink-muted hover:text-primary-600 hover:underline">
+                  <a href={link.href} class="text-sm text-ink-muted hover:text-ink hover:underline">
                     {link.name}
                   </a>
                 </li>
@@ -62,9 +84,9 @@ const columns = [
 
     <div class="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
       <p>&copy; {currentYear} {siteConfig.siteName}. Tüm hakları saklıdır.</p>
-      <p>
-        Kanal ve radyo logoları ilgili yayın kuruluşlarına aittir ve yalnızca tanımlayıcı/editoryal amaçla
-        kullanılır.
+      <p class="max-w-xl sm:text-right">
+        Frekanslar bağımsız bir rehberdir; sitede yayın akışı barındırılmaz. Marka ve logolar ilgili yayın
+        kuruluşlarına aittir ve yalnızca tanımlayıcı amaçla kullanılır.
       </p>
     </div>
   </div>
