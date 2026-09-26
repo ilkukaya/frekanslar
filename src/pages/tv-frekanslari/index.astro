@@ -1,42 +1,71 @@
 ---
+/**
+ * Terrestrial (DVB-T2) TV frequency overview built from the RTÜK licence
+ * lists: one row per channel with its reach and its İstanbul/Ankara/İzmir
+ * assignments, plus an index of every province.
+ */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-import VerificationBadge from '../../components/VerificationBadge.astro';
-import { ENCRYPTION_LABELS, RESOLUTION_LABELS } from '../../lib/labels';
-import { formatDateTr, formatTransponderSignature } from '../../lib/format';
-import { byId, sortByName } from '../../lib/relations';
+import ListenButton from '../../components/ListenButton.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { formatDateTr, formatTvChannel } from '../../lib/format';
 import { canonicalUrl, paths } from '../../lib/urls';
-import { breadcrumbListSchema, collectionPageSchema } from '../../lib/seo/jsonld';
+import { breadcrumbListSchema, collectionPageSchema, faqPageSchema } from '../../lib/seo/jsonld';
 
-const [channelEntries, serviceEntries, transponderEntries, satelliteEntries] = await Promise.all([
+const [channelEntries, assignmentEntries, cityEntries] = await Promise.all([
   getCollection('television-channels'),
-  getCollection('satellite-services'),
-  getCollection('transponders'),
-  getCollection('satellites'),
+  getCollection('terrestrial-tv-channels'),
+  getCollection('cities'),
 ]);
 
-const channels = sortByName(channelEntries.map((e) => e.data));
-const services = serviceEntries.map((e) => e.data).filter((s) => s.broadcastKind === 'tv' && s.status === 'active');
-const transponders = transponderEntries.map((e) => e.data);
-const satellites = satelliteEntries.map((e) => e.data);
+const cities = cityEntries.map((e) => e.data).sort((a, b) => a.name.localeCompare(b.name, 'tr'));
+const assignments = assignmentEntries.map((e) => e.data).filter((a) => a.status === 'active');
+const KEY_CITIES = ['istanbul', 'ankara', 'izmir'] as const;
 
-const rows = channels.map((channel) => {
-  const service = services.find((s) => s.stationId === channel.id);
-  const transponder = service ? byId(transponders, service.transponderId) : undefined;
-  const satellite = transponder ? byId(satellites, transponder.satelliteId) : undefined;
-  return { channel, service, transponder, satellite };
-});
+const rows = channelEntries
+  .map((e) => e.data)
+  .map((channel) => {
+    const own = assignments.filter((a) => a.channelId === channel.id);
+    const cityIds = new Set(own.map((a) => a.cityId));
+    const keyValues = Object.fromEntries(
+      KEY_CITIES.map((cityId) => {
+        const nums = [...new Set(own.filter((a) => a.cityId === cityId).map((a) => a.channelNumber))].sort((a, b) => a - b);
+        return [cityId, nums];
+      }),
+    ) as Record<(typeof KEY_CITIES)[number], number[]>;
+    return { channel, cityCount: cityIds.size, total: own.length, keyValues };
+  })
+  .filter((r) => r.total > 0)
+  .sort((a, b) => b.cityCount - a.cityCount || a.channel.name.localeCompare(b.channel.name, 'tr'));
 
-const latestVerifiedAt = services.map((s) => s.lastVerifiedAt).sort().at(-1) ?? null;
+const cityCounts = new Map<string, number>();
+for (const a of assignments) cityCounts.set(a.cityId, (cityCounts.get(a.cityId) ?? 0) + 1);
+const latestVerifiedAt = assignments.map((a) => a.lastVerifiedAt).sort().at(-1);
 
 const pagePath = paths.tvFrequencies();
-const pageTitle = 'TV Frekansları: Kanallara Göre Güncel Uydu Ayarları Tablosu';
-const pageDescription = `Türkiye'deki televizyon kanallarının uydu, frekans, polarizasyon ve sembol oranı bilgilerini tek tabloda karşılaştırın.`;
+const pageTitle = `Karasal TV Frekansları ${new Date().getFullYear()}: Kanal Kanal UHF/VHF Listesi (DVB-T2)`;
+const pageDescription = `Türkiye'deki ${rows.length} televizyon kanalının dijital karasal (DVB-T2) yayın kanalları: il sayısı, İstanbul, Ankara ve İzmir UHF/VHF kanal numaraları ve MHz değerleri. RTÜK lisans verisi.`;
 
 const breadcrumbItems = [
   { name: 'Ana Sayfa', href: paths.home() },
-  { name: 'TV Frekansları', href: pagePath },
+  { name: 'Karasal TV Frekansları', href: pagePath },
+];
+
+const faqs = [
+  {
+    question: 'Karasal TV frekansları neden kanal numarasıyla gösteriliyor?',
+    answer: 'Dijital karasal yayında (DVB-T2) her yayın, standart bir UHF veya VHF kanalına yerleştirilir. Televizyonlar kanal numarasını ya da karşılık gelen MHz değerini kabul eder; tablodaki MHz değerleri standart kanal planına göre hesaplanmış merkez frekanslardır.',
+  },
+  {
+    question: 'Karasal kanalları televizyonda nasıl bulurum?',
+    answer: "Televizyonunuzun kurulum menüsünde anten tipini 'Anten/Karasal (DVB-T2)' seçip otomatik arama yapmanız çoğu zaman yeterlidir. Otomatik arama bir kanalı bulamazsa, bu sayfadaki kanal numarasıyla manuel arama yapabilirsiniz.",
+  },
+  {
+    question: 'Aynı kanal her ilde aynı frekansta mı yayın yapar?',
+    answer: 'Hayır. Karasal yayın vericileri bölgeye göre farklı kanallar kullanır. Bir kanalın il il tüm kanal numaralarını, kanalın profil sayfasındaki karasal yayın tablosunda görebilirsiniz.',
+  },
 ];
 
 const jsonLd = [
@@ -45,62 +74,50 @@ const jsonLd = [
     name: pageTitle,
     description: pageDescription,
     url: canonicalUrl(pagePath),
-    items: channels.map((channel) => ({ name: channel.name, url: canonicalUrl(paths.televisionChannel(channel.slug)) })),
-    dateModified: latestVerifiedAt ?? undefined,
+    items: rows.map((r) => ({ name: r.channel.name, url: canonicalUrl(paths.televisionChannel(r.channel.slug)) })),
+    dateModified: latestVerifiedAt,
   }),
+  faqPageSchema(faqs),
 ];
+
+const fmt = (nums: number[]) => (nums.length === 0 ? '—' : nums.map((n) => formatTvChannel(n)).join(', '));
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt ?? undefined} jsonLd={jsonLd}>
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
-    <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">TV Frekansları</h1>
-    <p class="mt-2 max-w-2xl text-ink-muted">
-      Bir kanalın uydu, transponder ve teknik yayın bilgilerini hızlıca karşılaştırmak için aşağıdaki tabloyu
-      kullanabilirsiniz. Kanal profiline gitmek için kanal adına tıklayın.
+    <h1 class="mt-4 text-3xl text-ink sm:text-4xl">Karasal TV Frekansları</h1>
+    <p class="mt-2 max-w-3xl text-ink-muted">
+      Antenle (DVB-T2) izlenebilen {rows.length} televizyon kanalının yayın kanalları. Tablo, kanalın kaç ilde
+      karasal yayın tahsisi olduğuna göre sıralıdır; bir kanala tıklayarak il il tüm değerleri görün.
+      {latestVerifiedAt && <> Kaynak: RTÜK, son kontrol {formatDateTr(latestVerifiedAt)}.</>}
     </p>
 
-    <div class="mt-6 overflow-x-auto rounded-lg border border-border" tabindex="0">
+    <div class="mt-6 overflow-x-auto rounded-xl border border-border bg-surface" tabindex="0">
       <table class="responsive-table w-full border-collapse text-sm">
-        <caption class="sr-only">Türkiye televizyon kanalları frekans tablosu</caption>
+        <caption class="sr-only">Televizyon kanallarının karasal yayın kanal numaraları</caption>
         <thead class="bg-surface-subtle text-left">
           <tr>
             <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kanal</th>
-            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Uydu</th>
-            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Frekans / Pol / SR</th>
-            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Görüntü</th>
-            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Şifreleme</th>
-            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Durum</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İl</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İstanbul</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Ankara</th>
+            <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İzmir</th>
+            <th scope="col" class="px-3 py-2.5"><span class="sr-only">Canlı izle</span></th>
           </tr>
         </thead>
         <tbody>
           {
-            rows.map(({ channel, service, transponder, satellite }) => (
+            rows.map(({ channel, cityCount, keyValues }) => (
               <tr>
-                <td data-label="Kanal" class="border-t border-border px-3 py-2.5 font-medium text-ink">
-                  <a href={paths.televisionChannel(channel.slug)} class="text-primary-600 hover:underline">{channel.name}</a>
+                <td data-label="Kanal" class="border-t border-border px-3 py-2.5 font-semibold text-ink">
+                  <a href={paths.televisionChannel(channel.slug)} class="hover:text-primary-600 hover:underline">{channel.name}</a>
                 </td>
-                <td data-label="Uydu" class="border-t border-border px-3 py-2.5 text-ink-muted">
-                  {satellite ? <a href={paths.satellite(satellite.slug)} class="hover:text-primary-600 hover:underline">{satellite.name}</a> : '—'}
-                </td>
-                <td data-label="Frekans / Pol / SR" class="border-t border-border px-3 py-2.5 text-ink-muted">
-                  {transponder ? (
-                    <a href={paths.transponder(transponder.slug)} class="hover:text-primary-600 hover:underline">
-                      {formatTransponderSignature(transponder.frequencyMhz, transponder.polarization, transponder.symbolRate)}
-                    </a>
-                  ) : (
-                    '—'
-                  )}
-                </td>
-                <td data-label="Görüntü" class="border-t border-border px-3 py-2.5 text-ink-muted">
-                  {service?.resolution ? RESOLUTION_LABELS[service.resolution] : '—'}
-                </td>
-                <td data-label="Şifreleme" class="border-t border-border px-3 py-2.5 text-ink-muted">
-                  {service ? ENCRYPTION_LABELS[service.encryption] : '—'}
-                </td>
-                <td data-label="Durum" class="border-t border-border px-3 py-2.5">
-                  <VerificationBadge status={service?.verificationStatus ?? channel.verificationStatus} compact />
-                </td>
+                <td data-label="İl" class="num border-t border-border px-3 py-2.5 text-ink">{cityCount}</td>
+                <td data-label="İstanbul" class="num border-t border-border px-3 py-2.5 text-ink-muted">{fmt(keyValues.istanbul)}</td>
+                <td data-label="Ankara" class="num border-t border-border px-3 py-2.5 text-ink-muted">{fmt(keyValues.ankara)}</td>
+                <td data-label="İzmir" class="num border-t border-border px-3 py-2.5 text-ink-muted">{fmt(keyValues.izmir)}</td>
+                <td class="border-t border-border px-3 py-2 text-right"><ListenButton brand={channel} kind="tv" /></td>
               </tr>
             ))
           }
@@ -108,13 +125,25 @@ const jsonLd = [
       </table>
     </div>
 
-    {
-      latestVerifiedAt && (
-        <p class="mt-4 text-xs text-ink-faint">
-          Son güncelleme: <time datetime={latestVerifiedAt}>{formatDateTr(latestVerifiedAt)}</time>. Her satırdaki
-          değerler ilgili kanalın profil sayfasında kaynağıyla birlikte gösterilir.
-        </p>
-      )
-    }
+    <AdSlot placement="inContent" />
+
+    <section class="mt-10">
+      <h2 class="text-2xl text-ink">İl İl Karasal TV Kanalları</h2>
+      <p class="mt-1 text-sm text-ink-muted">Her il sayfasında o ildeki tüm karasal TV kanalları ve FM radyolar birlikte listelenir.</p>
+      <ul class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
+        {
+          cities.map((c) => (
+            <li>
+              <a href={`${paths.city(c.slug)}#tv`} class="flex items-baseline justify-between rounded-lg border border-border bg-surface px-3 py-2 text-sm hover:border-ink">
+                <span class="text-ink">{c.name}</span>
+                <span class="num text-xs text-ink-faint">{cityCounts.get(c.id) ?? 0}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <FAQSection faqs={faqs} />
   </div>
 </BaseLayout>

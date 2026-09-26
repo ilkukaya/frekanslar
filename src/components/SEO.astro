@@ -20,6 +20,7 @@ interface Props {
   /** ISO date the underlying content was last verified/updated. */
   lastUpdated?: string;
   jsonLd?: JsonLdObject | JsonLdObject[];
+  ogImage?: string;
 }
 
 const {
@@ -30,15 +31,17 @@ const {
   ogType = 'website',
   lastUpdated,
   jsonLd,
+  ogImage = '/og-default.png',
 } = Astro.props;
 
 const url = canonicalUrl(path);
+const imageUrl = ogImage.startsWith('http') ? ogImage : canonicalUrl(ogImage);
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={url} />
-<meta name="robots" content={robots} />
+<meta name="robots" content={robots === 'index,follow' ? 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' : robots} />
 
 <meta property="og:type" content={ogType} />
 <meta property="og:title" content={title} />
@@ -46,9 +49,14 @@ const url = canonicalUrl(path);
 <meta property="og:url" content={url} />
 <meta property="og:site_name" content={siteConfig.siteName} />
 <meta property="og:locale" content={siteConfig.locale.replace('-', '_')} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
 {lastUpdated && <meta property="article:modified_time" content={lastUpdated} />}
 
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 

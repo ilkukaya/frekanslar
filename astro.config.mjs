@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 // Central site URL fallback. The real production domain is not known yet,
 // so we default to https://example.com as instructed. Override with the
 // PUBLIC_SITE_URL environment variable once a real domain is available.
-const SITE_URL = process.env.PUBLIC_SITE_URL || 'https://example.com';
+const SITE_URL = process.env.PUBLIC_SITE_URL || 'https://frekanslar.netlify.app';
 
 export default defineConfig({
   site: SITE_URL,

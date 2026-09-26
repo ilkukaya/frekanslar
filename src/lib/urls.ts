@@ -24,6 +24,9 @@ export const paths = {
   privacy: (): string => '/gizlilik/',
   terms: (): string => '/kullanim-kosullari/',
   search: (): string => '/ara/',
+  radioDirectory: (): string => '/radyolar/',
+  broadcasterList: (): string => '/yayin-kuruluslari/',
+  broadcaster: (broadcasterSlug: string): string => `/kurulus/${broadcasterSlug}/`,
 
   city: (citySlug: string): string => `/radyo-frekanslari/${citySlug}/`,
   district: (citySlug: string, districtSlug: string): string =>

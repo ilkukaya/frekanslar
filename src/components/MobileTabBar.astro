@@ -1,0 +1,47 @@
+---
+/**
+ * App-style bottom navigation for phones (hidden from md up). Thumb-reach
+ * access to the five things people come here for.
+ */
+import { Building2, House, MapPin, Radio, Tv } from '@lucide/astro';
+import { paths } from '../lib/urls';
+
+const items = [
+  { name: 'Ana Sayfa', href: paths.home(), icon: House, match: (p: string) => p === '/' },
+  { name: 'Radyolar', href: paths.radioDirectory(), icon: Radio, match: (p: string) => p.startsWith('/radyolar/') || p.startsWith('/radyo/') },
+  { name: 'Şehirler', href: paths.radioList(), icon: MapPin, match: (p: string) => p.startsWith('/radyo-frekanslari/') },
+  { name: 'TV', href: paths.tvList(), icon: Tv, match: (p: string) => p.startsWith('/televizyon-kanallari/') || p.startsWith('/tv/') || p.startsWith('/tv-frekanslari/') },
+  { name: 'Kuruluşlar', href: paths.broadcasterList(), icon: Building2, match: (p: string) => p.startsWith('/yayin-kuruluslari/') || p.startsWith('/kurulus/') },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+  aria-label="Alt menü"
+  class="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 backdrop-blur md:hidden"
+  style="padding-bottom: env(safe-area-inset-bottom);"
+>
+  <ul class="mx-auto grid max-w-md grid-cols-5">
+    {
+      items.map((item) => {
+        const active = item.match(currentPath);
+        return (
+          <li>
+            <a
+              href={item.href}
+              aria-current={active ? 'page' : undefined}
+              class:list={[
+                'flex h-16 flex-col items-center justify-center gap-1 text-[0.68rem] font-medium',
+                active ? 'text-primary-600' : 'text-ink-faint',
+              ]}
+            >
+              <item.icon class="h-5 w-5" aria-hidden="true" stroke-width={active ? 2.4 : 1.8} />
+              {item.name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

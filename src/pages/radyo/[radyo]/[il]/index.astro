@@ -6,6 +6,8 @@ import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import VerificationBadge from '../../../../components/VerificationBadge.astro';
 import SourceList from '../../../../components/SourceList.astro';
 import LogoPlaceholder from '../../../../components/LogoPlaceholder.astro';
+import ListenButton from '../../../../components/ListenButton.astro';
+import AdSlot from '../../../../components/AdSlot.astro';
 import BrandCard from '../../../../components/BrandCard.astro';
 import { COVERAGE_TYPE_LABELS } from '../../../../lib/labels';
 import { formatDateTr, formatFrequencyDisplay } from '../../../../lib/format';
@@ -117,19 +119,25 @@ const jsonLd = [
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
 
-    <div class="mt-4 flex flex-wrap items-center gap-3">
-      <LogoPlaceholder name={station.name} logo={station.logo} size="md" />
-      <h1 class="text-2xl font-bold text-ink sm:text-3xl">{station.name} — {city.name} Frekansı</h1>
+    <div class="mt-4 flex flex-col gap-5 rounded-2xl border border-border bg-surface p-5 sm:flex-row sm:items-center sm:p-7">
+      <LogoPlaceholder name={station.name} logo={station.logo} website={station.officialWebsite} size="lg" />
+      <div class="min-w-0 flex-1">
+        <h1 class="text-2xl text-ink sm:text-3xl">{station.name} {city.name} Frekansı</h1>
+        {soleValue !== undefined && (
+          <p class="num mt-1 text-5xl font-extrabold text-primary-600">{soleValue.toFixed(1)}<span class="ml-1 text-xl text-ink-faint">MHz</span></p>
+        )}
+      </div>
+      <ListenButton brand={station} kind="radio" size="lg" />
     </div>
 
-    <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
-      <p class="text-sm font-semibold text-primary-700">{station.name}, {city.name}'de kaç frekansında yayın yapıyor?</p>
+    <div class="mt-6 rounded-xl border-l-4 border-primary-500 bg-surface p-5">
+      <p class="font-display text-sm font-bold text-ink">{station.name}, {city.name}'de kaç frekansında yayın yapıyor?</p>
       <p class="mt-1 text-ink">
         {
           soleValue !== undefined ? (
             <>
               {station.name}, {city.name} ilinde {formatFrequencyDisplay(soleValue, 'MHz')} frekansında yayın yapıyor
-              {rows.length > 1 && ` (${rows.length} farklı verici noktasından)`}.
+              {rows.length > 1 ? ` (${rows.length} farklı verici noktasından).` : '.'}
             </>
           ) : (
             <>
@@ -183,6 +191,8 @@ const jsonLd = [
         <SourceList sources={sources} />
       </div>
     </div>
+
+    <AdSlot placement="inContent" />
 
     <p class="mt-6 text-sm text-ink-muted">
       {station.name} hakkında daha fazla bilgi (yayın kapsamı, resmî bağlantılar, tüm şehirlerdeki frekansları) için{' '}

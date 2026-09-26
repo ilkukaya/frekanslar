@@ -75,7 +75,7 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt} jsonLd={jsonLd}>
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={latestVerifiedAt} jsonLd={jsonLd} robots={transponders.length === 0 ? 'noindex,follow' : 'index,follow'}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
     <h1 class="mt-4 text-2xl font-bold text-ink sm:text-3xl">{satellite.name}</h1>

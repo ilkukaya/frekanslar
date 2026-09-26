@@ -290,21 +290,24 @@ Ayrıntılar için [`LINKING_POLICY.md`](./LINKING_POLICY.md) ve [`CONTENT_REMOV
 - [`VERIFICATION_POLICY.md`](./VERIFICATION_POLICY.md) — doğrulama durumları ve süreci
 - [`CONTENT_REMOVAL_POLICY.md`](./CONTENT_REMOVAL_POLICY.md) — düzeltme ve kaldırma başvuruları
 
-## Bilinen Eksikler (İlk Sürüm)
+## Yayın, SEO ve Gelir
 
-- **Uydu/transponder/platform verileri** RTÜK'ün kapsamı dışındadır ve hâlâ mimariyi göstermek amacıyla
-  oluşturulmuş örnek veridir (`pending-review`, kaynak `editorial-placeholder`).
-- `officialWebsite`, `officialLiveUrl`, `officialSocialLinks` ve logo alanları RTÜK lisans listelerinde yer
-  almadığı için içe aktarılan ~1.080 radyo/TV markasının tamamında boş bırakılmıştır; bu nedenle "Resmî
-  Yayından Dinle/İzle" butonları bu kayıtlarda görünmez (butonun eksik bağlantıda gizlenme davranışının
-  doğru çalıştığını gösterir, bir hata değildir). Bu alanların doldurulması ayrı, açıkça kaynaklandırılmış
-  bir sonraki veri toplama aşamasıdır.
-- `categories` (tür/format) ve `languages` alanları RTÜK verisinde yoktur; marka adından çıkarılan sınırlı
-  bir anahtar kelime tahminine (`scripts/import/build-rtuk-data.ts`'teki `inferCategories`) ve `["tr"]`
-  varsayılanına dayanır -- gerçek tür/dil bilgisiyle doğrulanmayı bekler.
-- İlçe (`districts.json`) ve verici (`terrestrial-transmitters.json`) kayıtları yalnızca RTÜK'ün lisans
-  listelerinde bir vericinin bulunduğu ilçe olarak geçen ~700 (il, ilçe) çiftini kapsar; rakım ve tesis adı
-  gibi ayrıntılar (RTÜK verisinde yok) `null` bırakılmıştır.
-- `frequency-updates.json` bu içe aktarımla birlikte sıfırlandı: tek bir RTÜK anlık görüntüsünden gerçek bir
-  "neyin değiştiği" bilgisi çıkarılamaz. Değişiklik geçmişi, veri zaman içinde yeniden içe aktarıldıkça
-  (`npm run data:diff`) gerçek kayıtlarla dolmaya başlayacaktır.
+- Canlı adres: <https://frekanslar.netlify.app> (Netlify, GitHub'a her push'ta otomatik deploy).
+- Reklam (AdSense), analitik (GA4), arama motoru doğrulamaları ve affiliate kimlikleri **ortam
+  değişkenleriyle** açılır; hiçbiri ayarlanmadığında site hiçbir üçüncü taraf betik yüklemez. Adım adım
+  anlatım: [`YAYIN-VE-GELIR-REHBERI.md`](./YAYIN-VE-GELIR-REHBERI.md).
+- Arama motorları + yapay zekâ yanıt motorları (GEO/AEO) için: `robots.txt` (AI botlarına açık), `llms.txt`,
+  zengin JSON-LD (RadioStation, TelevisionStation, Organization, Article, FAQPage, Dataset, BreadcrumbList),
+  her profilde "doğrudan cevap" kutusu ve veri odaklı SSS, IndexNow anahtar dosyası + `npm run seo:indexnow`.
+
+## Bilinen Eksikler
+
+- **Uydu transponder / platform kanal numarası** verileri doğrulanana kadar yayımlanmaz (örnek veriler
+  kaldırıldı). Uydu ve platform sayfaları içerik eklenene kadar `noindex` durumundadır.
+- Resmî web sitesi / canlı yayın bağlantıları öncelikle ulusal ve bölgesel yayıncılar için eklendi; yerel
+  yayıncıların çoğunda henüz boştur (bağlantı yoksa "Dinle/İzle" butonu gösterilmez, profil sayfasında
+  "Bağlantıyı bildirin" çağrısı görünür).
+- Logolar: kayıtta doğrulanmış bir logo dosyası yoksa, yayıncının resmî sitesindeki simge Google'ın simge
+  servisi üzerinden gösterilir; o da yoksa renkli bir monogram kullanılır.
+- Karasal TV MHz değerleri, RTÜK listesindeki UHF/VHF kanal numarasından standart kanal planına göre
+  hesaplanır (bkz. `tvChannelCenterMhz`).

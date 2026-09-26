@@ -9,11 +9,11 @@
     "description": "D-Smart, uydu üzerinden doğrudan eve yayın (DTH) yöntemiyle hizmet veren ücretli bir televizyon platformudur.",
     "coverage": "Türkiye",
     "status": "active",
-    "lastVerifiedAt": "2026-08-05",
+    "lastVerifiedAt": "2026-09-26",
     "sourceIds": [
-      "editorial-placeholder"
+      "broadcaster-official-site"
     ],
-    "verificationStatus": "pending-review"
+    "verificationStatus": "partially-verified"
   },
   {
     "id": "tivibu",
@@ -25,11 +25,11 @@
     "description": "Tivibu, Türk Telekom tarafından işletilen IPTV ve OTT tabanlı televizyon platformudur.",
     "coverage": "Türkiye",
     "status": "active",
-    "lastVerifiedAt": "2026-08-05",
+    "lastVerifiedAt": "2026-09-26",
     "sourceIds": [
-      "editorial-placeholder"
+      "broadcaster-official-site"
     ],
-    "verificationStatus": "pending-review"
+    "verificationStatus": "partially-verified"
   },
   {
     "id": "turksat-kablo-tv",
@@ -41,10 +41,10 @@
     "description": "Türksat Kablo TV, Türksat A.Ş. tarafından işletilen kablolu televizyon dağıtım platformudur.",
     "coverage": "Türkiye (kablo altyapısının bulunduğu bölgeler)",
     "status": "active",
-    "lastVerifiedAt": "2026-08-05",
+    "lastVerifiedAt": "2026-09-26",
     "sourceIds": [
-      "editorial-placeholder"
+      "broadcaster-official-site"
     ],
-    "verificationStatus": "pending-review"
+    "verificationStatus": "partially-verified"
   }
 ]

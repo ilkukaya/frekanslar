@@ -41,6 +41,14 @@ export function generateStationFaqs(
     answer: `${station.name}, ${COVERAGE_TYPE_LABELS[station.coverageType].toLowerCase()} kapsamda yayın yapan bir radyo istasyonudur.`,
   });
 
+  const stationLive = station.officialLiveUrl ?? station.officialWebsite;
+  if (stationLive) {
+    faqs.push({
+      question: `${station.name} canlı nasıl dinlenir?`,
+      answer: `${station.name}'i internetten canlı dinlemek için radyonun resmî yayın sayfasını kullanabilirsiniz: ${stationLive}. ${activeCities.length > 0 ? 'Radyo cihazından dinlemek için bulunduğunuz ilin FM frekansını bu sayfadaki listeden bulabilirsiniz.' : ''}`.trim(),
+    });
+  }
+
   if (station.officialWebsite) {
     faqs.push({
       question: `${station.name}'in resmî web sitesi nedir?`,
@@ -70,8 +78,26 @@ export function generateChannelFaqs(
   hasSatelliteService: boolean,
   platformCount: number,
   broadcaster: Broadcaster | null,
+  terrestrialCityNames: readonly string[] = [],
 ): FaqItem[] {
   const faqs: FaqItem[] = [];
+
+  const channelLive = channel.officialLiveUrl ?? channel.officialWebsite;
+  if (channelLive) {
+    faqs.push({
+      question: `${channel.name} canlı nasıl izlenir?`,
+      answer: `${channel.name} yayınını internetten kanalın resmî sayfası üzerinden canlı izleyebilirsiniz: ${channelLive}.`,
+    });
+  }
+
+  if (terrestrialCityNames.length > 0) {
+    const shown = terrestrialCityNames.slice(0, 5).join(', ');
+    const rest = terrestrialCityNames.length - Math.min(5, terrestrialCityNames.length);
+    faqs.push({
+      question: `${channel.name} karasal (antenle) hangi illerde izlenebilir?`,
+      answer: `RTÜK lisans kayıtlarına göre ${channel.name}, ${terrestrialCityNames.length} ilde dijital karasal yayın (DVB-T2) kanal tahsisine sahip: ${shown}${rest > 0 ? ` ve ${rest} il daha` : ''}.`,
+    });
+  }
 
   faqs.push({
     question: `${channel.name} ne tür bir yayın kapsamına sahip?`,

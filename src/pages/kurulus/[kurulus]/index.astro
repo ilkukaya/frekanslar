@@ -1,0 +1,206 @@
+---
+/**
+ * Broadcaster (licence holder company) profile: the "firma profili" --
+ * every radio and TV brand the company holds an RTÜK licence for, where
+ * it broadcasts, and its official links.
+ */
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import { Building2 } from '@lucide/astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import BrandCard from '../../../components/BrandCard.astro';
+import VerificationBadge from '../../../components/VerificationBadge.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import FAQSection from '../../../components/FAQSection.astro';
+import { canonicalUrl, paths } from '../../../lib/urls';
+import { formatDateTr } from '../../../lib/format';
+import { breadcrumbListSchema, broadcasterOrganizationSchema, faqPageSchema, webPageSchema } from '../../../lib/seo/jsonld';
+
+export const getStaticPaths = (async () => {
+  const [broadcasterEntries, radioEntries, tvEntries, cityEntries, freqEntries, tvAssignEntries] = await Promise.all([
+    getCollection('broadcasters'),
+    getCollection('radio-stations'),
+    getCollection('television-channels'),
+    getCollection('cities'),
+    getCollection('terrestrial-frequencies'),
+    getCollection('terrestrial-tv-channels'),
+  ]);
+  const cityById = new Map(cityEntries.map((e) => [e.data.id, e.data]));
+  const radios = radioEntries.map((e) => e.data);
+  const tvs = tvEntries.map((e) => e.data);
+
+  const citiesByBrand = new Map<string, Set<string>>();
+  const add = (brandId: string, cityId: string) => {
+    const set = citiesByBrand.get(brandId) ?? new Set<string>();
+    set.add(cityId);
+    citiesByBrand.set(brandId, set);
+  };
+  for (const { data } of freqEntries) if (data.status === 'active') add(data.stationId, data.cityId);
+  for (const { data } of tvAssignEntries) if (data.status === 'active') add(data.channelId, data.cityId);
+
+  return broadcasterEntries.map(({ data: broadcaster }) => {
+    const ownedRadios = radios.filter((r) => r.owner === broadcaster.id);
+    const ownedTvs = tvs.filter((t) => t.owner === broadcaster.id);
+    const cityIds = new Set<string>();
+    for (const b of [...ownedRadios, ...ownedTvs]) for (const c of citiesByBrand.get(b.id) ?? []) cityIds.add(c);
+    const reachCities = [...cityIds]
+      .map((id) => cityById.get(id))
+      .filter((c): c is NonNullable<typeof c> => Boolean(c))
+      .sort((a, b) => a.name.localeCompare(b.name, 'tr'));
+    const hq = broadcaster.headquarters ? (cityById.get(broadcaster.headquarters) ?? null) : null;
+    return {
+      params: { kurulus: broadcaster.slug },
+      props: { broadcaster, ownedRadios, ownedTvs, reachCities, hq },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { broadcaster, ownedRadios, ownedTvs, reachCities, hq } = Astro.props;
+const brandCount = ownedRadios.length + ownedTvs.length;
+const brandNames = [...ownedRadios, ...ownedTvs].map((b) => b.name);
+
+const pagePath = paths.broadcaster(broadcaster.slug);
+const shortName = broadcaster.name.length > 60 ? `${broadcaster.name.slice(0, 57)}…` : broadcaster.name;
+const pageTitle = `${shortName} – Radyo/TV Kuruluş Profili`;
+const pageDescription = `${broadcaster.name}: RTÜK lisanslı ${brandCount} yayın markası (${brandNames.slice(0, 3).join(', ')}${brandNames.length > 3 ? '…' : ''}), ${reachCities.length} ilde yayın. Firma künyesi ve resmî bağlantılar.`;
+
+const breadcrumbItems = [
+  { name: 'Ana Sayfa', href: paths.home() },
+  { name: 'Yayın Kuruluşları', href: paths.broadcasterList() },
+  { name: shortName, href: pagePath },
+];
+
+const faqs = [
+  {
+    question: `${broadcaster.name} hangi radyo ve televizyonların sahibi?`,
+    answer: `RTÜK lisans kayıtlarına göre ${broadcaster.name}, ${brandCount} yayın markasının lisans sahibidir: ${brandNames.join(', ')}.`,
+  },
+  ...(reachCities.length > 0
+    ? [
+        {
+          question: `${broadcaster.name} hangi illerde yayın yapıyor?`,
+          answer: `Kuruluşa ait markaların karasal yayın yaptığı iller: ${reachCities.map((c) => c.name).join(', ')}.`,
+        },
+      ]
+    : []),
+  ...(hq
+    ? [{ question: `${broadcaster.name} nerede?`, answer: `Kuruluşun RTÜK kayıtlarındaki merkezi ${hq.name} ilidir.` }]
+    : []),
+];
+
+const jsonLd = [
+  webPageSchema({ name: pageTitle, description: pageDescription, url: canonicalUrl(pagePath), dateModified: broadcaster.lastVerifiedAt }),
+  breadcrumbListSchema(breadcrumbItems.map((i) => ({ name: i.name, url: canonicalUrl(i.href) }))),
+  broadcasterOrganizationSchema({
+    name: broadcaster.name,
+    description: broadcaster.description,
+    url: canonicalUrl(pagePath),
+    website: broadcaster.officialWebsite,
+    city: hq?.name ?? null,
+    brands: [
+      ...ownedRadios.map((r) => ({ name: r.name, url: canonicalUrl(paths.radioStation(r.slug)), kind: 'radio' as const })),
+      ...ownedTvs.map((t) => ({ name: t.name, url: canonicalUrl(paths.televisionChannel(t.slug)), kind: 'tv' as const })),
+    ],
+  }),
+  faqPageSchema(faqs),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={broadcaster.lastVerifiedAt} jsonLd={jsonLd}>
+  <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <section class="mt-4 rounded-2xl border border-border bg-surface p-5 sm:p-7">
+      <div class="flex items-start gap-4">
+        <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-surface-muted text-ink-muted">
+          <Building2 class="h-7 w-7" aria-hidden="true" />
+        </span>
+        <div class="min-w-0">
+          <p class="text-xs font-semibold uppercase tracking-wider text-ink-faint">Yayın kuruluşu · Firma profili</p>
+          <h1 class="mt-1 text-2xl text-ink sm:text-3xl">{broadcaster.name}</h1>
+          <p class="mt-2 text-ink-muted">
+            {ownedRadios.length > 0 && `${ownedRadios.length} radyo`}
+            {ownedRadios.length > 0 && ownedTvs.length > 0 && ' · '}
+            {ownedTvs.length > 0 && `${ownedTvs.length} televizyon`}
+            {reachCities.length > 0 && ` · ${reachCities.length} ilde yayın`}
+          </p>
+          <div class="mt-3"><VerificationBadge status={broadcaster.verificationStatus} lastVerifiedAt={broadcaster.lastVerifiedAt} /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-2xl text-ink">Firma Künyesi</h2>
+      <dl class="mt-4 grid grid-cols-1 overflow-hidden rounded-xl border border-border bg-surface text-[0.925rem] sm:grid-cols-2">
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3 sm:border-r">
+          <dt class="text-ink-faint">Ticaret unvanı</dt><dd class="text-ink">{broadcaster.name}</dd>
+        </div>
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3">
+          <dt class="text-ink-faint">Merkez</dt>
+          <dd class="text-ink">{hq ? <a href={paths.city(hq.slug)} class="underline decoration-border-strong underline-offset-4">{hq.name}</a> : 'Belirtilmemiş'}</dd>
+        </div>
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3 sm:border-r">
+          <dt class="text-ink-faint">Lisanslı marka</dt><dd class="num font-semibold text-ink">{brandCount}</dd>
+        </div>
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3">
+          <dt class="text-ink-faint">Kuruluş yılı</dt><dd class="text-ink">{broadcaster.foundedYear ?? <span class="text-ink-faint">Eklenmedi</span>}</dd>
+        </div>
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3 sm:border-r">
+          <dt class="text-ink-faint">Web sitesi</dt>
+          <dd class="text-ink">
+            {broadcaster.officialWebsite ? <a href={broadcaster.officialWebsite} target="_blank" rel="noopener noreferrer" class="underline">{broadcaster.officialWebsite.replace(/^https?:\/\/(www\.)?/, '')}</a> : <span class="text-ink-faint">Eklenmedi</span>}
+          </dd>
+        </div>
+        <div class="grid grid-cols-[10rem_1fr] gap-4 border-b border-border px-4 py-3">
+          <dt class="text-ink-faint">Kaynak · Tarih</dt><dd class="text-ink">RTÜK · {formatDateTr(broadcaster.lastVerifiedAt)}</dd>
+        </div>
+      </dl>
+    </section>
+
+    {
+      ownedRadios.length > 0 && (
+        <section class="mt-10">
+          <h2 class="text-2xl text-ink">Radyoları</h2>
+          <div class="mt-4 grid grid-cols-1 gap-2.5 md:grid-cols-2">
+            {ownedRadios.map((r) => <BrandCard brand={r} kind="radio" />)}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      ownedTvs.length > 0 && (
+        <section class="mt-10">
+          <h2 class="text-2xl text-ink">Televizyon Kanalları</h2>
+          <div class="mt-4 grid grid-cols-1 gap-2.5 md:grid-cols-2">
+            {ownedTvs.map((t) => <BrandCard brand={t} kind="tv" />)}
+          </div>
+        </section>
+      )
+    }
+
+    <AdSlot placement="inContent" />
+
+    {
+      reachCities.length > 0 && (
+        <section class="mt-10">
+          <h2 class="text-2xl text-ink">Yayın Yapılan İller</h2>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {reachCities.map((c) => (
+              <li><a href={paths.city(c.slug)} class="inline-block rounded-full border border-border bg-surface px-3 py-1.5 text-sm text-ink hover:border-ink">{c.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <FAQSection faqs={faqs} />
+
+    <p class="mt-8 rounded-xl border border-border bg-surface p-4 text-sm text-ink-muted">
+      Bu kuruluşun yetkilisi misiniz? Logo, web sitesi, sosyal medya ve iletişim bilgilerinizi eklemek için
+      <a href={`${paths.correction()}?ilgili=${encodeURIComponent(broadcaster.name)}`} class="font-medium text-ink underline decoration-primary-500 underline-offset-4">profil güncelleme formunu</a>
+      kullanın.
+    </p>
+  </div>
+</BaseLayout>

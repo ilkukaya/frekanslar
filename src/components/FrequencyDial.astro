@@ -1,0 +1,99 @@
+---
+/**
+ * A tuner-style FM dial (87.5–108 MHz) plotting the real stations of one
+ * city from the RTÜK data. Pure server-rendered SVG + links: the scale
+ * scrolls horizontally on phones, every marker is a real link.
+ */
+import { paths } from '../lib/urls';
+
+interface DialStation {
+  frequency: number;
+  name: string;
+  slug: string;
+  prominent: boolean;
+}
+
+interface Props {
+  cityName: string;
+  citySlug: string;
+  stations: DialStation[];
+}
+
+const { cityName, citySlug, stations } = Astro.props;
+const MIN = 87.5;
+const MAX = 108;
+const WIDTH = 1640;
+const x = (f: number) => ((f - MIN) / (MAX - MIN)) * (WIDTH - 40) + 20;
+const ticks: number[] = [];
+for (let f = 88; f <= 108; f += 0.5) ticks.push(Math.round(f * 10) / 10);
+
+// Stagger labels on three rows so neighbours don't collide.
+// Greedy placement: a label is only drawn if it fits on one of three rows
+// without touching its neighbour; everything else stays a plain tick.
+const labelled = stations.filter((s) => s.prominent).sort((a, b) => a.frequency - b.frequency);
+const rowEnds = [-Infinity, -Infinity, -Infinity];
+const placed: (DialStation & { px: number; row: number })[] = [];
+for (const s of labelled) {
+  const px = x(s.frequency);
+  const width = 12 + (s.frequency.toFixed(1).length + 1 + s.name.length) * 7.2;
+  const row = rowEnds.findIndex((end) => px > end + 10);
+  if (row === -1) continue;
+  rowEnds[row] = px + width;
+  placed.push({ ...s, px, row });
+}
+---
+
+<figure class="dial rounded-2xl bg-[#1d1b16] p-4 text-[#f3efe7] ring-1 ring-white/10 sm:p-5">
+  <figcaption class="flex items-baseline justify-between gap-3">
+    <span class="font-display text-sm font-bold uppercase tracking-widest text-primary-500">● {cityName} FM kadranı</span>
+    <a href={paths.city(citySlug)} class="text-xs text-[#f3efe7]/70 underline underline-offset-4 hover:text-[#f3efe7]">
+      Tüm {cityName} frekansları →
+    </a>
+  </figcaption>
+  <div class="scrollbar-none mt-3 overflow-x-auto" tabindex="0" aria-label={`${cityName} FM frekans kadranı, yatay kaydırılabilir`}>
+    <svg viewBox={`0 0 ${WIDTH} 190`} width={WIDTH} height="190" class="block max-w-none" role="img" aria-label={`${cityName} FM radyo frekansları`}>
+      <line x1="20" x2={WIDTH - 20} y1="120" y2="120" stroke="currentColor" stroke-opacity="0.35" />
+      {
+        ticks.map((t) => {
+          const major = Number.isInteger(t);
+          return (
+            <g>
+              <line x1={x(t)} x2={x(t)} y1={major ? 106 : 113} y2="120" stroke="currentColor" stroke-opacity={major ? 0.7 : 0.3} />
+              {major && t % 2 === 0 && (
+                <text x={x(t)} y="142" text-anchor="middle" font-size="13" fill="currentColor" fill-opacity="0.55" class="num">
+                  {t}
+                </text>
+              )}
+            </g>
+          );
+        })
+      }
+      {
+        stations.map((s) => (
+          <a href={paths.radioStation(s.slug)} aria-label={`${s.frequency.toFixed(1)} MHz ${s.name}`}>
+            <line x1={x(s.frequency)} x2={x(s.frequency)} y1="96" y2="120" stroke={s.prominent ? '#e5482a' : 'currentColor'} stroke-opacity={s.prominent ? 1 : 0.45} stroke-width={s.prominent ? 2.5 : 1.5} />
+            <title>{`${s.frequency.toFixed(1)} · ${s.name}`}</title>
+          </a>
+        ))
+      }
+      {
+        placed.map((s) => (
+          <a href={paths.radioStation(s.slug)}>
+            <line x1={s.px} x2={s.px} y1={20 + s.row * 26 + 8} y2="96" stroke="#e5482a" stroke-opacity="0.35" stroke-dasharray="2 3" />
+            <text x={s.px + 4} y={20 + s.row * 26} font-size="13" fill="currentColor" class="dial-label">
+              <tspan font-weight="700" class="num">{s.frequency.toFixed(1)}</tspan> {s.name}
+            </text>
+          </a>
+        ))
+      }
+      <text x="20" y="178" font-size="11" fill="currentColor" fill-opacity="0.4">MHz</text>
+    </svg>
+  </div>
+</figure>
+
+<style>
+  .dial :global(a:hover .dial-label),
+  .dial :global(a:focus .dial-label) {
+    fill: #ff7a5c;
+  }
+</style>

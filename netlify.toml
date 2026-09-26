@@ -14,23 +14,22 @@
 # already end in a slash).
 
 # --- Security headers -------------------------------------------------
-# Applied site-wide. CSP is same-origin only: this site never loads a
-# third-party script, style, font or frame, and the "official
-# listen/watch" links are plain <a target="_blank"> navigations, never
-# iframes -- so there is nothing to allow-list beyond 'self'.
-# 'unsafe-inline' stays in script-src/style-src because Astro's static
-# build inlines some small per-page bundles and Astro's own scoped
-# <style> blocks directly into the HTML rather than always extracting
-# them to external files; a static site has no per-request nonce to
-# tighten this further without a server.
+# CSP allows exactly the third parties the site can use:
+#  - Google AdSense + Funding Choices (consent) and Google Analytics 4 --
+#    only loaded when PUBLIC_ADSENSE_CLIENT / PUBLIC_GA4_ID are set;
+#  - brand icons from Google's favicon service (img-src https:).
+# The "official listen/watch" actions are plain <a target="_blank">
+# navigations, never iframes. 'unsafe-inline' stays because Astro inlines
+# small per-page scripts/styles and a static site has no per-request nonce.
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://www.googletagmanager.com https://*.google.com https://*.doubleclick.net https://*.gstatic.com https://fundingchoicesmessages.google.com https://*.adtrafficquality.google; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.adtrafficquality.google; frame-src https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com https://*.adtrafficquality.google; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 # --- Caching ------------------------------------------------------------
 # Hashed build assets (content-addressed filenames) are immutable --
@@ -44,3 +43,19 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/og-default.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/search-index.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# Old placeholder-only routes that no longer have content.
+[[redirects]]
+  from = "/transponder/*"
+  to = "/uydu-frekanslari/"
+  status = 301

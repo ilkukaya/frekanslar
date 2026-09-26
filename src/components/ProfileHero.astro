@@ -1,0 +1,95 @@
+---
+/**
+ * Top of every radio/TV profile page: logo, name, key tags and the
+ * primary "Canlı Dinle/İzle" action that sends the visitor to the
+ * broadcaster's official live page. No in-site player, ever.
+ */
+import { ArrowUpRight, Globe, MapPin } from '@lucide/astro';
+import LogoPlaceholder from './LogoPlaceholder.astro';
+import ListenButton from './ListenButton.astro';
+import VerificationBadge from './VerificationBadge.astro';
+import { COVERAGE_TYPE_LABELS } from '../lib/labels';
+import type { RadioStation, TelevisionChannel } from '../data/schemas';
+
+interface Props {
+  brand: RadioStation | TelevisionChannel;
+  kind: 'radio' | 'tv';
+  hqName: string | null;
+  /** e.g. "34 ilde 41 FM frekansı" */
+  reachSummary: string;
+  title?: string;
+}
+
+const { brand, kind, hqName, reachSummary, title } = Astro.props;
+const kindLabel = kind === 'radio' ? 'Radyo' : 'Televizyon';
+function hostOf(url: string | null): string | null {
+  try {
+    return url ? new URL(url).hostname.replace(/^www\./, '') : null;
+  } catch {
+    return null;
+  }
+}
+const websiteHost = hostOf(brand.officialWebsite);
+const hasAction = Boolean(brand.officialLiveUrl ?? brand.officialWebsite);
+---
+
+<section class="mt-4 rounded-2xl border border-border bg-surface p-5 sm:p-7">
+  <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+    <LogoPlaceholder name={brand.name} logo={brand.logo} website={brand.officialWebsite} size="xl" />
+    <div class="min-w-0 flex-1">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ink-faint">
+        <span class="rounded-full bg-surface-muted px-2.5 py-1 text-ink-muted">{kindLabel}</span>
+        <span class="rounded-full bg-surface-muted px-2.5 py-1 text-ink-muted">{COVERAGE_TYPE_LABELS[brand.coverageType]}</span>
+        {
+          hqName && (
+            <span class="inline-flex items-center gap-1 rounded-full bg-surface-muted px-2.5 py-1 text-ink-muted">
+              <MapPin class="h-3.5 w-3.5" aria-hidden="true" />
+              {hqName}
+            </span>
+          )
+        }
+      </div>
+      <h1 class="mt-3 text-3xl text-ink sm:text-[2.6rem] sm:leading-[1.05]">{title ?? brand.name}</h1>
+      <p class="mt-2 text-ink-muted">{reachSummary}</p>
+      <div class="mt-3">
+        <VerificationBadge status={brand.verificationStatus} lastVerifiedAt={brand.lastVerifiedAt} />
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 flex flex-col gap-3 border-t border-border pt-5 sm:flex-row sm:items-center">
+    {
+      hasAction ? (
+        <>
+          <ListenButton brand={brand} kind={kind} size="lg" />
+          {brand.officialWebsite && brand.officialLiveUrl && (
+            <a
+              href={brand.officialWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-official-action
+              data-analytics-event="official_website_clicked"
+              data-analytics-payload={JSON.stringify({ stationId: brand.id })}
+              class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border-strong px-5 font-semibold text-ink hover:bg-surface-muted"
+            >
+              <Globe class="h-4.5 w-4.5" aria-hidden="true" />
+              {websiteHost}
+              <ArrowUpRight class="h-4 w-4" aria-hidden="true" />
+            </a>
+          )}
+          <p class="text-xs text-ink-faint sm:ml-2 sm:max-w-xs">
+            Yayın, {kind === 'radio' ? 'radyonun' : 'kanalın'} kendi resmî sitesinde açılır. Frekanslar yayın
+            akışı barındırmaz.
+          </p>
+        </>
+      ) : (
+        <p class="text-sm text-ink-muted">
+          Bu yayın için resmî canlı yayın bağlantısı henüz eklenmedi.{' '}
+          <a href={`/duzeltme-bildir/?ilgili=${encodeURIComponent(brand.name)}`} class="font-medium text-ink underline decoration-primary-500 underline-offset-4">
+            Bağlantıyı bildirin
+          </a>
+        </p>
+      )
+    }
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+/**
+ * Frekanslar wordmark: a five-bar "signal" mark with an on-air dot.
+ * Inline SVG so it follows the current theme via currentColor.
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<span class:list={['inline-flex items-center gap-2', className]}>
+  <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true">
+    <rect width="32" height="32" rx="8" class="fill-ink"></rect>
+    <g class="stroke-surface" stroke-width="2" stroke-linecap="round" fill="none">
+      <path d="M7 20v-3"></path>
+      <path d="M11 22v-7"></path>
+      <path d="M15 24V9"></path>
+      <path d="M19 22v-7"></path>
+      <path d="M23 20v-3"></path>
+    </g>
+    <circle cx="24.5" cy="9" r="3" class="fill-primary-500"></circle>
+  </svg>
+  <span class="font-display text-[1.3rem] font-extrabold leading-none tracking-tight text-ink">frekanslar</span>
+</span>

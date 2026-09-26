@@ -5,20 +5,19 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import VerificationBadge from '../../../components/VerificationBadge.astro';
 import SourceList from '../../../components/SourceList.astro';
-import LogoPlaceholder from '../../../components/LogoPlaceholder.astro';
-import OfficialActionButton from '../../../components/OfficialActionButton.astro';
+import ProfileHero from '../../../components/ProfileHero.astro';
+import Kunye from '../../../components/Kunye.astro';
+import AdSlot from '../../../components/AdSlot.astro';
 import FAQSection from '../../../components/FAQSection.astro';
 import RelatedLinks from '../../../components/RelatedLinks.astro';
 import BadgeSnippet from '../../../components/BadgeSnippet.astro';
 import ClaimProfile from '../../../components/ClaimProfile.astro';
 import {
-  BROADCAST_TYPE_LABELS,
   CHANGE_TYPE_LABELS,
-  COVERAGE_TYPE_LABELS,
   ENCRYPTION_LABELS,
   RESOLUTION_LABELS,
 } from '../../../lib/labels';
-import { formatDateTr, formatSymbolRate, formatTransponderFrequency } from '../../../lib/format';
+import { formatDateTr, formatSymbolRate, formatTransponderFrequency, formatTvChannel } from '../../../lib/format';
 import { buildChannelDirectAnswer } from '../../../lib/direct-answers';
 import { generateChannelFaqs } from '../../../lib/faq-generator';
 import {
@@ -59,6 +58,27 @@ export const getStaticPaths = (async () => {
     getCollection('platform-channels'),
     getCollection('platforms'),
   ]);
+  const [radioEntries, cityEntries, tvAssignmentEntries, districtEntries] = await Promise.all([
+    getCollection('radio-stations'),
+    getCollection('cities'),
+    getCollection('terrestrial-tv-channels'),
+    getCollection('districts'),
+  ]);
+  const ownerBrandCounts = new Map<string, number>();
+  for (const brand of [...channelEntries, ...radioEntries]) {
+    const owner = brand.data.owner;
+    if (owner) ownerBrandCounts.set(owner, (ownerBrandCounts.get(owner) ?? 0) + 1);
+  }
+  const cities = cityEntries.map((e) => e.data);
+  const cityById = new Map(cities.map((c) => [c.id, c]));
+  const districtById = new Map(districtEntries.map((e) => [e.data.id, e.data]));
+  const assignmentsByChannel = new Map<string, (typeof tvAssignmentEntries)[number]['data'][]>();
+  for (const { data } of tvAssignmentEntries) {
+    if (data.status !== 'active') continue;
+    const list = assignmentsByChannel.get(data.channelId) ?? [];
+    list.push(data);
+    assignmentsByChannel.set(data.channelId, list);
+  }
 
   const channels = channelEntries.map((e) => e.data);
   const broadcasters = broadcasterEntries.map((e) => e.data);
@@ -88,6 +108,19 @@ export const getStaticPaths = (async () => {
         channelPlatforms,
         platforms,
         relatedChannels: relatedBrands(channels, channel, 4),
+        otherBrandCount: channel.owner ? (ownerBrandCounts.get(channel.owner) ?? 1) - 1 : 0,
+        hqCity: channel.headquarters ? (cityById.get(channel.headquarters) ?? null) : null,
+        terrestrialRows: (assignmentsByChannel.get(channel.id) ?? [])
+          .map((a) => ({
+            assignment: a,
+            city: cityById.get(a.cityId) ?? null,
+            district: a.districtId ? (districtById.get(a.districtId) ?? null) : null,
+          }))
+          .sort(
+            (x, y) =>
+              (x.city?.name ?? '').localeCompare(y.city?.name ?? '', 'tr') ||
+              (x.district?.name ?? '').localeCompare(y.district?.name ?? '', 'tr'),
+          ),
       },
     };
   });
@@ -104,17 +137,46 @@ const {
   channelPlatforms,
   platforms,
   relatedChannels,
+  otherBrandCount,
+  hqCity,
+  terrestrialRows,
 } = Astro.props;
+
+const terrestrialCities = [...new Map(terrestrialRows.filter((r) => r.city).map((r) => [r.city!.id, r.city!])).values()];
 
 const channelSources = sourcesByIds(sources, channel.sourceIds);
 const platformById = new Map(platforms.map((p) => [p.id, p]));
 
-const directAnswer = buildChannelDirectAnswer(channel, channelServices, transponders, satellites);
-const faqs = generateChannelFaqs(channel, channelServices.length > 0, channelPlatforms.length, broadcaster);
+const satelliteAnswer = buildChannelDirectAnswer(channel, channelServices, transponders, satellites);
+const istanbulRow = terrestrialRows.find((r) => r.city?.id === 'istanbul') ?? terrestrialRows[0];
+const directAnswer =
+  channelServices.length === 0 && istanbulRow
+    ? {
+        question: `${channel.name} karasal yayın frekansı nedir?`,
+        answer: `RTÜK lisans kayıtlarına göre ${channel.name}, ${terrestrialCities.length} ilde dijital karasal (DVB-T2) yayın tahsisine sahip. Örneğin ${istanbulRow.city?.name ?? ''}${istanbulRow.district ? ` (${istanbulRow.district.name})` : ''} için ${istanbulRow.assignment.band} bandında ${formatTvChannel(istanbulRow.assignment.channelNumber)} olarak kayıtlı. Tüm iller aşağıdaki tabloda.`,
+      }
+    : satelliteAnswer;
+const faqs = generateChannelFaqs(
+  channel,
+  channelServices.length > 0,
+  channelPlatforms.length,
+  broadcaster,
+  terrestrialCities.map((c) => c.name),
+);
 
 const pagePath = paths.televisionChannel(channel.slug);
-const pageTitle = `${channel.name} Frekansı ve Güncel Uydu Ayarları`;
-const pageDescription = `${channel.name} uydu frekansı, polarizasyon, sembol oranı, FEC ve platform kanal numaraları: güncel yayın bilgileri ve doğrulama durumu.`;
+const pageTitle =
+  terrestrialCities.length > 0
+    ? `${channel.name} Frekansı: Karasal Yayın Kanalları, Canlı İzle, Künye`
+    : `${channel.name} Frekansı, Canlı İzle ve Kanal Künyesi`;
+const pageDescription =
+  terrestrialCities.length > 0
+    ? `${channel.name} ${terrestrialCities.length} ilde dijital karasal (DVB-T2) yayında. İl il UHF/VHF kanal numaraları ve MHz değerleri, resmî canlı yayın bağlantısı ve kanal künyesi.`
+    : `${channel.name} yayın bilgileri, resmî canlı yayın bağlantısı, lisans sahibi kuruluş ve kanal künyesi.`;
+const reachSummary =
+  terrestrialCities.length > 0
+    ? `${terrestrialCities.length} ilde ${terrestrialRows.length} karasal yayın tahsisi${broadcaster ? ` · ${broadcaster.name}` : ''}`
+    : (broadcaster?.name ?? 'Televizyon kanalı');
 
 const breadcrumbItems = [
   { name: 'Ana Sayfa', href: paths.home() },
@@ -135,98 +197,84 @@ const jsonLd = [
     description: channel.description,
     url: canonicalUrl(pagePath),
     logo: channel.logo,
-    sameAs: Object.values(channel.officialSocialLinks).filter((v): v is string => Boolean(v)),
+    sameAs: [channel.officialWebsite, ...Object.values(channel.officialSocialLinks)].filter((v): v is string => Boolean(v)),
     areaServed: 'Türkiye',
   }),
   ...(faqs.length > 0 ? [faqPageSchema(faqs)] : []),
 ];
 
-const socialLinks = Object.entries(channel.officialSocialLinks).filter(([, url]) => Boolean(url));
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} path={pagePath} lastUpdated={channel.lastVerifiedAt} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--container-content) px-4 py-6 sm:px-6">
     <Breadcrumb items={breadcrumbItems} />
 
-    <div class="mt-4 flex flex-wrap items-start gap-4">
-      <LogoPlaceholder name={channel.name} logo={channel.logo} size="lg" />
-      <div class="min-w-0 flex-1">
-        <h1 class="text-2xl font-bold text-ink sm:text-3xl">{channel.name}</h1>
-        <p class="mt-1 text-sm text-ink-muted">
-          {BROADCAST_TYPE_LABELS[channel.broadcastType]} · {COVERAGE_TYPE_LABELS[channel.coverageType]}
-        </p>
-        <div class="mt-2">
-          <VerificationBadge status={channel.verificationStatus} lastVerifiedAt={channel.lastVerifiedAt} />
-        </div>
-      </div>
+    <ProfileHero brand={channel} kind="tv" hqName={hqCity?.name ?? null} reachSummary={reachSummary} />
+
+    <div class="mt-6 rounded-xl border-l-4 border-primary-500 bg-surface p-5">
+      <p class="font-display text-sm font-bold text-ink">{directAnswer.question}</p>
+      <p class="mt-1.5 text-ink">{directAnswer.answer}</p>
     </div>
 
-    <div class="mt-6 rounded-lg border border-primary-100 bg-primary-50 p-4">
-      <p class="text-sm font-semibold text-primary-700">{directAnswer.question}</p>
-      <p class="mt-1 text-ink">{directAnswer.answer}</p>
-    </div>
+    <p class="mt-6 max-w-3xl leading-relaxed text-ink-muted">{channel.description}</p>
 
-    <p class="mt-6 max-w-3xl text-ink-muted">{channel.description}</p>
+    <AdSlot placement="inContent" />
 
-    <div class="mt-6 flex flex-wrap gap-3">
-      <OfficialActionButton
-        href={channel.officialLiveUrl}
-        label="Resmî Yayından İzle"
-        destinationDescription="Bu bağlantı sizi kanalın resmî canlı yayın sayfasına yönlendirir."
-        analyticsEvent="official_watch_clicked"
-        analyticsPayload={{ channelId: channel.id }}
-      />
-      <OfficialActionButton
-        href={channel.officialWebsite}
-        label="Resmî Web Sitesine Git"
-        destinationDescription="Bu bağlantı sizi kanalın resmî web sitesine yönlendirir."
-        variant="secondary"
-        analyticsEvent="official_website_clicked"
-        analyticsPayload={{ channelId: channel.id }}
-      />
-    </div>
-
-    <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Yayın Merkezi</p>
-        <p class="mt-1 font-medium text-ink">{channel.headquarters ?? 'Belirtilmemiş'}</p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Yayın Kuruluşu</p>
-        <p class="mt-1 font-medium text-ink">{broadcaster ? broadcaster.name : 'Belirtilmemiş'}</p>
-      </div>
-      <div class="rounded-lg border border-border bg-surface p-4">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-faint">Yayın Durumu</p>
-        <p class="mt-1 font-medium text-ink">{COVERAGE_TYPE_LABELS[channel.coverageType]}</p>
-      </div>
-    </div>
+    <Kunye
+      brand={channel}
+      kind="tv"
+      broadcaster={broadcaster}
+      otherBrandCount={otherBrandCount}
+      hq={hqCity ? { name: hqCity.name, slug: hqCity.slug } : null}
+      cityCount={terrestrialCities.length}
+      assignmentLabel="Karasal yayın tahsisi"
+      assignmentCount={terrestrialRows.length}
+      sources={channelSources}
+    />
 
     {
-      socialLinks.length > 0 && (
-        <div class="mt-6">
-          <h2 class="text-sm font-semibold text-ink">Resmî Sosyal Medya Hesapları</h2>
-          <div class="mt-2 flex flex-wrap gap-2">
-            {socialLinks.map(([platform, url]) => (
-              <a
-                href={url as string}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-md border border-border-strong px-3 py-1.5 text-sm capitalize text-ink hover:bg-surface-subtle"
-              >
-                {platform}
-              </a>
-            ))}
+      terrestrialRows.length > 0 && (
+        <section class="mt-10">
+          <h2 class="text-2xl text-ink">{channel.name} Karasal Yayın Kanalları (DVB-T2)</h2>
+          <p class="mt-1 max-w-3xl text-sm text-ink-muted">
+            RTÜK lisans listelerindeki bant ve kanal numaraları. MHz değeri, standart UHF/VHF kanal planına göre
+            hesaplanmış merkez frekanstır; televizyonunuzda otomatik arama yapmanız genellikle yeterlidir.
+          </p>
+          <div class="mt-4 overflow-x-auto rounded-xl border border-border bg-surface" tabindex="0">
+            <table class="responsive-table w-full border-collapse text-sm">
+              <caption class="sr-only">{channel.name} il bazında karasal yayın kanalları</caption>
+              <thead class="bg-surface-subtle text-left">
+                <tr>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İl</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">İlçe / Verici</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Bant</th>
+                  <th scope="col" class="px-3 py-2.5 font-semibold text-ink">Kanal · Frekans</th>
+                </tr>
+              </thead>
+              <tbody>
+                {terrestrialRows.map(({ assignment, city, district }) => (
+                  <tr>
+                    <td data-label="İl" class="border-t border-border px-3 py-2.5 font-medium text-ink">
+                      {city ? <a href={paths.city(city.slug)} class="hover:text-primary-600 hover:underline">{city.name}</a> : assignment.cityId}
+                    </td>
+                    <td data-label="İlçe / Verici" class="border-t border-border px-3 py-2.5 text-ink-muted">{district?.name ?? '—'}</td>
+                    <td data-label="Bant" class="border-t border-border px-3 py-2.5 text-ink-muted">{assignment.band}</td>
+                    <td data-label="Kanal · Frekans" class="num border-t border-border px-3 py-2.5 font-semibold text-ink">
+                      {formatTvChannel(assignment.channelNumber)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </div>
+        </section>
       )
     }
 
-    <section class="mt-10">
+    <section class="mt-10" hidden={channelServices.length === 0}>
       <h2 class="text-xl font-bold text-ink">Uydu Yayın Bilgileri</h2>
       {
-        channelServices.length === 0 ? (
-          <p class="mt-3 text-sm text-ink-muted">Bu kanal için henüz doğrulanmış bir uydu yayın kaydı bulunmuyor.</p>
-        ) : (
+        channelServices.length === 0 ? null : (
           channelServices.map((service) => {
             const transponder = transponders.find((t) => t.id === service.transponderId);
             const satellite = transponder ? satellites.find((s) => s.id === transponder.satelliteId) : undefined;

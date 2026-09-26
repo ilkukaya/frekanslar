@@ -1,255 +1,235 @@
 ---
 import { getCollection } from 'astro:content';
+import { ArrowRight } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SearchBox from '../components/SearchBox.astro';
 import BrandCard from '../components/BrandCard.astro';
-import CityCard from '../components/CityCard.astro';
-import SatelliteCard from '../components/SatelliteCard.astro';
 import GuideCard from '../components/GuideCard.astro';
-import StatBlock from '../components/StatBlock.astro';
-import VerificationBadge from '../components/VerificationBadge.astro';
-import { Compass, MapPinned, Radio as RadioIcon, SatelliteDish, Tv } from '@lucide/astro';
+import FrequencyDial from '../components/FrequencyDial.astro';
+import FAQSection from '../components/FAQSection.astro';
+import AdSlot from '../components/AdSlot.astro';
 import { siteConfig } from '../config/site';
-import { CHANGE_TYPE_LABELS } from '../lib/labels';
-import { formatDateTr } from '../lib/format';
-import {
-  featuredFirst,
-  mostRecentlyVerified,
-  recentUpdates,
-  stationsActiveInCity,
-} from '../lib/relations';
-import { paths } from '../lib/urls';
-import { organizationSchema, websiteSchema } from '../lib/seo/jsonld';
+import { paths, canonicalUrl } from '../lib/urls';
+import { faqPageSchema, organizationSchema, websiteSchema, datasetSchema } from '../lib/seo/jsonld';
 
-const [
-  cityEntries,
-  radioEntries,
-  tvEntries,
-  satelliteEntries,
-  updateEntries,
-  guideEntries,
-  frequencyEntries,
-] = await Promise.all([
-  getCollection('cities'),
-  getCollection('radio-stations'),
-  getCollection('television-channels'),
-  getCollection('satellites'),
-  getCollection('frequency-updates'),
-  getCollection('guides'),
-  getCollection('terrestrial-frequencies'),
-]);
+const [cityEntries, radioEntries, tvEntries, guideEntries, frequencyEntries, tvAssignEntries, broadcasterEntries] =
+  await Promise.all([
+    getCollection('cities'),
+    getCollection('radio-stations'),
+    getCollection('television-channels'),
+    getCollection('guides'),
+    getCollection('terrestrial-frequencies'),
+    getCollection('terrestrial-tv-channels'),
+    getCollection('broadcasters'),
+  ]);
 
-const cities = cityEntries.map((entry) => entry.data);
-const radioStations = radioEntries.map((entry) => entry.data);
-const televisionChannels = tvEntries.map((entry) => entry.data);
-const satellites = satelliteEntries.map((entry) => entry.data);
-const frequencyUpdates = updateEntries.map((entry) => entry.data);
-const terrestrialFrequencies = frequencyEntries.map((entry) => entry.data);
+const cities = cityEntries.map((e) => e.data).sort((a, b) => a.name.localeCompare(b.name, 'tr'));
+const radios = radioEntries.map((e) => e.data);
+const tvs = tvEntries.map((e) => e.data);
+const frequencies = frequencyEntries.map((e) => e.data).filter((f) => f.status === 'active');
+const tvAssignments = tvAssignEntries.map((e) => e.data).filter((a) => a.status === 'active');
+const radioById = new Map(radios.map((r) => [r.id, r]));
 
-const featuredTv = featuredFirst(televisionChannels).slice(0, 4);
-const featuredRadio = featuredFirst(radioStations).slice(0, 4);
-const topCities = [...cities].sort((a, b) => a.name.localeCompare(b.name, 'tr')).slice(0, 8);
-const recentChanges = recentUpdates(frequencyUpdates, 5);
-const recentlyVerifiedBroadcasts = mostRecentlyVerified([...radioStations, ...televisionChannels], 6);
+const freqCount = new Map<string, number>();
+for (const f of frequencies) freqCount.set(f.stationId, (freqCount.get(f.stationId) ?? 0) + 1);
+const tvCityCount = new Map<string, Set<string>>();
+for (const a of tvAssignments) tvCityCount.set(a.channelId, (tvCityCount.get(a.channelId) ?? new Set()).add(a.cityId));
+
+const hasLink = (b: { officialLiveUrl: string | null; officialWebsite: string | null }) =>
+  Boolean(b.officialLiveUrl ?? b.officialWebsite);
+
+const nationalRadios = radios
+  .filter((r) => r.coverageType === 'national')
+  .sort((a, b) => Number(hasLink(b)) - Number(hasLink(a)) || (freqCount.get(b.id) ?? 0) - (freqCount.get(a.id) ?? 0))
+  .slice(0, 12);
+
+const nationalTvs = tvs
+  .filter((t) => t.coverageType === 'national')
+  .sort((a, b) => Number(hasLink(b)) - Number(hasLink(a)) || (tvCityCount.get(b.id)?.size ?? 0) - (tvCityCount.get(a.id)?.size ?? 0))
+  .slice(0, 12);
+
+// Istanbul dial: every active FM frequency; national/regional brands get a label.
+const dialStations = frequencies
+  .filter((f) => f.cityId === 'istanbul')
+  .map((f) => {
+    const station = radioById.get(f.stationId);
+    return station
+      ? { frequency: f.frequency, name: station.name, slug: station.slug, prominent: station.coverageType === 'national' }
+      : null;
+  })
+  .filter((s): s is NonNullable<typeof s> => s !== null)
+  .sort((a, b) => a.frequency - b.frequency);
+
+const popularCitySlugs = ['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kocaeli', 'mersin', 'kayseri', 'samsun'];
+const popularCities = popularCitySlugs
+  .map((slug) => cities.find((c) => c.slug === slug))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+
+const guides = guideEntries
+  .sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.updatedDate.localeCompare(a.data.updatedDate))
+  .slice(0, 6);
 
 const stats = [
-  { label: 'Televizyon Kanalı', value: String(televisionChannels.length) },
-  { label: 'Radyo İstasyonu', value: String(radioStations.length) },
-  { label: 'Şehir', value: String(cities.length) },
-  { label: 'Uydu', value: String(satellites.length) },
+  { value: radios.length.toLocaleString('tr-TR'), label: 'radyo' },
+  { value: tvs.length.toLocaleString('tr-TR'), label: 'televizyon' },
+  { value: frequencies.length.toLocaleString('tr-TR'), label: 'FM frekansı' },
+  { value: tvAssignments.length.toLocaleString('tr-TR'), label: 'karasal TV kanalı' },
+  { value: String(cities.length), label: 'il' },
+  { value: broadcasterEntries.length.toLocaleString('tr-TR'), label: 'yayın kuruluşu' },
 ];
 
-const tools = [
+const faqs = [
   {
-    icon: RadioIcon,
-    title: 'Şehrinize göre radyo bulun',
-    description: 'İlinizdeki tüm FM frekanslarını tek tabloda görün.',
-    href: paths.radioList(),
+    question: 'Bulunduğum şehirde radyo frekanslarını nasıl öğrenebilirim?',
+    answer: `Şehir listesinden ilinizi seçin; o ildeki tüm lisanslı FM radyoların frekanslarını, ilçe ve verici bazında tek tabloda görürsünüz. ${cities.length} ilin tamamı RTÜK lisans verisiyle listelenir.`,
   },
   {
-    icon: Tv,
-    title: 'Televizyon kanalı arayın',
-    description: 'Kanal adına göre profil ve uydu ayarlarına ulaşın.',
-    href: paths.tvList(),
+    question: 'Bir radyonun frekansı her şehirde aynı mı?',
+    answer: 'Hayır. Ulusal radyolar bile her ilde farklı bir FM frekansı kullanabilir. Bu yüzden radyo profillerinde frekanslar il il ayrı gösterilir.',
   },
   {
-    icon: SatelliteDish,
-    title: 'Uydu frekansı sorgulayın',
-    description: 'Türksat uyduları ve transponder bilgilerini inceleyin.',
-    href: paths.satelliteList(),
+    question: 'Frekanslar sitesinde radyo dinleyebilir miyim?',
+    answer: 'Frekanslar bir rehberdir; sitede yayın akışı barındırılmaz. Her radyo ve kanal sayfasındaki "Dinle" veya "İzle" butonu sizi yayıncının kendi resmî canlı yayın sayfasına yönlendirir.',
   },
   {
-    icon: Compass,
-    title: 'Rehberlere göz atın',
-    description: 'Kanal ekleme ve frekans bulma rehberlerini okuyun.',
-    href: paths.guideList(),
+    question: 'Karasal (antenle) TV kanallarının frekansı nedir?',
+    answer: 'Dijital karasal yayında (DVB-T2) kanallar UHF/VHF kanal numarasıyla yayınlanır. Her TV kanalının sayfasında il il bant, kanal numarası ve karşılık gelen MHz değeri yer alır.',
+  },
+  {
+    question: 'Veriler nereden geliyor?',
+    answer: "Karasal radyo ve televizyon frekans/lisans bilgileri Radyo ve Televizyon Üst Kurulu'nun (RTÜK) resmî il bazlı yayın lisans listelerinden alınır ve her kayıtta kaynağı ile son kontrol tarihi gösterilir.",
   },
 ];
 
-const jsonLd = [organizationSchema(), websiteSchema()];
+const jsonLd = [
+  organizationSchema(),
+  websiteSchema(),
+  datasetSchema({
+    name: 'Türkiye Karasal Radyo ve Televizyon Frekans Veritabanı',
+    description: `RTÜK lisans listelerinden derlenen ${frequencies.length} FM frekansı ve ${tvAssignments.length} karasal TV kanal tahsisi (${cities.length} il).`,
+    url: canonicalUrl(paths.dataSources()),
+    dateModified: frequencies.map((f) => f.lastVerifiedAt).sort().at(-1) ?? '2026-08-05',
+    keywords: ['radyo frekansları', 'FM frekans', 'karasal TV', 'DVB-T2', 'RTÜK'],
+  }),
+  faqPageSchema(faqs),
+];
 ---
 
-<BaseLayout
-  title={siteConfig.defaultTitle}
-  description={siteConfig.defaultDescription}
-  path={paths.home()}
-  jsonLd={jsonLd}
->
+<BaseLayout title={siteConfig.defaultTitle} description={siteConfig.defaultDescription} path={paths.home()} jsonLd={jsonLd}>
   <section class="border-b border-border bg-surface">
-    <div class="mx-auto max-w-(--container-content) px-4 py-14 text-center sm:px-6 sm:py-20">
-      <h1 class="text-3xl font-bold text-ink sm:text-5xl">Türkiye Radyo ve Televizyon Frekansları</h1>
-      <p class="mx-auto mt-4 max-w-2xl text-base text-ink-muted sm:text-lg">
-        Şehrinizdeki radyo frekanslarını, güncel uydu kanal ayarlarını ve Türkiye’de yayın yapan radyo ve
-        televizyon kuruluşlarını bulun.
-      </p>
-      <div class="mx-auto mt-8 max-w-xl">
-        <SearchBox size="large" />
+    <div class="mx-auto grid max-w-(--container-content) gap-10 px-4 pb-10 pt-10 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:pb-14 lg:pt-14">
+      <div>
+        <p class="text-sm font-semibold text-primary-600">Türkiye radyo ve TV frekans rehberi</p>
+        <h1 class="mt-3 text-[2.4rem] leading-[1.02] text-ink sm:text-6xl">
+          Hangi radyo<br class="hidden sm:block" /> hangi frekansta?
+        </h1>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted">
+          Türkiye'deki {radios.length.toLocaleString('tr-TR')} radyo ve {tvs.length} televizyonun il il frekansları,
+          künyeleri ve resmî canlı yayın bağlantıları. Tek yerde, kaynağıyla.
+        </p>
+        <div class="mt-7 max-w-xl">
+          <SearchBox size="large" />
+        </div>
+        <form class="mt-4 flex max-w-xl items-center gap-2" action={paths.radioList()} data-city-picker>
+          <label for="city-picker" class="shrink-0 text-sm font-medium text-ink-muted">Şehrinizi seçin:</label>
+          <select id="city-picker" name="il" class="h-11 min-w-0 flex-1 rounded-full border border-border-strong bg-surface px-4 text-ink">
+            <option value="">81 il…</option>
+            {cities.map((c) => <option value={c.slug}>{c.name}</option>)}
+          </select>
+          <button type="submit" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ink text-surface hover:bg-primary-600" aria-label="Şehrin frekanslarına git">
+            <ArrowRight class="h-5 w-5" aria-hidden="true" />
+          </button>
+        </form>
+      </div>
+      <div class="min-w-0">
+        <FrequencyDial cityName="İstanbul" citySlug="istanbul" stations={dialStations} />
+        <ul class="mt-4 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-6 lg:grid-cols-3">
+          {
+            stats.map((s) => (
+              <li class="bg-surface px-3 py-3">
+                <p class="num text-xl font-extrabold text-ink">{s.value}</p>
+                <p class="text-xs text-ink-faint">{s.label}</p>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <StatBlock stats={stats} />
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Popüler Televizyon Kanalları</h2>
-      <a href={paths.tvList()} class="text-sm font-medium text-primary-600 hover:underline">Tümünü gör</a>
+  <section class="mx-auto max-w-(--container-content) px-4 pt-12 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl text-ink sm:text-3xl">Ulusal radyolar</h2>
+        <p class="mt-1 text-sm text-ink-muted">Türkiye genelinde yayın yapan radyolar. "Dinle" resmî yayına götürür.</p>
+      </div>
+      <a href={paths.radioDirectory()} class="shrink-0 text-sm font-semibold text-ink underline decoration-primary-500 underline-offset-4">Tüm radyolar</a>
     </div>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {featuredTv.map((channel) => <BrandCard brand={channel} kind="tv" />)}
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Popüler Radyo İstasyonları</h2>
-      <a href={paths.radioList()} class="text-sm font-medium text-primary-600 hover:underline">Tümünü gör</a>
-    </div>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {featuredRadio.map((station) => <BrandCard brand={station} kind="radio" />)}
+    <div class="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+      {nationalRadios.map((r) => <BrandCard brand={r} kind="radio" meta={`${freqCount.get(r.id) ?? 0} FM frekansı`} />)}
     </div>
   </section>
 
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Şehre Göre Radyo Frekansları</h2>
-      <a href={paths.radioList()} class="text-sm font-medium text-primary-600 hover:underline">Tüm şehirler</a>
+  <section class="mx-auto max-w-(--container-content) px-4 pt-12 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl text-ink sm:text-3xl">Ulusal TV kanalları</h2>
+        <p class="mt-1 text-sm text-ink-muted">Karasal yayın kanalları ve resmî canlı yayın bağlantıları.</p>
+      </div>
+      <a href={paths.tvList()} class="shrink-0 text-sm font-semibold text-ink underline decoration-primary-500 underline-offset-4">Tüm kanallar</a>
     </div>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+      {nationalTvs.map((t) => <BrandCard brand={t} kind="tv" meta={tvCityCount.get(t.id)?.size ? `${tvCityCount.get(t.id)?.size} ilde karasal yayın` : 'Ulusal kanal'} />)}
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-(--container-content) px-4 sm:px-6"><AdSlot placement="inContent" /></div>
+
+  <section class="mx-auto max-w-(--container-content) px-4 pt-12 sm:px-6">
+    <h2 class="text-2xl text-ink sm:text-3xl">Şehre göre radyo frekansları</h2>
+    <div class="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
       {
-        topCities.map((city) => (
-          <CityCard city={city} radioCount={stationsActiveInCity(radioStations, terrestrialFrequencies, city.id).length} />
-        ))
-      }
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Güncel Uydu Frekansları</h2>
-      <a href={paths.satelliteList()} class="text-sm font-medium text-primary-600 hover:underline">Tümünü gör</a>
-    </div>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {satellites.map((satellite) => <SatelliteCard satellite={satellite} />)}
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Son Frekans Değişiklikleri</h2>
-      <a href={paths.updateList()} class="text-sm font-medium text-primary-600 hover:underline">Tüm güncellemeler</a>
-    </div>
-    {
-      recentChanges.length === 0 ? (
-        <p class="mt-4 rounded-lg border border-border bg-surface p-4 text-sm text-ink-muted">
-          Henüz kayıtlı bir değişiklik geçmişi yok. Bu bölüm, veriler zaman içinde güncellendikçe (yeni yayın, kapanan
-          yayın, değişen frekans gibi) dolmaya başlayacaktır.
-        </p>
-      ) : (
-        <ul class="mt-4 divide-y divide-border rounded-lg border border-border bg-surface">
-          {recentChanges.map((update) => (
-            <li>
-              <a href={paths.update(update.slug)} class="flex flex-col gap-1 px-4 py-3 hover:bg-surface-subtle sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p class="font-medium text-ink">{update.title}</p>
-                  <p class="text-sm text-ink-muted">{CHANGE_TYPE_LABELS[update.changeType]}</p>
-                </div>
-                <time datetime={update.date} class="text-xs text-ink-faint">{formatDateTr(update.date)}</time>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )
-    }
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <h2 class="text-xl font-bold text-ink">Frekans Bulma Araçları</h2>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        tools.map((tool) => (
-          <a
-            href={tool.href}
-            class="flex flex-col gap-2 rounded-lg border border-border bg-surface p-4 shadow-card hover:border-primary-600"
-          >
-            <span class="flex h-9 w-9 items-center justify-center rounded-md bg-primary-50 text-primary-700">
-              <tool.icon class="h-4.5 w-4.5" aria-hidden="true" />
-            </span>
-            <p class="font-semibold text-ink">{tool.title}</p>
-            <p class="text-sm text-ink-muted">{tool.description}</p>
+        popularCities.map((c) => (
+          <a href={paths.city(c.slug)} class="group rounded-xl border border-border bg-surface p-4 hover:border-ink">
+            <p class="font-display text-lg font-bold text-ink">{c.name}</p>
+            <p class="mt-0.5 text-xs text-ink-faint">{frequencies.filter((f) => f.cityId === c.id).length} frekans</p>
           </a>
         ))
       }
     </div>
+    <details class="group mt-4 rounded-xl border border-border bg-surface">
+      <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-ink [&::-webkit-details-marker]:hidden">
+        Tüm iller ({cities.length})
+        <span class="text-ink-faint group-open:rotate-180">▾</span>
+      </summary>
+      <ul class="grid grid-cols-2 gap-x-4 gap-y-1 border-t border-border px-4 py-4 text-sm sm:grid-cols-4 lg:grid-cols-6">
+        {cities.map((c) => <li><a href={paths.city(c.slug)} class="text-ink-muted hover:text-ink hover:underline">{c.name}</a></li>)}
+      </ul>
+    </details>
   </section>
 
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center justify-between">
-      <h2 class="text-xl font-bold text-ink">Rehber İçerikleri</h2>
-      <a href={paths.guideList()} class="text-sm font-medium text-primary-600 hover:underline">Tüm rehberler</a>
+  <section class="mx-auto max-w-(--container-content) px-4 pt-12 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-2xl text-ink sm:text-3xl">Rehberler</h2>
+      <a href={paths.guideList()} class="shrink-0 text-sm font-semibold text-ink underline decoration-primary-500 underline-offset-4">Tüm rehberler</a>
     </div>
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-      {
-        guideEntries.map((guide) => (
-          <GuideCard slug={guide.id} title={guide.data.title} description={guide.data.description} updatedDate={guide.data.updatedDate} />
-        ))
-      }
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <h2 class="text-xl font-bold text-ink">Son Doğrulanan Yayınlar</h2>
-    <p class="mt-1 text-sm text-ink-muted">
-      En son editöryal incelemeden geçen radyo ve televizyon kayıtları.
-    </p>
-    <div class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        recentlyVerifiedBroadcasts.map((brand) => {
-          const isRadio = radioStations.some((station) => station.id === brand.id);
-          const href = isRadio ? paths.radioStation(brand.slug) : paths.televisionChannel(brand.slug);
-          return (
-            <a href={href} class="flex items-center justify-between gap-3 rounded-md border border-border bg-surface px-4 py-3 hover:border-primary-600">
-              <span class="font-medium text-ink">{brand.name}</span>
-              <VerificationBadge status={brand.verificationStatus} compact />
-            </a>
-          );
-        })
-      }
+    <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {guides.map((g) => <GuideCard slug={g.id} title={g.data.title} description={g.data.description} updatedDate={g.data.updatedDate} />)}
     </div>
   </section>
 
-  <section class="mx-auto max-w-(--container-content) px-4 py-10 sm:px-6">
-    <div class="flex items-center gap-2 text-sm text-ink-muted">
-      <MapPinned class="h-4 w-4 shrink-0" aria-hidden="true" />
-      <p>
-        Frekanslar, {cities.length} şehirdeki radyo frekanslarını, {televisionChannels.length} televizyon kanalının
-        uydu yayın bilgilerini ve {satellites.length} Türksat uydusunu tek bir veritabanında bir araya getirir. Bu
-        ilk sürümdeki teknik değerlerin çoğu örnek veridir; ayrıntı için
-        <a href={paths.dataSources()} class="ml-1 underline hover:text-primary-600">veri kaynakları sayfasına</a>
-        bakın.
-      </p>
-    </div>
+  <section class="mx-auto max-w-(--container-narrow) px-4 pt-6 sm:px-6">
+    <FAQSection faqs={faqs} />
   </section>
 </BaseLayout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-city-picker]');
+  const select = form?.querySelector<HTMLSelectElement>('select');
+  const go = (event?: Event) => {
+    event?.preventDefault();
+    if (select?.value) window.location.href = `/radyo-frekanslari/${select.value}/`;
+  };
+  form?.addEventListener('submit', go);
+  select?.addEventListener('change', () => go());
+</script>

@@ -6,7 +6,7 @@ import { formatDateTr } from '../../lib/format';
 import { canonicalUrl, paths } from '../../lib/urls';
 import { breadcrumbListSchema, webPageSchema } from '../../lib/seo/jsonld';
 
-const lastUpdated = '2026-08-05';
+const lastUpdated = '2026-09-26';
 const pagePath = paths.privacy();
 const pageTitle = 'Gizlilik Politikası | Frekanslar';
 const pageDescription = `${siteConfig.siteName} gizlilik politikası: hangi verilerin toplandığı, analitik yaklaşımımız ve düzeltme formu üzerinden paylaşılan bilgiler.`;
@@ -29,12 +29,34 @@ const jsonLd = [
     <p class="mt-2 text-sm text-ink-faint">Son güncelleme: {formatDateTr(lastUpdated)}</p>
 
     <div class="prose-content mt-6 space-y-4 text-ink-muted">
-      <h2 class="text-lg font-bold text-ink">Analitik Yaklaşımımız</h2>
+      <h2 class="text-lg font-bold text-ink">Çerezler, Analitik ve Reklamlar</h2>
       <p>
-        {siteConfig.siteName}, varsayılan olarak hiçbir üçüncü taraf analitik betiği yüklemez ve hiçbir çerez
-        kullanmaz. Site içi etkileşimler (arama, sonuç tıklaması, resmî bağlantı tıklaması, düzeltme gönderimi
-        gibi) yalnızca bir analitik sağlayıcı açıkça yapılandırılmışsa ve o sağlayıcının betiği site işletmeni
-        tarafından ayrıca eklenmişse ölçülür. Bu ölçüm, kullanıcıyı tanımlayıcı kişisel veri toplamaz.
+        {siteConfig.siteName} ücretsiz bir hizmettir ve giderlerini reklam gelirleriyle karşılayabilir. Reklam ve
+        ölçüm hizmetleri etkinleştirildiğinde sitede aşağıdaki üçüncü taraf hizmetler kullanılır:
+      </p>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>
+          <strong class="text-ink">Google AdSense:</strong> Google dahil üçüncü taraf sağlayıcılar, bu siteye ve
+          diğer sitelere yaptığınız önceki ziyaretlere dayalı reklamlar sunmak için çerezler kullanır. Google'ın
+          reklam çerezlerini kullanması, Google'ın ve iş ortaklarının size bu siteye ve/veya internetteki diğer
+          sitelere yaptığınız ziyaretlere dayalı reklamlar sunmasını sağlar. Kişiselleştirilmiş reklamları
+          <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="text-ink underline">Google Reklam Ayarları</a>
+          sayfasından devre dışı bırakabilirsiniz. Ayrıntılar:
+          <a href="https://policies.google.com/technologies/ads?hl=tr" target="_blank" rel="noopener noreferrer" class="text-ink underline">Google reklam politikaları</a>.
+        </li>
+        <li>
+          <strong class="text-ink">Google Analytics 4:</strong> Ziyaret istatistiklerini (hangi sayfaların
+          görüntülendiği, cihaz türü gibi) IP adresi anonimleştirilerek toplu olarak ölçmek için kullanılır.
+        </li>
+        <li>
+          <strong class="text-ink">Marka simgeleri:</strong> Radyo ve kanal logoları gösterilirken ilgili yayıncının
+          resmî sitesindeki simge, Google'ın simge hizmeti üzerinden tarayıcınıza yüklenir.
+        </li>
+      </ul>
+      <p>
+        Avrupa Ekonomik Alanı ve Birleşik Krallık'tan gelen ziyaretçilerden reklam çerezleri için onay istenir.
+        Tarayıcınızın ayarlarından çerezleri istediğiniz zaman silebilir veya engelleyebilirsiniz. Kişisel
+        verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında işlenir.
       </p>
 
       <h2 class="text-lg font-bold text-ink">Düzeltme Bildirim Formu</h2>

@@ -25,9 +25,11 @@
     "data:check-links": "tsx scripts/data-check-links.ts",
     "data:report": "tsx scripts/data-report.ts",
     "data:diff": "tsx scripts/data-diff.ts",
-    "data:import-rtuk": "tsx scripts/import/build-rtuk-data.ts"
+    "data:import-rtuk": "tsx scripts/import/build-rtuk-data.ts",
+    "seo:indexnow": "tsx scripts/seo-indexnow.ts"
   },
   "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@lucide/astro": "^1.28.0",
     "astro": "7.1.6",
     "fuse.js": "7.5.0",
